@@ -800,52 +800,42 @@ document.getElementById('resetProgress').onclick = async() => {
 fetch('markers.json')
   .then(res => res.json())
   .then(async data => {
-
     totalCount = data.length;
-    updateProgressDisplay();
 
     data.forEach(point => {
-      // Determine initial found state: Firestore for logged-in users, localStorage for guests
-      const isFound = currentUser
-        ? false // we'll load Firestore progress separately in loadUserProgress()
-        : localStorage.getItem(`found_${point.id}`) === 'true';
+      // Always start marker as "not found"
+      const markerIcon = point.icon
+        ? L.icon({
+            iconUrl: point.icon,
+            iconSize: icons[point.category].options.iconSize || [48,72],
+            iconAnchor: icons[point.category].options.iconAnchor || [24,72],
+            popupAnchor: icons[point.category].options.popupAnchor || [0,-72]
+          })
+        : icons[point.category];
 
       const marker = L.marker(point.coords, {
-        opacity: isFound ? 0.5 : 1,
-        icon: point.icon ? L.icon({
-          iconUrl: point.icon,
-          iconSize: icons[point.category].options.iconSize,
-          iconAnchor: icons[point.category].options.iconAnchor,
-          popupAnchor: icons[point.category].options.popupAnchor
-        }) : icons[point.category],
+        opacity: 1,
+        icon: markerIcon,
         title: point.name
       });
 
       marker.category = point.category;
       marker.description = point.description;
 
-      if (isFound) foundMarkers[point.id] = marker;
-      else markers[point.id] = marker;
-
+      markers[point.id] = marker; // initially all in markers
       marker.addTo(map);
       createMarkerPopup(marker, point.id);
 
-      // RIGHT-CLICK TO TOGGLE FOUND USING toggleFound
       marker.on("contextmenu", (e) => {
-        e.originalEvent.preventDefault(); // stop browser context menu
-        // simulate checkbox toggle
+        e.originalEvent.preventDefault();
         const currentlyFound = foundMarkers[point.id] === marker;
         toggleFound(point.id, { checked: !currentlyFound });
       });
     });
 
+    // After adding all markers, overlay progress
+    await loadUserProgress(); 
     updateProgressDisplay();
-
-    // If user is logged in, load their Firestore progress
-    if (currentUser) {
-      await loadUserProgress(); // make sure markers reflect Firestore state
-    }
-
   })
   .catch(err => console.error("Error loading markers:", err));
 
