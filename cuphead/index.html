@@ -550,12 +550,13 @@
   import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
 
   const firebaseConfig = {
-    apiKey: "YOUR_KEY",
-    authDomain: "YOUR_APP.firebaseapp.com",
-    projectId: "YOUR_APP",
-    storageBucket: "YOUR_APP.appspot.com",
-    messagingSenderId: "123",
-    appId: "1:123:web:abc"
+    apiKey: "AIzaSyBGI-tSZjsy7wvNSu3D_lFZR96TQND-uJU",
+    authDomain: "gamegazetteer-bfed2.firebaseapp.com",
+    projectId: "gamegazetteer-bfed2",
+    storageBucket: "gamegazetteer-bfed2.appspot.com",
+    messagingSenderId: "659845857638",
+    appId: "1:659845857638:web:7ad66baffa924961a948a7",
+    measurementId: "G-Q8QP2RD1BL"
   };
 
   const app = initializeApp(firebaseConfig);
@@ -658,17 +659,94 @@ function updateProgressDisplay() {
 }
 
 /* ---------- HELPER FUNCTIONS ---------- */
-function toggleFound(id, checkbox) {
+// Check if user is logged in
+function getCurrentUser() {
+  return firebase.auth().currentUser;
+}
+
+// Save found state (Firebase or Local)
+async function saveFoundState(id, state) {
+  const user = getCurrentUser();
+
+  if (user) {
+    // ---- FIREBASE PATH ----
+    const docRef = firebase.firestore()
+      .collection("users")
+      .doc(user.uid)
+      .collection("found")
+      .doc(String(id));
+
+    if (state === true) {
+      await docRef.set({ found: true });
+    } else {
+      await docRef.delete(); // user unfound item
+    }
+
+  } else {
+    // ---- LOCAL STORAGE ----
+    if (state === true) {
+      localStorage.setItem(`found_${id}`, "true");
+    } else {
+      localStorage.removeItem(`found_${id}`);
+    }
+  }
+}
+
+// Load found state (Firebase or Local)
+async function loadFoundState(id) {
+  const user = getCurrentUser();
+
+  if (user) {
+    const doc = await firebase.firestore()
+      .collection("users")
+      .doc(user.uid)
+      .collection("found")
+      .doc(String(id))
+      .get();
+
+    return doc.exists ? true : false;
+
+  } else {
+    return localStorage.getItem(`found_${id}`) === "true";
+  }
+}
+
+async function applySavedStates() {
+  for (const id in markers) {
+    const isFound = await loadFoundState(id);
+
+    if (isFound) {
+      const marker = markers[id];
+
+      marker.setOpacity(0.5);
+      foundMarkers[id] = marker;
+      delete markers[id];
+    }
+  }
+
+  updateMarkersByCategory();
+  updateProgressDisplay();
+}
+
+firebase.auth().onAuthStateChanged(async user => {
+  await applySavedStates();
+});
+
+async function toggleFound(id, checkbox) {
   const marker = markers[id] || foundMarkers[id];
   if (!marker) return;
 
-  if (checkbox.checked) {
-    localStorage.setItem(`found_${id}`, 'true');
+  const isFound = checkbox.checked;
+
+  // Save state in Firebase OR localStorage
+  await saveFoundState(id, isFound);
+
+  // Update markers visually
+  if (isFound) {
     marker.setOpacity(0.5);
     delete markers[id];
     foundMarkers[id] = marker;
   } else {
-    localStorage.removeItem(`found_${id}`);
     marker.setOpacity(1);
     delete foundMarkers[id];
     markers[id] = marker;
@@ -676,7 +754,6 @@ function toggleFound(id, checkbox) {
 
   updateMarkersByCategory();
   updateProgressDisplay();
-
   createMarkerPopup(marker, id);
   marker.openPopup();
 }
@@ -684,8 +761,9 @@ function toggleFound(id, checkbox) {
 // popup mode
 const popupMode = "dark";
 
-function createMarkerPopup(marker, id) {
-  const isFound = localStorage.getItem(`found_${id}`) === 'true';
+async function createMarkerPopup(marker, id) {
+  // Load found state (Firebase if logged in, else localStorage)
+  const isFound = await loadFoundState(id);
 
   const popupContent = `
     <div style="
@@ -746,13 +824,33 @@ document.querySelectorAll('.subcategory').forEach(section => {
   });
 });
 
-document.getElementById('resetProgress').onclick = () => {
+document.getElementById('resetProgress').onclick = async() => {
   if (!confirm("Are you sure you want to reset all progress?")) return;
+
+  const user = firebase.auth().currentUser;
 
   // Clear found markers from localStorage
   Object.keys(localStorage).forEach(key => {
     if (key.startsWith("found_")) localStorage.removeItem(key);
   });
+
+  // ---------- RESET FIREBASE IF LOGGED IN ----------
+  if (user) {
+    try {
+      const userDocRef = db.collection("users").doc(user.uid).collection("found");
+      const snapshot = await userDocRef.get();
+      const batch = db.batch();
+
+      snapshot.forEach(doc => {
+        batch.delete(doc.ref); // remove each marker
+      });
+
+      await batch.commit();
+      console.log("Firebase progress reset.");
+    } catch (err) {
+      console.error("Error resetting Firebase progress:", err);
+    }
+  }
 
   // Reset marker states
   Object.values(foundMarkers).forEach(marker => {
@@ -771,13 +869,19 @@ document.getElementById('resetProgress').onclick = () => {
 /* ---------- LOAD MARKERS ---------- */
 fetch('markers.json')
   .then(res => res.json())
-  .then(data => {
+  .then(async data => {
 
     totalCount = data.length;
     updateProgressDisplay();
 
+    // Load saved states FIRST (Firebase or localStorage)
+    const initialFoundStates = {};
+    for (const point of data) {
+      initialFoundStates[point.id] = await loadFoundState(point.id);
+    }
+
     data.forEach(point => {
-      const isFound = localStorage.getItem(`found_${point.id}`) === 'true';
+      const isFound = initialFoundStates[point.id];
 
       const marker = L.marker(point.coords, {
         opacity: isFound ? 0.5 : 1,
@@ -799,20 +903,21 @@ fetch('markers.json')
       marker.addTo(map);
       createMarkerPopup(marker, point.id);
 
-      // RIGHT-CLICK TO TOGGLE FOUND WITHOUT SHOWING POPUP
-      marker.on("contextmenu", (e) => {
-        e.originalEvent.preventDefault(); // stop browser right-click menu
-        const id = point.id;
-        const isFound = localStorage.getItem(`found_${id}`) === "true";
+      // RIGHT-CLICK TO TOGGLE FOUND WITHOUT POPUP
+      marker.on("contextmenu", async (e) => {
+        e.originalEvent.preventDefault();
 
-        // Toggle state
-        if (!isFound) {
-          localStorage.setItem(`found_${id}`, "true");
+        const id = point.id;
+        const currentlyFound = await loadFoundState(id);
+
+        // Toggle
+        if (!currentlyFound) {
+          await saveFoundState(id, true);
           marker.setOpacity(0.5);
           delete markers[id];
           foundMarkers[id] = marker;
         } else {
-          localStorage.removeItem(`found_${id}`);
+          await saveFoundState(id, false);
           marker.setOpacity(1);
           delete foundMarkers[id];
           markers[id] = marker;
@@ -822,7 +927,7 @@ fetch('markers.json')
         updateProgressDisplay();
 
         marker.addTo(map);
-        createMarkerPopup(marker, point.id);
+        createMarkerPopup(marker, id);
       });
 
     });
