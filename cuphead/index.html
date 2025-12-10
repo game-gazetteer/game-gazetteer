@@ -566,75 +566,17 @@
 
   window.FirebaseServices = { auth, db, doc, getDoc, setDoc };
   const user = auth.currentUser;
+  
   /* ---------- LOAD MARKERS ---------- */
-  if (user) {
-    console.log("Yes")
-    console.log(user)
-    const res = await fetch('markers.json');
-    const data = await res.json();
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      console.log("User is signed in:", user.uid);
 
-      totalCount = data.length;
-      updateProgressDisplay();
-
-      data.forEach(async point => {
-        const isFound = await isMarkerFound(point.id);
-
-        const marker = L.marker(point.coords, {
-          opacity: isFound ? 0.5 : 1,
-          icon: point.icon ? L.icon({
-            iconUrl: point.icon,
-            iconSize: icons[point.category].options.iconSize,
-            iconAnchor: icons[point.category].options.iconAnchor,
-            popupAnchor: icons[point.category].options.popupAnchor
-          }) : icons[point.category],
-          title: point.name
-        });
-
-        marker.category = point.category;
-        marker.description = point.description;
-
-        if (isFound) foundMarkers[point.id] = marker;
-        else markers[point.id] = marker;
-
-        marker.addTo(map);
-        createMarkerPopup(marker, point.id);
-
-        // RIGHT-CLICK TO TOGGLE FOUND WITHOUT SHOWING POPUP
-        marker.on("contextmenu", (e) => {
-          e.originalEvent.preventDefault(); // stop browser right-click menu
-
-          (async () => {
-            const id = point.id;
-            const isFound = await isMarkerFound(id);
-
-            // Toggle state
-            if (!isFound) {
-              await setDoc(doc(db, "users", user.uid), { found: { [id]: true } }, { merge: true });
-              marker.setOpacity(0.5);
-              delete markers[id];
-              foundMarkers[id] = marker;
-            } else {
-              await setDoc(doc(db, "users", user.uid), { found: { [id]: false } }, { merge: true });
-              marker.setOpacity(1);
-              delete foundMarkers[id];
-              markers[id] = marker;
-            }
-
-            updateMarkersByCategory();
-            updateProgressDisplay();
-
-            marker.addTo(map);
-            createMarkerPopup(marker, point.id);
-          })();
-        });
-
-      });
-
-      updateProgressDisplay();
-  } else {
-    console.log("No")
-    console.log(user)
-    fetch('markers.json')
+      // Now you can safely load markers from Firebase
+      await loadMarkers(user);
+    } else {
+      console.log("No user signed in");
+      fetch('markers.json')
       .then(res => res.json())
       .then(data => {
 
@@ -695,7 +637,71 @@
         updateProgressDisplay();
       })
       .catch(err => console.error("Error loading markers:", err));
-  }  
+    }
+  });
+
+async function loadMarkers(user) {
+  const res = await fetch('markers.json');
+  const data = await res.json();
+
+  totalCount = data.length;
+  updateProgressDisplay();
+  data.forEach(async point => {
+        const isFound = await isMarkerFound(point.id);
+
+        const marker = L.marker(point.coords, {
+          opacity: isFound ? 0.5 : 1,
+          icon: point.icon ? L.icon({
+            iconUrl: point.icon,
+            iconSize: icons[point.category].options.iconSize,
+            iconAnchor: icons[point.category].options.iconAnchor,
+            popupAnchor: icons[point.category].options.popupAnchor
+          }) : icons[point.category],
+          title: point.name
+        });
+
+        marker.category = point.category;
+        marker.description = point.description;
+
+        if (isFound) foundMarkers[point.id] = marker;
+        else markers[point.id] = marker;
+
+        marker.addTo(map);
+        createMarkerPopup(marker, point.id);
+
+        // RIGHT-CLICK TO TOGGLE FOUND WITHOUT SHOWING POPUP
+        marker.on("contextmenu", (e) => {
+          e.originalEvent.preventDefault(); // stop browser right-click menu
+
+          (async () => {
+            const id = point.id;
+            const isFound = await isMarkerFound(id);
+
+            // Toggle state
+            if (!isFound) {
+              await setDoc(doc(db, "users", user.uid), { found: { [id]: true } }, { merge: true });
+              marker.setOpacity(0.5);
+              delete markers[id];
+              foundMarkers[id] = marker;
+            } else {
+              await setDoc(doc(db, "users", user.uid), { found: { [id]: false } }, { merge: true });
+              marker.setOpacity(1);
+              delete foundMarkers[id];
+              markers[id] = marker;
+            }
+
+            updateMarkersByCategory();
+            updateProgressDisplay();
+
+            marker.addTo(map);
+            createMarkerPopup(marker, point.id);
+          })();
+        });
+
+      });
+
+      updateProgressDisplay();
+}
 
   /* ---------- Check Found Function (Logged In) ---------- */
   async function isMarkerFound(pointId) {
