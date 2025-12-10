@@ -675,22 +675,12 @@ async function toggleFound(id, checkbox) {
   if (!marker) return;
 
   if (checkbox.checked) {
-    if (currentUser) {
-      // Save to Firestore
-      await setDoc(doc(db, 'users', currentUser.uid), { [id]: true }, { merge: true });
-    } else {
-      // Save locally
-      localStorage.setItem(`found_${id}`, 'true');
-    }
+    localStorage.setItem(`found_${id}`, 'true');
     marker.setOpacity(0.5);
     delete markers[id];
     foundMarkers[id] = marker;
   } else {
-    if (currentUser) {
-      await setDoc(doc(db, 'users', currentUser.uid), { [id]: false }, { merge: true });
-    } else {
-      localStorage.removeItem(`found_${id}`);
-    }
+    localStorage.removeItem(`found_${id}`);
     marker.setOpacity(1);
     delete foundMarkers[id];
     markers[id] = marker;
@@ -707,30 +697,50 @@ async function toggleFound(id, checkbox) {
 const popupMode = "dark";
 
 function createMarkerPopup(marker, id) {
-  const isFound = foundMarkers[id] === marker;
+  const isFound = localStorage.getItem(`found_${id}`) === 'true';
 
-  const popupDiv = document.createElement('div');
-  popupDiv.style.minWidth = '220px';
-  popupDiv.style.fontFamily = 'Segoe UI,sans-serif';
-  popupDiv.innerHTML = `
-    <h3 style="margin:0 0 6px 0;font-size:20px;color:#9c7cff;">${marker.options.title}</h3>
-    ${marker.description ? `<p style="margin:0 0 10px 0;font-size:14px;color:#fff;">${marker.description}</p>` : ''}
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.1);margin:6px 0;">
-    <label class="popup-toggle">
-      Found <input type="checkbox" ${isFound ? "checked" : ""}>
-    </label>
+  const popupContent = `
+    <div style="
+      font-family: 'Segoe UI', sans-serif;
+      min-width: 220px;
+      color: ${popupMode === "dark" ? "#fff" : "#333"};
+      padding: 10px;
+    ">
+      <h3 style="
+        margin: 0 0 6px 0;
+        font-size: 20px;
+        color: ${popupMode === "dark" ? "#9c7cff" : "#673ab7"};
+      ">${marker.options.title}</h3>
+
+      ${marker.description ? `<p style="
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        line-height: 1.4;
+        color: ${popupMode === "dark" ? "#fff" : "#555"};
+      ">${marker.description}</p>` : ''}
+
+      <hr style="
+        border: none;
+        border-top: 1px solid ${popupMode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"};
+        margin: 6px 0;
+      ">
+
+      <label class="popup-toggle">
+        Found
+        <input type="checkbox" ${isFound ? "checked" : ""} onchange="toggleFound('${id}', this)">
+      </label>
+    </div>
   `;
 
-  const popup = L.popup().setContent(popupDiv);
-  marker.bindPopup(popup);
-
-  const checkbox = popupDiv.querySelector('input[type=checkbox]');
-  checkbox.addEventListener('change', () => toggleFound(id, checkbox));
+  marker.unbindPopup();
+  marker.bindPopup(popupContent);
 
   if (popupMode === "dark") {
     marker.on('popupopen', e => {
       const container = e.popup._container;
-      if (container) container.classList.add('popup-dark');
+      if (container) {
+        container.classList.add('popup-dark');
+      }
     });
   }
 }
@@ -748,18 +758,13 @@ document.querySelectorAll('.subcategory').forEach(section => {
   });
 });
 
-document.getElementById('resetProgress').onclick = async() => {
+document.getElementById('resetProgress').onclick = () => {
   if (!confirm("Are you sure you want to reset all progress?")) return;
 
   // Clear found markers from localStorage
   Object.keys(localStorage).forEach(key => {
     if (key.startsWith("found_")) localStorage.removeItem(key);
   });
-
-  // Reset in Firestore if logged in
-  if (currentUser) {
-    await setDoc(doc(db, "userProgress", currentUser.uid), {}, { merge: true });
-  }
 
   // Reset marker states
   Object.values(foundMarkers).forEach(marker => {
@@ -778,42 +783,59 @@ document.getElementById('resetProgress').onclick = async() => {
 /* ---------- LOAD MARKERS ---------- */
 fetch('markers.json')
   .then(res => res.json())
-  .then(async data => {
+  .then(data => {
+
     totalCount = data.length;
+    updateProgressDisplay();
 
     data.forEach(point => {
-      // Always start marker as "not found"
-      const markerIcon = point.icon
-        ? L.icon({
-            iconUrl: point.icon,
-            iconSize: icons[point.category].options.iconSize || [48,72],
-            iconAnchor: icons[point.category].options.iconAnchor || [24,72],
-            popupAnchor: icons[point.category].options.popupAnchor || [0,-72]
-          })
-        : icons[point.category];
+      const isFound = localStorage.getItem(`found_${point.id}`) === 'true';
 
       const marker = L.marker(point.coords, {
-        opacity: 1,
-        icon: markerIcon,
+        opacity: isFound ? 0.5 : 1,
+        icon: point.icon ? L.icon({
+          iconUrl: point.icon,
+          iconSize: icons[point.category].options.iconSize,
+          iconAnchor: icons[point.category].options.iconAnchor,
+          popupAnchor: icons[point.category].options.popupAnchor
+        }) : icons[point.category],
         title: point.name
       });
 
       marker.category = point.category;
       marker.description = point.description;
 
-      markers[point.id] = marker; // initially all in markers
+      if (isFound) foundMarkers[point.id] = marker;
+      else markers[point.id] = marker;
+
       marker.addTo(map);
       createMarkerPopup(marker, point.id);
 
+      // RIGHT-CLICK TO TOGGLE FOUND WITHOUT SHOWING POPUP
       marker.on("contextmenu", (e) => {
-        e.originalEvent.preventDefault();
-        const currentlyFound = foundMarkers[point.id] === marker;
-        toggleFound(point.id, { checked: !currentlyFound });
+        e.originalEvent.preventDefault(); // stop browser right-click menu
+        const id = point.id;
+        const isFound = localStorage.getItem(`found_${id}`) === "true";
+
+        // Toggle state
+        if (!isFound) {
+          localStorage.setItem(`found_${id}`, "true");
+          marker.setOpacity(0.5);
+          delete markers[id];
+          foundMarkers[id] = marker;
+        } else {
+          localStorage.removeItem(`found_${id}`);
+          marker.setOpacity(1);
+          delete foundMarkers[id];
+          markers[id] = marker;
+        }
+
+        updateMarkersByCategory();
+        updateProgressDisplay();
       });
+
     });
 
-    // After adding all markers, overlay progress
-    await loadUserProgress(); 
     updateProgressDisplay();
   })
   .catch(err => console.error("Error loading markers:", err));
@@ -823,48 +845,6 @@ document.getElementById("toggleSidebar").onclick = () => {
   const side = document.getElementById("controls");
   side.style.display = side.style.display === "none" ? "block" : "none";
 };
-
-async function loadUserProgress() {
-  if (currentUser) {
-    const docRef = doc(db, "userProgress", currentUser.uid);
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      Object.entries(data).forEach(([id, found]) => {
-        const marker = markers[id] || foundMarkers[id];
-        if (!marker) return;
-
-        if (found) {
-          marker.setOpacity(0.5);
-          delete markers[id];
-          foundMarkers[id] = marker;
-        } else {
-          marker.setOpacity(1);
-          delete foundMarkers[id];
-          markers[id] = marker;
-        }
-        createMarkerPopup(marker, id);
-      });
-    }
-  } else {
-    // Load from localStorage if not logged in
-    Object.keys(localStorage).forEach(key => {
-      if (!key.startsWith("found_")) return;
-      const id = key.replace("found_", "");
-      const marker = markers[id] || foundMarkers[id];
-      if (!marker) return;
-
-      marker.setOpacity(0.5);
-      delete markers[id];
-      foundMarkers[id] = marker;
-      createMarkerPopup(marker, id);
-    });
-  }
-
-  updateProgressDisplay();
-  updateMarkersByCategory();
-}
 
 const searchInput = document.getElementById('markerSearch');
 const searchResults = document.getElementById('searchResults');
@@ -976,7 +956,6 @@ map.on('click', e => {
   console.log(`Clicked at: ${lat}, ${lng}`);
 });
 
-window.toggleFound = toggleFound; // expose to popups
 </script>
 
 </body>
