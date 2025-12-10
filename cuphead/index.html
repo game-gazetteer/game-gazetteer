@@ -707,51 +707,30 @@ async function toggleFound(id, checkbox) {
 const popupMode = "dark";
 
 function createMarkerPopup(marker, id) {
-  // Determine if the marker is found
   const isFound = foundMarkers[id] === marker;
 
-  const popupContent = `
-    <div style="
-      font-family: 'Segoe UI', sans-serif;
-      min-width: 220px;
-      color: ${popupMode === "dark" ? "#fff" : "#333"};
-      padding: 10px;
-    ">
-      <h3 style="
-        margin: 0 0 6px 0;
-        font-size: 20px;
-        color: ${popupMode === "dark" ? "#9c7cff" : "#673ab7"};
-      ">${marker.options.title}</h3>
-
-      ${marker.description ? `<p style="
-        margin: 0 0 10px 0;
-        font-size: 14px;
-        line-height: 1.4;
-        color: ${popupMode === "dark" ? "#fff" : "#555"};
-      ">${marker.description}</p>` : ''}
-
-      <hr style="
-        border: none;
-        border-top: 1px solid ${popupMode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"};
-        margin: 6px 0;
-      ">
-
-      <label class="popup-toggle">
-        Found
-        <input type="checkbox" ${isFound ? "checked" : ""} onchange="toggleFound('${id}', this)">
-      </label>
-    </div>
+  const popupDiv = document.createElement('div');
+  popupDiv.style.minWidth = '220px';
+  popupDiv.style.fontFamily = 'Segoe UI,sans-serif';
+  popupDiv.innerHTML = `
+    <h3 style="margin:0 0 6px 0;font-size:20px;color:#9c7cff;">${marker.options.title}</h3>
+    ${marker.description ? `<p style="margin:0 0 10px 0;font-size:14px;color:#fff;">${marker.description}</p>` : ''}
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.1);margin:6px 0;">
+    <label class="popup-toggle">
+      Found <input type="checkbox" ${isFound ? "checked" : ""}>
+    </label>
   `;
 
-  marker.unbindPopup();
-  marker.bindPopup(popupContent);
+  const popup = L.popup().setContent(popupDiv);
+  marker.bindPopup(popup);
+
+  const checkbox = popupDiv.querySelector('input[type=checkbox]');
+  checkbox.addEventListener('change', () => toggleFound(id, checkbox));
 
   if (popupMode === "dark") {
     marker.on('popupopen', e => {
       const container = e.popup._container;
-      if (container) {
-        container.classList.add('popup-dark');
-      }
+      if (container) container.classList.add('popup-dark');
     });
   }
 }
@@ -997,6 +976,7 @@ map.on('click', e => {
   console.log(`Clicked at: ${lat}, ${lng}`);
 });
 
+window.toggleFound = toggleFound; // expose to popups
 </script>
 
 </body>
