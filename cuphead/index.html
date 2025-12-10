@@ -569,6 +569,7 @@
   /* ---------- LOAD MARKERS ---------- */
   if (user) {
     console.log("Yes")
+    console.log(user)
     const res = await fetch('markers.json');
     const data = await res.json();
 
@@ -632,6 +633,7 @@
       updateProgressDisplay();
   } else {
     console.log("No")
+    console.log(user)
     fetch('markers.json')
       .then(res => res.json())
       .then(data => {
