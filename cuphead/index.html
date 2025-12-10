@@ -545,28 +545,6 @@
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
-  import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyBGI-tSZjsy7wvNSu3D_lFZR96TQND-uJU",
-      authDomain: "gamegazetteer-bfed2.firebaseapp.com",
-      projectId: "gamegazetteer-bfed2",
-      storageBucket: "gamegazetteer-bfed2.appspot.com",
-      messagingSenderId: "659845857638",
-      appId: "1:659845857638:web:7ad66baffa924961a948a7",
-      measurementId: "G-Q8QP2RD1BL"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db   = getFirestore(app);
-
-  window.FirebaseServices = { auth, db, doc, getDoc, setDoc };
-</script>
-
 <script>
 /* ---------- MARKER ICONS ---------- */
 const icons = {
@@ -660,28 +638,17 @@ function updateProgressDisplay() {
 }
 
 /* ---------- HELPER FUNCTIONS ---------- */
-async function toggleFound(id, checkbox) {
+function toggleFound(id, checkbox) {
   const marker = markers[id] || foundMarkers[id];
   if (!marker) return;
 
-  const { auth, db, doc, setDoc, getDoc } = window.FirebaseServices;
-  const user = auth.currentUser;
-
   if (checkbox.checked) {
-    if (user) {
-      await setDoc(userDocRef, { found: { [id]: true } }, { merge: true });
-    } else {
-      localStorage.setItem(`found_${id}`, 'true');
-    }
+    localStorage.setItem(`found_${id}`, 'true');
     marker.setOpacity(0.5);
     delete markers[id];
     foundMarkers[id] = marker;
   } else {
-    if (user) {
-      await setDoc(userDocRef, { found: { [id]: false } }, { merge: true });
-    } else {
-      localStorage.removeItem(`found_${id}`);
-    }
+    localStorage.removeItem(`found_${id}`);
     marker.setOpacity(1);
     delete foundMarkers[id];
     markers[id] = marker;
@@ -782,7 +749,6 @@ document.getElementById('resetProgress').onclick = () => {
 };
 
 /* ---------- LOAD MARKERS ---------- */
-
 fetch('markers.json')
   .then(res => res.json())
   .then(data => {
