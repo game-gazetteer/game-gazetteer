@@ -545,38 +545,6 @@
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBGI-tSZjsy7wvNSu3D_lFZR96TQND-uJU",
-  authDomain: "gamegazetteer-bfed2.firebaseapp.com",
-  projectId: "gamegazetteer-bfed2",
-  storageBucket: "gamegazetteer-bfed2.appspot.com",
-  messagingSenderId: "659845857638",
-  appId: "1:659845857638:web:7ad66baffa924961a948a7",
-  measurementId: "G-Q8QP2RD1BL"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-let currentUser = null;
-
-// Track auth state
-onAuthStateChanged(auth, user => {
-  if (user) {
-    currentUser = user;
-    loadUserProgress();
-  } else {
-    currentUser = null;
-  }
-});
-</script>
-
 <script>
 /* ---------- MARKER ICONS ---------- */
 const icons = {
