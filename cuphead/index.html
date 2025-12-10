@@ -800,6 +800,9 @@ fetch('markers.json')
 
         updateMarkersByCategory();
         updateProgressDisplay();
+
+        marker.addTo(map);
+        createMarkerPopup(marker, point.id);
       });
 
     });
