@@ -670,27 +670,17 @@ function updateProgressDisplay() {
 }
 
 /* ---------- HELPER FUNCTIONS ---------- */
-async function toggleFound(id, checkbox) {
+function toggleFound(id, checkbox) {
   const marker = markers[id] || foundMarkers[id];
   if (!marker) return;
 
   if (checkbox.checked) {
-    if (currentUser) {
-      // Save to Firestore
-      await setDoc(doc(db, 'users', currentUser.uid), { [id]: true }, { merge: true });
-    } else {
-      // Save locally
-      localStorage.setItem(`found_${id}`, 'true');
-    }
+    localStorage.setItem(`found_${id}`, 'true');
     marker.setOpacity(0.5);
     delete markers[id];
     foundMarkers[id] = marker;
   } else {
-    if (currentUser) {
-      await setDoc(doc(db, 'users', currentUser.uid), { [id]: false }, { merge: true });
-    } else {
-      localStorage.removeItem(`found_${id}`);
-    }
+    localStorage.removeItem(`found_${id}`);
     marker.setOpacity(1);
     delete foundMarkers[id];
     markers[id] = marker;
