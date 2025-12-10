@@ -55,8 +55,9 @@
             max-width: 1200px;
             margin: auto;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, 260px);
             gap: 30px;
+            justify-content: center;
         }
 
         /* MAP CARDS */
@@ -132,15 +133,15 @@
     <div class="grid" id="mapGrid">
 
         <!-- SAMPLE CARDS (Replace with your own) -->
-        <div class="map-card" data-title="Cuphead Map" onclick="location.href='cuphead'">
+        <div class="map-card" data-title="Cuphead" onclick="location.href='cuphead'">
             <img src="thumbnails/cuphead.png" alt="Cuphead">
             <div class="title">Cuphead</div>
         </div>
 
-        <!--<div class="map-card" data-title="Placeholder" onclick="location.href='./hk-map/index.html'">
-            <img src="thumbnails/hk.jpg" alt="Placeholder">
-            <div class="title">Placeholder</div>
-        </div>-->
+        <div class="map-card" data-title="Celeste">
+            <img src="thumbnails/placeholder.png" alt="Placeholder">
+            <div class="title">Upcoming: Celeste</div>
+        </div>
 
     </div>
 
