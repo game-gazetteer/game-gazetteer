@@ -544,71 +544,6 @@
 
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
-  import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyBGI-tSZjsy7wvNSu3D_lFZR96TQND-uJU",
-    authDomain: "gamegazetteer-bfed2.firebaseapp.com",
-    projectId: "gamegazetteer-bfed2",
-    storageBucket: "gamegazetteer-bfed2.appspot.com",
-    messagingSenderId: "659845857638",
-    appId: "1:659845857638:web:7ad66baffa924961a948a7",
-    measurementId: "G-Q8QP2RD1BL"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db   = getFirestore(app);
-
-  window.FirebaseServices = { auth, db, doc, getDoc, setDoc };
-
-  const user = auth.currentUser;
-
-  async function toggleFound(id, checkbox) {
-    const marker = markers[id] || foundMarkers[id];
-    if (!marker) return;
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        console.log("success")
-        if (checkbox.checked) {
-          await setDoc(doc(db, "users", user.uid), { found: { [id]: true } }, { merge: true });
-          marker.setOpacity(0.5);
-          delete markers[id];
-          foundMarkers[id] = marker;
-        } else {
-          await setDoc(doc(db, "users", user.uid), { found: { [id]: false } }, { merge: true });
-          marker.setOpacity(1);
-          delete foundMarkers[id];
-          markers[id] = marker;
-        }
-      } else {
-        console.log("fail")
-        if (checkbox.checked) {
-          localStorage.setItem(`found_${id}`, 'true');
-          marker.setOpacity(0.5);
-          delete markers[id];
-          foundMarkers[id] = marker;
-        } else {
-          localStorage.removeItem(`found_${id}`);
-          marker.setOpacity(1);
-          delete foundMarkers[id];
-          markers[id] = marker;
-        }
-      }
-    });
-    updateMarkersByCategory();
-    updateProgressDisplay();
-
-    createMarkerPopup(marker, id);
-    marker.openPopup();
-
-  }
-  window.toggleFound = toggleFound;
-</script>
-
 
 <script>
 /* ---------- MARKER ICONS ---------- */
@@ -703,6 +638,32 @@ function updateProgressDisplay() {
 }
 
 /* ---------- HELPER FUNCTIONS ---------- */
+function toggleFound(id, checkbox) {
+  const marker = markers[id] || foundMarkers[id];
+  if (!marker) return;
+
+  if (checkbox.checked) {
+    localStorage.setItem(`found_${id}`, 'true');
+    marker.setOpacity(0.5);
+    delete markers[id];
+    foundMarkers[id] = marker;
+  } else {
+    localStorage.removeItem(`found_${id}`);
+    marker.setOpacity(1);
+    delete foundMarkers[id];
+    markers[id] = marker;
+  }
+
+  updateMarkersByCategory();
+  updateProgressDisplay();
+
+  createMarkerPopup(marker, id);
+  marker.openPopup();
+}
+
+// popup mode
+const popupMode = "dark";
+
 function createMarkerPopup(marker, id) {
   const isFound = localStorage.getItem(`found_${id}`) === 'true';
 
@@ -710,25 +671,25 @@ function createMarkerPopup(marker, id) {
     <div style="
       font-family: 'Segoe UI', sans-serif;
       min-width: 220px;
-      color: #fff;
+      color: ${popupMode === "dark" ? "#fff" : "#333"};
       padding: 10px;
     ">
       <h3 style="
         margin: 0 0 6px 0;
         font-size: 20px;
-        color: #9c7cff;
+        color: ${popupMode === "dark" ? "#9c7cff" : "#673ab7"};
       ">${marker.options.title}</h3>
 
       ${marker.description ? `<p style="
         margin: 0 0 10px 0;
         font-size: 14px;
         line-height: 1.4;
-        color: #fff;
+        color: ${popupMode === "dark" ? "#fff" : "#555"};
       ">${marker.description}</p>` : ''}
 
       <hr style="
         border: none;
-        border-top: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid ${popupMode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"};
         margin: 6px 0;
       ">
 
@@ -742,13 +703,14 @@ function createMarkerPopup(marker, id) {
   marker.unbindPopup();
   marker.bindPopup(popupContent);
 
-  // Always-dark mode: add the dark class on popup open
-  marker.on('popupopen', e => {
-    const container = e.popup._container;
-    if (container) {
-      container.classList.add('popup-dark');
-    }
-  });
+  if (popupMode === "dark") {
+    marker.on('popupopen', e => {
+      const container = e.popup._container;
+      if (container) {
+        container.classList.add('popup-dark');
+      }
+    });
+  }
 }
 
 // Make sidebar subcategories collapsible
