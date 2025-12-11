@@ -901,6 +901,8 @@ map.on('click', e => {
           updateProgressDisplay();
         });
   });
+  console.log("Loaded JSON:", data);
+  console.log("Data length:", data.length);
 
   // LOAD found markers from Firebase
   async function loadFoundMarkersFromFirebase(user) {
