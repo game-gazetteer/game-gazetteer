@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessibility Statement – Game Gazetteer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: "IM Fell English", serif;
+            background-color: #e7d8b1;
+            color: #3a2d17;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            background: rgba(255, 245, 214, 0.95);
+            border: 2px solid #5e4729;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(70, 50, 20, 0.4);
+        }
+
+        h1 {
+            font-family: "Cinzel", serif;
+            text-align: center;
+            font-size: 2.8em;
+            margin-top: 0;
+            text-shadow: 0 0 6px #f7f1dc;
+        }
+
+        h2 {
+            font-family: "Cinzel", serif;
+            margin-top: 30px;
+            border-bottom: 1px solid #6a5331;
+            padding-bottom: 5px;
+        }
+
+        p, li {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: #5e4729;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            background: rgba(205, 185, 135, 0.95);
+            border-top: 2px solid #5e4729;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+    <h1>Accessibility Statement</h1>
+
+    <p>
+        Game Gazetteer is committed to providing an accessible experience for all
+        users, including those with disabilities. We strive to ensure that our
+        interactive maps and content are usable by as many people as possible.
+    </p>
+
+    <h2>Accessibility Goals</h2>
+    <p>
+        Our goal is to make Game Gazetteer accessible in accordance with generally
+        recognized accessibility standards, including the Web Content Accessibility
+        Guidelines (WCAG), where reasonably possible.
+    </p>
+
+    <h2>Measures We Support</h2>
+    <ul>
+        <li>Readable fonts and clear color contrast</li>
+        <li>Keyboard-accessible navigation where possible</li>
+        <li>Semantic HTML structure for screen readers</li>
+        <li>Scalable text and responsive layouts</li>
+        <li>Descriptive alternative text for key images</li>
+    </ul>
+
+    <h2>Known Limitations</h2>
+    <p>
+        Some interactive map features rely on third-party libraries or custom
+        graphics that may not yet be fully accessible to all assistive technologies.
+        We acknowledge these limitations and aim to improve accessibility over time.
+    </p>
+
+    <h2>Third-Party Content</h2>
+    <p>
+        Game Gazetteer uses third-party services and libraries, including mapping
+        and authentication tools, which may not fully conform to accessibility
+        standards. We do not control the accessibility of third-party content.
+    </p>
+
+    <h2>Feedback & Contact</h2>
+    <p>
+        If you encounter accessibility barriers while using Game Gazetteer, we
+        welcome your feedback. Please reach out through the official Game Gazetteer
+        website so we can review and address the issue where feasible.
+    </p>
+
+    <p>
+        We view accessibility as an ongoing effort and appreciate your patience
+        as the site continues to evolve.
+    </p>
+
+    <p><strong>Last updated:</strong> 2025</p>
+
+    <div class="back-link">
+        <a href="index.html">← Return to Game Gazetteer</a>
+    </div>
+</div>
+
+<footer>
+    © <span id="year"></span> Game Gazetteer
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact & Support – Game Gazetteer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: "IM Fell English", serif;
+            background-color: #e7d8b1;
+            color: #3a2d17;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            background: rgba(255, 245, 214, 0.95);
+            border: 2px solid #5e4729;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(70, 50, 20, 0.4);
+        }
+
+        h1 {
+            font-family: "Cinzel", serif;
+            text-align: center;
+            font-size: 2.8em;
+            margin-top: 0;
+            text-shadow: 0 0 6px #f7f1dc;
+        }
+
+        h2 {
+            font-family: "Cinzel", serif;
+            margin-top: 30px;
+            border-bottom: 1px solid #6a5331;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .contact-box {
+            background: rgba(240, 225, 185, 0.9);
+            border: 1px solid #6a5331;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .support-box {
+            background: rgba(225, 205, 160, 0.95);
+            border: 2px solid #5e4729;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .support-box a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #6a5331;
+            color: #f4e7c5;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: "Cinzel", serif;
+            font-size: 1em;
+        }
+
+        .support-box a:hover {
+            background: #5e4729;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: #5e4729;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            background: rgba(205, 185, 135, 0.95);
+            border-top: 2px solid #5e4729;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+    <h1>Contact & Support</h1>
+
+    <p>
+        Game Gazetteer is an independent, fan-created project built and maintained
+        by a single creator. Feedback, corrections, and thoughtful suggestions are
+        always welcome.
+    </p>
+
+    <h2>Contact</h2>
+    <div class="contact-box">
+        <p>
+            If you would like to report an issue, suggest a feature, or share feedback,
+            please reach out through one of the following methods:
+        </p>
+
+        <form id="feedback-form" class="contact-box">
+            <p>
+                Use the form below to send feedback, report issues, or suggest improvements.
+            </p>
+
+            <label for="message">Message</label><br>
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+                style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 8px;
+                    font-family: 'IM Fell English', serif;
+                    font-size: 1em;
+                    border-radius: 6px;
+                    border: 2px solid #6a5331;
+                    background: #f4e7c5;
+                "
+            ></textarea>
+
+            <button type="submit" style="
+                margin-top: 15px;
+                padding: 8px 16px;
+                font-family: 'Cinzel', serif;
+                font-size: 1em;
+                border-radius: 6px;
+                border: 2px solid #6a5331;
+                background: #6a5331;
+                color: #f4e7c5;
+                cursor: pointer;
+            ">
+                Send Feedback
+            </button>
+
+            <p id="feedback-status" style="margin-top: 10px;"></p>
+        </form>
+
+        <p>
+            Please note that responses may take time, as the project is maintained
+            by one person.
+        </p>
+    </div>
+
+    <h2>Support the Project</h2>
+    <div class="support-box">
+        <p>
+            Game Gazetteer is free to use and built by a single creator in personal
+            time. If you find the maps helpful and would like to support continued
+            development, hosting costs, and future improvements, you can do so below.
+        </p>
+
+        <p>
+            Support is completely optional, but always appreciated.
+        </p>
+
+        <a
+            href="https://ko-fi.com/gamegazetteer"
+            target="_blank"
+            rel="noopener"
+            aria-label="Support Game Gazetteer on Ko-fi"
+        >
+            ☕ Support the Gazetteer
+        </a>
+
+        <p style="margin-top: 12px; font-size: 0.95em;">
+            One-time or recurring support available.
+        </p>
+    </div>
+
+
+    <div class="back-link">
+        <a href="index.html">← Return to Game Gazetteer</a>
+    </div>
+</div>
+
+<footer>
+    © <span id="year"></span> Game Gazetteer
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+    // SAME Firebase config as your main site
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGI-tSZjsy7wvNSu3D_lFZR96TQND-uJU",
+        authDomain: "gamegazetteer-bfed2.firebaseapp.com",
+        projectId: "gamegazetteer-bfed2",
+        storageBucket: "gamegazetteer-bfed2.appspot.com",
+        messagingSenderId: "659845857638",
+        appId: "1:659845857638:web:7ad66baffa924961a948a7"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    let currentUser = null;
+
+    onAuthStateChanged(auth, user => {
+        currentUser = user;
+    });
+
+    const form = document.getElementById("feedback-form");
+    const status = document.getElementById("feedback-status");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const message = document.getElementById("message").value.trim();
+
+        if (!message) return;
+
+        try {
+            await addDoc(collection(db, "feedback"), {
+                message,
+                uid: currentUser ? currentUser.uid : null,
+                email: currentUser ? currentUser.email : null,
+                createdAt: serverTimestamp(),
+                page: window.location.pathname
+            });
+
+            form.reset();
+            status.textContent = "Thank you! Your feedback has been sent.";
+            status.style.color = "#2f6b2f";
+
+        } catch (err) {
+            status.textContent = "Error sending feedback. Please try again later.";
+            status.style.color = "#8b2e2e";
+            console.error(err);
+        }
+    });
+</script>
+
+</body>
+</html>

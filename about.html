@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About – Game Gazetteer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: "IM Fell English", serif;
+            background-color: #e7d8b1;
+            color: #3a2d17;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            background: rgba(255, 245, 214, 0.95);
+            border: 2px solid #5e4729;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(70, 50, 20, 0.4);
+        }
+
+        h1 {
+            font-family: "Cinzel", serif;
+            text-align: center;
+            font-size: 2.8em;
+            margin-top: 0;
+            text-shadow: 0 0 6px #f7f1dc;
+        }
+
+        h2 {
+            font-family: "Cinzel", serif;
+            margin-top: 30px;
+            border-bottom: 1px solid #6a5331;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: #5e4729;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            background: rgba(205, 185, 135, 0.95);
+            border-top: 2px solid #5e4729;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+    <h1>About Game Gazetteer</h1>
+
+    <p>
+        <strong>Game Gazetteer</strong> is a growing collection of hand-crafted,
+        interactive maps designed to help players explore, track, and uncover
+        the hidden details of their favorite games.
+    </p>
+
+    <h2>The Idea</h2>
+    <p>
+        Many games are rich with secrets, collectibles, and layered environments.
+        Game Gazetteer was created to serve as a modern explorer’s journal —
+        a place where maps feel less like checklists and more like living atlases.
+    </p>
+
+    <h2>What Makes It Different</h2>
+    <p>
+        Each map is built with care, prioritizing clarity, atmosphere, and usability.
+        Rather than overwhelming players with noise, Game Gazetteer focuses on
+        thoughtful design, smooth interaction, and respect for the source material.
+    </p>
+
+    <h2>Independent & Fan-Made</h2>
+    <p>
+        Game Gazetteer is an independent, fan-created project built and maintained
+        by a single creator. Every map, feature, and design decision is crafted
+        by me, one person with a deep appreciation for game worlds and careful,
+        hands-on craftsmanship.
+    </p>
+
+    <p>
+        The project is not affiliated with or endorsed by any game developers or
+        publishers. All game-related names, locations, and assets belong to their
+        respective owners and are used for reference purposes.
+    </p>
+
+    <h2>Looking Ahead</h2>
+    <p>
+        Game Gazetteer is actively evolving. New maps, features, and improvements
+        are added over time as the project grows, guided by player feedback and a
+        continued passion for game worlds worth exploring.
+    </p>
+
+    <div class="back-link">
+        <a href="index.html">← Return to Game Gazetteer</a>
+    </div>
+</div>
+
+<footer>
+    © <span id="year"></span> Game Gazetteer
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
