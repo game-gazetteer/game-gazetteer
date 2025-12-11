@@ -703,9 +703,6 @@ function updateProgressDisplay() {
 }
 
 /* ---------- HELPER FUNCTIONS ---------- */
-// popup mode
-const popupMode = "dark";
-
 function createMarkerPopup(marker, id) {
   const isFound = localStorage.getItem(`found_${id}`) === 'true';
 
@@ -713,25 +710,25 @@ function createMarkerPopup(marker, id) {
     <div style="
       font-family: 'Segoe UI', sans-serif;
       min-width: 220px;
-      color: ${popupMode === "dark" ? "#fff" : "#333"};
+      color: #fff;
       padding: 10px;
     ">
       <h3 style="
         margin: 0 0 6px 0;
         font-size: 20px;
-        color: ${popupMode === "dark" ? "#9c7cff" : "#673ab7"};
+        color: #9c7cff;
       ">${marker.options.title}</h3>
 
       ${marker.description ? `<p style="
         margin: 0 0 10px 0;
         font-size: 14px;
         line-height: 1.4;
-        color: ${popupMode === "dark" ? "#fff" : "#555"};
+        color: #fff;
       ">${marker.description}</p>` : ''}
 
       <hr style="
         border: none;
-        border-top: 1px solid ${popupMode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"};
+        border-top: 1px solid rgba(255,255,255,0.1);
         margin: 6px 0;
       ">
 
@@ -745,14 +742,13 @@ function createMarkerPopup(marker, id) {
   marker.unbindPopup();
   marker.bindPopup(popupContent);
 
-  if (popupMode === "dark") {
-    marker.on('popupopen', e => {
-      const container = e.popup._container;
-      if (container) {
-        container.classList.add('popup-dark');
-      }
-    });
-  }
+  // Always-dark mode: add the dark class on popup open
+  marker.on('popupopen', e => {
+    const container = e.popup._container;
+    if (container) {
+      container.classList.add('popup-dark');
+    }
+  });
 }
 
 // Make sidebar subcategories collapsible
