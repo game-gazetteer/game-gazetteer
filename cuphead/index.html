@@ -784,7 +784,7 @@ map.on('click', e => {
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  // const analytics = getAnalytics(app);
   const auth = getAuth();
   const db = getFirestore();
 
@@ -800,8 +800,11 @@ map.on('click', e => {
         console.log("User logged in → loading Firebase progress");
 
         // LOAD from Firebase
+        console.log("Auth state:", user?.uid);
+        console.log("Calling Firebase loader...");
         foundIds = await loadFoundMarkersFromFirebase(user);
-        console.log("Loaded")
+        console.log("Loaded foundIds:", foundIds);
+        console.log("Reached FETCH block");
     } else {
         isLoggedIn = false
         console.log("Not logged in → using localStorage");
@@ -908,13 +911,22 @@ map.on('click', e => {
 
   // LOAD found markers from Firebase
   async function loadFoundMarkersFromFirebase(user) {
-      const ref = doc(db, "users", user.uid, "progress", "foundMarkers");
-      const snap = await getDoc(ref);
-      if (snap.exists()) {
-          return snap.data().found || [];
-      } 
-      return [];
+    try {
+        const ref = doc(db, "users", user.uid, "progress", "foundMarkers");
+        const snap = await getDoc(ref);
+
+        if (!snap.exists()) return [];
+
+        const found = snap.data().found;
+
+        return Array.isArray(found) ? found : [];
+    } 
+    catch (err) {
+        console.error("FIREBASE READ ERROR:", err);
+        return [];
+    }
   }
+
 
   // SAVE found markers TO Firebase
   async function saveFoundMarkersToFirebase(user, foundIdsArray) {
