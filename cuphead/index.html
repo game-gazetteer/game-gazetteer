@@ -811,6 +811,7 @@ map.on('click', e => {
     }
 
       /* ---------- LOAD MARKERS ---------- */
+      console.log("Reached FETCH block");
       fetch('markers.json')
         .then(res => res.json())
         .then(data => {
