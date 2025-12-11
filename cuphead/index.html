@@ -596,29 +596,49 @@
         .then(data => {
 
           totalCount = data.length;
-          updateProgressDisplay();
 
           data.forEach(point => {
-            const isFound = foundIds.includes(String(point.id));
+            const id = String(point.id);
+            const isFound = foundIds.includes(id);
+
+            const baseIcon = icons[point.category] || L.icon({
+                iconSize: [48, 72],
+                iconAnchor: [24, 72],
+                popupAnchor: [0, -72]
+            });
+
+            let iconToUse = baseIcon;
+
+            // Override with a custom image if provided
+            if (point.icon) {
+                iconToUse = L.icon({
+                    iconUrl: point.icon,
+                    iconSize: baseIcon?.options?.iconSize ?? [48,72],
+                    iconAnchor: baseIcon?.options?.iconAnchor ?? [24,72],
+                    popupAnchor: baseIcon?.options?.popupAnchor ?? [0,-72]
+                });
+            }
+
+            /* ============================
+                CREATE MARKER
+                ============================ */
 
             const marker = L.marker(point.coords, {
-              opacity: isFound ? 0.5 : 1,
-              icon: point.icon ? L.icon({
-                iconUrl: point.icon,
-                iconSize: icons[point.category].options.iconSize,
-                iconAnchor: icons[point.category].options.iconAnchor,
-                popupAnchor: icons[point.category].options.popupAnchor
-              }) : icons[point.category],
-              title: point.name
+                opacity: isFound ? 0.5 : 1,
+                icon: iconToUse,
+                title: point.name
             });
 
             marker.category = point.category;
             marker.description = point.description;
             marker.isFound = isFound;
 
-            if (isFound) foundMarkers[point.id] = marker;
-            else markers[point.id] = marker;
-
+            if (isFound) {
+              foundMarkers[point.id] = marker;
+            } else {
+              markers[point.id] = marker;
+            }
+              
             marker.addTo(map);
             createMarkerPopup(marker, point.id);
 
