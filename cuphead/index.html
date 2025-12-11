@@ -614,6 +614,7 @@
 
             marker.category = point.category;
             marker.description = point.description;
+            marker.isFound = isFound;
 
             if (isFound) foundMarkers[point.id] = marker;
             else markers[point.id] = marker;
@@ -688,6 +689,7 @@
     if (!marker) return;
 
     const isNowFound = checkbox.checked;
+    marker.isFound = isNowFound;
 
     if (isNowFound) {
       marker.setOpacity(0.5);
@@ -720,7 +722,7 @@
   }
 
   function createMarkerPopup(marker, id) {
-    const isFound = localStorage.getItem(`found_${id}`) === 'true';
+    const isFound = marker.isFound;
 
     // Create container div
     const popupContainer = document.createElement("div");
