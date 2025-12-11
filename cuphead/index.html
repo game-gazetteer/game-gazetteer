@@ -545,6 +545,275 @@
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+  import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+
+  // Firebase config
+  const firebaseConfig = {
+      apiKey: "AIzaSyBGI-tSZjsy7wvNSu3D_lFZR96TQND-uJU",
+      authDomain: "gamegazetteer-bfed2.firebaseapp.com",
+      projectId: "gamegazetteer-bfed2",
+      storageBucket: "gamegazetteer-bfed2.appspot.com",
+      messagingSenderId: "659845857638",
+      appId: "1:659845857638:web:7ad66baffa924961a948a7",
+      measurementId: "G-Q8QP2RD1BL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth();
+  const db = getFirestore();
+
+  let isLoggedIn = false;
+
+  // Check Logged in
+  onAuthStateChanged(auth, async user => {
+
+    let foundIds = [];
+
+    if (user) {
+        isLoggedIn = true
+        console.log("User logged in → loading Firebase progress");
+
+        // LOAD from Firebase
+        foundIds = await loadFoundMarkersFromFirebase(user);
+    } else {
+        isLoggedIn = false
+        console.log("Not logged in → using localStorage");
+
+        foundIds = Object.keys(localStorage)
+            .filter(k => k.startsWith("found_") && localStorage.getItem(k) === "true")
+            .map(k => k.replace("found_", ""));
+    }
+
+      /* ---------- LOAD MARKERS ---------- */
+      fetch('markers.json')
+        .then(res => res.json())
+        .then(data => {
+
+          totalCount = data.length;
+          updateProgressDisplay();
+
+          data.forEach(point => {
+            const isFound = foundIds.includes(String(point.id));
+
+            const marker = L.marker(point.coords, {
+              opacity: isFound ? 0.5 : 1,
+              icon: point.icon ? L.icon({
+                iconUrl: point.icon,
+                iconSize: icons[point.category].options.iconSize,
+                iconAnchor: icons[point.category].options.iconAnchor,
+                popupAnchor: icons[point.category].options.popupAnchor
+              }) : icons[point.category],
+              title: point.name
+            });
+
+            marker.category = point.category;
+            marker.description = point.description;
+
+            if (isFound) foundMarkers[point.id] = marker;
+            else markers[point.id] = marker;
+
+            marker.addTo(map);
+            createMarkerPopup(marker, point.id);
+
+            // RIGHT-CLICK TO TOGGLE FOUND WITHOUT SHOWING POPUP
+            marker.on("contextmenu", async (e) => {
+              e.originalEvent.preventDefault(); // stop browser right-click menu
+              const id = point.id;
+              const isNowFound = !foundIds.includes(String(id));
+
+              // Toggle state
+              if (isNowFound) {
+                foundIds.push(String(id));
+                marker.setOpacity(0.5);
+                delete markers[id];
+                foundMarkers[id] = marker;
+              } else {
+                foundIds = foundIds.filter(x => x !== String(id));
+                marker.setOpacity(1);
+                delete foundMarkers[id];
+                markers[id] = marker;
+              }
+
+              // SAVE depending on logged in status
+              if (isLoggedIn && user) {
+                await saveFoundMarkersToFirebase(user, foundIds);
+              } else {
+                if (isNowFound) localStorage.setItem(`found_${id}`, "true");
+                else localStorage.removeItem(`found_${id}`);
+              }
+
+              updateMarkersByCategory();
+              updateProgressDisplay();
+
+              marker.addTo(map);
+              createMarkerPopup(marker, point.id);
+            });
+
+          });
+
+          updateProgressDisplay();
+        });
+  });
+
+  // LOAD found markers from Firebase
+  async function loadFoundMarkersFromFirebase(user) {
+      const ref = doc(db, "users", user.uid, "progress", "foundMarkers");
+      const snap = await getDoc(ref);
+      if (snap.exists()) {
+          return snap.data().found || [];
+      } 
+      return [];
+  }
+
+  // SAVE found markers TO Firebase
+  async function saveFoundMarkersToFirebase(user, foundIdsArray) {
+      const ref = doc(db, "users", user.uid, "progress", "foundMarkers");
+      await setDoc(ref, { found: foundIdsArray });
+  }
+
+  /* ---------- SIDEBAR TOGGLE ---------- */
+  document.getElementById("toggleSidebar").onclick = () => {
+    const side = document.getElementById("controls");
+    side.style.display = side.style.display === "none" ? "block" : "none";
+  };
+
+  async function toggleFound(id, checkbox) {
+    const marker = markers[id] || foundMarkers[id];
+    if (!marker) return;
+
+    const isNowFound = checkbox.checked;
+
+    if (isNowFound) {
+      marker.setOpacity(0.5);
+      delete markers[id];
+      foundMarkers[id] = marker;
+    } else {
+      marker.setOpacity(1);
+      delete foundMarkers[id];
+      markers[id] = marker;
+    }
+
+    if (isLoggedIn && auth.currentUser) {
+      // update foundIds array
+      let foundIds = Object.keys(foundMarkers);
+      if (isNowFound && !foundIds.includes(String(id))) foundIds.push(String(id));
+      if (!isNowFound) foundIds = foundIds.filter(x => x !== String(id));
+
+      await saveFoundMarkersToFirebase(auth.currentUser, foundIds);
+    } else {
+      // fallback to localStorage
+      if (isNowFound) localStorage.setItem(`found_${id}`, "true");
+      else localStorage.removeItem(`found_${id}`);
+    }
+
+    updateMarkersByCategory();
+    updateProgressDisplay();
+
+    createMarkerPopup(marker, id);
+    marker.openPopup();
+  }
+
+  function createMarkerPopup(marker, id) {
+    const isFound = localStorage.getItem(`found_${id}`) === 'true';
+
+    // Create container div
+    const popupContainer = document.createElement("div");
+    popupContainer.style.fontFamily = "'Segoe UI', sans-serif";
+    popupContainer.style.minWidth = "220px";
+    popupContainer.style.color = "#fff";
+    popupContainer.style.padding = "10px";
+
+    // Title
+    const title = document.createElement("h3");
+    title.style.margin = "0 0 6px 0";
+    title.style.fontSize = "20px";
+    title.style.color = "#9c7cff";
+    title.innerText = marker.options.title;
+    popupContainer.appendChild(title);
+
+    // Description
+    if (marker.description) {
+      const desc = document.createElement("p");
+      desc.style.margin = "0 0 10px 0";
+      desc.style.fontSize = "14px";
+      desc.style.lineHeight = "1.4";
+      desc.style.color = "#fff";
+      desc.innerText = marker.description;
+      popupContainer.appendChild(desc);
+    }
+
+    // Horizontal line
+    const hr = document.createElement("hr");
+    hr.style.border = "none";
+    hr.style.borderTop = "1px solid rgba(255,255,255,0.1)";
+    hr.style.margin = "6px 0";
+    popupContainer.appendChild(hr);
+
+    // Found checkbox
+    const label = document.createElement("label");
+    label.className = "popup-toggle";
+    label.innerText = "Found ";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.checked = isFound;
+    input.addEventListener("change", e => toggleFound(id, e.target));
+
+    label.appendChild(input);
+    popupContainer.appendChild(label);
+
+    // Bind popup
+    marker.unbindPopup();
+    marker.bindPopup(popupContainer);
+
+    marker.on('popupopen', e => {
+      const container = e.popup._container;
+      if (container) container.classList.add('popup-dark');
+    });
+  }
+
+  document.getElementById('resetProgress').onclick = async () => {
+    if (!confirm("Are you sure you want to reset all progress?")) return;
+
+    // Clear found markers from localStorage
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith("found_")) localStorage.removeItem(key);
+    });
+
+    // Reset marker states
+    Object.values(foundMarkers).forEach(marker => {
+      marker.setOpacity(1);
+      markers[marker.options.title] = marker; // put back into markers (optional)
+    });
+
+    // Clear foundMarkers object
+    for (const id in foundMarkers) delete foundMarkers[id];
+
+    // Update map and progress display
+    updateMarkersByCategory();
+    updateProgressDisplay();
+
+    // ----- Reset Firebase ONLY if logged in -----
+    if (isLoggedIn && auth.currentUser) {
+      try {
+        const ref = doc(db, "users", auth.currentUser.uid, "progress", "foundMarkers");
+        await setDoc(ref, { found: [] });
+        console.log("Firebase progress reset successfully.");
+      } catch (err) {
+        console.error("Error resetting Firebase progress:", err);
+      }
+    }
+  };
+
+</script>
+
+
 <script>
 /* ---------- MARKER ICONS ---------- */
 const icons = {
@@ -638,80 +907,6 @@ function updateProgressDisplay() {
 }
 
 /* ---------- HELPER FUNCTIONS ---------- */
-function toggleFound(id, checkbox) {
-  const marker = markers[id] || foundMarkers[id];
-  if (!marker) return;
-
-  if (checkbox.checked) {
-    localStorage.setItem(`found_${id}`, 'true');
-    marker.setOpacity(0.5);
-    delete markers[id];
-    foundMarkers[id] = marker;
-  } else {
-    localStorage.removeItem(`found_${id}`);
-    marker.setOpacity(1);
-    delete foundMarkers[id];
-    markers[id] = marker;
-  }
-
-  updateMarkersByCategory();
-  updateProgressDisplay();
-
-  createMarkerPopup(marker, id);
-  marker.openPopup();
-}
-
-// popup mode
-const popupMode = "dark";
-
-function createMarkerPopup(marker, id) {
-  const isFound = localStorage.getItem(`found_${id}`) === 'true';
-
-  const popupContent = `
-    <div style="
-      font-family: 'Segoe UI', sans-serif;
-      min-width: 220px;
-      color: ${popupMode === "dark" ? "#fff" : "#333"};
-      padding: 10px;
-    ">
-      <h3 style="
-        margin: 0 0 6px 0;
-        font-size: 20px;
-        color: ${popupMode === "dark" ? "#9c7cff" : "#673ab7"};
-      ">${marker.options.title}</h3>
-
-      ${marker.description ? `<p style="
-        margin: 0 0 10px 0;
-        font-size: 14px;
-        line-height: 1.4;
-        color: ${popupMode === "dark" ? "#fff" : "#555"};
-      ">${marker.description}</p>` : ''}
-
-      <hr style="
-        border: none;
-        border-top: 1px solid ${popupMode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"};
-        margin: 6px 0;
-      ">
-
-      <label class="popup-toggle">
-        Found
-        <input type="checkbox" ${isFound ? "checked" : ""} onchange="toggleFound('${id}', this)">
-      </label>
-    </div>
-  `;
-
-  marker.unbindPopup();
-  marker.bindPopup(popupContent);
-
-  if (popupMode === "dark") {
-    marker.on('popupopen', e => {
-      const container = e.popup._container;
-      if (container) {
-        container.classList.add('popup-dark');
-      }
-    });
-  }
-}
 
 // Make sidebar subcategories collapsible
 document.querySelectorAll('.subcategory').forEach(section => {
@@ -725,97 +920,6 @@ document.querySelectorAll('.subcategory').forEach(section => {
     section.classList.toggle("collapsed");
   });
 });
-
-document.getElementById('resetProgress').onclick = () => {
-  if (!confirm("Are you sure you want to reset all progress?")) return;
-
-  // Clear found markers from localStorage
-  Object.keys(localStorage).forEach(key => {
-    if (key.startsWith("found_")) localStorage.removeItem(key);
-  });
-
-  // Reset marker states
-  Object.values(foundMarkers).forEach(marker => {
-    marker.setOpacity(1);
-    markers[marker.options.title] = marker; // put back into markers (optional)
-  });
-
-  // Clear foundMarkers object
-  for (const id in foundMarkers) delete foundMarkers[id];
-
-  // Update map and progress display
-  updateMarkersByCategory();
-  updateProgressDisplay();
-};
-
-/* ---------- LOAD MARKERS ---------- */
-fetch('markers.json')
-  .then(res => res.json())
-  .then(data => {
-
-    totalCount = data.length;
-    updateProgressDisplay();
-
-    data.forEach(point => {
-      const isFound = localStorage.getItem(`found_${point.id}`) === 'true';
-
-      const marker = L.marker(point.coords, {
-        opacity: isFound ? 0.5 : 1,
-        icon: point.icon ? L.icon({
-          iconUrl: point.icon,
-          iconSize: icons[point.category].options.iconSize,
-          iconAnchor: icons[point.category].options.iconAnchor,
-          popupAnchor: icons[point.category].options.popupAnchor
-        }) : icons[point.category],
-        title: point.name
-      });
-
-      marker.category = point.category;
-      marker.description = point.description;
-
-      if (isFound) foundMarkers[point.id] = marker;
-      else markers[point.id] = marker;
-
-      marker.addTo(map);
-      createMarkerPopup(marker, point.id);
-
-      // RIGHT-CLICK TO TOGGLE FOUND WITHOUT SHOWING POPUP
-      marker.on("contextmenu", (e) => {
-        e.originalEvent.preventDefault(); // stop browser right-click menu
-        const id = point.id;
-        const isFound = localStorage.getItem(`found_${id}`) === "true";
-
-        // Toggle state
-        if (!isFound) {
-          localStorage.setItem(`found_${id}`, "true");
-          marker.setOpacity(0.5);
-          delete markers[id];
-          foundMarkers[id] = marker;
-        } else {
-          localStorage.removeItem(`found_${id}`);
-          marker.setOpacity(1);
-          delete foundMarkers[id];
-          markers[id] = marker;
-        }
-
-        updateMarkersByCategory();
-        updateProgressDisplay();
-
-        marker.addTo(map);
-        createMarkerPopup(marker, point.id);
-      });
-
-    });
-
-    updateProgressDisplay();
-  })
-  .catch(err => console.error("Error loading markers:", err));
-
-/* ---------- SIDEBAR TOGGLE ---------- */
-document.getElementById("toggleSidebar").onclick = () => {
-  const side = document.getElementById("controls");
-  side.style.display = side.style.display === "none" ? "block" : "none";
-};
 
 const searchInput = document.getElementById('markerSearch');
 const searchResults = document.getElementById('searchResults');
