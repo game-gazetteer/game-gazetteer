@@ -797,13 +797,11 @@ map.on('click', e => {
 
     if (user) {
         isLoggedIn = true
-        console.log("User logged in → loading Firebase progress");
 
         // LOAD from Firebase
         foundIds = await loadFoundMarkersFromFirebase(user);
     } else {
         isLoggedIn = false
-        console.log("Not logged in → using localStorage");
 
         foundIds = Object.keys(localStorage)
             .filter(k => k.startsWith("found_") && localStorage.getItem(k) === "true")

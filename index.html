@@ -213,7 +213,6 @@
                 try {
                     const result = await signInWithPopup(auth, provider);
                     const user = result.user;
-                    console.log('Logged in as:', user.email);
                 } catch (err) {
                     alert('Error: ' + err.message);
                 }
@@ -240,7 +239,6 @@
             const docSnap = await getDoc(doc(db, 'users', uid, 'progress', 'userSettings'));
             if (docSnap.exists()) {
                 const data = docSnap.data();
-                console.log('Loaded progress:', data);
                 // Example: apply to map
                 // map.setView([data.mapCenter.lat, data.mapCenter.lng], data.zoom);
             }
