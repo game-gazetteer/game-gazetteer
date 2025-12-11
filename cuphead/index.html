@@ -800,11 +800,7 @@ map.on('click', e => {
         console.log("User logged in → loading Firebase progress");
 
         // LOAD from Firebase
-        console.log("Auth state:", user?.uid);
-        console.log("Calling Firebase loader...");
         foundIds = await loadFoundMarkersFromFirebase(user);
-        console.log("Loaded foundIds:", foundIds);
-        console.log("Reached FETCH block");
     } else {
         isLoggedIn = false
         console.log("Not logged in → using localStorage");
@@ -815,7 +811,7 @@ map.on('click', e => {
     }
 
       /* ---------- LOAD MARKERS ---------- */
-      console.log("Reached FETCH block");
+
       fetch('markers.json')
         .then(res => res.json())
         .then(data => {
@@ -906,8 +902,6 @@ map.on('click', e => {
           updateProgressDisplay();
         });
   });
-  console.log("Loaded JSON:", data);
-  console.log("Data length:", data.length);
 
   // LOAD found markers from Firebase
   async function loadFoundMarkersFromFirebase(user) {
