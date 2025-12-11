@@ -237,7 +237,7 @@
         }
 
         async function loadUserProgress(uid) {
-            const docSnap = await getDoc(doc(db, 'users', uid));
+            const docSnap = await getDoc(doc(db, 'users', uid, 'progress', 'userSettings'));
             if (docSnap.exists()) {
                 const data = docSnap.data();
                 console.log('Loaded progress:', data);

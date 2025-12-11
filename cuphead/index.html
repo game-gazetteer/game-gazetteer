@@ -1056,9 +1056,7 @@ map.on('click', e => {
       try {
         const ref = doc(db, "users", auth.currentUser.uid, "progress", "foundMarkers");
         await setDoc(ref, { found: [] });
-        console.log("Firebase progress reset successfully.");
       } catch (err) {
-        console.error("Error resetting Firebase progress:", err);
       }
     }
   };
