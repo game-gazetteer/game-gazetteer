@@ -550,12 +550,13 @@
   import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
 
   const firebaseConfig = {
-    apiKey: "YOUR_KEY",
-    authDomain: "YOUR_APP.firebaseapp.com",
-    projectId: "YOUR_APP",
-    storageBucket: "YOUR_APP.appspot.com",
-    messagingSenderId: "123",
-    appId: "1:123:web:abc"
+    apiKey: "AIzaSyBGI-tSZjsy7wvNSu3D_lFZR96TQND-uJU",
+    authDomain: "gamegazetteer-bfed2.firebaseapp.com",
+    projectId: "gamegazetteer-bfed2",
+    storageBucket: "gamegazetteer-bfed2.appspot.com",
+    messagingSenderId: "659845857638",
+    appId: "1:659845857638:web:7ad66baffa924961a948a7",
+    measurementId: "G-Q8QP2RD1BL"
   };
 
   const app = initializeApp(firebaseConfig);
@@ -735,7 +736,7 @@ function createMarkerPopup(marker, id) {
 
       <label class="popup-toggle">
         Found
-        <input type="checkbox" ${isFound ? "checked" : ""} onchange="await toggleFound('${id}', this)">
+        <input type="checkbox" ${isFound ? "checked" : ""} onchange="toggleFound('${id}', this)">
       </label>
     </div>
   `;
