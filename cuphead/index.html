@@ -545,6 +545,226 @@
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+<script>
+/* ---------- MARKER ICONS ---------- */
+const icons = {
+  "Boss": L.icon({ 
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  }),
+  "Maus": L.icon({ 
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  }),
+  "RunGun": L.icon({ 
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  }),
+  "Items": L.icon({ 
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  }),
+  "Coins": L.icon({ 
+    iconUrl: 'icons/coin.png',
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  }),
+  "Travel": L.icon({ 
+    iconUrl: 'icons/boatman.png',
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  }),
+  "NPC": L.icon({ 
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  }),
+  "Secrets": L.icon({ 
+    iconUrl: 'icons/secret.png',
+    iconSize: [48, 72], 
+    iconAnchor: [24, 72], 
+    popupAnchor: [0, -72] 
+  })
+};
+
+/* ---------- MAP ---------- */
+var map = L.map('map', { 
+  center: [27, 36],
+  zoom: 2,
+  zoomControl: false,
+  attributionControl: false
+});
+
+L.tileLayer('tiles/{z}/{x}/{y}.png', {
+    maxZoom: 5, 
+    minZoom: 2,
+    noWrap: true,
+    bounds: [[-75.5,-180],[85.04,259.5]]
+}).addTo(map);
+
+const markers = {};
+const foundMarkers = {};
+let hideFound = false;
+
+let totalCount = 0;
+
+/* ---------- PROGRESS COUNTER UPDATER ---------- */
+function updateProgressDisplay() {
+  const foundCount = Object.keys(foundMarkers).length;
+  const percent = totalCount > 0 ? Math.round((foundCount / totalCount) * 100) : 0;
+
+  document.getElementById("progressDetails").innerText =
+    `${foundCount} / ${totalCount} (${percent}%)`;
+
+  // Update progress bar width
+  document.getElementById("progressBarInner").style.width = percent + "%";
+
+  // Handle 100% star
+  const star = document.getElementById("progressStar");
+
+  if (percent === 100) {
+    star.style.display = "inline-block"; // show star
+    star.style.opacity = "1";
+    star.style.transform = "scale(1)";
+  } else {
+    star.style.display = "none"; // remove star from layout
+  }
+}
+
+/* ---------- HELPER FUNCTIONS ---------- */
+
+// Make sidebar subcategories collapsible
+document.querySelectorAll('.subcategory').forEach(section => {
+  const header = section.querySelector('h3');
+  const content = section.querySelector('.subcategory-content');
+
+  // Start expanded
+  section.classList.remove("collapsed");
+
+  header.addEventListener('click', () => {
+    section.classList.toggle("collapsed");
+  });
+});
+
+const searchInput = document.getElementById('markerSearch');
+const searchResults = document.getElementById('searchResults');
+
+function updateSearchResults() {
+  const query = searchInput.value.toLowerCase();
+  searchResults.innerHTML = '';
+
+  if (!query) return;
+
+  const allMarkers = {...markers, ...foundMarkers};
+
+  Object.entries(allMarkers).forEach(([id, marker]) => {
+    if (marker.options.title.toLowerCase().includes(query)) {
+      const div = document.createElement('div');
+      div.innerText = marker.options.title;
+      div.style.cursor = 'pointer';
+      div.style.padding = '4px 6px';
+      div.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+      div.onclick = () => {
+        map.setView(marker.getLatLng(), 0); // zoom/pan to marker
+        marker.openPopup();
+      };
+      searchResults.appendChild(div);
+    }
+  });
+}
+
+searchInput.addEventListener('input', updateSearchResults);
+
+/* ---------- HIDE/SHOW FOUND ---------- */
+document.getElementById("foundToggle").onclick = () => {
+  hideFound = !hideFound;
+
+  if (hideFound) {
+    Object.values(foundMarkers).forEach(m => map.removeLayer(m));
+    foundToggle.innerText = "Show Found Items";
+  } else {
+    Object.values(foundMarkers).forEach(m => m.addTo(map));
+    foundToggle.innerText = "Hide Found Items";
+  }
+};
+
+/* ---------- SHOW ALL / HIDE ALL CATEGORY TOGGLES ---------- */
+document.getElementById("showAllBtn").onclick = () => {
+  document.querySelectorAll('.category').forEach(box => box.checked = true);
+  updateMarkersByCategory();
+};
+
+document.getElementById("hideAllBtn").onclick = () => {
+  document.querySelectorAll('.category').forEach(box => box.checked = false);
+  updateMarkersByCategory();
+};
+
+/* ---------- CATEGORY FILTERING ---------- */
+function updateMarkersByCategory() {
+  const active = [...document.querySelectorAll('.category:checked')].map(x => x.value);
+
+  [...Object.values(markers), ...Object.values(foundMarkers)].forEach(m => {
+    if (active.includes(m.category) && !(hideFound && Object.values(foundMarkers).includes(m))) {
+      m.addTo(map);
+    } else {
+      map.removeLayer(m);
+    }
+  });
+}
+
+document.querySelectorAll('.category').forEach(b => {
+  b.addEventListener('change', updateMarkersByCategory);
+});
+
+function updateMarkersBySearch() {
+  const query = searchInput.value.toLowerCase();
+  const activeCategories = [...document.querySelectorAll('.category:checked')].map(x => x.value);
+
+  [...Object.values(markers), ...Object.values(foundMarkers)].forEach(marker => {
+    const matchesCategory = activeCategories.includes(marker.category);
+    
+    // Check if query is in title or description
+    const titleMatch = marker.options.title.toLowerCase().includes(query);
+    const descMatch = marker.description && marker.description.toLowerCase().includes(query);
+    const matchesSearch = titleMatch || descMatch;
+
+    if (matchesCategory && matchesSearch && !(hideFound && Object.values(foundMarkers).includes(marker))) {
+      marker.addTo(map);
+    } else {
+      map.removeLayer(marker);
+    }
+  });
+}
+
+// Run live search whenever input changes
+searchInput.addEventListener('input', updateMarkersBySearch);
+
+// Make category filtering also respect search
+function updateMarkersByCategoryAndSearch() {
+  updateMarkersBySearch();
+}
+
+// Update category event listener
+document.querySelectorAll('.category').forEach(b => {
+  b.addEventListener('change', updateMarkersByCategoryAndSearch);
+});
+
+// Log click coords rounded to 1 decimal place
+map.on('click', e => {
+  const lat = e.latlng.lat.toFixed(2);
+  const lng = e.latlng.lng.toFixed(1);
+  console.log(`Clicked at: ${lat}, ${lng}`);
+});
+
+</script>
+
+
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
   import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
@@ -832,226 +1052,6 @@
       }
     }
   };
-
-</script>
-
-
-<script>
-/* ---------- MARKER ICONS ---------- */
-const icons = {
-  "Boss": L.icon({ 
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  }),
-  "Maus": L.icon({ 
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  }),
-  "RunGun": L.icon({ 
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  }),
-  "Items": L.icon({ 
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  }),
-  "Coins": L.icon({ 
-    iconUrl: 'icons/coin.png',
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  }),
-  "Travel": L.icon({ 
-    iconUrl: 'icons/boatman.png',
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  }),
-  "NPC": L.icon({ 
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  }),
-  "Secrets": L.icon({ 
-    iconUrl: 'icons/secret.png',
-    iconSize: [48, 72], 
-    iconAnchor: [24, 72], 
-    popupAnchor: [0, -72] 
-  })
-};
-
-/* ---------- MAP ---------- */
-var map = L.map('map', { 
-  center: [27, 36],
-  zoom: 2,
-  zoomControl: false,
-  attributionControl: false
-});
-
-L.tileLayer('tiles/{z}/{x}/{y}.png', {
-    maxZoom: 5, 
-    minZoom: 2,
-    noWrap: true,
-    bounds: [[-75.5,-180],[85.04,259.5]]
-}).addTo(map);
-
-const markers = {};
-const foundMarkers = {};
-let hideFound = false;
-
-let totalCount = 0;
-
-/* ---------- PROGRESS COUNTER UPDATER ---------- */
-function updateProgressDisplay() {
-  const foundCount = Object.keys(foundMarkers).length;
-  const percent = totalCount > 0 ? Math.round((foundCount / totalCount) * 100) : 0;
-
-  document.getElementById("progressDetails").innerText =
-    `${foundCount} / ${totalCount} (${percent}%)`;
-
-  // Update progress bar width
-  document.getElementById("progressBarInner").style.width = percent + "%";
-
-  // Handle 100% star
-  const star = document.getElementById("progressStar");
-
-  if (percent === 100) {
-    star.style.display = "inline-block"; // show star
-    star.style.opacity = "1";
-    star.style.transform = "scale(1)";
-  } else {
-    star.style.display = "none"; // remove star from layout
-  }
-}
-
-/* ---------- HELPER FUNCTIONS ---------- */
-
-// Make sidebar subcategories collapsible
-document.querySelectorAll('.subcategory').forEach(section => {
-  const header = section.querySelector('h3');
-  const content = section.querySelector('.subcategory-content');
-
-  // Start expanded
-  section.classList.remove("collapsed");
-
-  header.addEventListener('click', () => {
-    section.classList.toggle("collapsed");
-  });
-});
-
-const searchInput = document.getElementById('markerSearch');
-const searchResults = document.getElementById('searchResults');
-
-function updateSearchResults() {
-  const query = searchInput.value.toLowerCase();
-  searchResults.innerHTML = '';
-
-  if (!query) return;
-
-  const allMarkers = {...markers, ...foundMarkers};
-
-  Object.entries(allMarkers).forEach(([id, marker]) => {
-    if (marker.options.title.toLowerCase().includes(query)) {
-      const div = document.createElement('div');
-      div.innerText = marker.options.title;
-      div.style.cursor = 'pointer';
-      div.style.padding = '4px 6px';
-      div.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-      div.onclick = () => {
-        map.setView(marker.getLatLng(), 0); // zoom/pan to marker
-        marker.openPopup();
-      };
-      searchResults.appendChild(div);
-    }
-  });
-}
-
-searchInput.addEventListener('input', updateSearchResults);
-
-/* ---------- HIDE/SHOW FOUND ---------- */
-document.getElementById("foundToggle").onclick = () => {
-  hideFound = !hideFound;
-
-  if (hideFound) {
-    Object.values(foundMarkers).forEach(m => map.removeLayer(m));
-    foundToggle.innerText = "Show Found Items";
-  } else {
-    Object.values(foundMarkers).forEach(m => m.addTo(map));
-    foundToggle.innerText = "Hide Found Items";
-  }
-};
-
-/* ---------- SHOW ALL / HIDE ALL CATEGORY TOGGLES ---------- */
-document.getElementById("showAllBtn").onclick = () => {
-  document.querySelectorAll('.category').forEach(box => box.checked = true);
-  updateMarkersByCategory();
-};
-
-document.getElementById("hideAllBtn").onclick = () => {
-  document.querySelectorAll('.category').forEach(box => box.checked = false);
-  updateMarkersByCategory();
-};
-
-/* ---------- CATEGORY FILTERING ---------- */
-function updateMarkersByCategory() {
-  const active = [...document.querySelectorAll('.category:checked')].map(x => x.value);
-
-  [...Object.values(markers), ...Object.values(foundMarkers)].forEach(m => {
-    if (active.includes(m.category) && !(hideFound && Object.values(foundMarkers).includes(m))) {
-      m.addTo(map);
-    } else {
-      map.removeLayer(m);
-    }
-  });
-}
-
-document.querySelectorAll('.category').forEach(b => {
-  b.addEventListener('change', updateMarkersByCategory);
-});
-
-function updateMarkersBySearch() {
-  const query = searchInput.value.toLowerCase();
-  const activeCategories = [...document.querySelectorAll('.category:checked')].map(x => x.value);
-
-  [...Object.values(markers), ...Object.values(foundMarkers)].forEach(marker => {
-    const matchesCategory = activeCategories.includes(marker.category);
-    
-    // Check if query is in title or description
-    const titleMatch = marker.options.title.toLowerCase().includes(query);
-    const descMatch = marker.description && marker.description.toLowerCase().includes(query);
-    const matchesSearch = titleMatch || descMatch;
-
-    if (matchesCategory && matchesSearch && !(hideFound && Object.values(foundMarkers).includes(marker))) {
-      marker.addTo(map);
-    } else {
-      map.removeLayer(marker);
-    }
-  });
-}
-
-// Run live search whenever input changes
-searchInput.addEventListener('input', updateMarkersBySearch);
-
-// Make category filtering also respect search
-function updateMarkersByCategoryAndSearch() {
-  updateMarkersBySearch();
-}
-
-// Update category event listener
-document.querySelectorAll('.category').forEach(b => {
-  b.addEventListener('change', updateMarkersByCategoryAndSearch);
-});
-
-// Log click coords rounded to 1 decimal place
-map.on('click', e => {
-  const lat = e.latlng.lat.toFixed(2);
-  const lng = e.latlng.lng.toFixed(1);
-  console.log(`Clicked at: ${lat}, ${lng}`);
-});
 
 </script>
 
