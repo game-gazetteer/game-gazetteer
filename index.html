@@ -104,23 +104,26 @@
 
         .header {
             display: flex;
-            align-items: center; /* vertically center logo with text */
-            justify-content: center; /* center the whole header horizontally */
-            gap: 15px; /* space between logo and text */
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
             margin-top: 20px;
+            padding: 0 16px;          /* prevents edge cutoff */
+            flex-wrap: wrap;          /* allows stacking on small screens */
+            text-align: center;
         }
 
         .header h1 {
-            font-size: 4em;
+            font-size: clamp(2.2rem, 6vw, 4rem);
             font-family: "Cinzel", serif;
             text-shadow: 0 0 8px #f7f1dc;
-            margin: 0; /* remove default margin */
-            line-height: 1; /* ensures vertical alignment works better */
+            margin: 0;
+            line-height: 1.1;
         }
 
         .header .logo {
-            height: 5em; /* match text height */
-            width: auto; /* maintain aspect ratio */
+            height: clamp(48px, 12vw, 80px);
+            width: auto;
         }
 
         /* FOOTER */
@@ -151,8 +154,33 @@
             flex: 1;
         }
 
-            </style>
-        </head>
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+                margin-bottom: 24px;
+                padding: 0 12px;
+            }
+
+            .search-container input {
+                width: 90%;
+                max-width: 320px;
+            }
+
+            #auth-btn {
+                top: 10px;
+                right: 10px;
+                font-size: 0.9em;
+                padding: 6px 12px;
+            }
+        }
+
+    </style>
+</head>
 
 <body>
     <main class ="content">
