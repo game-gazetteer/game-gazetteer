@@ -1,0 +1,331 @@
+[
+    {
+      "id": "berry1-1",
+      "name": "Red Strawberry 1",
+      "coords": [15.70, -161.1],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-2",
+      "name": "Red Strawberry 2",
+      "coords": [19.75, -141.4],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-3",
+      "name": "Red Strawberry 3",
+      "coords": [36.45, -132.2],
+      "category": "berries",
+      "description": "Navigate here without dashing to collect the strawberry.",
+      "gif": "gifs/berry1-3.gif",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-4",
+      "name": "Red Strawberry 4",
+      "coords": [39.9, -138.5],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-5",
+      "name": "Red Strawberry 5",
+      "coords": [46.75, -129.4],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-6",
+      "name": "Red Strawberry 6",
+      "coords": [39.9, -106.2],
+      "category": "berries",
+      "description": "Destroy the breakable wall to the left to access this area.",
+      "layer": "city",
+      "links": [
+        {
+          "label": "Breakable Wall",
+          "target": "city:wall1",
+          "zoom": 6
+        }
+      ]
+    },
+    {
+      "id": "berry1-7",
+      "name": "Red Strawberry 7",
+      "coords": [56.6, -145.2],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-8",
+      "name": "Red Strawberry 8",
+      "coords": [50.1, -106.6],
+      "category": "berries",
+      "description": "Destroy the breakable wall to the left to access this area.",
+      "layer": "city",
+      "links": [
+        {
+          "label": "Breakable Wall",
+          "target": "city:wall2",
+          "zoom": 6
+        }
+      ]
+    },
+    {
+      "id": "berry1-9",
+      "name": "Red Strawberry 9",
+      "coords": [61.5, -123.4],
+      "category": "berries",
+      "description": "Enter through the hidden area. Then, follow the path to the left.",
+      "layer": "city",
+      "links": [
+        {
+          "label": "Hidden Area",
+          "target": "city:secret1",
+          "zoom": 6
+        }
+      ]
+    },
+    {
+      "id": "berry1-10",
+      "name": "Red Strawberry 10",
+      "coords": [59.75, -84.7],
+      "category": "berries",
+      "description": "Destroy the breakable wall to the right to access this area.",
+      "layer": "city",
+      "links": [
+        {
+          "label": "Breakable Wall",
+          "target": "city:wall3",
+          "zoom": 6
+        }
+      ]
+    },
+    {
+      "id": "berry1-11",
+      "name": "Red Strawberry 11",
+      "coords": [66.3, -63.7],
+      "category": "berries",
+      "description": "Destroy the breakable wall above Strawberry 10 to access this area.",
+      "layer": "city",
+      "links": [
+        {
+          "label": "Breakable Wall",
+          "target": "city:wall4",
+          "zoom": 6
+        }
+      ]
+    },
+    {
+      "id": "berry1-12",
+      "name": "Red Strawberry 12",
+      "coords": [61.68, -35.6],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-13",
+      "name": "Red Strawberry 13",
+      "coords": [67.66, -52.8],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-14",
+      "name": "Red Strawberry 14",
+      "coords": [67.39, -34.9],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-15",
+      "name": "Red Strawberry 15",
+      "coords": [69.05, -22.6],
+      "category": "berries",
+      "gif":"gifs/berry1-15.gif",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-16",
+      "name": "Red Strawberry 16",
+      "coords": [71.02, -6.4],
+      "category": "berries",
+      "gif":"gifs/berry1-16.gif",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-17",
+      "name": "Red Strawberry 17",
+      "coords": [71.45, 3.5],
+      "category": "berries",
+      "description": "Navigate here without dashing to collect the strawberry.",
+      "gif":"gifs/berry1-17.gif",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-18",
+      "name": "Red Strawberry 18",
+      "coords": [72.67, -44.7],
+      "category": "berries",
+      "gif":"gifs/berry1-18.gif",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-19",
+      "name": "Red Strawberry 19",
+      "coords": [75.47, -17.0],
+      "category": "berries",
+      "layer": "city"
+    },
+    {
+      "id": "berry1-20",
+      "name": "Red Strawberry 20",
+      "coords": [79.60, -37.3],
+      "category": "berries",
+      "gif":"gifs/berry1-20.gif",
+      "layer": "city"
+    },
+    {
+      "id": "gberry1-1",
+      "name": "Golden Strawberry",
+      "coords": [4.08, -175.0],
+      "category": "berries",
+      "description": "*Unlocked after beating Core B-Side*\n\nBeat Forsaken City without dying.",
+      "icon": "gberry",
+      "layer": "city"
+    },
+    {
+      "id": "gberry1-2",
+      "name": "Winged Golden Strawberry",
+      "coords": [81.15, -1.9],
+      "category": "berries",
+      "description": "Beat Forsaken City without dashing.",
+      "icon": "gberry",
+      "layer": "city"
+    },
+    {
+      "id": "wall1",
+      "name": "Breakable Wall",
+      "coords": [39.44, -117.1],
+      "category": "walls",
+      "description": "Dash to break.",
+      "layer": "city"
+    },
+    {
+      "id": "wall2",
+      "name": "Breakable Wall",
+      "coords": [49.40, -107.6],
+      "category": "walls",
+      "description": "Dash to break.",
+      "layer": "city"
+    },
+    {
+      "id": "wall3",
+      "name": "Breakable Wall",
+      "coords": [58.23, -73.1],
+      "category": "walls",
+      "description": "Dash to break.",
+      "layer": "city"
+    },
+    {
+      "id": "wall4",
+      "name": "Breakable Wall",
+      "coords": [61.55, -80.2],
+      "category": "walls",
+      "description": "Dash to break.",
+      "layer": "city"
+    },
+    {
+      "id": "npc1",
+      "name": "Theo",
+      "coords": [48.84, -142.4],
+      "category": "NPC",
+      "layer": "city"
+    },
+    {
+      "id": "heart1-1",
+      "name": "Blue Crystal Heart",
+      "coords": [60.24, -124.3],
+      "category": "hearts",
+      "icon": "blueHeart",
+      "description": "Enter through the hidden area. Then, follow the path to the left.\n\nTo unlock the crystal heart, dash in the direction of the birds to the left, in the order of the colors on the computer.\nDash Direction Code: 🡹🡸🡾🡽🡸🡼.",
+      "gif":"gifs/heart1-1.gif",
+      "layer": "city",
+      "links": [
+        {
+          "label": "Hidden Area",
+          "target": "city:secret1",
+          "zoom": 6
+        }
+      ]
+    },
+    {
+      "id": "heart1-2",
+      "name": "Red Crystal Heart",
+      "coords": [82.15, 111.0],
+      "category": "hearts",
+      "icon": "redHeart",
+      "layer": "city"
+    },
+    {
+      "id": "heart1-3",
+      "name": "Red Crystal Heart",
+      "coords": [8.71, 60.8],
+      "category": "hearts",
+      "icon": "goldHeart",
+      "layer": "city"
+    },
+    {
+      "id": "tape1",
+      "name": "B-Side Cassette Tape",
+      "coords": [76.90, -32.4],
+      "category": "tapes",
+      "description": "Enter this room through the hidden enterance behind the traffic light block.",
+      "layer": "city",
+      "links": [
+        {
+          "label": "Hidden Area",
+          "target": "city:secret3",
+          "zoom": 6
+        }
+      ]
+    },
+    {
+      "id": "secret1",
+      "name": "Hidden Area",
+      "coords": [55.07, -80.9],
+      "category": "secrets",
+      "description": "Access this hidden area from below by dashing.",
+      "gif": "gifs/secret1.gif",
+      "layer": "city"
+    },
+    {
+      "id": "secret2",
+      "name": "Hidden Area",
+      "coords": [71.03, -18.9],
+      "category": "secrets",
+      "description": "Access this hidden area behind the traffic light block.",
+      "gif": "gifs/secret2.gif",
+      "layer": "city"
+    },
+    {
+      "id": "secret3",
+      "name": "Hidden Area",
+      "coords": [75.68, -28.5],
+      "category": "secrets",
+      "description": "Access the cassette tape area behind the traffic light block.",
+      "gif": "gifs/secret3.gif",
+      "layer": "city"
+    },
+    {
+      "id": "secret4",
+      "name": "Hidden Area",
+      "coords": [79.28, -21.1],
+      "category": "secrets",
+      "description": "To access this area, grab the block to make it fall.",
+      "gif": "gifs/secret4.gif",
+      "layer": "city"
+    }
+  ]
