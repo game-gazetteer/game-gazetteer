@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Game Gazetteer - Cuphead Interactive Map</title>
+  <title>Game Gazetteer - Celeste Interactive Map</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -42,9 +42,10 @@
     }
 
     /* Category colors */
-    .marker-berries     { background: blue; }
+    .marker-berries        { background: blue; }
     .marker-hearts         { background: red; }
     .marker-tapes          { background: green; }
+    .marker-keys           { background: cyan; }
     .marker-walls          { background: purple; }
     .marker-npc            { background: #ff7043; }
     .marker-secrets        { background: rgb(60, 0, 128); }
@@ -591,6 +592,52 @@
           <span>Cassettes</span>
           <input type="checkbox" class="category" value="tapes" checked>
         </label>
+
+        <label class="filter-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            width="28"
+            height="28"
+            aria-label="Key"
+          >
+            <!-- Key head -->
+            <circle
+              cx="20"
+              cy="32"
+              r="12"
+              fill="none"
+              stroke="white"
+              stroke-width="4"
+            />
+
+            <!-- Head hole -->
+            <circle
+              cx="20"
+              cy="32"
+              r="4"
+              fill="none"
+              stroke="white"
+              stroke-width="3"
+            />
+
+            <!-- Shaft -->
+            <rect
+              x="32"
+              y="28"
+              width="20"
+              height="8"
+              fill="white"
+            />
+
+            <!-- Teeth -->
+            <rect x="46" y="36" width="6" height="8" fill="white"/>
+            <rect x="38" y="36" width="6" height="5" fill="white"/>
+          </svg>
+          <span>Keys/Locks</span>
+          <input type="checkbox" class="category" value="keys" checked>
+        </label>
+
       </div>
   </div>
 
@@ -616,7 +663,7 @@
             stroke-width="3"
             stroke-linecap="round"
             stroke-linejoin="round"
-            aria-label="Breakable wall icon"
+            aria-label="Smashable wall icon"
           >
             <rect x="10" y="12" width="44" height="40" rx="4"/>
 
@@ -645,7 +692,7 @@
             <path d="M46 30 L50 28"/>
             <path d="M44 44 L48 46"/>
           </svg>
-          <span>Breakable Walls</span>
+          <span>Smashable Walls</span>
           <input type="checkbox" class="category" value="walls" checked>
         </label>
 
@@ -845,6 +892,212 @@ const SVG_ICONS = {
       </g>
     </svg>
   `,
+  mberry: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="24"
+      height="24"
+      fill="none"
+      stroke="#000"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-label="Strawberry icon"
+    >
+      <!-- Leaves -->
+      <path d="M18 14
+              C22 10 26 12 28 14
+              C30 10 34 10 36 14
+              C38 12 42 10 46 14" />
+
+      <!-- Stem -->
+      <line x1="32" y1="10" x2="32" y2="18" />
+
+      <!-- Strawberry body (red fill) -->
+      <path
+        d="M18 22
+          C18 40 28 56 32 58
+          C36 56 46 40 46 22
+          C46 18 42 14 32 14
+          C22 14 18 18 18 22Z"
+        fill="#8bfbdb"
+      />
+
+      <!-- Seeds -->
+      <g stroke-width="2">
+        <!-- Row 1 -->
+        <circle cx="29" cy="28" r="1"/>
+        <circle cx="35" cy="28" r="1"/>
+
+        <!-- Row 2 -->
+        <circle cx="26" cy="34" r="1"/>
+        <circle cx="32" cy="34" r="1"/>
+        <circle cx="38" cy="34" r="1"/>
+
+        <!-- Row 3 -->
+        <circle cx="29" cy="40" r="1"/>
+        <circle cx="35" cy="40" r="1"/>
+
+        <!-- Row 4 -->
+        <circle cx="32" cy="46" r="1"/>
+      </g>
+    </svg>
+  `,
+  seed: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-label="Strawberry seed">
+      <path
+        d="M12 3
+          C16 6, 18 10, 12 21
+          C6 10, 8 6, 12 3Z"
+        fill="#2e7d32"
+        stroke="#0b2a12"
+        stroke-width="1.5"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M10 7
+          C9 9, 9.5 10.5, 11 11.5"
+        fill="none"
+        stroke="#a5d6a7"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
+  `,
+  keys: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Golden key"
+    >
+      <!-- Key head -->
+      <circle
+        cx="20"
+        cy="32"
+        r="12"
+        fill="#FFD700"
+        stroke="#B8860B"
+        stroke-width="3"
+      />
+
+      <!-- Head hole -->
+      <circle
+        cx="20"
+        cy="32"
+        r="4"
+        fill="none"
+        stroke="#8a6f00"
+        stroke-width="2"
+      />
+
+      <!-- Shaft -->
+      <rect
+        x="32"
+        y="28"
+        width="22"
+        height="8"
+        rx="2"
+        fill="#FFD700"
+        stroke="#B8860B"
+        stroke-width="2"
+      />
+
+      <!-- Teeth -->
+      <rect
+        x="46"
+        y="36"
+        width="6"
+        height="8"
+        fill="#FFD700"
+        stroke="#8a6f00"
+        stroke-width="2"
+      />
+      <rect
+        x="38"
+        y="36"
+        width="6"
+        height="5"
+        fill="#FFD700"
+        stroke="#8a6f00"
+        stroke-width="2"
+      />
+
+      <!-- Highlight -->
+      <path
+        d="M14 24
+          C12 28 12 36 14 40"
+        fill="none"
+        stroke="#FFF2A8"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
+  `,
+  locks: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Lock"
+    >
+      <!-- Shackle -->
+      <path
+        d="M20 28
+          V18
+          C20 10 26 6 32 6
+          C38 6 44 10 44 18
+          V28"
+        fill="none"
+        stroke="#555555"
+        stroke-width="4"
+        stroke-linecap="round"
+      />
+
+      <!-- Lock body -->
+      <rect
+        x="14"
+        y="28"
+        width="36"
+        height="30"
+        rx="6"
+        fill="#FFD700"
+        stroke="#B8860B"
+        stroke-width="3"
+      />
+
+      <!-- Keyhole -->
+      <circle
+        cx="32"
+        cy="42"
+        r="4"
+        fill="#8a6f00"
+      />
+      <rect
+        x="30.5"
+        y="42"
+        width="3"
+        height="8"
+        fill="#8a6f00"
+      />
+
+      <!-- Highlight -->
+      <path
+        d="M20 32
+          C18 36 18 46 20 50"
+        fill="none"
+        stroke="#FFF2A8"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
+  `,
   blueHeart: `
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -1041,7 +1294,7 @@ const SVG_ICONS = {
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
-      aria-label="Breakable wall icon"
+      aria-label="Smashable wall icon"
     >
       <!-- Outer wall -->
       <rect x="10" y="12" width="44" height="40" rx="4"/>
@@ -1076,8 +1329,292 @@ const SVG_ICONS = {
       <path d="M44 44 L48 46"/>
     </svg>
   `,
+  topaz: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Topaz jewel"
+    >
+      <!-- Outer gem -->
+      <path
+        d="M32 4
+          L54 18
+          L46 56
+          H18
+          L10 18
+          Z"
+        fill="#fbc02d"
+        stroke="#f57f17"
+        stroke-width="3"
+        stroke-linejoin="round"
+      />
+
+      <!-- Facet lines -->
+      <path d="M32 4 V56" stroke="#f57f17" stroke-width="2"/>
+      <path d="M10 18 L32 32 L54 18" stroke="#f57f17" stroke-width="2" fill="none"/>
+      <path d="M18 56 L32 32 L46 56" stroke="#f57f17" stroke-width="2" fill="none"/>
+
+      <!-- Inner facet -->
+      <polygon
+        points="32,14 44,24 32,46 20,24"
+        fill="#ffe082"
+        opacity="0.9"
+      />
+
+      <!-- Highlight -->
+      <path
+        d="M22 18
+          C20 22 20 28 22 32"
+        fill="none"
+        stroke="#fff8e1"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
+  `,
+  diamond: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Pink diamond jewel"
+    >
+      <!-- Outer diamond -->
+      <path
+        d="M32 4
+          L56 20
+          L44 56
+          H20
+          L8 20
+          Z"
+        fill="#ec407a"
+        stroke="#ad1457"
+        stroke-width="3"
+        stroke-linejoin="round"
+      />
+
+      <!-- Facet lines -->
+      <path d="M32 4 V56" stroke="#ad1457" stroke-width="2"/>
+      <path d="M8 20 L32 32 L56 20" stroke="#ad1457" stroke-width="2" fill="none"/>
+      <path d="M20 56 L32 32 L44 56" stroke="#ad1457" stroke-width="2" fill="none"/>
+
+      <!-- Inner facet -->
+      <polygon
+        points="32,14 44,24 32,46 20,24"
+        fill="#f48fb1"
+        opacity="0.9"
+      />
+
+      <!-- Highlight -->
+      <path
+        d="M22 18
+          C20 22 20 28 22 32"
+        fill="none"
+        stroke="#fce4ec"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
+  `,
+  pearl: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Pearl"
+    >
+      <!-- Pearl body -->
+      <circle
+        cx="32"
+        cy="32"
+        r="22"
+        fill="#f5f5f5"
+        stroke="#bdbdbd"
+        stroke-width="3"
+      />
+
+      <!-- Soft inner shading -->
+      <circle
+        cx="36"
+        cy="36"
+        r="16"
+        fill="#eeeeee"
+        opacity="0.9"
+      />
+
+      <!-- Highlight -->
+      <path
+        d="M22 22
+          C18 24 18 30 22 34"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="3"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+
+      <!-- Subtle shadow edge -->
+      <path
+        d="M42 42
+          C44 40 46 36 46 32"
+        fill="none"
+        stroke="#cfcfcf"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.6"
+      />
+    </svg>
+  `,
   NPC: `
     <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+  `,
+  emerald: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Emerald jewel"
+    >
+      <!-- Outer gem (emerald cut) -->
+      <path
+        d="M18 6
+          H46
+          L58 18
+          V46
+          L46 58
+          H18
+          L6 46
+          V18
+          Z"
+        fill="#2e7d32"
+        stroke="#1b5e20"
+        stroke-width="3"
+        stroke-linejoin="round"
+      />
+
+      <!-- Facet lines -->
+      <path d="M32 6 V58" stroke="#1b5e20" stroke-width="2"/>
+      <path d="M6 18 L32 32 L58 18" stroke="#1b5e20" stroke-width="2" fill="none"/>
+      <path d="M18 58 L32 32 L46 58" stroke="#1b5e20" stroke-width="2" fill="none"/>
+
+      <!-- Inner facet -->
+      <rect
+        x="22"
+        y="22"
+        width="20"
+        height="20"
+        fill="#66bb6a"
+        opacity="0.9"
+      />
+
+      <!-- Highlight -->
+      <path
+        d="M22 16
+          C20 20 20 26 22 30"
+        fill="none"
+        stroke="#c8e6c9"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
+  `,
+  sapphire: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Sapphire jewel"
+    >
+      <!-- Outer gem -->
+      <path
+        d="M32 4
+          L52 20
+          L44 56
+          H20
+          L12 20
+          Z"
+        fill="#1e88e5"
+        stroke="#0d47a1"
+        stroke-width="3"
+        stroke-linejoin="round"
+      />
+
+      <!-- Facet lines -->
+      <path d="M32 4 V56" stroke="#0d47a1" stroke-width="2"/>
+      <path d="M12 20 L32 32 L52 20" stroke="#0d47a1" stroke-width="2" fill="none"/>
+      <path d="M20 56 L32 32 L44 56" stroke="#0d47a1" stroke-width="2" fill="none"/>
+
+      <!-- Inner facet -->
+      <polygon
+        points="32,14 42,24 32,44 22,24"
+        fill="#42a5f5"
+        opacity="0.9"
+      />
+
+      <!-- Highlight -->
+      <path
+        d="M22 18
+          C20 22 20 28 22 32"
+        fill="none"
+        stroke="#bbdefb"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
+  `,
+  star: `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width="22"
+      height="22"
+      aria-label="Star jewel"
+    >
+      <!-- Outer star -->
+      <path
+        d="M32 4
+          L39.5 22.5
+          L60 24
+          L44.5 38
+          L49 58
+          L32 47
+          L15 58
+          L19.5 38
+          L4 24
+          L24.5 22.5
+          Z"
+        fill="#FFD700"
+        stroke="#B8860B"
+        stroke-width="3"
+        stroke-linejoin="round"
+      />
+
+      <!-- Facet lines -->
+      <path d="M32 4 L32 47" stroke="#B8860B" stroke-width="2"/>
+      <path d="M24.5 22.5 L32 32 L39.5 22.5" stroke="#B8860B" stroke-width="2" fill="none"/>
+      <path d="M19.5 38 L32 32 L44.5 38" stroke="#B8860B" stroke-width="2" fill="none"/>
+
+      <!-- Highlight -->
+      <path
+        d="M22 20
+          C20 24 20 30 22 34"
+        fill="none"
+        stroke="#FFF2A8"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity="0.9"
+      />
+    </svg>
   `,
   secrets: `
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -1111,7 +1648,8 @@ const SVG_SIZES = {
   tapes: 25,
   walls: 30,
   NPC: 25,
-  secrets: 30
+  secrets: 30,
+  keys: 35,
 };
 
 function createSvgMarker(category, isFound = false, iconKey = null) {
@@ -1375,33 +1913,6 @@ document.querySelectorAll('.subcategory').forEach(section => {
 });
 
 const searchInput = document.getElementById('markerSearch');
-const searchResults = document.getElementById('searchResults');
-
-function updateSearchResults() {
-  const query = searchInput.value.toLowerCase();
-  searchResults.innerHTML = '';
-
-  if (!query) return;
-
-  const allMarkers = {...markers, ...foundMarkers};
-
-  Object.entries(allMarkers).forEach(([id, marker]) => {
-    if (marker.options.title.toLowerCase().includes(query)) {
-      const div = document.createElement('div');
-      div.innerText = marker.options.title;
-      div.style.cursor = 'pointer';
-      div.style.padding = '4px 6px';
-      div.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-      div.onclick = () => {
-        map.setView(marker.getLatLng(), 0); // zoom/pan to marker
-        marker.openPopup();
-      };
-      searchResults.appendChild(div);
-    }
-  });
-}
-
-searchInput.addEventListener('input', updateSearchResults);
 
 /* ---------- HIDE/SHOW FOUND ---------- */
 document.getElementById("foundToggle").onclick = () => {
@@ -1448,6 +1959,11 @@ function updateMarkersBySearch() {
   const query = searchInput.value.toLowerCase();
   const activeCategories = [...document.querySelectorAll('.category:checked')].map(x => x.value);
 
+  if (!query) {
+    updateMarkersByCategory();
+    return;
+  }
+
   [...Object.values(markers), ...Object.values(foundMarkers)].forEach(marker => {
     const matchesCategory = activeCategories.includes(marker.category) || forcedVisibleMarkers.has(marker.__id);
     
@@ -1480,7 +1996,7 @@ document.querySelectorAll('.category').forEach(b => {
 // Log click coords rounded to 1 decimal place
 map.on('click', e => {
   const lat = e.latlng.lat.toFixed(2);
-  const lng = e.latlng.lng.toFixed(1);
+  const lng = e.latlng.lng.toFixed(2);
   console.log(`Clicked at: ${lat}, ${lng}`);
 });
 
