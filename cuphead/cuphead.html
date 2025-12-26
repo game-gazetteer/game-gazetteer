@@ -888,33 +888,6 @@ document.querySelectorAll('.subcategory').forEach(section => {
 });
 
 const searchInput = document.getElementById('markerSearch');
-const searchResults = document.getElementById('searchResults');
-
-function updateSearchResults() {
-  const query = searchInput.value.toLowerCase();
-  searchResults.innerHTML = '';
-
-  if (!query) return;
-
-  const allMarkers = {...markers, ...foundMarkers};
-
-  Object.entries(allMarkers).forEach(([id, marker]) => {
-    if (marker.options.title.toLowerCase().includes(query)) {
-      const div = document.createElement('div');
-      div.innerText = marker.options.title;
-      div.style.cursor = 'pointer';
-      div.style.padding = '4px 6px';
-      div.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-      div.onclick = () => {
-        map.setView(marker.getLatLng(), 0); // zoom/pan to marker
-        marker.openPopup();
-      };
-      searchResults.appendChild(div);
-    }
-  });
-}
-
-searchInput.addEventListener('input', updateSearchResults);
 
 /* ---------- HIDE/SHOW FOUND ---------- */
 document.getElementById("foundToggle").onclick = () => {
@@ -960,6 +933,11 @@ document.querySelectorAll('.category').forEach(b => {
 function updateMarkersBySearch() {
   const query = searchInput.value.toLowerCase();
   const activeCategories = [...document.querySelectorAll('.category:checked')].map(x => x.value);
+
+  if (!query) {
+    updateMarkersByCategory();
+    return;
+  }
 
   [...Object.values(markers), ...Object.values(foundMarkers)].forEach(marker => {
     const matchesCategory = activeCategories.includes(marker.category);
