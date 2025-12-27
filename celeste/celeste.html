@@ -2303,6 +2303,11 @@ map.on('click', e => {
       const container = e.popup._container;
       if (container) container.classList.add('popup-dark');
     });
+
+    marker.on("popupclose", () => {
+      const video = popupContainer.querySelector("video");
+      if (video) video.pause();
+    });
   }
 
   document.getElementById('resetProgress').onclick = async () => {
