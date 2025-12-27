@@ -2075,7 +2075,7 @@ map.on('click', e => {
             marker.mapLayer = point.layer || "city";
             marker.__id = id;
             marker.iconKey = point.icon;
-            marker.gif = point.gif;
+            marker.mp4 = point.mp4;
 
             if (isFound) {
               foundMarkers[id] = marker;
@@ -2230,9 +2230,9 @@ map.on('click', e => {
       popupContainer.appendChild(desc);
     }
 
-    if (marker.gif) {
+    if (marker.mp4) {
       const img = document.createElement("img");
-      img.src = marker.gif;
+      img.src = marker.mp4;
       img.style.width = "100%";
       img.style.maxWidth = "240px";
       img.style.borderRadius = "8px";

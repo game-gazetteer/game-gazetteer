@@ -379,7 +379,7 @@
       "coords": [36.45, -132.2],
       "category": "berries",
       "description": "Navigate here without dashing to collect the strawberry.",
-      "gif": "gifs/berry1-3.gif",
+      "mp4": "mp4/berry1-3.mp4",
       "layer": "city"
     },
     {
@@ -504,7 +504,7 @@
       "name": "Red Strawberry 15",
       "coords": [69.05, -22.6],
       "category": "berries",
-      "gif":"gifs/berry1-15.gif",
+      "mp4":"mp4/berry1-15.mp4",
       "layer": "city"
     },
     {
@@ -512,7 +512,7 @@
       "name": "Red Strawberry 16",
       "coords": [71.02, -6.4],
       "category": "berries",
-      "gif":"gifs/berry1-16.gif",
+      "mp4":"mp4/berry1-16.mp4",
       "layer": "city"
     },
     {
@@ -521,7 +521,7 @@
       "coords": [71.45, 3.5],
       "category": "berries",
       "description": "Navigate here without dashing to collect the strawberry.",
-      "gif":"gifs/berry1-17.gif",
+      "mp4":"mp4/berry1-17.mp4",
       "layer": "city"
     },
     {
@@ -529,7 +529,7 @@
       "name": "Red Strawberry 18",
       "coords": [72.67, -44.7],
       "category": "berries",
-      "gif":"gifs/berry1-18.gif",
+      "mp4":"mp4/berry1-18.mp4",
       "layer": "city"
     },
     {
@@ -544,7 +544,7 @@
       "name": "Red Strawberry 20",
       "coords": [79.60, -37.3],
       "category": "berries",
-      "gif":"gifs/berry1-20.gif",
+      "mp4":"mp4/berry1-20.mp4",
       "layer": "city"
     },
     {
@@ -685,7 +685,7 @@
       "name": "Red Strawberry 6",
       "coords": [76.29, -147.85],
       "category": "berries",
-      "gif":"gifs/berry2-6.gif",
+      "mp4":"mp4/berry2-6.mp4",
       "layer": "site"
     },
     {
@@ -693,7 +693,7 @@
       "name": "Red Strawberry 7",
       "coords": [76.25, -140.1],
       "category": "berries",
-      "gif":"gifs/berry2-7.gif",
+      "mp4":"mp4/berry2-7.mp4",
       "layer": "site"
     },
     {
@@ -701,7 +701,7 @@
       "name": "Red Strawberry 8",
       "coords": [75.91, -157.3],
       "category": "berries",
-      "gif":"gifs/berry2-8.gif",
+      "mp4":"mp4/berry2-8.mp4",
       "layer": "site"
     },
     {
@@ -752,7 +752,7 @@
       "name": "Red Strawberry 14",
       "coords": [82.44, -152.6],
       "category": "berries",
-      "gif":"gifs/berry2-14.gif",
+      "mp4":"mp4/berry2-14.mp4",
       "layer": "site"
     },
     {
@@ -782,7 +782,7 @@
       "name": "Red Strawberry 17",
       "coords": [78.88, -128.0],
       "category": "berries",
-      "gif":"gifs/berry2-17.gif",
+      "mp4":"mp4/berry2-17.mp4",
       "layer": "site"
     },
     {
@@ -791,7 +791,7 @@
       "coords": [69.07, -129.9],
       "category": "berries",
       "description": "Navigate here without dashing to collect the strawberry.",
-      "gif":"gifs/berry2-18.gif",
+      "mp4":"mp4/berry2-18.mp4",
       "layer": "site"
     },
     {
@@ -799,7 +799,7 @@
       "name": "Red Strawberry 1",
       "coords": [80.76, -152.5],
       "category": "berries",
-      "gif":"gifs/berry3-1.gif",
+      "mp4":"mp4/berry3-1.mp4",
       "layer": "resort"
     },
     {
@@ -808,7 +808,7 @@
       "coords": [81.70, -158.6],
       "category": "berries",
       "description": "Use the screen change dash refresh to reach the strawberry.",
-      "gif":"gifs/berry3-2.gif",
+      "mp4":"mp4/berry3-2.mp4",
       "layer": "resort"
     },
     {
@@ -837,7 +837,7 @@
       "name": "Red Strawberry 6",
       "coords": [81.87, -100.1],
       "category": "berries",
-      "gif":"gifs/berry3-6.gif",
+      "mp4":"mp4/berry3-6.mp4",
       "layer": "resort"
     },
     {
@@ -846,7 +846,7 @@
       "coords": [81.44, -86.6],
       "category": "berries",
       "description": "Navigate here without dashing to collect the strawberry.",
-      "gif":"gifs/berry3-7.gif",
+      "mp4":"mp4/berry3-7.mp4",
       "layer": "resort"
     },
     {
@@ -854,7 +854,7 @@
       "name": "Red Strawberry 8",
       "coords": [81.82, -89.9],
       "category": "berries",
-      "gif":"gifs/berry3-8.gif",
+      "mp4":"mp4/berry3-8.mp4",
       "layer": "resort"
     },
     {
@@ -899,7 +899,7 @@
       "name": "Red Strawberry 12",
       "coords": [82.35, -46.8],
       "category": "berries",
-      "gif":"gifs/berry3-12.gif",
+      "mp4":"mp4/berry3-12.mp4",
       "layer": "resort"
     },
     {
@@ -907,7 +907,7 @@
       "name": "Red Strawberry 13",
       "coords": [82.95, -51.0],
       "category": "berries",
-      "gif":"gifs/berry3-13.gif",
+      "mp4":"mp4/berry3-13.mp4",
       "layer": "resort"
     },
     {
@@ -924,7 +924,7 @@
       "coords": [81.83, -36.8],
       "category": "berries",
       "description": "Navigate to the right without dashing. Then, dash above the strawberry and collect it when it flies up.",
-      "gif":"gifs/berry3-15.gif",
+      "mp4":"mp4/berry3-15.mp4",
       "layer": "resort"
     },
     {
@@ -939,7 +939,7 @@
       "name": "Red Strawberry 17",
       "coords": [80.30, -44.4],
       "category": "berries",
-      "gif":"gifs/berry3-17.gif",
+      "mp4":"mp4/berry3-17.mp4",
       "layer": "resort"
     },
     {
@@ -954,7 +954,7 @@
       "name": "Red Strawberry 19",
       "coords": [83.17, -86.0],
       "category": "berries",
-      "gif":"gifs/berry3-19.gif",
+      "mp4":"mp4/berry3-19.mp4",
       "layer": "resort"
     },
     {
@@ -962,7 +962,7 @@
       "name": "Red Strawberry 20",
       "coords": [82.58, -100.3],
       "category": "berries",
-      "gif":"gifs/berry3-20.gif",
+      "mp4":"mp4/berry3-20.mp4",
       "layer": "resort"
     },
     {
@@ -970,7 +970,7 @@
       "name": "Red Strawberry 21",
       "coords": [81.99, -109.4],
       "category": "berries",
-      "gif":"gifs/berry3-21.gif",
+      "mp4":"mp4/berry3-21.mp4",
       "layer": "resort"
     },
     {
@@ -978,7 +978,7 @@
       "name": "Red Strawberry 22",
       "coords": [82.16, -112.4],
       "category": "berries",
-      "gif":"gifs/berry3-22.gif",
+      "mp4":"mp4/berry3-22.mp4",
       "layer": "resort"
     },
     {
@@ -1022,7 +1022,7 @@
       "name": "Red Strawberry 2",
       "coords": [76.01, -155.3],
       "category": "berries",
-      "gif":"gifs/berry4-2.gif",
+      "mp4":"mp4/berry4-2.mp4",
       "layer": "ridge"
     },
     {
@@ -1030,7 +1030,7 @@
       "name": "Red Strawberry 3",
       "coords": [76.33, -149.6],
       "category": "berries",
-      "gif":"gifs/berry4-3.gif",
+      "mp4":"mp4/berry4-3.mp4",
       "layer": "ridge"
     },
     {
@@ -1038,7 +1038,7 @@
       "name": "Red Strawberry 4",
       "coords": [76.22, -141.9],
       "category": "berries",
-      "gif":"gifs/berry4-4.gif",
+      "mp4":"mp4/berry4-4.mp4",
       "layer": "ridge"
     },
     {
@@ -1046,7 +1046,7 @@
       "name": "Red Strawberry 5",
       "coords": [76.39, -135.6],
       "category": "berries",
-      "gif":"gifs/berry4-5.gif",
+      "mp4":"mp4/berry4-5.mp4",
       "layer": "ridge"
     },
     {
@@ -1070,7 +1070,7 @@
       "coords": [77.24, -131.4],
       "category": "berries",
       "description": "Collect the 4 strawberry seeds without landing to reveal the strawberry.",
-      "gif":"gifs/berry4-7.gif",
+      "mp4":"mp4/berry4-7.mp4",
       "layer": "ridge",
       "links": [
         {
@@ -1164,7 +1164,7 @@
       "name": "Red Strawberry 8",
       "coords": [77.61, -127.2],
       "category": "berries",
-      "gif":"gifs/berry4-8.gif",
+      "mp4":"mp4/berry4-8.mp4",
       "layer": "ridge"
     },
     {
@@ -1172,7 +1172,7 @@
       "name": "Red Strawberry 9",
       "coords": [78.09, -120.4],
       "category": "berries",
-      "gif":"gifs/berry4-9-10.gif",
+      "mp4":"mp4/berry4-9-10.mp4",
       "layer": "ridge"
     },
     {
@@ -1180,7 +1180,7 @@
       "name": "Red Strawberry 10",
       "coords": [78.05, -119.6],
       "category": "berries",
-      "gif":"gifs/berry4-9-10.gif",
+      "mp4":"mp4/berry4-9-10.mp4",
       "layer": "ridge"
     },
     {
@@ -1188,7 +1188,7 @@
       "name": "Red Strawberry 11",
       "coords": [78.29, -129.4],
       "category": "berries",
-      "gif":"gifs/berry4-11.gif",
+      "mp4":"mp4/berry4-11.mp4",
       "layer": "ridge"
     },
     {
@@ -1196,7 +1196,7 @@
       "name": "Red Strawberry 12",
       "coords": [78.47, -120.5],
       "category": "berries",
-      "gif":"gifs/berry4-12.gif",
+      "mp4":"mp4/berry4-12.mp4",
       "layer": "ridge"
     },
     {
@@ -1204,7 +1204,7 @@
       "name": "Red Strawberry 13",
       "coords": [78.27, -132.0],
       "category": "berries",
-      "gif":"gifs/berry4-13.gif",
+      "mp4":"mp4/berry4-13.mp4",
       "layer": "ridge"
     },
     {
@@ -1235,7 +1235,7 @@
       "coords": [79.02, -115.7],
       "category": "berries",
       "description": "Accessed through the smashable wall to the left.",
-      "gif":"gifs/berry4-16.gif",
+      "mp4":"mp4/berry4-16.mp4",
       "layer": "ridge",
       "links": [
         {
@@ -1250,7 +1250,7 @@
       "name": "Red Strawberry 17",
       "coords": [80.13, -114.7],
       "category": "berries",
-      "gif":"gifs/berry4-17.gif",
+      "mp4":"mp4/berry4-17.mp4",
       "layer": "ridge"
     },
     {
@@ -1259,7 +1259,7 @@
       "coords": [80.75, -115.0],
       "category": "berries",
       "description": "Navigate here without dashing to collect the strawberry.",
-      "gif":"gifs/berry4-18.gif",
+      "mp4":"mp4/berry4-18.mp4",
       "layer": "ridge"
     },
     {
@@ -1267,7 +1267,7 @@
       "name": "Red Strawberry 19",
       "coords": [80.28, -109.1],
       "category": "berries",
-      "gif":"gifs/berry4-19.gif",
+      "mp4":"mp4/berry4-19.mp4",
       "layer": "ridge"
     },
     {
@@ -1275,7 +1275,7 @@
       "name": "Red Strawberry 20",
       "coords": [81.20, -89.1],
       "category": "berries",
-      "gif":"gifs/berry4-20.gif",
+      "mp4":"mp4/berry4-20.mp4",
       "layer": "ridge"
     },
     {
@@ -1283,7 +1283,7 @@
       "name": "Red Strawberry 21",
       "coords": [81.91, -94.0],
       "category": "berries",
-      "gif":"gifs/berry4-21.gif",
+      "mp4":"mp4/berry4-21.mp4",
       "layer": "ridge"
     },
     {
@@ -1291,7 +1291,7 @@
       "name": "Red Strawberry 22",
       "coords": [82.09, -88.3],
       "category": "berries",
-      "gif":"gifs/berry4-22.gif",
+      "mp4":"mp4/berry4-22.mp4",
       "layer": "ridge"
     },
     {
@@ -1299,7 +1299,7 @@
       "name": "Red Strawberry 23",
       "coords": [83.24, -74.4],
       "category": "berries",
-      "gif":"gifs/berry4-23.gif",
+      "mp4":"mp4/berry4-23.mp4",
       "layer": "ridge"
     },
     {
@@ -1323,7 +1323,7 @@
       "coords": [83.84, -72.9],
       "category": "berries",
       "description": "Accessed through the hidden area below.",
-      "gif":"gifs/berry4-25.gif",
+      "mp4":"mp4/berry4-25.mp4",
       "layer": "ridge",
       "links": [
         {
@@ -1338,7 +1338,7 @@
       "name": "Red Strawberry 26",
       "coords": [83.60, -65.53],
       "category": "berries",
-      "gif":"gifs/berry4-26.gif",
+      "mp4":"mp4/berry4-26.mp4",
       "layer": "ridge"
     },
     {
@@ -1346,7 +1346,7 @@
       "name": "Red Strawberry 27",
       "coords": [83.79, -49.9],
       "category": "berries",
-      "gif":"gifs/berry4-27.gif",
+      "mp4":"mp4/berry4-27.mp4",
       "layer": "ridge"
     },
     {
@@ -1368,7 +1368,7 @@
       "name": "Red Strawberry 29",
       "coords": [83.89, -15.2],
       "category": "berries",
-      "gif":"gifs/berry4-29.gif",
+      "mp4":"mp4/berry4-29.mp4",
       "layer": "ridge"
     },
     {
@@ -1377,7 +1377,7 @@
       "coords": [78.31, -161.4],
       "category": "berries",
       "description": "Accessed through the hidden area below.",
-      "gif":"gifs/berry5-1.gif",
+      "mp4":"mp4/berry5-1.mp4",
       "layer": "temple",
       "links": [
         {
@@ -1392,7 +1392,7 @@
       "name": "Red Strawberry 2",
       "coords": [80.38, -118.7],
       "category": "berries",
-      "gif":"gifs/berry5-2.gif",
+      "mp4":"mp4/berry5-2.mp4",
       "layer": "temple"
     },
     {
@@ -1400,7 +1400,7 @@
       "name": "Red Strawberry 3",
       "coords": [77.61, -104.3],
       "category": "berries",
-      "gif":"gifs/berry5-3.gif",
+      "mp4":"mp4/berry5-3.mp4",
       "layer": "temple"
     },
     {
@@ -1408,7 +1408,7 @@
       "name": "Red Strawberry 4",
       "coords": [77.86, -114.3],
       "category": "berries",
-      "gif":"gifs/berry5-4.gif",
+      "mp4":"mp4/berry5-4.mp4",
       "layer": "temple"
     },
     {
@@ -1416,7 +1416,7 @@
       "name": "Red Strawberry 5",
       "coords": [77.41, -124.0],
       "category": "berries",
-      "gif":"gifs/berry5-5.gif",
+      "mp4":"mp4/berry5-5.mp4",
       "layer": "temple"
     },
     {
@@ -1424,7 +1424,7 @@
       "name": "Red Strawberry 6",
       "coords": [76.79, -114.3],
       "category": "berries",
-      "gif":"gifs/berry5-6.gif",
+      "mp4":"mp4/berry5-6.mp4",
       "layer": "temple"
     },
     {
@@ -1432,7 +1432,7 @@
       "name": "Red Strawberry 7",
       "coords": [76.23, -125.6],
       "category": "berries",
-      "gif":"gifs/berry5-7.gif",
+      "mp4":"mp4/berry5-7.mp4",
       "layer": "temple"
     },
     {
@@ -1440,7 +1440,7 @@
       "name": "Red Strawberry 8",
       "coords": [76.09, -105.2],
       "category": "berries",
-      "gif":"gifs/berry5-8.gif",
+      "mp4":"mp4/berry5-8.mp4",
       "layer": "temple"
     },
     {
@@ -1463,7 +1463,7 @@
       "name": "Red Strawberry 10",
       "coords": [81.25, -133.3],
       "category": "berries",
-      "gif":"gifs/berry5-10.gif",
+      "mp4":"mp4/berry5-10.mp4",
       "layer": "temple"
     },
     {
@@ -1471,7 +1471,7 @@
       "name": "Red Strawberry 11",
       "coords": [82.23, -106.2],
       "category": "berries",
-      "gif":"gifs/berry5-11.gif",
+      "mp4":"mp4/berry5-11.mp4",
       "layer": "temple"
     },
     {
@@ -1479,7 +1479,7 @@
       "name": "Red Strawberry 12",
       "coords": [81.61, -94.8],
       "category": "berries",
-      "gif":"gifs/berry5-12.gif",
+      "mp4":"mp4/berry5-12.mp4",
       "layer": "temple"
     },
     {
@@ -1487,7 +1487,7 @@
       "name": "Red Strawberry 13",
       "coords": [80.02, -95.7],
       "category": "berries",
-      "gif":"gifs/berry5-13.gif",
+      "mp4":"mp4/berry5-13.mp4",
       "layer": "temple"
     },
     {
@@ -1496,7 +1496,7 @@
       "coords": [80.95, -94.4],
       "category": "berries",
       "description": "Navigate here without dashing to collect the strawberry.",
-      "gif":"gifs/berry5-14.gif",
+      "mp4":"mp4/berry5-14.mp4",
       "layer": "temple"
     },
     {
@@ -1504,7 +1504,7 @@
       "name": "Red Strawberry 15",
       "coords": [78.59, -78.6],
       "category": "berries",
-      "gif":"gifs/berry5-15.gif",
+      "mp4":"mp4/berry5-15.mp4",
       "layer": "temple"
     },
     {
@@ -1512,7 +1512,7 @@
       "name": "Red Strawberry 16",
       "coords": [80.64, -78.3],
       "category": "berries",
-      "gif":"gifs/berry5-16.gif",
+      "mp4":"mp4/berry5-16.mp4",
       "layer": "temple"
     },
     {
@@ -1520,7 +1520,7 @@
       "name": "Red Strawberry 17",
       "coords": [80.64, -84.1],
       "category": "berries",
-      "gif":"gifs/berry5-17.gif",
+      "mp4":"mp4/berry5-17.mp4",
       "layer": "temple"
     },
     {
@@ -1528,7 +1528,7 @@
       "name": "Red Strawberry 18",
       "coords": [78.09, -70.5],
       "category": "berries",
-      "gif":"gifs/berry5-18.gif",
+      "mp4":"mp4/berry5-18.mp4",
       "layer": "temple"
     },
     {
@@ -1536,7 +1536,7 @@
       "name": "Red Strawberry 19",
       "coords": [77.91, -56.5],
       "category": "berries",
-      "gif":"gifs/berry5-19.gif",
+      "mp4":"mp4/berry5-19.mp4",
       "layer": "temple"
     },
     {
@@ -1552,7 +1552,7 @@
       "coords": [78.55, -39.9],
       "category": "berries",
       "description": "Collect the 3 strawberry seeds without landing to reveal the strawberry.",
-      "gif":"gifs/berry5-21.gif",
+      "mp4":"mp4/berry5-21.mp4",
       "layer": "temple",
       "links": [
         {
@@ -1625,7 +1625,7 @@
       "name": "Red Strawberry 22",
       "coords": [81.40, -71.4],
       "category": "berries",
-      "gif":"gifs/berry5-22.gif",
+      "mp4":"mp4/berry5-22.mp4",
       "layer": "temple"
     },
     {
@@ -1633,7 +1633,7 @@
       "name": "Red Strawberry 23",
       "coords": [81.14, -53.7],
       "category": "berries",
-      "gif":"gifs/berry5-23.gif",
+      "mp4":"mp4/berry5-23.mp4",
       "layer": "temple"
     },
     {
@@ -1641,7 +1641,7 @@
       "name": "Red Strawberry 24",
       "coords": [61.39, -122.5],
       "category": "berries",
-      "gif":"gifs/berry5-24.gif",
+      "mp4":"mp4/berry5-24.mp4",
       "layer": "temple"
     },
     {
@@ -1649,7 +1649,7 @@
       "name": "Red Strawberry 25",
       "coords": [70.19, -92.3],
       "category": "berries",
-      "gif":"gifs/berry5-25.gif",
+      "mp4":"mp4/berry5-25.mp4",
       "layer": "temple"
     },
     {
@@ -1658,7 +1658,7 @@
       "coords": [68.77, -91.8],
       "category": "berries",
       "description": "Accessed through the hidden area above.",
-      "gif":"gifs/berry5-26.gif",
+      "mp4":"mp4/berry5-26.mp4",
       "layer": "temple",
       "links": [
         {
@@ -1674,7 +1674,7 @@
       "coords": [66.49, -63.3],
       "category": "berries",
       "description": "Accessed through the hidden area above.",
-      "gif":"gifs/berry5-27.gif",
+      "mp4":"mp4/berry5-27.mp4",
       "layer": "temple",
       "links": [
         {
@@ -1689,7 +1689,7 @@
       "name": "Red Strawberry 28",
       "coords": [69.33, -63.2],
       "category": "berries",
-      "gif":"gifs/berry5-28.gif",
+      "mp4":"mp4/berry5-28.mp4",
       "layer": "temple"
     },
     {
@@ -1727,7 +1727,7 @@
       "name": "Red Strawberry 31",
       "coords": [72.66, -26.95],
       "category": "berries",
-      "gif":"gifs/berry5-31.gif",
+      "mp4":"mp4/berry5-31.mp4",
       "layer": "temple"
     },
     {
@@ -1736,7 +1736,7 @@
       "coords": [-76.70, -159.83],
       "category": "berries",
       "description":"Accessed through the smashable wall.",
-      "gif":"gifs/berry7-1.gif",
+      "mp4":"mp4/berry7-1.mp4",
       "layer": "summit",
       "links": [
         {
@@ -1752,7 +1752,7 @@
       "coords": [-75.95, -149.1],
       "category": "berries",
       "description":"Accessed through the smashable wall.",
-      "gif":"gifs/berry7-2.gif",
+      "mp4":"mp4/berry7-2.mp4",
       "layer": "summit",
       "links": [
         {
@@ -1768,7 +1768,7 @@
       "coords": [-76.08, -147.0],
       "category": "berries",
       "description":"Accessed through the smashable wall.",
-      "gif":"gifs/berry7-3.gif",
+      "mp4":"mp4/berry7-3.mp4",
       "layer": "summit",
       "links": [
         {
@@ -1783,7 +1783,7 @@
       "name": "Red Strawberry 4",
       "coords": [-76.06, -141.8],
       "category": "berries",
-      "gif":"gifs/berry7-4.gif",
+      "mp4":"mp4/berry7-4.mp4",
       "layer": "summit"
     },
     {
@@ -1791,7 +1791,7 @@
       "name": "Red Strawberry 5",
       "coords": [-72.67, -129.15],
       "category": "berries",
-      "gif":"gifs/berry7-5.gif",
+      "mp4":"mp4/berry7-5.mp4",
       "layer": "summit"
     },
     {
@@ -1799,7 +1799,7 @@
       "name": "Red Strawberry 6",
       "coords": [-70.59, -131.1],
       "category": "berries",
-      "gif":"gifs/berry7-6.gif",
+      "mp4":"mp4/berry7-6.mp4",
       "layer": "summit"
     },
     {
@@ -1808,7 +1808,7 @@
       "coords": [-70.67, -137.25],
       "category": "berries",
       "description":"Accessed through the hidden area to the right.",
-      "gif":"gifs/berry7-7.gif",
+      "mp4":"mp4/berry7-7.mp4",
       "layer": "summit",
       "links": [
         {
@@ -1824,7 +1824,7 @@
       "coords": [-71.83, -121.4],
       "category": "berries",
       "description":"Use the spring then dash quickly 2 times to collect the strawberry.",
-      "gif":"gifs/berry7-8.gif",
+      "mp4":"mp4/berry7-8.mp4",
       "layer": "summit"
     },
     {
@@ -1832,7 +1832,7 @@
       "name": "Red Strawberry 9",
       "coords": [-69.26, -109.4],
       "category": "berries",
-      "gif":"gifs/berry7-9.gif",
+      "mp4":"mp4/berry7-9.mp4",
       "layer": "summit"
     },
     {
@@ -1840,7 +1840,7 @@
       "name": "Red Strawberry 10",
       "coords": [-67.23, -102.5],
       "category": "berries",
-      "gif":"gifs/berry7-10.gif",
+      "mp4":"mp4/berry7-10.mp4",
       "layer": "summit"
     },
     {
@@ -1848,7 +1848,7 @@
       "name": "Red Strawberry 11",
       "coords": [-59.19, -100.25],
       "category": "berries",
-      "gif":"gifs/berry7-11.gif",
+      "mp4":"mp4/berry7-11.mp4",
       "layer": "summit"
     },
     {
@@ -1856,7 +1856,7 @@
       "name": "Red Strawberry 12",
       "coords": [-57.61, -76.0],
       "category": "berries",
-      "gif":"gifs/berry7-12.gif",
+      "mp4":"mp4/berry7-12.mp4",
       "layer": "summit"
     },
     {
@@ -1879,7 +1879,7 @@
       "name": "Red Strawberry 14",
       "coords": [-53.54, -84.42],
       "category": "berries",
-      "gif":"gifs/berry7-14.gif",
+      "mp4":"mp4/berry7-14.mp4",
       "layer": "summit"
     },
     {
@@ -1903,7 +1903,7 @@
       "coords": [-51.21, -59.16],
       "category": "berries",
       "description":"Hidden behind the smashable wall.",
-      "gif":"gifs/berry7-16.gif",
+      "mp4":"mp4/berry7-16.mp4",
       "layer": "summit",
       "links": [
         {
@@ -1918,7 +1918,7 @@
       "name": "Red Strawberry 17",
       "coords": [-45.96, -58.84],
       "category": "berries",
-      "gif":"gifs/berry7-17.gif",
+      "mp4":"mp4/berry7-17.mp4",
       "layer": "summit"
     },
     {
@@ -1927,7 +1927,7 @@
       "coords": [-46.56, -53.22],
       "category": "berries",
       "description":"Accessed through the hidden area above.",
-      "gif":"gifs/berry7-18.gif",
+      "mp4":"mp4/berry7-18.mp4",
       "layer": "summit",
       "links": [
         {
@@ -1942,7 +1942,7 @@
       "name": "Red Strawberry 19",
       "coords": [-47.58, -50.61],
       "category": "berries",
-      "gif":"gifs/berry7-19.gif",
+      "mp4":"mp4/berry7-19.mp4",
       "layer": "summit"
     },
     {
@@ -1950,7 +1950,7 @@
       "name": "Red Strawberry 20",
       "coords": [-45.42, -42.31],
       "category": "berries",
-      "gif":"gifs/berry7-20.gif",
+      "mp4":"mp4/berry7-20.mp4",
       "layer": "summit"
     },
     {
@@ -1958,7 +1958,7 @@
       "name": "Red Strawberry 21",
       "coords": [-44.78, -33.70],
       "category": "berries",
-      "gif":"gifs/berry7-21.gif",
+      "mp4":"mp4/berry7-21.mp4",
       "layer": "summit"
     },
     {
@@ -1966,7 +1966,7 @@
       "name": "Red Strawberry 22",
       "coords": [-43.77, -26.24],
       "category": "berries",
-      "gif":"gifs/berry7-22.gif",
+      "mp4":"mp4/berry7-22.mp4",
       "layer": "summit"
     },
     {
@@ -1975,7 +1975,7 @@
       "coords": [-45.34, -15.86],
       "category": "berries",
       "description":"Accessed through the smashable wall above.",
-      "gif":"gifs/berry7-23.gif",
+      "mp4":"mp4/berry7-23.mp4",
       "layer": "summit",
       "links": [
         {
@@ -1991,7 +1991,7 @@
       "coords": [-43.97, -11.21],
       "category": "berries",
       "description":"Accessed through the hidden area below. Navigate to below the spring in the top left of this room without dashing, then dash to the spring, then dash twice quickly to the platform straight above to collect the strawberry when it flies up.",
-      "gif":"gifs/berry7-24.gif",
+      "mp4":"mp4/berry7-24.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2007,7 +2007,7 @@
       "coords": [-32.76, -3.65],
       "category": "berries",
       "description":"Accessed through the hidden area to the left.",
-      "gif":"gifs/berry7-25.gif",
+      "mp4":"mp4/berry7-25.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2023,7 +2023,7 @@
       "coords": [-32.63, 16.48],
       "category": "berries",
       "description":"Use the snowball to recharge your dash.",
-      "gif":"gifs/berry7-26.gif",
+      "mp4":"mp4/berry7-26.mp4",
       "layer": "summit"
     },
     {
@@ -2031,7 +2031,7 @@
       "name": "Red Strawberry 27",
       "coords": [-26.00, 28.83],
       "category": "berries",
-      "gif":"gifs/berry7-27.gif",
+      "mp4":"mp4/berry7-27.mp4",
       "layer": "summit"
     },
     {
@@ -2040,7 +2040,7 @@
       "coords": [-22.66, 25.00],
       "category": "berries",
       "description":"Navigate to the hanging blocks below without dashing, then dash twice quickly towards the strawberry to collect it.",
-      "gif":"gifs/berry7-28.gif",
+      "mp4":"mp4/berry7-28.mp4",
       "layer": "summit"
     },
     {
@@ -2049,7 +2049,7 @@
       "coords": [-18.37, 29.32],
       "category": "berries",
       "description": "Accessed through the smashable wall below. Collect the 3 strawberry seeds without landing to reveal the strawberry.",
-      "gif":"gifs/berry7-29.gif",
+      "mp4":"mp4/berry7-29.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2128,7 +2128,7 @@
       "coords": [-21.38, 32.66],
       "category": "berries",
       "description":"Accessed through the smashable wall below",
-      "gif":"gifs/berry7-30.gif",
+      "mp4":"mp4/berry7-30.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2143,7 +2143,7 @@
       "name": "Red Strawberry 31",
       "coords": [-23.20, 38.46],
       "category": "berries",
-      "gif":"gifs/berry7-31.gif",
+      "mp4":"mp4/berry7-31.mp4",
       "layer": "summit"
     },
     {
@@ -2152,7 +2152,7 @@
       "coords": [-14.02, 52.86],
       "category": "berries",
       "description":"Accessed through the hidden area to the left.",
-      "gif":"gifs/berry7-32.gif",
+      "mp4":"mp4/berry7-32.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2168,7 +2168,7 @@
       "coords": [-4.05, 46.80],
       "category": "berries",
       "description":"Accessed through the smashable wall to the right.",
-      "gif":"gifs/berry7-33.gif",
+      "mp4":"mp4/berry7-33.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2183,7 +2183,7 @@
       "name": "Red Strawberry 34",
       "coords": [-6.42, 58.85],
       "category": "berries",
-      "gif":"gifs/berry7-34.gif",
+      "mp4":"mp4/berry7-34.mp4",
       "layer": "summit"
     },
     {
@@ -2191,7 +2191,7 @@
       "name": "Red Strawberry 35",
       "coords": [-2.63, 82.22],
       "category": "berries",
-      "gif":"gifs/berry7-35.gif",
+      "mp4":"mp4/berry7-35.mp4",
       "layer": "summit"
     },
     {
@@ -2200,7 +2200,7 @@
       "coords": [-2.91, 88.99],
       "category": "berries",
       "description":"Accessed through the smashable wall below.",
-      "gif":"gifs/berry7-36.gif",
+      "mp4":"mp4/berry7-36.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2215,7 +2215,7 @@
       "name": "Red Strawberry 37",
       "coords": [-3.51, 101.65],
       "category": "berries",
-      "gif":"gifs/berry7-37.gif",
+      "mp4":"mp4/berry7-37.mp4",
       "layer": "summit"
     },
     {
@@ -2224,7 +2224,7 @@
       "coords": [1.83, 111.84],
       "category": "berries",
       "description":"Accessed through the hidden area to the left.",
-      "gif":"gifs/berry7-38.gif",
+      "mp4":"mp4/berry7-38.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2240,7 +2240,7 @@
       "coords": [7.25, 112.80],
       "category": "berries",
       "description":"Accessed through the hidden area to the left.",
-      "gif":"gifs/berry7-39-40.gif",
+      "mp4":"mp4/berry7-39-40.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2256,7 +2256,7 @@
       "coords": [7.25, 110.17],
       "category": "berries",
       "description":"Accessed through the hidden area to the right.",
-      "gif":"gifs/berry7-39-40.gif",
+      "mp4":"mp4/berry7-39-40.mp4",
       "layer": "summit",
       "links": [
         {
@@ -2271,7 +2271,7 @@
       "name": "Red Strawberry 41",
       "coords": [38.41, 111.32],
       "category": "berries",
-      "gif":"gifs/berry7-41.gif",
+      "mp4":"mp4/berry7-41.mp4",
       "layer": "summit"
     },
     {
@@ -2279,7 +2279,7 @@
       "name": "Red Strawberry 42",
       "coords": [42.29, 111.49],
       "category": "berries",
-      "gif":"gifs/berry7-42.gif",
+      "mp4":"mp4/berry7-42.mp4",
       "layer": "summit"
     },
     {
@@ -2287,7 +2287,7 @@
       "name": "Red Strawberry 43",
       "coords": [47.93, 112.37],
       "category": "berries",
-      "gif":"gifs/berry7-43.gif",
+      "mp4":"mp4/berry7-43.mp4",
       "layer": "summit"
     },
     {
@@ -2295,7 +2295,7 @@
       "name": "Red Strawberry 44",
       "coords": [60.15, 105.86],
       "category": "berries",
-      "gif":"gifs/berry7-44.gif",
+      "mp4":"mp4/berry7-44.mp4",
       "layer": "summit"
     },
     {
@@ -2303,7 +2303,7 @@
       "name": "Red Strawberry 45",
       "coords": [61.02, 117.38],
       "category": "berries",
-      "gif":"gifs/berry7-45.gif",
+      "mp4":"mp4/berry7-45.mp4",
       "layer": "summit"
     },
     {
@@ -2311,7 +2311,7 @@
       "name": "Red Strawberry 46",
       "coords": [61.90, 114.13],
       "category": "berries",
-      "gif":"gifs/berry7-46.gif",
+      "mp4":"mp4/berry7-46.mp4",
       "layer": "summit"
     },
     {
@@ -2319,7 +2319,7 @@
       "name": "Red Strawberry 47",
       "coords": [76.82, 122.39],
       "category": "berries",
-      "gif":"gifs/berry7-47.gif",
+      "mp4":"mp4/berry7-47.mp4",
       "layer": "summit"
     },
     {
@@ -2328,7 +2328,7 @@
       "coords": [68.59, -143.92],
       "category": "berries",
       "description":"Activate the ice switch all the way to the right several rooms, then enter this room to access the strawberry.",
-      "gif":"gifs/berry8-1.gif",
+      "mp4":"mp4/berry8-1.mp4",
       "layer": "core"
     },
     {
@@ -2337,7 +2337,7 @@
       "coords": [73.47, -127.91],
       "category": "berries",
       "description":"Activate the ice switch directly below one room down, then enter this room to access the strawberry.",
-      "gif":"gifs/berry8-2.gif",
+      "mp4":"mp4/berry8-2.mp4",
       "layer": "core"
     },
     {
@@ -2345,7 +2345,7 @@
       "name": "Red Strawberry 3",
       "coords": [72.97, -114.74],
       "category": "berries",
-      "gif":"gifs/berry8-3.gif",
+      "mp4":"mp4/berry8-3.mp4",
       "layer": "core"
     },
     {
@@ -2353,7 +2353,7 @@
       "name": "Red Strawberry 4",
       "coords": [73.30, -104.80],
       "category": "berries",
-      "gif":"gifs/berry8-4.gif",
+      "mp4":"mp4/berry8-4.mp4",
       "layer": "core"
     },
     {
@@ -2361,7 +2361,7 @@
       "name": "Red Strawberry 5",
       "coords": [81.24, -92.76],
       "category": "berries",
-      "gif":"gifs/berry8-5.gif",
+      "mp4":"mp4/berry8-5.mp4",
       "layer": "core"
     },
     {
@@ -2719,7 +2719,7 @@
       "category": "hearts",
       "icon": "blueHeart",
       "description": "Enter through the hidden area. Then, follow the path to the left.\n\nTo unlock the crystal heart, dash in the direction of the birds to the left, in the order of the colors on the computer.\nDash Direction Code: 🡹🡸🡾🡽🡸🡼.",
-      "gif":"gifs/heart1-1.gif",
+      "mp4":"mp4/heart1-1.mp4",
       "layer": "city",
       "links": [
         {
@@ -2752,7 +2752,7 @@
       "category": "hearts",
       "icon": "blueHeart",
       "description": "Use the ability to recharge your dash by changing screens to reach the heart.",
-      "gif":"gifs/heart2-1.gif",
+      "mp4":"mp4/heart2-1.mp4",
       "layer": "site"
     },
     {
@@ -2810,7 +2810,7 @@
       "category": "hearts",
       "icon": "blueHeart",
       "description": "Smash the wall to the left to access this area. Then, jump on the white block and hold down until you fall behind it. Use the background platforms to reach the crystal heart.",
-      "gif":"gifs/heart4-1.gif",
+      "mp4":"mp4/heart4-1.mp4",
       "layer": "ridge",
       "links": [
         {
@@ -2885,7 +2885,7 @@
       "category": "hearts",
       "icon": "blueHeart",
       "description":"To solve the puzzle you have to use the dash directions from the birds at the very first crystal heart in the order of colors listed here 4 times. Each time will be different based off of the symbol below the 4 torches:\nTorch 1 (Normal):🡹🡸🡾🡽🡸🡼\nTorch 2 (Right/Left Swapped):🡹🡺🡿🡼🡺🡽\nTorch 3 (Up/Down Swapped):🡻🡸🡽🡾🡸🡿\nTorch 4 (All Swapped):🡻🡺🡼🡿🡺🡾",
-      "gif":"gifs/heart6-1.gif",
+      "mp4":"mp4/heart6-1.mp4",
       "layer": "reflection"
     },
     {
@@ -2966,7 +2966,7 @@
       "coords": [-75.04, -133.3],
       "category": "hearts",
       "description":"Collect all 6 jewels to access the crystal heart.",
-      "gif":"gifs/jewel1.gif",
+      "mp4":"mp4/jewel1.mp4",
       "icon": "star",
       "layer": "summit"
     },
@@ -2976,7 +2976,7 @@
       "coords": [-71.66, -127.5],
       "category": "hearts",
       "description":"Accessed through the hidden area above. Collect all 6 jewels to access the crystal heart.",
-      "gif":"gifs/jewel2.gif",
+      "mp4":"mp4/jewel2.mp4",
       "icon": "sapphire",
       "layer": "summit"
     },
@@ -2986,7 +2986,7 @@
       "coords": [-56.40, -76.95],
       "category": "hearts",
       "description":"Accessed through the smashable wall to the left. Collect all 6 jewels to access the crystal heart.",
-      "gif":"gifs/jewel3.gif",
+      "mp4":"mp4/jewel3.mp4",
       "icon": "emerald",
       "layer": "summit",
       "links": [
@@ -3003,7 +3003,7 @@
       "coords": [-46.30, -20.86],
       "category": "hearts",
       "description":"Accessed through the hidden area to the left. Collect all 6 jewels to access the crystal heart.",
-      "gif":"gifs/jewel4.gif",
+      "mp4":"mp4/jewel4.mp4",
       "icon": "topaz",
       "layer": "summit",
       "links": [
@@ -3020,7 +3020,7 @@
       "coords": [-33.19, -15.85],
       "category": "hearts",
       "description":"Accessed through the hidden areas below. Collect all 6 jewels to access the crystal heart.",
-      "gif":"gifs/jewel5.gif",
+      "mp4":"mp4/jewel5.mp4",
       "icon": "diamond",
       "layer": "summit",
       "links": [
@@ -3042,7 +3042,7 @@
       "coords": [-3.06, 80.82],
       "category": "hearts",
       "description":"Start from the area behind the smashable wall near strawberry 33 and use the red bubble to travel all the way to the right. Collect all 6 jewels to access the crystal heart.",
-      "gif":"gifs/jewel6.gif",
+      "mp4":"mp4/jewel6.mp4",
       "icon": "pearl",
       "layer": "summit",
       "links": [
@@ -3096,7 +3096,7 @@
       "coords": [78.98, -33.3],
       "category": "tapes",
       "description": "Accessed through the hidden area to the left.",
-      "gif":"gifs/tape5.gif",
+      "mp4":"mp4/tape5.mp4",
       "layer": "temple",
       "links": [
         {
@@ -3112,7 +3112,7 @@
       "coords": [81.96, -173.3],
       "category": "tapes",
       "description": "Accessed after using the angry platform to smash both smashable walls.",
-      "gif":"gifs/tape6.gif",
+      "mp4":"mp4/tape6.mp4",
       "layer": "reflection",
       "links": [
         {
@@ -3133,7 +3133,7 @@
       "coords": [-43.13, -34.77],
       "category": "tapes",
       "description": "Accessed through the hidden area to the left.",
-      "gif":"gifs/tape7.gif",
+      "mp4":"mp4/tape7.mp4",
       "layer": "summit",
       "links": [
         {
@@ -3156,7 +3156,7 @@
       "coords": [55.07, -80.9],
       "category": "secrets",
       "description": "Access this hidden area from below by dashing.",
-      "gif": "gifs/secret1.gif",
+      "mp4": "mp4/secret1.mp4",
       "layer": "city"
     },
     {
@@ -3165,7 +3165,7 @@
       "coords": [71.03, -18.9],
       "category": "secrets",
       "description": "Access this hidden area behind the traffic light block.",
-      "gif": "gifs/secret2.gif",
+      "mp4": "mp4/secret2.mp4",
       "layer": "city"
     },
     {
@@ -3174,7 +3174,7 @@
       "coords": [75.68, -28.5],
       "category": "secrets",
       "description": "Access the cassette tape area behind the traffic light block.",
-      "gif": "gifs/secret3.gif",
+      "mp4": "mp4/secret3.mp4",
       "layer": "city"
     },
     {
@@ -3183,7 +3183,7 @@
       "coords": [79.28, -21.1],
       "category": "secrets",
       "description": "To access this area, grab the block to make it fall.",
-      "gif": "gifs/secret4.gif",
+      "mp4": "mp4/secret4.mp4",
       "layer": "city"
     },
     {
@@ -3192,7 +3192,7 @@
       "coords": [75.38, -145.3],
       "category": "secrets",
       "description": "Dash through the space block to access this area above.",
-      "gif": "gifs/secret5.gif",
+      "mp4": "mp4/secret5.mp4",
       "layer": "site"
     },
     {
@@ -3201,7 +3201,7 @@
       "coords": [75.68, -150.8],
       "category": "secrets",
       "description": "Dash through the space block to access this area below.",
-      "gif": "gifs/secret6.gif",
+      "mp4": "mp4/secret6.mp4",
       "layer": "site"
     },
     {
@@ -3210,7 +3210,7 @@
       "coords": [80.83, -165.7],
       "category": "secrets",
       "description": "Dash through the space block to access this area.",
-      "gif": "gifs/secret7.gif",
+      "mp4": "mp4/secret7.mp4",
       "layer": "site"
     },
     {
@@ -3219,7 +3219,7 @@
       "coords": [76.74, -127.1],
       "category": "secrets",
       "description": "Dash through the space block to access this area.",
-      "gif": "gifs/secret8.gif",
+      "mp4": "mp4/secret8.mp4",
       "layer": "site"
     },
     {
@@ -3234,7 +3234,7 @@
       "name": "Hidden Area",
       "coords": [81.52, -103.2],
       "category": "secrets",
-      "gif": "gifs/secret10.gif",
+      "mp4": "mp4/secret10.mp4",
       "layer": "resort"
     },
     {
@@ -3242,7 +3242,7 @@
       "name": "Hidden Area",
       "coords": [82.64, -91.4],
       "category": "secrets",
-      "gif": "gifs/secret11.gif",
+      "mp4": "mp4/secret11.mp4",
       "layer": "resort"
     },
     {
@@ -3343,7 +3343,7 @@
       "name": "Hidden Area",
       "coords": [80.44, -46.6],
       "description":"Hidden area to bypass the normal lock.",
-      "gif":"gifs/secret23.gif",
+      "mp4":"mp4/secret23.mp4",
       "category": "secrets",
       "layer": "temple",
       "links": [
@@ -3381,7 +3381,7 @@
       "name": "Hidden Area",
       "coords": [83.14, -164.1],
       "description":"Accessed after smashing the smashable wall and using the feathers to fly here.",
-      "gif":"gifs/secret27.gif",
+      "mp4":"mp4/secret27.mp4",
       "category": "secrets",
       "layer": "reflection",
       "links": [
@@ -5104,7 +5104,7 @@
       "coords": [76.51, -131.62],
       "category": "keys",
       "description": "Collect the 2 shields to activate the shield platform.",
-      "gif":"gifs/lock25.gif",
+      "mp4":"mp4/lock25.mp4",
       "layer": "ridge",
       "icon":"locks",
       "links": [
@@ -7919,7 +7919,7 @@
       "coords": [-70.82, -123.0],
       "category": "keys",
       "description": "Collect the 3 shields to activate the shield platform.",
-      "gif":"gifs/lock86.gif",
+      "mp4":"mp4/lock86.mp4",
       "layer": "summit",
       "icon":"locks",
       "links": [
@@ -7991,7 +7991,7 @@
       "coords": [-60.25, -95.3],
       "category": "keys",
       "description": "Collect the 4 shields to activate the shield platform.",
-      "gif":"gifs/lock87.gif",
+      "mp4":"mp4/lock87.mp4",
       "layer": "summit",
       "icon":"locks",
       "links": [
