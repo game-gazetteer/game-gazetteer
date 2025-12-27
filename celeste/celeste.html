@@ -1833,6 +1833,14 @@ function updateProgressDisplay() {
 
 /* ---------- HELPER FUNCTIONS ---------- */
 
+function stopAllPopupVideos() {
+  document.querySelectorAll(".leaflet-popup video").forEach(video => {
+    video.pause();
+    video.removeAttribute("src"); // optional: frees memory
+    video.load();
+  });
+}
+
 function jumpToMarker(targetId, zoomOverride = null) {
   const allMarkers = { ...markers, ...foundMarkers };
   const target = allMarkers[targetId];
@@ -1873,6 +1881,8 @@ function jumpToMarker(targetId, zoomOverride = null) {
 
 
 document.getElementById("layerSelect").addEventListener("change", e => {
+  stopAllPopupVideos();
+
   const newLayerKey = e.target.value;
   if (newLayerKey === currentLayer) return;
 
@@ -2232,12 +2242,11 @@ map.on('click', e => {
 
     if (marker.mp4) {
       const video = document.createElement("video");
-      video.src = marker.mp4;
-      video.muted = true;          // MUST be set first
+      video.dataset.src = marker.mp4;   // 👈 lazy-load
+      video.muted = true;
       video.loop = true;
-      video.autoplay = true;
       video.playsInline = true;
-      video.preload = "metadata";
+      video.preload = "none";            // 👈 important
 
       video.style.width = "100%";
       video.style.marginTop = "8px";
@@ -2246,9 +2255,18 @@ map.on('click', e => {
 
       popupContainer.appendChild(video);
 
-      // 🔑 Force autoplay when ready
-      video.addEventListener("loadedmetadata", () => {
+      // Load + play ONLY when popup opens
+      marker.on("popupopen", () => {
+        if (!video.src) {
+          video.src = video.dataset.src;
+          video.load();
+        }
         video.play().catch(() => {});
+      });
+
+      // Pause when popup closes
+      marker.on("popupclose", () => {
+        video.pause();
       });
     }
 
