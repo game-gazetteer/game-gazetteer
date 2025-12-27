@@ -1042,7 +1042,6 @@ map.on('click', e => {
             const marker = L.marker(point.coords, {
                 icon: createSvgMarker(point.category, isFound),
                 title: point.name,
-                opacity: isFound ? 0.5 : 1
             });
 
             marker.category = point.category;
