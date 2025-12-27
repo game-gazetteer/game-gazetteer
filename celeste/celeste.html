@@ -2231,15 +2231,25 @@ map.on('click', e => {
     }
 
     if (marker.mp4) {
-      const img = document.createElement("img");
-      img.src = marker.mp4;
-      img.style.width = "100%";
-      img.style.maxWidth = "240px";
-      img.style.borderRadius = "8px";
-      img.style.marginBottom = "8px";
-      img.loading = "lazy";
+      const video = document.createElement("video");
+      video.src = marker.mp4;
+      video.muted = true;          // MUST be set first
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.preload = "metadata";
 
-      popupContainer.appendChild(img);
+      video.style.width = "100%";
+      video.style.marginTop = "8px";
+      video.style.borderRadius = "6px";
+      video.style.display = "block";
+
+      popupContainer.appendChild(video);
+
+      // 🔑 Force autoplay when ready
+      video.addEventListener("loadedmetadata", () => {
+        video.play().catch(() => {});
+      });
     }
 
     if (marker.links.length > 0) {
