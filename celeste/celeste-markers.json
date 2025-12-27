@@ -2366,8 +2366,8 @@
     },
     {
       "id": "mberry",
-      "name": "Moon Berry",
-      "coords": [39.10, -98.26],
+      "name": "Moon Berry (WOW)",
+      "coords": [84.468, 48.024],
       "category": "berries",
       "icon": "mberry",
       "layer": "farewell"
@@ -2713,6 +2713,34 @@
       "layer": "core"
     },
     {
+      "id": "npc38",
+      "name": "Granny (RIP)",
+      "coords": [77.90, -175.41],
+      "category": "NPC",
+      "layer": "farewell"
+    },
+    {
+      "id": "npc39",
+      "name": "Badeline",
+      "coords": [82.499, -57.242],
+      "category": "NPC",
+      "layer": "farewell"
+    },
+    {
+      "id": "npc40",
+      "name": "Badeline",
+      "coords": [82.618, -41.140],
+      "category": "NPC",
+      "layer": "farewell"
+    },
+    {
+      "id": "npc41",
+      "name": "Badeline",
+      "coords": [82.678, 34.158],
+      "category": "NPC",
+      "layer": "farewell"
+    },
+    {
       "id": "heart1-1",
       "name": "Blue Crystal Heart",
       "coords": [60.24, -124.3],
@@ -2959,6 +2987,14 @@
       "category": "hearts",
       "icon": "goldHeart",
       "layer": "core"
+    },
+    {
+      "id": "heart9-1",
+      "name": "Fake Crystal Heart",
+      "coords": [81.041, -126.065],
+      "category": "hearts",
+      "icon": "grayHeart",
+      "layer": "farewell"
     },
     {
       "id": "jewel1",
@@ -3542,6 +3578,64 @@
       "coords": [33.57, 110.95],
       "category": "secrets",
       "layer": "summit"
+    },
+    {
+      "id": "secret49",
+      "name": "Hidden Area",
+      "coords": [79.53, -142.27],
+      "category": "secrets",
+      "description":"Accessed after destroying the utility vault.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Utility Vault",
+          "target": "farewell:lock109",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "secret50",
+      "name": "Hidden Area",
+      "coords": [79.66, -141.64],
+      "category": "secrets",
+      "description":"Hidden area that leads to a secret route to bypass the key collection sequence below.",
+      "layer": "farewell"
+    },
+    {
+      "id": "secret51",
+      "name": "Wavedash Tutorial",
+      "coords": [81.043, -121.878],
+      "category": "secrets",
+      "layer": "farewell"
+    },
+    {
+      "id": "secret52",
+      "name": "Kevin Room",
+      "coords": [81.579, -97.435],
+      "category": "secrets",
+      "description":"Use the feathers to reach here.",
+      "layer": "farewell"
+    },
+    {
+      "id": "secret53",
+      "name": "Hidden Path",
+      "coords": [82.737, 47.041],
+      "category": "secrets",
+      "description":"After destroying the utility vault, head left to start the moon berry route.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Utility Vault",
+          "target": "farewell:lock151",
+          "zoom": 10
+        },
+        {
+          "label": "Moon Berry (WOW)",
+          "target": "farewell:mberry",
+          "zoom": 10
+        }
+      ]
     },
     {
       "id": "lock0",
@@ -8728,6 +8822,15 @@
       "icon":"locks"
     },
     {
+      "id": "lock103-1",
+      "name": "Crystal Heart Gate",
+      "coords": [81.034, -122.704],
+      "category": "keys",
+      "description": "Opened after collecting any 15 crystal hearts.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
       "id": "lock104",
       "name": "Shield Platform",
       "coords": [56.65, -111.46],
@@ -8755,6 +8858,1733 @@
           "label": "Shield Platform",
           "target": "core:lock104",
           "zoom": 8
+        }
+      ]
+    },
+    {
+      "id": "lock105",
+      "name": "Shield Platform",
+      "coords": [78.88, -162.08],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key105",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key105",
+      "name": "Shield",
+      "coords": [78.88, -162.32],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock105",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock106",
+      "name": "Shield Platform",
+      "coords": [78.97, -157.99],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key106-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key106-2",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key106-1",
+      "name": "Shield 1",
+      "coords": [78.97, -158.21],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock106",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key106-2",
+      "name": "Shield 2",
+      "coords": [78.91, -158.47],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock106",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock107",
+      "name": "Shield Platform",
+      "coords": [78.87, -157.05],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key107",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key107",
+      "name": "Shield",
+      "coords": [78.90, -157.68],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock107",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock108",
+      "name": "Shield Platform",
+      "coords": [78.96, -155.19],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key108",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key108",
+      "name": "Shield",
+      "coords": [78.915, -155.81],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock108",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock109",
+      "name": "Utility Vault",
+      "coords": [79.53, -141.53],
+      "category": "keys",
+      "description": "Destroy this to remove the electricity barriers in the power source room.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock110",
+      "name": "Shield Platform",
+      "coords": [79.606, -140.371],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key110-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key110-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key110-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key110-1",
+      "name": "Shield 1",
+      "coords": [79.59, -140.81],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock110",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key110-2",
+      "name": "Shield 2",
+      "coords": [79.646, -140.85],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock110",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key110-3",
+      "name": "Shield 3",
+      "coords": [79.642, -140.522],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock110",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock111",
+      "name": "Temple Gate",
+      "coords": [79.425, -141.280],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Dash Switch",
+          "target": "farewell:key111",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key111",
+      "name": "Dash Switch",
+      "coords": [79.410, -141.136],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Temple Gate",
+          "target": "farewell:lock111",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock112",
+      "name": "Temple Gate",
+      "coords": [79.438, -142.509],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Dash Switch",
+          "target": "farewell:key112",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key112",
+      "name": "Dash Switch",
+      "coords": [79.423, -142.633],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Temple Gate",
+          "target": "farewell:lock112",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock113",
+      "name": "Lock 1",
+      "coords": [79.341, -141.884],
+      "category": "keys",
+      "description": "Use the key to open the first lock in the power source room.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Key 1",
+          "target": "farewell:key113",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key113",
+      "name": "Key 1",
+      "coords": [79.293, -138.440],
+      "category": "keys",
+      "description": "Use the key to open the first lock in the power source room.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Lock 1",
+          "target": "farewell:lock113",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock114",
+      "name": "Lock 2",
+      "coords": [79.381, -141.884],
+      "category": "keys",
+      "description": "Use the key to open the second lock in the power source room.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Key 2",
+          "target": "farewell:key114",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key114",
+      "name": "Key 2",
+      "coords": [79.482, -138.700],
+      "category": "keys",
+      "description": "Use the key to open the second lock in the power source room.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Lock 2",
+          "target": "farewell:lock114",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock115",
+      "name": "Lock 3",
+      "coords": [79.422, -141.884],
+      "category": "keys",
+      "description": "Use the key to open the third lock in the power source room.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Key 3",
+          "target": "farewell:key115",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key115",
+      "name": "Key 3",
+      "coords": [79.345, -145.031],
+      "category": "keys",
+      "description": "Use the key to open the third lock in the power source room.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Lock 3",
+          "target": "farewell:lock115",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock116",
+      "name": "Lock 4",
+      "coords": [79.461, -141.884],
+      "category": "keys",
+      "description": "Use the key to open the fourth lock in the power source room.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Key 4",
+          "target": "farewell:key116",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key116",
+      "name": "Key 4",
+      "coords": [79.837, -143.227],
+      "category": "keys",
+      "description": "Use the key to open the fourth lock in the power source room.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Lock 4",
+          "target": "farewell:lock116",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock117",
+      "name": "Lock 5",
+      "coords": [79.502, -141.886],
+      "category": "keys",
+      "description": "Use the key to open the final lock in the power source room. Then use the red bubble below to ascend.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Key 5",
+          "target": "farewell:key117",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key117",
+      "name": "Key 5",
+      "coords": [79.638, -140.062],
+      "category": "keys",
+      "description": "Accessed through the hidden area to the left. Use the key to open the final lock in the power source room.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Lock 5",
+          "target": "farewell:lock117",
+          "zoom": 10
+        },
+        {
+          "label": "Hidden Area",
+          "target": "farewell:secret49",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock118",
+      "name": "Shield Platform",
+      "coords": [80.512, -141.553],
+      "category": "keys",
+      "description": "Collect the 2 shields using the pufferfish to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key118-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key118-2",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key118-1",
+      "name": "Shield 1",
+      "coords": [80.454, -142.259],
+      "category": "keys",
+      "description": "Collect the 2 shields using the pufferfish to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock118",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key118-2",
+      "name": "Shield 2",
+      "coords": [80.487, -142.259],
+      "category": "keys",
+      "description": "Collect the 2 shields using the pufferfish to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock118",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock119",
+      "name": "Shield Platform",
+      "coords": [81.030, -139.839],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key119",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key119",
+      "name": "Shield",
+      "coords": [81.037, -140.061],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock119",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock120",
+      "name": "Temple Gate",
+      "coords": [81.080, -138.203],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Dash Switch",
+          "target": "farewell:key120",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key120",
+      "name": "Dash Switch",
+      "coords": [81.049, -138.248],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Temple Gate",
+          "target": "farewell:lock120",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock121",
+      "name": "Temple Gate",
+      "coords": [81.084, -137.807],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Dash Switch",
+          "target": "farewell:key121",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key121",
+      "name": "Dash Switch",
+      "coords": [81.056, -137.874],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Temple Gate",
+          "target": "farewell:lock121",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock122",
+      "name": "Temple Gate",
+      "coords": [81.090, -137.280],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Dash Switch",
+          "target": "farewell:key122",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key122",
+      "name": "Dash Switch",
+      "coords": [81.063, -137.346],
+      "category": "keys",
+      "description": "Hit the dash switch to activate the temple gate.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Temple Gate",
+          "target": "farewell:lock122",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock123",
+      "name": "Shield Platform",
+      "coords": [81.047, -135.854],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key123",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key123",
+      "name": "Shield",
+      "coords": [80.978, -136.433],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock123",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock124",
+      "name": "Shield Platform",
+      "coords": [81.048, -131.119],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key124-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key124-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key124-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key124-1",
+      "name": "Shield 1",
+      "coords": [81.045, -132.326],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock124",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key124-2",
+      "name": "Shield 2",
+      "coords": [81.023, -132.085],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock124",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key124-3",
+      "name": "Shield 3",
+      "coords": [81.045, -131.733],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock124",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock125",
+      "name": "Shield Platform",
+      "coords": [81.257, -110.121],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key125",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key125",
+      "name": "Shield",
+      "coords": [81.263, -111.232],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock125",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock126",
+      "name": "Shield Platform",
+      "coords": [81.317, -105.036],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key126",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key126",
+      "name": "Shield",
+      "coords": [81.320, -104.730],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock126",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock127",
+      "name": "Shield Platform",
+      "coords": [81.193, -106.202],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key127-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key127-2",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key127-1",
+      "name": "Shield 1",
+      "coords": [81.234, -106.157],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock127",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key127-2",
+      "name": "Shield 2",
+      "coords": [81.190, -106.154],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock127",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock128",
+      "name": "Shield Platform",
+      "coords": [81.709, -104.882],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key128",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key128",
+      "name": "Shield",
+      "coords": [81.709, -103.521],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock128",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock129",
+      "name": "Shield Platform",
+      "coords": [81.953, -84.098],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key129",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key129",
+      "name": "Shield",
+      "coords": [81.962, -84.251],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock129",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock130",
+      "name": "Shield Platform",
+      "coords": [82.010, -82.260],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key130",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key130",
+      "name": "Shield",
+      "coords": [81.967, -82.888],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock130",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock131",
+      "name": "Shield Platform",
+      "coords": [81.637, -79.611],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key131-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key131-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key131-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key131-1",
+      "name": "Shield 1",
+      "coords": [81.675, -80.163],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock131",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key131-2",
+      "name": "Shield 2",
+      "coords": [81.661, -79.920],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock131",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key131-3",
+      "name": "Shield 3",
+      "coords": [81.653, -79.614],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock131",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock132-1",
+      "name": "Shield Platform",
+      "coords": [81.947, -76.012],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key132-3",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 4",
+          "target": "farewell:key132-4",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 5",
+          "target": "farewell:key132-5",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 6",
+          "target": "farewell:key132-6",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock132-2",
+      "name": "Shield Platform",
+      "coords": [81.978, -75.726],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key132-3",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 4",
+          "target": "farewell:key132-4",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 5",
+          "target": "farewell:key132-5",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 6",
+          "target": "farewell:key132-6",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock132-3",
+      "name": "Shield Platform",
+      "coords": [81.946, -75.436],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key132-3",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 4",
+          "target": "farewell:key132-4",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 5",
+          "target": "farewell:key132-5",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 6",
+          "target": "farewell:key132-6",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key132-1",
+      "name": "Shield 1",
+      "coords": [81.772, -75.921],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key132-2",
+      "name": "Shield 2",
+      "coords": [81.813, -75.527],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key132-3",
+      "name": "Shield 3",
+      "coords": [81.828, -75.725],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key132-4",
+      "name": "Shield 4",
+      "coords": [81.869, -75.922],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key132-5",
+      "name": "Shield 5",
+      "coords": [81.869, -75.530],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key132-6",
+      "name": "Shield 6",
+      "coords": [81.910, -75.725],
+      "category": "keys",
+      "description": "Collect the 6 shields to activate the shield platforms.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock132-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock133",
+      "name": "Shield Platform",
+      "coords": [82.041, -74.000],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key133",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key133",
+      "name": "Shield",
+      "coords": [82.017, -74.100],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock133",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock134",
+      "name": "Shield Platform",
+      "coords": [82.066, -69.166],
+      "category": "keys",
+      "description": "Collect the 4 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key134-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key134-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key134-3",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 4",
+          "target": "farewell:key134-4",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key134-1",
+      "name": "Shield 1",
+      "coords": [81.996, -69.706],
+      "category": "keys",
+      "description": "Collect the 4 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock134",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key134-2",
+      "name": "Shield 2",
+      "coords": [82.026, -69.530],
+      "category": "keys",
+      "description": "Collect the 4 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock134",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key134-3",
+      "name": "Shield 3",
+      "coords": [81.989, -69.200],
+      "category": "keys",
+      "description": "Collect the 4 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock134",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key134-4",
+      "name": "Shield 4",
+      "coords": [82.063, -69.112],
+      "category": "keys",
+      "description": "Collect the 4 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock134",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock135",
+      "name": "Shield Platform",
+      "coords": [82.005, -67.442],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key135",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key135",
+      "name": "Shield",
+      "coords": [82.047, -67.750],
+      "category": "keys",
+      "description": "Collect the shield to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock135",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock136",
+      "name": "Shield Platform",
+      "coords": [82.565, -52.039],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key136-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key136-2",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key136-1",
+      "name": "Shield 1",
+      "coords": [82.537, -52.785],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock136",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key136-2",
+      "name": "Shield 2",
+      "coords": [82.540, -52.501],
+      "category": "keys",
+      "description": "Collect the 2 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock136",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock137",
+      "name": "Shield Platform",
+      "coords": [82.621, -46.675],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield 1",
+          "target": "farewell:key137-1",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 2",
+          "target": "farewell:key137-2",
+          "zoom": 10
+        },
+        {
+          "label": "Shield 3",
+          "target": "farewell:key137-3",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key137-1",
+      "name": "Shield 1",
+      "coords": [82.616, -47.226],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock137",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key137-2",
+      "name": "Shield 2",
+      "coords": [82.616, -47.028],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock137",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key137-3",
+      "name": "Shield 3",
+      "coords": [82.602, -46.829],
+      "category": "keys",
+      "description": "Collect the 3 shields to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock137",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock138",
+      "name": "Utility Vault",
+      "coords": [82.657, -40.986],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock139",
+      "name": "Utility Vault",
+      "coords": [82.649, -38.194],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock140",
+      "name": "Utility Vault",
+      "coords": [82.655, -33.467],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock141",
+      "name": "Utility Vault",
+      "coords": [82.647, -29.014],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock142",
+      "name": "Utility Vault",
+      "coords": [82.653, -25.038],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock143",
+      "name": "Utility Vault",
+      "coords": [82.652, -15.301],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock144",
+      "name": "Utility Vault",
+      "coords": [82.684, -4.996],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock145",
+      "name": "Utility Vault",
+      "coords": [82.695, -0.906],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock146",
+      "name": "Utility Vault",
+      "coords": [82.673, 3.969],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock147",
+      "name": "Utility Vault",
+      "coords": [82.669, 8.076],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock148",
+      "name": "Utility Vault",
+      "coords": [82.662, 26.381],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock149",
+      "name": "Utility Vault",
+      "coords": [82.694, 33.652],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock150",
+      "name": "Shield Platform",
+      "coords": [83.104, 44.772],
+      "category": "keys",
+      "description": "Collect the shield using the jellyfish to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key150",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key150",
+      "name": "Shield",
+      "coords": [83.214, 45.081],
+      "category": "keys",
+      "description": "Collect the shield using the jellyfish to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock150",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "lock151",
+      "name": "Utility Vault",
+      "coords": [82.686, 48.071],
+      "category": "keys",
+      "description": "Destroy the utility vault to progress.",
+      "layer": "farewell",
+      "icon":"locks"
+    },
+    {
+      "id": "lock152",
+      "name": "Shield Platform",
+      "coords": [84.110, 48.279],
+      "category": "keys",
+      "description": "Collect the shield using the jellyfish to activate the shield platform.",
+      "layer": "farewell",
+      "icon":"locks",
+      "links": [
+        {
+          "label": "Shield",
+          "target": "farewell:key152",
+          "zoom": 10
+        }
+      ]
+    },
+    {
+      "id": "key152",
+      "name": "Shield",
+      "coords": [84.104, 48.023],
+      "category": "keys",
+      "description": "Collect the shield using the jellyfish to activate the shield platform.",
+      "layer": "farewell",
+      "links": [
+        {
+          "label": "Shield Platform",
+          "target": "farewell:lock152",
+          "zoom": 10
         }
       ]
     }
