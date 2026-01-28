@@ -27,6 +27,11 @@
     justify-content: center;
     }
 
+    /* Locked state: red outline (only used in edit mode via JS) */
+    .marker-locked {
+      border-color: rgba(255, 0, 0, 0.95) !important;
+    }
+
     /* SVG icon */
     .marker svg {
         width: 100%;
@@ -736,6 +741,25 @@
 
 <div id="map"></div>
 
+<button id="exportMarkers" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #673ab7;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+">
+  Export Marker JSON
+</button>
+
+
 <select id="layerSelect" style="
   position: absolute;
   top: 12px;
@@ -759,6 +783,54 @@
 
 <script>
 const forcedVisibleMarkers = new Set();
+
+// ============================
+// EDIT MODE GLOBALS
+// Use: ?edit=true
+// ============================
+window.GG_EDIT_MODE = new URLSearchParams(window.location.search).get("edit") === "true";
+
+// This will hold the raw JSON array (metroid-prime-4-markers.json)
+// We set it later after fetch loads.
+window.GG_MARKER_DATA = [];
+
+// A function we will define later (inside module script) to add markers on click.
+window.GG_ADD_MARKER_AT = null;
+window.GG_PENDING_ADD_LATLNGS = [];
+
+// Show export button in edit mode and wire export
+(function initEditorUI() {
+  const btn = document.getElementById("exportMarkers");
+  if (!btn) return;
+
+  if (window.GG_EDIT_MODE) {
+    btn.style.display = "block";
+    btn.addEventListener("click", async () => {
+      // Sort a COPY for export (doesn't affect your live array order)
+      const sorted = [...window.GG_MARKER_DATA].sort((a, b) => {
+        // Sort by full id (layer:id) so it’s deterministic across layers
+        const ak = `${a.layer ?? ""}:${String(a.id ?? "")}`;
+        const bk = `${b.layer ?? ""}:${String(b.id ?? "")}`;
+
+        // numeric:true makes "c2" come before "c10"
+        return ak.localeCompare(bk, undefined, { numeric: true, sensitivity: "base" });
+      });
+
+      const json = JSON.stringify(sorted, null, 2);
+
+      try {
+        await navigator.clipboard.writeText(json);
+        alert("Marker JSON (sorted) copied to clipboard!");
+      } catch (err) {
+        console.log(json);
+        alert("Clipboard blocked — sorted JSON printed to console.");
+      }
+
+      console.log(json);
+    });
+  }
+})();
+
 
 const SVG_ICONS = {
   crystals: `
@@ -1665,10 +1737,13 @@ const SVG_SIZES = {
   keys: 35,
 };
 
-function createSvgMarker(category, isFound = false, iconKey = null) {
+function createSvgMarker(category, isFound = false, iconKey = null, isLocked = false) {
   const size = SVG_SIZES[category] ?? 18;
   const catClass = String(category).trim().toLowerCase();
   const svg = SVG_ICONS[iconKey] || SVG_ICONS[category];
+
+  // ✅ only show red outline in edit mode
+  const lockClass = (window.GG_EDIT_MODE && isLocked) ? "marker-locked" : "";
 
   return L.divIcon({
     className: '',
@@ -1676,7 +1751,7 @@ function createSvgMarker(category, isFound = false, iconKey = null) {
     iconAnchor: [19, 44],
     popupAnchor: [1, -41],
     html: `
-      <div class="marker marker-${catClass} ${isFound ? 'marker-found' : ''}">
+      <div class="marker marker-${catClass} ${isFound ? 'marker-found' : ''} ${lockClass}">
         <div style="
           width:${size}px;
           height:${size}px;
@@ -1858,10 +1933,10 @@ document.getElementById("foundToggle").onclick = () => {
 
   if (hideFound) {
     Object.values(foundMarkers).forEach(m => map.removeLayer(m));
-    foundToggle.innerText = "Show Found Items";
+    document.getElementById("foundToggle").innerText = "Show Found Items";
   } else {
     Object.values(foundMarkers).forEach(m => m.addTo(map));
-    foundToggle.innerText = "Hide Found Items";
+    document.getElementById("foundToggle").innerText = "Hide Found Items";
   }
 };
 
@@ -1931,15 +2006,22 @@ document.querySelectorAll('.category').forEach(b => {
   b.addEventListener('change', updateMarkersByCategoryAndSearch);
 });
 
-// Log click coords rounded to 1 decimal place
-map.on('click', e => {
-  const lat = e.latlng.lat.toFixed(3);
-  const lng = e.latlng.lng.toFixed(3);
-  console.log(`Clicked at: ${lat}, ${lng}`);
+map.on("click", (e) => {
+  if (window.GG_EDIT_MODE) {
+    if (window.GG_COPIED_MARKER) {
+      window.pasteCopiedMarkerAt(e.latlng);
+    } else if (typeof window.GG_ADD_MARKER_AT === "function") {
+      window.GG_ADD_MARKER_AT(e.latlng);
+    } else {
+      // Queue the click so it works once markers/module are ready
+      window.GG_PENDING_ADD_LATLNGS.push(e.latlng);
+      console.warn("Edit mode active, marker tools not ready yet — queued click.");
+    }
+    return;
+  }
 });
 
 </script>
-
 
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
@@ -1966,107 +2048,169 @@ map.on('click', e => {
 
   let isLoggedIn = false;
 
-  // Check Logged in
-  onAuthStateChanged(auth, async user => {
+  let didLoadMarkers = false;
 
-    let foundIds = [];
+  function applyLockState(marker, locked) {
+    marker.isLocked = !!locked;
 
-    if (user) {
-        isLoggedIn = true
+    // IMPORTANT: options.draggable must reflect lock state
+    marker.options.draggable = window.GG_EDIT_MODE && !marker.isLocked;
 
-        // LOAD from Firebase
-        foundIds = await loadFoundMarkersFromFirebase(user);
-    } else {
-        isLoggedIn = false
+    const drag = ensureDragging(marker);
+    if (drag) {
+      if (marker.options.draggable) drag.enable();
+      else drag.disable();
+    }
+  }
 
-        foundIds = Object.keys(localStorage)
-            .filter(k => k.startsWith("found_") && localStorage.getItem(k) === "true")
-            .map(k => k.replace("found_", ""));
+  function ensureDragging(marker) {
+    // If Leaflet already attached dragging, great
+    if (marker.dragging) return marker.dragging;
+
+    // Force-create the drag handler if Leaflet didn't
+    if (window.L?.Handler?.MarkerDrag) {
+      marker.dragging = new L.Handler.MarkerDrag(marker);
+      return marker.dragging;
     }
 
-      /* ---------- LOAD MARKERS ---------- */
+    return null;
+  }
 
-      fetch('metroid-prime-4-markers.json')
-        .then(res => res.json())
-        .then(data => {
+  function attachRightClick(marker) {
+    // Remove any old handler if this gets called twice
+    marker.off("contextmenu");
 
-          totalCount = data.length;
+    marker.on("contextmenu", (e) => {
+      // Stop the browser context menu + stop Leaflet propagation
+      if (e?.originalEvent) {
+        e.originalEvent.preventDefault();
+        e.originalEvent.stopPropagation();
+      }
+      if (window.L?.DomEvent) L.DomEvent.stop(e);
 
-          data.forEach(point => {
-            const id = `${point.layer}:${point.id}`;
-            const isFound = foundIds.includes(id);
+      // EDIT MODE: toggle locked
+      if (window.GG_EDIT_MODE) {
+        const nowLocked = !marker.isLocked;
 
-            /* ============================
-                CREATE MARKER
-                ============================ */
+        // keep JSON clean
+        if (marker.__dataRef) {
+          if (nowLocked) marker.__dataRef.locked = true;
+          else delete marker.__dataRef.locked;
+        }
 
-            const marker = L.marker(point.coords, {
-                icon: createSvgMarker(point.category, isFound, point.icon),
-                title: point.name,
-            });
+        applyLockState(marker, nowLocked);
 
-            marker.category = point.category;
-            marker.description = point.description;
-            marker.links = point.links || [];
-            marker.isFound = isFound;
-            marker.mapLayer = point.layer || "city";
-            marker.__id = id;
-            marker.iconKey = point.icon;
-            marker.mp4 = point.mp4;
-            marker.image = point.image;
+        // refresh icon (red outline only in edit mode)
+        marker.setIcon(
+          createSvgMarker(marker.category, marker.isFound, marker.iconKey, nowLocked)
+        );
 
-            if (isFound) {
-              foundMarkers[id] = marker;
-            } else {
-              markers[id] = marker;
-            }
-              
-            if (marker.mapLayer === currentLayer) {
-              marker.addTo(map);
-            }
-            createMarkerPopup(marker, id);
+        // rebuild popup so the lock checkbox reflects the new state
+        createMarkerPopup(marker, marker.__id);
 
-            // RIGHT-CLICK TO TOGGLE FOUND WITHOUT SHOWING POPUP
-            marker.on("contextmenu", async (e) => {
-              e.originalEvent.preventDefault(); // stop browser right-click menu
-              const id = `${point.layer}:${point.id}`;
-              const isNowFound = !marker.isFound;
-              marker.isFound = isNowFound;
+        return;
+      }
 
-              // Toggle state
-              if (isNowFound) {
-                foundIds.push(String(id));
-                delete markers[id];
-                foundMarkers[id] = marker;
-              } else {
-                foundIds = foundIds.filter(x => x !== String(id));
-                delete foundMarkers[id];
-                markers[id] = marker;
-              }
+      // NORMAL MODE: toggle found
+      toggleFound(marker.__id, { checked: !marker.isFound });
+    });
+  }
 
-              marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey));
+  async function loadMarkers(foundIds) {
+    if (didLoadMarkers) return;
+    didLoadMarkers = true;
 
-              // SAVE depending on logged in status
-              if (isLoggedIn && user) {
-                await saveFoundMarkersToFirebase(user, foundIds);
-              } else {
-                if (isNowFound) localStorage.setItem(`found_${id}`, "true");
-                else localStorage.removeItem(`found_${id}`);
-              }
+    fetch('metroid-prime-4-markers.json')
+      .then(res => res.json())
+      .then(data => {
+        window.GG_MARKER_DATA = data;
+        totalCount = data.length;
 
-              updateMarkersByCategory();
-              updateProgressDisplay();
+        data.forEach(point => {
+          const id = `${point.layer}:${point.id}`;
+          const isFound = foundIds.includes(id);
 
-              if (marker.mapLayer === currentLayer) {
-                marker.addTo(map);
-              }
-              createMarkerPopup(marker, id);
-            });
-
+          const marker = L.marker(point.coords, {
+            icon: createSvgMarker(point.category, isFound, point.icon, !!point.locked),
+            title: point.name,
+            draggable: window.GG_EDIT_MODE && !point.locked
           });
 
-          updateProgressDisplay();
+          marker.__dataRef = point;
+          applyLockState(marker, !!point.locked);
+
+          if (window.GG_EDIT_MODE) {
+            // Ensure dragging exists even if Leaflet didn't attach it for some reason
+
+            const drag = ensureDragging(marker);
+            if (drag) {
+              if (marker.isLocked) drag.disable();
+              else drag.enable();
+            }
+
+            marker.on("dragend", () => {
+              const pos = marker.getLatLng();
+              point.coords = [pos.lat, pos.lng];
+            });
+          }
+
+          marker.category = point.category;
+          marker.description = point.description;
+          marker.links = point.links || [];
+          marker.isFound = isFound;
+          marker.mapLayer = point.layer || currentLayer;
+          marker.__id = id;
+          marker.iconKey = point.icon;
+          marker.mp4 = point.mp4;
+          marker.image = point.image;
+
+          if (isFound) foundMarkers[id] = marker;
+          else markers[id] = marker;
+
+          if (marker.mapLayer === currentLayer) marker.addTo(map);
+
+          createMarkerPopup(marker, id);
+          attachRightClick(marker);
+
         });
+
+        updateProgressDisplay();
+        updateMarkersByCategory();
+        // Flush any queued map clicks from edit mode
+        if (window.GG_PENDING_ADD_LATLNGS?.length && typeof window.GG_ADD_MARKER_AT === "function") {
+          const queued = [...window.GG_PENDING_ADD_LATLNGS];
+          window.GG_PENDING_ADD_LATLNGS.length = 0;
+          queued.forEach(ll => window.GG_ADD_MARKER_AT(ll));
+        }
+      })
+      .catch(err => {
+        console.error("Marker JSON load failed:", err);
+      });
+  }
+
+  // Check Logged in
+  onAuthStateChanged(auth, async user => {
+    let foundIds = [];
+
+    try {
+      if (user) {
+        isLoggedIn = true;
+        foundIds = await loadFoundMarkersFromFirebase(user);
+      } else {
+        isLoggedIn = false;
+        foundIds = Object.keys(localStorage)
+          .filter(k => k.startsWith("found_") && localStorage.getItem(k) === "true")
+          .map(k => k.replace("found_", ""));
+      }
+    } catch (e) {
+      console.error("Auth/progress load failed, falling back:", e);
+      isLoggedIn = false;
+      foundIds = Object.keys(localStorage)
+        .filter(k => k.startsWith("found_") && localStorage.getItem(k) === "true")
+        .map(k => k.replace("found_", ""));
+    }
+
+    await loadMarkers(foundIds);
   });
 
   // LOAD found markers from Firebase
@@ -2108,11 +2252,11 @@ map.on('click', e => {
     marker.isFound = isNowFound;
 
     if (isNowFound) {
-      marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey));
+      marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey, !!marker.isLocked));
       delete markers[id];
       foundMarkers[id] = marker;
     } else {
-      marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey));
+      marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey, !!marker.isLocked));
       delete foundMarkers[id];
       markers[id] = marker;
     }
@@ -2135,6 +2279,344 @@ map.on('click', e => {
 
     createMarkerPopup(marker, id);
     marker.openPopup();
+  }
+
+  // ============================
+  // EDIT MODE: Copy/Paste Marker
+  // ============================
+  window.GG_COPIED_MARKER = null;        // holds a JSON-ish point template
+  window.GG_SELECTED_MARKER = null;      // last popup-opened marker
+
+  function makeUniqueId(baseId, layer) {
+    const base = String(baseId ?? "").trim();
+    if (!base) return null;
+
+    const exists = (fullId) => (markers[fullId] || foundMarkers[fullId]);
+    const full = (id) => `${layer}:${id}`;
+
+    // If base doesn't exist yet, use it
+    if (!exists(full(base))) return base;
+
+    // Otherwise try base2, base3, ...
+    let n = 2;
+    while (n < 10000) {
+      const candidate = `${base}${n}`;
+      if (!exists(full(candidate))) return candidate;
+      n++;
+    }
+    return null;
+  }
+
+  function removePointFromMarkerData(fullId) {
+    // fullId looks like "layer:id"
+    const [layer, id] = String(fullId).split(":");
+    const idx = window.GG_MARKER_DATA.findIndex(p => String(p.layer) === String(layer) && String(p.id) === String(id));
+    if (idx >= 0) window.GG_MARKER_DATA.splice(idx, 1);
+    totalCount = window.GG_MARKER_DATA.length;
+  }
+
+  function deleteMarkerEverywhere(fullId) {
+    const m = markers[fullId] || foundMarkers[fullId];
+    if (!m) return;
+
+    // Remove from map
+    try { map.removeLayer(m); } catch {}
+
+    // Remove from buckets
+    delete markers[fullId];
+    delete foundMarkers[fullId];
+
+    // Remove from raw JSON
+    removePointFromMarkerData(fullId);
+
+    // Remove found-state persistence for this id (best-effort)
+    try {
+      localStorage.removeItem(`found_${fullId}`);
+    } catch {}
+
+    // Update UI
+    updateMarkersByCategory();
+    updateProgressDisplay();
+  }
+
+  function clonePointTemplateFromMarker(marker) {
+    const p = marker?.__dataRef;
+    if (!p) return null;
+
+    // Clone only the marker JSON fields you care about
+    return {
+      id: p.id,
+      layer: p.layer ?? marker.mapLayer ?? currentLayer,
+      coords: Array.isArray(p.coords) ? [...p.coords] : [marker.getLatLng().lat, marker.getLatLng().lng],
+      category: p.category ?? marker.category ?? "crystals",
+      icon: p.icon ?? marker.iconKey ?? "crystals",
+      name: p.name ?? marker.options.title ?? "New Marker",
+      description: p.description ?? "",
+      image: p.image,
+      mp4: p.mp4,
+      locked: !!p.locked,
+      links: Array.isArray(p.links) ? JSON.parse(JSON.stringify(p.links)) : []
+    };
+  }
+
+  // Create a Leaflet marker + hook it up exactly like your loader does
+  function createMarkerFromPoint(point, { openPopup = true } = {}) {
+    const fullId = `${point.layer}:${point.id}`;
+
+    const marker = L.marker(point.coords, {
+      
+      icon: createSvgMarker(point.category, false, point.icon, !!point.locked),
+      title: point.name,
+      draggable: window.GG_EDIT_MODE && !point.locked
+    });
+
+    marker.__dataRef = point;
+    applyLockState(marker, !!point.locked);
+    if (window.GG_EDIT_MODE) {
+
+      const drag = ensureDragging(marker);
+      if (drag) {
+        if (marker.isLocked) drag.disable();
+        else drag.enable();
+      }
+    }
+
+    marker.on("dragend", () => {
+      const pos = marker.getLatLng();
+      point.coords = [pos.lat, pos.lng];
+    });
+
+    marker.category = point.category;
+    marker.description = point.description;
+    marker.links = point.links || [];
+    marker.isFound = false;
+    marker.mapLayer = point.layer || currentLayer;
+    marker.__id = fullId;
+    marker.iconKey = point.icon;
+    marker.mp4 = point.mp4;
+    marker.image = point.image;
+
+    markers[fullId] = marker;
+
+    if (marker.mapLayer === currentLayer) marker.addTo(map);
+
+    createMarkerPopup(marker, fullId);
+    attachRightClick(marker);
+    updateMarkersByCategory();
+    updateProgressDisplay();
+
+    if (openPopup) marker.openPopup();
+
+    return marker;
+  }
+
+  window.GG_ADD_MARKER_AT = function(latlng) {
+    if (!window.GG_EDIT_MODE) return;
+
+    // Don’t allow adding until the JSON has loaded,
+    // because loadMarkers() will overwrite GG_MARKER_DATA.
+    if (!didLoadMarkers || !Array.isArray(window.GG_MARKER_DATA) || window.GG_MARKER_DATA.length === 0) {
+      window.GG_PENDING_ADD_LATLNGS = window.GG_PENDING_ADD_LATLNGS || [];
+      window.GG_PENDING_ADD_LATLNGS.push(latlng);
+      console.warn("Markers not loaded yet — queued add.");
+      return;
+    }
+
+    const layer = currentLayer;
+
+    // Pick a unique id like new, new2, new3...
+    const newId = makeUniqueId("new", layer) || makeUniqueId("m", layer);
+    if (!newId) {
+      alert("Couldn't generate a unique ID.");
+      return;
+    }
+
+    const point = {
+      id: newId,
+      layer,
+      coords: [latlng.lat, latlng.lng],
+      category: "crystals",
+      icon: "crystals",
+      name: `New Marker (${newId})`
+    };
+
+    window.GG_MARKER_DATA.push(point);
+    totalCount = window.GG_MARKER_DATA.length;
+
+    createMarkerFromPoint(point, { openPopup: false });
+  };
+
+  window.pasteCopiedMarkerAt = function pasteCopiedMarkerAt(latlng) {
+    if (!window.GG_EDIT_MODE) return;
+    if (!window.GG_COPIED_MARKER) {
+      alert("No copied marker yet. Open a marker popup and click Copy.");
+      return;
+    }
+
+    const src = window.GG_COPIED_MARKER;
+    const layer = currentLayer;
+
+    // new id = oldId_copy (or oldId_copy2, oldId_copy3...)
+    const baseWanted = `${String(src.id ?? "").trim()}_copy`;
+    const newId = makeUniqueId(baseWanted, layer);
+    if (!newId) {
+      alert("Couldn't generate a unique ID.");
+      return;
+    }
+
+    const point = {
+      ...src,
+      id: newId,
+      layer,
+      coords: [latlng.lat, latlng.lng]
+    };
+
+    if (!point.description) delete point.description;
+    if (!point.image) delete point.image;
+    if (!point.mp4) delete point.mp4;
+    if (!point.links?.length) delete point.links;
+
+    window.GG_MARKER_DATA.push(point);
+    totalCount = window.GG_MARKER_DATA.length;
+
+    createMarkerFromPoint(point, { openPopup: true });
+  };
+
+  // Editor pick-lists (must match your checkbox values for filtering)
+  const GG_CATEGORY_OPTIONS = [
+    { value: "crystals", label: "Crystals" },
+    { value: "hearts",   label: "Hearts" },
+    { value: "tapes",    label: "Cassettes" },
+    { value: "keys",     label: "Keys/Locks" },
+    { value: "walls",    label: "Smashable Walls" },
+    { value: "NPC",      label: "NPCs" },
+    { value: "secrets",  label: "Secrets" },
+  ];
+
+  // Icon options = keys from your SVG_ICONS object
+  function getIconOptions() {
+    try {
+      return Object.keys(SVG_ICONS).map(k => ({ value: k, label: k }));
+    } catch {
+      return [];
+    }
+  }
+
+  function normalizeMediaPath(input, defaultFolder) {
+    const v = (input ?? "").trim();
+    if (!v) return ""; // blank => remove
+    // If user typed a URL or already provided a folder path, keep it
+    if (v.startsWith("http://") || v.startsWith("https://") || v.startsWith("/") || v.includes("/")) return v;
+    // Otherwise auto-prefix
+    return `${defaultFolder.replace(/\/$/, "")}/${v}`;
+  }
+
+  // Apply edits to BOTH the Leaflet marker and the backing JSON object
+  function applyEditsToMarker(marker, oldFullId, { id, name, category, iconKey, description, image, mp4, locked }) {
+    if (!marker) return;
+
+    const point = marker.__dataRef;
+    if (!point) return;
+
+    const layer = point.layer || marker.mapLayer || currentLayer;
+
+    // ============================
+    // ID CHANGE (safe re-key)
+    // ============================
+    let newFullId = oldFullId;
+
+    if (typeof id === "string" && id.trim() && id.trim() !== point.id) {
+      const cleanId = id.trim();
+
+      if (cleanId.includes(":")) {
+        alert("ID cannot contain ':'");
+        return;
+      }
+      if (/\s/.test(cleanId)) {
+        alert("ID cannot contain spaces");
+        return;
+      }
+
+      const candidateFullId = `${layer}:${cleanId}`;
+
+      if (markers[candidateFullId] || foundMarkers[candidateFullId]) {
+        alert(`A marker with ID "${candidateFullId}" already exists.`);
+        return;
+      }
+
+      // remove old key
+      delete markers[oldFullId];
+      delete foundMarkers[oldFullId];
+
+      // update ids
+      point.id = cleanId;
+      marker.__id = candidateFullId;
+
+      // re-add to correct bucket
+      if (marker.isFound) foundMarkers[candidateFullId] = marker;
+      else markers[candidateFullId] = marker;
+
+      newFullId = candidateFullId;
+    }
+
+    // ============================
+    // OTHER FIELDS
+    // ============================
+    if (typeof name === "string") {
+      const n = name.trim() || "Untitled Marker";
+      marker.options.title = n;
+      point.name = n;
+    }
+
+    if (typeof category === "string") {
+      marker.category = category;
+      point.category = category;
+    }
+
+    if (typeof locked === "boolean") {
+      marker.isLocked = locked;
+      if (locked) point.locked = true;
+      else delete point.locked; // keeps JSON clean if false
+
+      applyLockState(marker, locked);
+    }
+
+    if (typeof iconKey === "string") {
+      marker.iconKey = iconKey;
+      point.icon = iconKey;
+    }
+
+    // Description (blank => remove)
+    if (typeof description === "string") {
+      const d = description.trim();
+      marker.description = d;
+      if (d) point.description = d;
+      else delete point.description;
+    }
+
+    // Image (blank => remove, filename => images/<file>)
+    if (typeof image === "string") {
+      const imgPath = normalizeMediaPath(image, "images");
+      marker.image = imgPath || null;
+      if (imgPath) point.image = imgPath;
+      else delete point.image;
+    }
+
+    // MP4/GIF (blank => remove, filename => gifs/<file>)
+    if (typeof mp4 === "string") {
+      const mp4Path = normalizeMediaPath(mp4, "gifs");
+      marker.mp4 = mp4Path || null;
+      if (mp4Path) point.mp4 = mp4Path;
+      else delete point.mp4;
+    }
+
+    // Refresh the marker icon
+    marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey, !!marker.isLocked));
+
+    // Rebuild popup (so image/video sections appear/disappear)
+    createMarkerPopup(marker, newFullId);
+
+    updateMarkersByCategory();
   }
 
   function createMarkerPopup(marker, id) {
@@ -2166,6 +2648,336 @@ map.on('click', e => {
         .replace(/\n/g, "<br>")
         .replace(/\*(.*?)\*/g, "<em>$1</em>");
       popupContainer.appendChild(desc);
+    }
+
+    // ============================
+    // EDIT UI (only in ?edit=true)
+    // ============================
+    if (window.GG_EDIT_MODE) {
+      const editWrap = document.createElement("div");
+      editWrap.style.marginTop = "10px";
+      editWrap.style.padding = "10px";
+      editWrap.style.borderRadius = "8px";
+      editWrap.style.background = "rgba(255,255,255,0.06)";
+      editWrap.style.border = "1px solid rgba(255,255,255,0.10)";
+
+      const editTitle = document.createElement("div");
+      editTitle.innerText = "Edit Marker";
+      editTitle.style.fontWeight = "700";
+      editTitle.style.marginBottom = "8px";
+      editTitle.style.fontSize = "14px";
+      editTitle.style.color = "#fff";
+      editWrap.appendChild(editTitle);
+
+      // --- ID input ---
+      const idLabel = document.createElement("div");
+      idLabel.innerText = "ID";
+      idLabel.style.fontSize = "12px";
+      idLabel.style.opacity = "0.85";
+      idLabel.style.marginBottom = "4px";
+      editWrap.appendChild(idLabel);
+
+      const idInput = document.createElement("input");
+      idInput.type = "text";
+      idInput.value = marker.__dataRef?.id || "";   // <-- current id
+      idInput.placeholder = "e.g. c1 (no spaces, no :)";
+      idInput.style.width = "100%";
+      idInput.style.boxSizing = "border-box";
+      idInput.style.padding = "8px";
+      idInput.style.borderRadius = "8px";
+      idInput.style.border = "none";
+      idInput.style.outline = "none";
+      idInput.style.marginBottom = "10px";
+      idInput.style.background = "rgba(0,0,0,0.25)";
+      idInput.style.color = "#fff";
+      editWrap.appendChild(idInput);
+
+      // --- Name input ---
+      const nameLabel = document.createElement("div");
+      nameLabel.innerText = "Name";
+      nameLabel.style.fontSize = "12px";
+      nameLabel.style.opacity = "0.85";
+      nameLabel.style.marginBottom = "4px";
+      editWrap.appendChild(nameLabel);
+
+      const nameInput = document.createElement("input");
+      nameInput.type = "text";
+      nameInput.value = marker.options.title || "";
+      nameInput.placeholder = "Marker name...";
+      nameInput.style.width = "100%";
+      nameInput.style.boxSizing = "border-box";
+      nameInput.style.padding = "8px";
+      nameInput.style.borderRadius = "8px";
+      nameInput.style.border = "none";
+      nameInput.style.outline = "none";
+      nameInput.style.marginBottom = "10px";
+      nameInput.style.background = "rgba(0,0,0,0.25)";
+      nameInput.style.color = "#fff";
+      editWrap.appendChild(nameInput);
+
+      // --- Category select ---
+      const catLabel = document.createElement("div");
+      catLabel.innerText = "Category";
+      catLabel.style.fontSize = "12px";
+      catLabel.style.opacity = "0.85";
+      catLabel.style.marginBottom = "4px";
+      editWrap.appendChild(catLabel);
+
+      const catSelect = document.createElement("select");
+      catSelect.style.width = "100%";
+      catSelect.style.boxSizing = "border-box";
+      catSelect.style.padding = "8px";
+      catSelect.style.borderRadius = "8px";
+      catSelect.style.border = "none";
+      catSelect.style.outline = "none";
+      catSelect.style.marginBottom = "10px";
+      catSelect.style.background = "rgba(0,0,0,0.25)";
+      catSelect.style.color = "#fff";
+
+      GG_CATEGORY_OPTIONS.forEach(opt => {
+        const o = document.createElement("option");
+        o.value = opt.value;
+        o.innerText = opt.label;
+        catSelect.appendChild(o);
+      });
+
+      catSelect.value = marker.category || "crystals";
+      editWrap.appendChild(catSelect);
+
+      // --- Icon select ---
+      const iconLabel = document.createElement("div");
+      iconLabel.innerText = "Icon";
+      iconLabel.style.fontSize = "12px";
+      iconLabel.style.opacity = "0.85";
+      iconLabel.style.marginBottom = "4px";
+      editWrap.appendChild(iconLabel);
+
+      const iconSelect = document.createElement("select");
+      iconSelect.style.width = "100%";
+      iconSelect.style.boxSizing = "border-box";
+      iconSelect.style.padding = "8px";
+      iconSelect.style.borderRadius = "8px";
+      iconSelect.style.border = "none";
+      iconSelect.style.outline = "none";
+      iconSelect.style.marginBottom = "10px";
+      iconSelect.style.background = "rgba(0,0,0,0.25)";
+      iconSelect.style.color = "#fff";
+
+      const iconOptions = getIconOptions();
+      iconOptions.forEach(opt => {
+        const o = document.createElement("option");
+        o.value = opt.value;
+        o.innerText = opt.label;
+        iconSelect.appendChild(o);
+      });
+
+      iconSelect.value = marker.iconKey || marker.category || "crystals";
+      editWrap.appendChild(iconSelect);
+
+      // --- Description textarea ---
+      const descLabel = document.createElement("div");
+      descLabel.innerText = "Description";
+      descLabel.style.fontSize = "12px";
+      descLabel.style.opacity = "0.85";
+      descLabel.style.marginBottom = "4px";
+      editWrap.appendChild(descLabel);
+
+      const descInput = document.createElement("textarea");
+      descInput.value = marker.__dataRef?.description || "";
+      descInput.placeholder = "Optional. Supports your *italics* formatting.";
+      descInput.rows = 4;
+      descInput.style.width = "100%";
+      descInput.style.boxSizing = "border-box";
+      descInput.style.padding = "8px";
+      descInput.style.borderRadius = "8px";
+      descInput.style.border = "none";
+      descInput.style.outline = "none";
+      descInput.style.marginBottom = "10px";
+      descInput.style.resize = "vertical";
+      descInput.style.background = "rgba(0,0,0,0.25)";
+      descInput.style.color = "#fff";
+      editWrap.appendChild(descInput);
+
+      // --- Image filename/path ---
+      const imgLabel = document.createElement("div");
+      imgLabel.innerText = "Image (filename or path)";
+      imgLabel.style.fontSize = "12px";
+      imgLabel.style.opacity = "0.85";
+      imgLabel.style.marginBottom = "4px";
+      editWrap.appendChild(imgLabel);
+
+      const imgInput = document.createElement("input");
+      imgInput.type = "text";
+      imgInput.value = marker.__dataRef?.image || "";
+      imgInput.placeholder = "e.g. c1.jpg (auto => images/c1.jpg) or images/c1.jpg or https://...";
+      imgInput.style.width = "100%";
+      imgInput.style.boxSizing = "border-box";
+      imgInput.style.padding = "8px";
+      imgInput.style.borderRadius = "8px";
+      imgInput.style.border = "none";
+      imgInput.style.outline = "none";
+      imgInput.style.marginBottom = "10px";
+      imgInput.style.background = "rgba(0,0,0,0.25)";
+      imgInput.style.color = "#fff";
+      editWrap.appendChild(imgInput);
+
+      // --- GIF/MP4 filename/path ---
+      const mp4Label = document.createElement("div");
+      mp4Label.innerText = "GIF/MP4 (filename or path)";
+      mp4Label.style.fontSize = "12px";
+      mp4Label.style.opacity = "0.85";
+      mp4Label.style.marginBottom = "4px";
+      editWrap.appendChild(mp4Label);
+
+      const mp4Input = document.createElement("input");
+      mp4Input.type = "text";
+      mp4Input.value = marker.__dataRef?.mp4 || "";
+      mp4Input.placeholder = "e.g. clip1.mp4 (auto => gifs/clip1.mp4) or gifs/clip1.mp4 or https://...";
+      mp4Input.style.width = "100%";
+      mp4Input.style.boxSizing = "border-box";
+      mp4Input.style.padding = "8px";
+      mp4Input.style.borderRadius = "8px";
+      mp4Input.style.border = "none";
+      mp4Input.style.outline = "none";
+      mp4Input.style.marginBottom = "10px";
+      mp4Input.style.background = "rgba(0,0,0,0.25)";
+      mp4Input.style.color = "#fff";
+      editWrap.appendChild(mp4Input);
+
+      // --- Lock toggle (disable dragging) ---
+      const lockRow = document.createElement("label");
+      lockRow.className = "popup-toggle";
+      lockRow.style.marginTop = "6px";
+      lockRow.innerText = "Lock (disable drag) ";
+
+      const lockInput = document.createElement("input");
+      lockInput.type = "checkbox";
+      lockInput.checked = !!(marker.__dataRef?.locked);
+
+      lockInput.addEventListener("change", () => {
+        const locked = lockInput.checked;
+
+        // Update JSON cleanly
+        if (marker.__dataRef) {
+          if (locked) marker.__dataRef.locked = true;
+          else delete marker.__dataRef.locked;
+        }
+
+        // Apply lock state + dragging config
+        applyLockState(marker, locked);
+
+        // Refresh icon (red outline only in edit mode)
+        marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey, locked));
+      });
+
+      lockRow.appendChild(lockInput);
+      editWrap.appendChild(lockRow);
+
+      // --- Copy + Paste row ---
+      const row = document.createElement("div");
+      row.style.display = "flex";
+      row.style.gap = "8px";
+      row.style.marginBottom = "10px";
+
+      const copyBtn = document.createElement("button");
+      copyBtn.innerText = "Copy Marker";
+      copyBtn.style.flex = "1";
+      copyBtn.style.padding = "10px";
+      copyBtn.style.borderRadius = "10px";
+      copyBtn.style.border = "none";
+      copyBtn.style.cursor = "pointer";
+      copyBtn.style.fontWeight = "700";
+      copyBtn.style.background = "rgba(255,255,255,0.12)";
+      copyBtn.style.color = "white";
+
+      copyBtn.onclick = () => {
+        window.GG_COPIED_MARKER = clonePointTemplateFromMarker(marker);
+        alert(`Copied "${marker.options.title}" (id: ${marker.__dataRef?.id})\nClick map to paste.`);
+      };
+
+      const pasteBtn = document.createElement("button");
+      pasteBtn.innerText = "Paste Here";
+      pasteBtn.style.flex = "1";
+      pasteBtn.style.padding = "10px";
+      pasteBtn.style.borderRadius = "10px";
+      pasteBtn.style.border = "none";
+      pasteBtn.style.cursor = "pointer";
+      pasteBtn.style.fontWeight = "700";
+      pasteBtn.style.background = "rgba(255,255,255,0.12)";
+      pasteBtn.style.color = "white";
+
+      pasteBtn.onclick = () => {
+        // paste near the current marker (slight offset so it doesn't stack perfectly)
+        const ll = marker.getLatLng();
+        window.pasteCopiedMarkerAt({ lat: ll.lat + 0.2, lng: ll.lng + 0.2 });
+      };
+
+      row.appendChild(copyBtn);
+      row.appendChild(pasteBtn);
+      editWrap.appendChild(row);
+    
+      // --- Delete button ---
+      const deleteBtn = document.createElement("button");
+      deleteBtn.innerText = "Delete Marker";
+      deleteBtn.style.width = "100%";
+      deleteBtn.style.padding = "10px";
+      deleteBtn.style.borderRadius = "10px";
+      deleteBtn.style.border = "none";
+      deleteBtn.style.cursor = "pointer";
+      deleteBtn.style.fontWeight = "800";
+      deleteBtn.style.background = "#e53935";
+      deleteBtn.style.color = "white";
+      deleteBtn.style.marginTop = "8px";
+
+      deleteBtn.onclick = () => {
+        if (!confirm(`Delete this marker?\n\n${id}`)) return;
+        deleteMarkerEverywhere(id);
+      };
+
+      editWrap.appendChild(deleteBtn);
+
+      // --- Save button ---
+      const saveBtn = document.createElement("button");
+      saveBtn.innerText = "Save Edits";
+      saveBtn.style.width = "100%";
+      saveBtn.style.padding = "10px";
+      saveBtn.style.borderRadius = "10px";
+      saveBtn.style.border = "none";
+      saveBtn.style.cursor = "pointer";
+      saveBtn.style.fontWeight = "700";
+      saveBtn.style.background = "#673ab7";
+      saveBtn.style.color = "white";
+
+      saveBtn.addEventListener("click", (e) => {
+        // Prevent Leaflet/map from treating this as a map click / marker click
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        // Leaflet helper (extra-safe)
+        if (window.L && L.DomEvent) L.DomEvent.stop(e);
+
+        applyEditsToMarker(marker, id, {
+          id: idInput.value.trim(),
+          name: nameInput.value.trim(),
+          category: catSelect.value,
+          iconKey: iconSelect.value,
+          description: descInput.value,
+          image: imgInput.value,
+          locked: lockInput.checked,
+          mp4: mp4Input.value,
+        });
+
+        // Close the currently open popup (most reliable)
+        setTimeout(() => {
+          map.closePopup();
+          // optional: also ensure the marker’s popup closes
+          marker.closePopup();
+        }, 0);
+      });
+
+      editWrap.appendChild(saveBtn);
+      popupContainer.appendChild(editWrap);
     }
 
     if (marker.image) {
@@ -2250,7 +3062,7 @@ map.on('click', e => {
     const input = document.createElement("input");
     input.type = "checkbox";
     input.checked = isFound;
-    input.addEventListener("change", e => toggleFound(id, e.target));
+    input.addEventListener("change", e => toggleFound(marker.__id, e.target));
 
     label.appendChild(input);
     popupContainer.appendChild(label);
@@ -2272,6 +3084,10 @@ map.on('click', e => {
       const video = popupContainer.querySelector("video");
       if (video) video.pause();
     });
+
+    marker.on("popupopen", () => {
+      if (window.GG_EDIT_MODE) window.GG_SELECTED_MARKER = marker;
+    });
   }
 
   document.getElementById('resetProgress').onclick = async () => {
@@ -2287,7 +3103,7 @@ map.on('click', e => {
     const marker = foundMarkers[id];
 
     marker.isFound = false; // ✅ CRITICAL FIX
-    marker.setIcon(createSvgMarker(marker.category, false, marker.iconKey));
+    marker.setIcon(createSvgMarker(marker.category, false, marker.iconKey, !!marker.isLocked));
 
     markers[id] = marker;
   }
