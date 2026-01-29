@@ -1649,5 +1649,968 @@
     "name": "Green Energy Crystal",
     "image": "images/c127.jpg",
     "locked": true
+  },
+  {
+    "id": "crystal128",
+    "layer": "viewros",
+    "coords": [
+      -51.72702815704775,
+      -144.75585937500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c128.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal129",
+    "layer": "viewros",
+    "coords": [
+      -52.42922227795513,
+      -152.79785156250003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c129.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal131",
+    "layer": "viewros",
+    "coords": [
+      -54.47003761280576,
+      -161.27929687500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c131.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal132",
+    "layer": "viewros",
+    "coords": [
+      -48.86471476180278,
+      -139.61425781250003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c132.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal133",
+    "layer": "viewros",
+    "coords": [
+      -49.92293545449573,
+      -135.00000000000003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c133.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal134",
+    "layer": "viewros",
+    "coords": [
+      -44.02442151965934,
+      -128.49609375000003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c134.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal135",
+    "layer": "viewros",
+    "coords": [
+      -37.055177106660814,
+      -127.96875000000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c135.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal136",
+    "layer": "viewros",
+    "coords": [
+      -33.61461929233378,
+      -134.07714843750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c136.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal137",
+    "layer": "viewros",
+    "coords": [
+      -41.73852846935915,
+      -141.10839843750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c137.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal138",
+    "layer": "viewros",
+    "coords": [
+      -29.878755346037977,
+      -142.03125000000003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c138.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal139",
+    "layer": "viewros",
+    "coords": [
+      -23.966175871265044,
+      -137.24121093750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c139.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal140",
+    "layer": "viewros",
+    "coords": [
+      -21.983801417384697,
+      -131.57226562500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c140.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal141",
+    "layer": "viewros",
+    "coords": [
+      -20.550508894195637,
+      -121.33300781250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c141.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal142",
+    "layer": "viewros",
+    "coords": [
+      -14.689881366618762,
+      -126.47460937500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c142.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal143",
+    "layer": "viewros",
+    "coords": [
+      -9.44906182688142,
+      -128.23242187500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c143.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal144",
+    "layer": "viewros",
+    "coords": [
+      48.19538740833338,
+      -119.79492187500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c144.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal145",
+    "layer": "viewros",
+    "coords": [
+      62.24746627771428,
+      -121.33300781250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c145.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal146",
+    "layer": "viewros",
+    "coords": [
+      66.51326044311188,
+      -124.40917968750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c146.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal147",
+    "layer": "viewros",
+    "coords": [
+      76.67978490310692,
+      -125.63964843750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c147.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal148",
+    "layer": "viewros",
+    "coords": [
+      74.69485438254536,
+      -108.01757812500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c148.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal149",
+    "layer": "viewros",
+    "coords": [
+      59.33318942659219,
+      -83.40820312500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c149.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal150",
+    "layer": "viewros",
+    "coords": [
+      56.68037378950137,
+      -93.20800781250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c150.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal151",
+    "layer": "viewros",
+    "coords": [
+      54.213861000644926,
+      -88.98925781250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c151.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal152",
+    "layer": "viewros",
+    "coords": [
+      50.597186230587035,
+      -90.13183593750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c152.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal153",
+    "layer": "viewros",
+    "coords": [
+      47.754097979680026,
+      -80.99121093750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c153.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal154",
+    "layer": "viewros",
+    "coords": [
+      34.77771580360469,
+      -84.63867187500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c154.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal155",
+    "layer": "viewros",
+    "coords": [
+      30.06909396443887,
+      -77.87109375
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c155.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal156",
+    "layer": "viewros",
+    "coords": [
+      29.49698759653577,
+      -85.166015625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c156.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal157",
+    "layer": "viewros",
+    "coords": [
+      20.55050889419565,
+      -89.12109375000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c157.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal158",
+    "layer": "viewros",
+    "coords": [
+      3.5572827265412794,
+      -88.28613281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c158.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal159",
+    "layer": "viewros",
+    "coords": [
+      -4.390228926463384,
+      -75.14648437500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c159.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal160",
+    "layer": "viewros",
+    "coords": [
+      -10.617418067950307,
+      -81.29882812500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c160.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal161",
+    "layer": "viewros",
+    "coords": [
+      -16.214674588248542,
+      -84.5068359375
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c161.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal162",
+    "layer": "viewros",
+    "coords": [
+      -26.82407078047018,
+      -86.74804687500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c162.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal163",
+    "layer": "viewros",
+    "coords": [
+      70.78690984117928,
+      -123.53027343750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c163.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal164",
+    "layer": "viewros",
+    "coords": [
+      -41.47566020027821,
+      -82.79296875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c164.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal165",
+    "layer": "viewros",
+    "coords": [
+      -46.43785689502421,
+      -76.20117187500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c165.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal166",
+    "layer": "viewros",
+    "coords": [
+      -51.89005393521691,
+      -80.63964843750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c166.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal167",
+    "layer": "viewros",
+    "coords": [
+      -51.8086147519852,
+      -87.75878906250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c167.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal168",
+    "layer": "viewros",
+    "coords": [
+      -60.413852350464914,
+      -74.57519531250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c168.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal169",
+    "layer": "viewros",
+    "coords": [
+      -56.968936194361206,
+      -82.52929687500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c169.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal170",
+    "layer": "viewros",
+    "coords": [
+      -58.676937672586924,
+      -88.54980468750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c170.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal171",
+    "layer": "viewros",
+    "coords": [
+      -43.739352079154706,
+      -92.63671875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c171.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal172",
+    "layer": "viewros",
+    "coords": [
+      -36.42128244364948,
+      -93.7353515625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c172.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal173",
+    "layer": "viewros",
+    "coords": [
+      -30.259067203213018,
+      -97.91015625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c173.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal174",
+    "layer": "viewros",
+    "coords": [
+      -27.215556209029675,
+      -105.38085937500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c174.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal175",
+    "layer": "viewros",
+    "coords": [
+      -10.790140750321738,
+      -104.41406250000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c175.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal176",
+    "layer": "viewros",
+    "coords": [
+      14.349547837185375,
+      -98.96484375000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c176.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal177",
+    "layer": "viewros",
+    "coords": [
+      30.713503990354965,
+      -96.89941406250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c177.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal178",
+    "layer": "viewros",
+    "coords": [
+      36.77409249464195,
+      -95.40527343750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c178.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal179",
+    "layer": "viewros",
+    "coords": [
+      38.75408327579141,
+      -105.73242187500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c179.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal180",
+    "layer": "viewros",
+    "coords": [
+      11.221510260010541,
+      -108.54492187500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c180.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal181",
+    "layer": "viewros",
+    "coords": [
+      8.971897294083014,
+      -108.72070312500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c181.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal182",
+    "layer": "viewros",
+    "coords": [
+      14.562317701914855,
+      -77.2119140625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c182.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal183",
+    "layer": "viewros",
+    "coords": [
+      22.87744046489714,
+      -71.49902343750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c183.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal184",
+    "layer": "viewros",
+    "coords": [
+      34.452218472826566,
+      -55.37109375000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c184.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal185",
+    "layer": "viewros",
+    "coords": [
+      38.20365531807151,
+      -49.79003906250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c185.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal186",
+    "layer": "viewros",
+    "coords": [
+      42.45588764197166,
+      -45.79101562500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c186.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal187",
+    "layer": "viewros",
+    "coords": [
+      42.8115217450979,
+      -36.34277343750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c187.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal188",
+    "layer": "viewros",
+    "coords": [
+      37.37015718405753,
+      -22.1923828125
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c188.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal189",
+    "layer": "viewros",
+    "coords": [
+      40.58058466412764,
+      -21.401367187500004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c189.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal190",
+    "layer": "viewros",
+    "coords": [
+      41.3108238809182,
+      -24.521484375000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c190.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal191",
+    "layer": "viewros",
+    "coords": [
+      35.31736632923788,
+      -15.117187500000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c191.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal192",
+    "layer": "viewros",
+    "coords": [
+      22.553147478403194,
+      -15.249023437500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c192.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal193",
+    "layer": "viewros",
+    "coords": [
+      28.57487404744697,
+      1.1865234375000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c193.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal194",
+    "layer": "viewros",
+    "coords": [
+      33.8339199536547,
+      -4.306640625000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c194.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal195",
+    "layer": "viewros",
+    "coords": [
+      34.27083595165,
+      -0.26367187500000006
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c195.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal196",
+    "layer": "viewros",
+    "coords": [
+      41.47566020027821,
+      -2.1533203125000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c196.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal197",
+    "layer": "viewros",
+    "coords": [
+      45.98169518512228,
+      2.9003906250000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c197.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal198",
+    "layer": "viewros",
+    "coords": [
+      47.635783590864854,
+      9.975585937500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c198.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal199",
+    "layer": "viewros",
+    "coords": [
+      51.83577752045248,
+      10.371093750000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c199.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal200",
+    "layer": "viewros",
+    "coords": [
+      43.197167282501276,
+      9.140625000000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c200.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal201",
+    "layer": "viewros",
+    "coords": [
+      40.91351257612758,
+      15.249023437500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c201.jpg",
+    "locked": true
+  },
+  {
+    "id": "missile1",
+    "layer": "viewros",
+    "coords": [
+      -44.59046718130884,
+      -85.29785156250001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use psychic lasso to pull the missile expansion out of the sand.",
+    "image": "images/m1.jpg",
+    "locked": true
   }
 ]
