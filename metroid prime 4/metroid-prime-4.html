@@ -49,10 +49,16 @@
     /* Category colors */
     .marker-crystals       { background: blue; }
     .marker-missiles       { background: purple; }
-    .marker-tapes          { background: green; }
-    .marker-keys           { background: cyan; }
+    .marker-shots          { background: #0f1419; }
+    .marker-bombs          { background: #5515eb; }
+    .marker-boosts         { background: #01687D;; }
+    .marker-energy         { background: orangered;; }
+    .marker-maps           { background: green; }
+    .marker-terminals      { background: cyan; }
+    .marker-psychic        { background: cyan; }
+    .marker-mech           { background: seagreen; }
     .marker-npc            { background: #ff7043; }
-    .marker-secrets        { background: rgb(60, 0, 128); }
+    .marker-research       { background: rgb(195, 0, 255); }
 
     .leaflet-container img.leaflet-tile {
         mix-blend-mode: normal;
@@ -556,59 +562,110 @@
         </label>
 
         <label class="filter-item">
-          <svg class="filter-icon" viewBox="0 0 24 24" aria-label="Cassette tape">
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 128"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Target / Energy Core"
+          >
+            <!-- Outer ring -->
+            <circle cx="64" cy="64" r="50" />
+
+            <!-- Inner ring -->
+            <circle cx="64" cy="64" r="28" />
+
+            <!-- Crosshair + diagonals -->
+            <path d="M64 14 L64 114" />
+            <path d="M14 64 L114 64" />
+            <path d="M36 36 L92 92" />
+            <path d="M36 92 L92 36" />
+
+            <!-- Core -->
+            <circle cx="64" cy="64" r="12" />
+          </svg>
+          <span>Shot Expansion/Upgrade</span>
+          <input type="checkbox" class="category" value="shots" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+            width="28" height="28" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            aria-label="Power Bomb Expansion">
+
+            <!-- Outer blast ring -->
+            <circle cx="32" cy="32" r="20"/>
+
+            <!-- Simple bomb body -->
+            <circle cx="32" cy="34" r="10"/>
+
+            <!-- Fuse -->
+            <path d="M32 24 V18"/>
+            <path d="M28 18 H36"/>
+
+            <!-- Energy sparks -->
+            <path d="M32 8  V14"/>
+            <path d="M32 50 V56"/>
+            <path d="M8  32 H14"/>
+            <path d="M50 32 H56"/>
+
+            <path d="M14 14 L18 18"/>
+            <path d="M46 46 L50 50"/>
+            <path d="M14 50 L18 46"/>
+            <path d="M46 18 L50 14"/>
+          </svg>
+          <span>Power Bomb Expansion</span>
+          <input type="checkbox" class="category" value="bombs" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 150 150"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Artifact Orb"
+          >
+            <!-- Outer orb -->
+            <circle cx="75" cy="75" r="50" />
+
+            <!-- Spiral paths -->
+            <g transform="rotate(-15 75 75)">
+              <path d="M10 75 C50 10 100 140 140 75" />
+              <path d="M10 75 C50 140 100 10 140 75" />
+            </g>
+
+            <!-- Top platform -->
+            <path
+              d="M36 24
+                Q30 30 36 36
+                H114
+                Q120 30 114 24
+                Z"
             />
 
-            <rect
-              x="6"
-              y="7"
-              width="12"
-              height="4"
-              rx="1"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-
-            <circle
-              cx="8.5"
-              cy="14"
-              r="2"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-
-            <circle
-              cx="15.5"
-              cy="14"
-              r="2"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-
-            <line
-              x1="10.5"
-              y1="14"
-              x2="13.5"
-              y2="14"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
+            <!-- Bottom platform -->
+            <path
+              d="M36 114
+                Q30 120 36 126
+                H114
+                Q120 120 114 114
+                Z"
             />
           </svg>
-          <span>Cassettes</span>
-          <input type="checkbox" class="category" value="tapes" checked>
+          <span>Vi-O-La Boost Tanks</span>
+          <input type="checkbox" class="category" value="boosts" checked>
         </label>
 
         <label class="filter-item">
@@ -617,45 +674,110 @@
             viewBox="0 0 64 64"
             width="28"
             height="28"
-            aria-label="Key"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Energy Canister"
           >
-            <!-- Key head -->
-            <circle
-              cx="20"
-              cy="32"
-              r="12"
-              fill="none"
-              stroke="white"
-              stroke-width="4"
-            />
+            <!-- Left cap -->
+            <ellipse cx="16" cy="32" rx="6" ry="18" />
 
-            <!-- Head hole -->
-            <circle
-              cx="20"
-              cy="32"
-              r="4"
-              fill="none"
-              stroke="white"
-              stroke-width="3"
-            />
+            <!-- Right cap -->
+            <ellipse cx="48" cy="32" rx="6" ry="18" />
 
-            <!-- Shaft -->
+            <!-- Outer shell -->
             <rect
-              x="32"
-              y="28"
-              width="20"
-              height="8"
-              fill="white"
+              x="16"
+              y="16"
+              width="32"
+              height="32"
+              rx="12"
             />
 
-            <!-- Teeth -->
-            <rect x="46" y="36" width="6" height="8" fill="white"/>
-            <rect x="38" y="36" width="6" height="5" fill="white"/>
+            <!-- Inner energy core -->
+            <rect
+              x="18"
+              y="18"
+              width="28"
+              height="28"
+              rx="10"
+            />
+
+            <!-- Energy lines -->
+            <line x1="22" y1="26" x2="42" y2="26" />
+            <line x1="22" y1="32" x2="42" y2="32" />
+            <line x1="22" y1="38" x2="42" y2="38" />
           </svg>
-          <span>Keys/Locks</span>
-          <input type="checkbox" class="category" value="keys" checked>
+          <span>Energy Tanks</span>
+          <input type="checkbox" class="category" value="energy" checked>
         </label>
 
+      </div>
+  </div>
+
+  <!-- Scan Logbook -->
+  <div class="subcategory">
+    <h3 class="collapsible-header">Scan Logbook</h3>
+      <div class="subcategory-content">
+
+        <label class="filter-item">
+          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <span>Galactic Federation</span>
+          <input type="checkbox" class="category" value="npc" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <span>Bosses</span>
+          <input type="checkbox" class="category" value="biology" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <span>Biology</span>
+          <input type="checkbox" class="category" value="biology" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <span>Machines</span>
+          <input type="checkbox" class="category" value="biology" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <span>Lamorn Lore</span>
+          <input type="checkbox" class="category" value="biology" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <span>Data Logs</span>
+          <input type="checkbox" class="category" value="biology" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+            width="28" height="28" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            aria-label="Research Sample">
+
+            <!-- Flask outline -->
+            <path d="M26 6 H38"/>
+            <path d="M30 6 V18 L18 40 A8 8 0 0 0 26 52 H38 A8 8 0 0 0 46 40 L34 18 V6"/>
+
+            <!-- Fluid level -->
+            <line x1="24" y1="36" x2="40" y2="36"/>
+
+            <!-- Bubbles -->
+            <circle cx="30" cy="30" r="1.5"/>
+            <circle cx="34" cy="26" r="1.5"/>
+          </svg>
+          <span>Research</span>
+          <input type="checkbox" class="category" value="research" checked>
+        </label>
       </div>
   </div>
 
@@ -665,77 +787,51 @@
       <div class="subcategory-content">
 
         <label class="filter-item">
-          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
-          <span>NPCs</span>
-          <input type="checkbox" class="category" value="NPC" checked>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+            width="28" height="28" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            aria-label="Map (folded)">
+
+            <!-- Folded map outline -->
+            <path d="M14 18 L26 14 L38 18 L50 14 V46 L38 50 L26 46 L14 50 Z"/>
+
+            <!-- Panel folds -->
+            <path d="M26 14 V46"/>
+            <path d="M38 18 V50"/>
+
+            <!-- Route line -->
+            <path d="M18 40 C24 30, 30 34, 36 26 S46 22, 46 30"/>
+
+            <!-- Location node -->
+            <circle cx="46" cy="30" r="3"/>
+          </svg>
+          <span>Area Maps</span>
+          <input type="checkbox" class="category" value="maps" checked>
         </label>
 
         <label class="filter-item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 64 64"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-label="Smashable wall icon"
-          >
-            <rect x="10" y="12" width="44" height="40" rx="4"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+            width="28" height="28" fill="none" stroke="currentColor"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            aria-label="Mech Part (Plate)">
+            <!-- Plate -->
+            <path d="M16 14 H48 L54 24 V40 L48 50 H16 L10 40 V24 Z"/>
 
-            <path d="M12 24H52"/>
-            <path d="M12 36H52"/>
-            <path d="M12 48H52"/>
+            <!-- Inner panel -->
+            <path d="M22 22 H42 L46 28 V36 L42 42 H22 L18 36 V28 Z"/>
 
-            <path d="M22 12V24"/>
-            <path d="M42 12V24"/>
-            <path d="M16 24V36"/>
-            <path d="M32 24V36"/>
-            <path d="M48 24V36"/>
-            <path d="M22 36V48"/>
-            <path d="M42 36V48"/>
-            <path d="M16 48V52"/>
-            <path d="M32 48V52"/>
-            <path d="M48 48V52"/>
+            <!-- Mounting holes -->
+            <circle cx="18" cy="24" r="2"/>
+            <circle cx="46" cy="24" r="2"/>
+            <circle cx="18" cy="40" r="2"/>
+            <circle cx="46" cy="40" r="2"/>
 
-            <path d="M34 16
-                    L30 22
-                    L36 28
-                    L28 34
-                    L34 40
-                    L26 48" />
-
-            <path d="M46 30 L50 28"/>
-            <path d="M44 44 L48 46"/>
+            <!-- Vent slots -->
+            <line x1="26" y1="30" x2="38" y2="30"/>
+            <line x1="26" y1="34" x2="38" y2="34"/>
           </svg>
-          <span>Smashable Walls</span>
-          <input type="checkbox" class="category" value="walls" checked>
-        </label>
-
-        <label class="filter-item">
-          <svg class="filter-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="
-              M12 2
-              C8.7 2, 6.2 4.1, 6.2 7
-              H8.6
-              C8.6 5.4, 9.9 4.4, 12 4.4
-              C14 4.4, 15.4 5.5, 15.4 7.2
-              C15.4 8.7, 14.4 9.5, 12.9 10.4
-              C11.2 11.4, 10.6 12.3, 10.6 14
-              V15.2
-              H13
-              V14.4
-              C13 13.2, 13.6 12.7, 15.2 11.7
-              C17 10.6, 18 9.3, 18 7.1
-              C18 4.2, 15.3 2, 12 2
-              Z
-            "/>
-            <circle cx="12" cy="18.5" r="1.6"/>
-          </svg>
-          <span>Secrets</span>
-          <input type="checkbox" class="category" value="secrets" checked>
+          <span>Mech Parts</span>
+          <input type="checkbox" class="category" value="mech" checked>
         </label>
       </div>
   </div>
@@ -971,807 +1067,421 @@ const SVG_ICONS = {
       />
     </svg>
   `,
-  mberry: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="24"
-      height="24"
-      fill="none"
-      stroke="#000"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-label="Strawberry icon"
-    >
-      <!-- Leaves -->
-      <path d="M16 16
-              C20 10 26 12 28 16
-              C30 10 34 10 36 16
-              C38 12 44 10 48 16" />
-
-      <!-- Stem -->
-      <line x1="32" y1="10" x2="32" y2="18" />
-
-      <!-- Strawberry body -->
-      <path
-        d="M16 24
-          C16 38 24 54 32 56
-          C40 54 48 38 48 24
-          C48 18 42 14 32 14
-          C22 14 16 18 16 24Z"
-        fill="#8bfbdb"
-      />
-
-      <!-- Seeds -->
-      <g stroke-width="2">
-        <!-- Upper -->
-        <circle cx="26" cy="30" r="1"/>
-        <circle cx="32" cy="28" r="1"/>
-        <circle cx="38" cy="30" r="1"/>
-
-        <!-- Middle -->
-        <circle cx="24" cy="36" r="1"/>
-        <circle cx="32" cy="36" r="1"/>
-        <circle cx="40" cy="36" r="1"/>
-
-        <!-- Lower -->
-        <circle cx="28" cy="42" r="1"/>
-        <circle cx="36" cy="42" r="1"/>
-
-        <circle cx="32" cy="48" r="1"/>
-      </g>
+  shotsice: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+      <circle cx="64" cy="64" r="50" fill="#0bc1e3" stroke="#009bb0" stroke-width="6"/>
+      <circle cx="64" cy="64" r="28" fill="#00f0ff" stroke="#00a2c1" stroke-width="4"/>
+      <path d="M64 10 L64 118 M10 64 L118 64 M36 36 L92 92 M36 92 L92 36" 
+            stroke="#7ef0ff" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="64" cy="64" r="12" fill="#00ffff" stroke="#0bc1e3" stroke-width="2"/>
     </svg>
   `,
-  seed: `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-label="Strawberry seed">
-      <path
-        d="M12 3
-          C16 6, 18 10, 12 21
-          C6 10, 8 6, 12 3Z"
-        fill="#2e7d32"
-        stroke="#0b2a12"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M10 7
-          C9 9, 9.5 10.5, 11 11.5"
-        fill="none"
-        stroke="#a5d6a7"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
-    </svg>
-  `,
-  keys: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Golden key"
-    >
-      <!-- Key head -->
+  shotsfire: `
+    <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 128 128"
+        width="128"
+        height="128">
+      <!-- Outer ring -->
       <circle
-        cx="20"
-        cy="32"
-        r="12"
-        fill="#FFD700"
-        stroke="#B8860B"
-        stroke-width="3"
+        cx="64" cy="64" r="50"
+        fill="#e53935"
+        stroke="#b71c1c"
+        stroke-width="6"
       />
 
-      <!-- Head hole -->
+      <!-- Inner ring -->
       <circle
-        cx="20"
-        cy="32"
-        r="4"
-        fill="none"
-        stroke="#8a6f00"
-        stroke-width="2"
+        cx="64" cy="64" r="28"
+        fill="#ff6f60"
+        stroke="#c62828"
+        stroke-width="4"
       />
 
-      <!-- Shaft -->
-      <rect
-        x="32"
-        y="28"
-        width="22"
-        height="8"
-        rx="2"
-        fill="#FFD700"
-        stroke="#B8860B"
-        stroke-width="2"
-      />
-
-      <!-- Teeth -->
-      <rect
-        x="46"
-        y="36"
-        width="6"
-        height="8"
-        fill="#FFD700"
-        stroke="#8a6f00"
-        stroke-width="2"
-      />
-      <rect
-        x="38"
-        y="36"
-        width="6"
-        height="5"
-        fill="#FFD700"
-        stroke="#8a6f00"
-        stroke-width="2"
-      />
-
-      <!-- Highlight -->
+      <!-- Cross + diagonals -->
       <path
-        d="M14 24
-          C12 28 12 36 14 40"
-        fill="none"
-        stroke="#FFF2A8"
-        stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
-    </svg>
-  `,
-  locks: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Lock"
-    >
-      <!-- Shackle -->
-      <path
-        d="M20 28
-          V18
-          C20 10 26 6 32 6
-          C38 6 44 10 44 18
-          V28"
-        fill="none"
-        stroke="#555555"
+        d="M64 10 L64 118
+          M10 64 L118 64
+          M36 36 L92 92
+          M36 92 L92 36"
+        stroke="#ffcdd2"
         stroke-width="4"
         stroke-linecap="round"
       />
 
-      <!-- Lock body -->
-      <rect
-        x="14"
-        y="28"
-        width="36"
-        height="30"
-        rx="6"
-        fill="#FFD700"
-        stroke="#B8860B"
-        stroke-width="3"
-      />
-
-      <!-- Keyhole -->
+      <!-- Core -->
       <circle
-        cx="32"
-        cy="42"
-        r="4"
-        fill="#8a6f00"
-      />
-      <rect
-        x="30.5"
-        y="42"
-        width="3"
-        height="8"
-        fill="#8a6f00"
-      />
-
-      <!-- Highlight -->
-      <path
-        d="M20 32
-          C18 36 18 46 20 50"
-        fill="none"
-        stroke="#FFF2A8"
+        cx="64" cy="64" r="12"
+        fill="#ff8a80"
+        stroke="#e53935"
         stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.9"
       />
     </svg>
   `,
-  blueHeart: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="24"
-      height="24"
-      aria-label="Blue Crystal Heart"
-      <g transform="translate(0 3)">
-    >
-      <!-- Outer heart -->
+  shotsthunder: `
+    <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 128 128"
+        width="128"
+        height="128">
+      <!-- Outer ring -->
+      <circle
+        cx="64" cy="64" r="50"
+        fill="#fdd835"
+        stroke="#f9a825"
+        stroke-width="6"
+      />
+
+      <!-- Inner ring -->
+      <circle
+        cx="64" cy="64" r="28"
+        fill="#fff176"
+        stroke="#fbc02d"
+        stroke-width="4"
+      />
+
+      <!-- Cross + diagonals (electric glow lines) -->
       <path
-        d="M32 56
-          C32 56 8 36 8 22
-          C8 14 14 8 22 8
-          C27 8 32 12 32 12
-          C32 12 37 8 42 8
-          C50 8 56 14 56 22
-          C56 36 32 56 32 56Z"
-        fill="#2196f3"
-        stroke="#000"
-        stroke-width="3"
+        d="M64 10 L64 118
+          M10 64 L118 64
+          M36 36 L92 92
+          M36 92 L92 36"
+        stroke="#fffde7"
+        stroke-width="4"
+        stroke-linecap="round"
+      />
+
+      <!-- Core -->
+      <circle
+        cx="64" cy="64" r="12"
+        fill="#ffff8d"
+        stroke="#fdd835"
+        stroke-width="2"
+      />
+    </svg>
+  `,
+  boosts: `
+    <svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background circle glow -->
+      <circle cx="75" cy="75" r="50" fill="url(#pinkGradient)" />
+      
+      <!-- Pink orb center -->
+      <defs>
+        <radialGradient id="pinkGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffb3d9"/>
+          <stop offset="100%" stop-color="#ff80c0"/>
+        </radialGradient>
+        
+        <!-- Golden spiral path -->
+        <path id="spiralPath" d="M10,75 C50,10 100,140 140,75" fill="none"/>
+      </defs>
+      
+      <!-- Golden spirals angled diagonally -->
+      <g
+        stroke="#D4AF37"
+        stroke-width="8"
+        stroke-linecap="round"
         stroke-linejoin="round"
-      />
-
-      <!-- Facet lines -->
-      <path d="M32 12 V56" stroke="#0d47a1" stroke-width="2"/>
-      <path d="M22 18 L32 30 L42 18" stroke="#0d47a1" stroke-width="2" fill="none"/>
-      <path d="M16 26 L32 44 L48 26" stroke="#0d47a1" stroke-width="2" fill="none"/>
-
-      <!-- Highlight -->
+        fill="none"
+        transform="rotate(-15 75 75)"
+      >
+        <use href="#spiralPath" />
+        <use href="#spiralPath" transform="scale(1,-1) translate(0,-150)" />
+      </g>
+      
+      <!-- Top gold platform (subtle semi-circle edges) -->
       <path
-        d="M24 16
-          C18 20 16 26 18 30"
-        stroke="#bbdefb"
-        stroke-width="2"
-        fill="none"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
-    </svg>
-  `,
-  redHeart: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="24"
-      height="24"
-      aria-label="Red Crystal Heart"
-    >
-      <!-- Shift entire heart DOWN by 4 units -->
-      <g transform="translate(0 4)">
-        <!-- Outer heart -->
-        <path
-          d="M32 56
-            C32 56 8 36 8 22
-            C8 14 14 8 22 8
-            C27 8 32 12 32 12
-            C32 12 37 8 42 8
-            C50 8 56 14 56 22
-            C56 36 32 56 32 56Z"
-          fill="#e53935"
-          stroke="#000"
-          stroke-width="3"
-          stroke-linejoin="round"
-        />
-
-        <!-- Facet lines -->
-        <path d="M32 12 V56" stroke="#8e0000" stroke-width="2"/>
-        <path d="M22 18 L32 30 L42 18" stroke="#8e0000" stroke-width="2" fill="none"/>
-        <path d="M16 26 L32 44 L48 26" stroke="#8e0000" stroke-width="2" fill="none"/>
-
-        <!-- Highlight -->
-        <path
-          d="M24 16
-            C18 20 16 26 18 30"
-          stroke="#ffcdd2"
-          stroke-width="2"
-          fill="none"
-          stroke-linecap="round"
-          opacity="0.9"
-        />
-      </g>
-    </svg>
-  `,
-  goldHeart: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="24"
-      height="24"
-      aria-label="Gold Crystal Heart"
-    >
-      <!-- Shift entire heart DOWN by 4 units -->
-      <g transform="translate(0 4)">
-        <!-- Outer heart -->
-        <path
-          d="M32 56
-            C32 56 8 36 8 22
-            C8 14 14 8 22 8
-            C27 8 32 12 32 12
-            C32 12 37 8 42 8
-            C50 8 56 14 56 22
-            C56 36 32 56 32 56Z"
-          fill="#FFD700"
-          stroke="#000"
-          stroke-width="3"
-          stroke-linejoin="round"
-        />
-
-        <!-- Facet lines -->
-        <path d="M32 12 V56" stroke="#B8860B" stroke-width="2"/>
-        <path d="M22 18 L32 30 L42 18" stroke="#B8860B" stroke-width="2" fill="none"/>
-        <path d="M16 26 L32 44 L48 26" stroke="#B8860B" stroke-width="2" fill="none"/>
-
-        <!-- Highlight -->
-        <path
-          d="M24 16
-            C18 20 16 26 18 30"
-          stroke="#FFF2A8"
-          stroke-width="2"
-          fill="none"
-          stroke-linecap="round"
-          opacity="0.95"
-        />
-      </g>
-    </svg>
-  `,
-  grayHeart: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="24"
-      height="24"
-      aria-label="Gray Crystal Heart"
-    >
-      <!-- Shift entire heart DOWN by 4 units -->
-      <g transform="translate(0 4)">
-        <!-- Outer heart -->
-        <path
-          d="M32 56
-            C32 56 8 36 8 22
-            C8 14 14 8 22 8
-            C27 8 32 12 32 12
-            C32 12 37 8 42 8
-            C50 8 56 14 56 22
-            C56 36 32 56 32 56Z"
-          fill="#d5ede0"
-          stroke="#000"
-          stroke-width="3"
-          stroke-linejoin="round"
-        />
-
-        <!-- Facet lines -->
-        <path d="M32 12 V56" stroke="#B8860B" stroke-width="2"/>
-        <path d="M22 18 L32 30 L42 18" stroke="#B8860B" stroke-width="2" fill="none"/>
-        <path d="M16 26 L32 44 L48 26" stroke="#B8860B" stroke-width="2" fill="none"/>
-
-        <!-- Highlight -->
-        <path
-          d="M24 16
-            C18 20 16 26 18 30"
-          stroke="#FFF2A8"
-          stroke-width="2"
-          fill="none"
-          stroke-linecap="round"
-          opacity="0.95"
-        />
-      </g>
-    </svg>
-  `,
-  tapes: `
-    <svg class="filter-icon" viewBox="0 0 24 24" aria-label="Cassette tape">
-      <!-- Outer cassette body -->
-      <rect
-        x="3"
-        y="5"
-        width="18"
-        height="14"
-        rx="2"
-        fill="none"
-        stroke="white"
-        stroke-width="2"
-      />
-
-      <!-- Top label window -->
-      <rect
-        x="6"
-        y="7"
-        width="12"
-        height="4"
-        rx="1"
-        fill="none"
-        stroke="white"
-        stroke-width="1.5"
-      />
-
-      <!-- Left reel -->
-      <circle
-        cx="8.5"
-        cy="14"
-        r="2"
-        fill="none"
-        stroke="white"
-        stroke-width="1.5"
-      />
-
-      <!-- Right reel -->
-      <circle
-        cx="15.5"
-        cy="14"
-        r="2"
-        fill="none"
-        stroke="white"
-        stroke-width="1.5"
-      />
-
-      <!-- Tape window -->
-      <line
-        x1="10.5"
-        y1="14"
-        x2="13.5"
-        y2="14"
-        stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-    </svg>
-  `,
-  walls: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="24"
-      height="24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-label="Smashable wall icon"
-    >
-      <!-- Outer wall -->
-      <rect x="10" y="12" width="44" height="40" rx="4"/>
-
-      <!-- Brick lines -->
-      <path d="M12 24H52"/>
-      <path d="M12 36H52"/>
-      <path d="M12 48H52"/>
-
-      <!-- Vertical mortar (staggered bricks) -->
-      <path d="M22 12V24"/>
-      <path d="M42 12V24"/>
-      <path d="M16 24V36"/>
-      <path d="M32 24V36"/>
-      <path d="M48 24V36"/>
-      <path d="M22 36V48"/>
-      <path d="M42 36V48"/>
-      <path d="M16 48V52"/>
-      <path d="M32 48V52"/>
-      <path d="M48 48V52"/>
-
-      <!-- Crack -->
-      <path d="M34 16
-              L30 22
-              L36 28
-              L28 34
-              L34 40
-              L26 48" />
-
-      <!-- Small chips -->
-      <path d="M46 30 L50 28"/>
-      <path d="M44 44 L48 46"/>
-    </svg>
-  `,
-  topaz: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Topaz jewel"
-    >
-      <!-- Outer gem -->
-      <path
-        d="M32 4
-          L54 18
-          L46 56
-          H18
-          L10 18
+        d="
+          M36,20
+          Q30,26 36,32
+          L114,32
+          Q120,26 114,20
           Z"
-        fill="#fbc02d"
-        stroke="#f57f17"
-        stroke-width="3"
-        stroke-linejoin="round"
+        fill="#D4AF37"
       />
 
-      <!-- Facet lines -->
-      <path d="M32 4 V56" stroke="#f57f17" stroke-width="2"/>
-      <path d="M10 18 L32 32 L54 18" stroke="#f57f17" stroke-width="2" fill="none"/>
-      <path d="M18 56 L32 32 L46 56" stroke="#f57f17" stroke-width="2" fill="none"/>
-
-      <!-- Inner facet -->
-      <polygon
-        points="32,14 44,24 32,46 20,24"
-        fill="#ffe082"
-        opacity="0.9"
-      />
-
-      <!-- Highlight -->
+      <!-- Bottom gold platform (subtle semi-circle edges) -->
       <path
-        d="M22 18
-          C20 22 20 28 22 32"
-        fill="none"
-        stroke="#fff8e1"
-        stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
-    </svg>
-  `,
-  diamond: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Pink diamond jewel"
-    >
-      <!-- Outer diamond -->
-      <path
-        d="M32 4
-          L56 20
-          L44 56
-          H20
-          L8 20
+        d="
+          M36,118
+          Q30,124 36,130
+          L114,130
+          Q120,124 114,118
           Z"
-        fill="#ec407a"
-        stroke="#ad1457"
-        stroke-width="3"
-        stroke-linejoin="round"
+        fill="#D4AF37"
       />
 
-      <!-- Facet lines -->
-      <path d="M32 4 V56" stroke="#ad1457" stroke-width="2"/>
-      <path d="M8 20 L32 32 L56 20" stroke="#ad1457" stroke-width="2" fill="none"/>
-      <path d="M20 56 L32 32 L44 56" stroke="#ad1457" stroke-width="2" fill="none"/>
-
-      <!-- Inner facet -->
-      <polygon
-        points="32,14 44,24 32,46 20,24"
-        fill="#f48fb1"
-        opacity="0.9"
-      />
-
-      <!-- Highlight -->
-      <path
-        d="M22 18
-          C20 22 20 28 22 32"
-        fill="none"
-        stroke="#fce4ec"
-        stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
     </svg>
   `,
-  pearl: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Pearl"
-    >
-      <!-- Pearl body -->
-      <circle
-        cx="32"
-        cy="32"
-        r="22"
-        fill="#f5f5f5"
-        stroke="#bdbdbd"
-        stroke-width="3"
-      />
+  energy: `
+    <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Cyan energy -->
+        <linearGradient id="energyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#AFFFFF"/>
+          <stop offset="100%" stop-color="#2CFFFF"/>
+        </linearGradient>
 
-      <!-- Soft inner shading -->
-      <circle
-        cx="36"
-        cy="36"
-        r="16"
-        fill="#eeeeee"
-        opacity="0.9"
-      />
+        <!-- Blue canister shell -->
+        <linearGradient id="shellGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#1E3F66"/>
+          <stop offset="50%" stop-color="#3B6FA5"/>
+          <stop offset="100%" stop-color="#16304D"/>
+        </linearGradient>
 
-      <!-- Highlight -->
-      <path
-        d="M22 22
-          C18 24 18 30 22 34"
-        fill="none"
-        stroke="#ffffff"
-        stroke-width="3"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
+        <filter id="energyGlow">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
 
-      <!-- Subtle shadow edge -->
-      <path
-        d="M42 42
-          C44 40 46 36 46 32"
-        fill="none"
-        stroke="#cfcfcf"
-        stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.6"
-      />
+      <!-- Left cap (behind) -->
+      <ellipse cx="16" cy="32" rx="6" ry="18" fill="#234E7A"/>
+
+      <!-- Right cap (behind) -->
+      <ellipse cx="48" cy="32" rx="6" ry="18" fill="#234E7A"/>
+
+      <!-- Energy core (in front) -->
+      <rect x="18" y="18" width="28" height="28" rx="10"
+            fill="url(#energyGrad)"
+            filter="url(#energyGlow)"/>
+
+      <!-- Shell frame (in front of caps, around core) -->
+      <rect x="16" y="16" width="32" height="32" rx="12"
+            fill="none"
+            stroke="url(#shellGrad)"
+            stroke-width="4"/>
+
+      <!-- Horizontal energy lines -->
+      <g stroke="#EFFFFF" stroke-width="1.5" opacity="0.85">
+        <line x1="22" y1="26" x2="42" y2="26"/>
+        <line x1="22" y1="32" x2="42" y2="32"/>
+        <line x1="22" y1="38" x2="42" y2="38"/>
+      </g>
     </svg>
   `,
-  NPC: `
+  maps: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+      width="28" height="28" fill="none" stroke="currentColor"
+      stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+      aria-label="Map (folded)">
+
+      <!-- Folded map outline -->
+      <path d="M14 18 L26 14 L38 18 L50 14 V46 L38 50 L26 46 L14 50 Z"/>
+
+      <!-- Panel folds -->
+      <path d="M26 14 V46"/>
+      <path d="M38 18 V50"/>
+
+      <!-- Route line -->
+      <path d="M18 40 C24 30, 30 34, 36 26 S46 22, 46 30"/>
+
+      <!-- Location node -->
+      <circle cx="46" cy="30" r="3"/>
+    </svg>
+  `,
+  save: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+      width="28" height="28" fill="none" stroke="currentColor"
+      stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+      aria-label="Metroid Station Node">
+
+      <!-- Blocky room -->
+      <path d="M16 20 H48 V44 H16 Z"/>
+
+      <!-- Door notch -->
+      <path d="M48 30 H54"/>
+
+      <!-- Station node badge -->
+      <rect x="24" y="26" width="16" height="12" rx="4"/>
+
+      <!-- Simple 'S' glyph -->
+      <path d="M36 28 H30 C28.5 28 28 29 28 30
+              C28 31 29 31.5 30.5 31.8
+              L33.5 32.4
+              C35 32.7 36 33.4 36 34.5
+              C36 36 34.8 36 33.5 36
+              H28"/>
+    </svg>
+  `,
+  terminals: `
+    <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Terminal base gradient -->
+        <linearGradient id="baseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#2C3A5E"/>
+          <stop offset="50%" stop-color="#1E2A45"/>
+          <stop offset="100%" stop-color="#121C30"/>
+        </linearGradient>
+
+        <!-- Button highlight gradient -->
+        <radialGradient id="buttonGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFFF4D" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#FFD700" stop-opacity="0.7"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Terminal main body -->
+      <rect x="16" y="24" width="32" height="32" rx="4" fill="url(#baseGrad)" stroke="#0A1220" stroke-width="1.5"/>
+
+      <!-- Front panel inset -->
+      <rect x="20" y="28" width="24" height="24" rx="2" fill="#1C2A45" stroke="#0A1220" stroke-width="1"/>
+
+      <!-- Buttons row 1 -->
+      <g>
+        <circle cx="26" cy="34" r="1.8" fill="url(#buttonGrad)"/>
+        <circle cx="32" cy="34" r="1.8" fill="url(#buttonGrad)"/>
+        <circle cx="38" cy="34" r="1.8" fill="url(#buttonGrad)"/>
+      </g>
+
+      <!-- Buttons row 2 -->
+      <g>
+        <circle cx="26" cy="40" r="1.8" fill="url(#buttonGrad)"/>
+        <circle cx="32" cy="40" r="1.8" fill="url(#buttonGrad)"/>
+        <circle cx="38" cy="40" r="1.8" fill="url(#buttonGrad)"/>
+      </g>
+
+      <!-- Small indicator lights -->
+      <g>
+        <circle cx="22" cy="46" r="1" fill="#FF5555"/>
+        <circle cx="32" cy="46" r="1" fill="#55FF55"/>
+        <circle cx="42" cy="46" r="1" fill="#5555FF"/>
+      </g>
+
+      <!-- Top panel vent / detail lines -->
+      <g stroke="#0A1220" stroke-width="1">
+        <line x1="22" y1="28" x2="42" y2="28"/>
+        <line x1="22" y1="30" x2="42" y2="30"/>
+      </g>
+
+      <!-- Optional base/platform -->
+      <rect x="18" y="56" width="28" height="4" rx="1" fill="#1E2A45"/>
+    </svg>
+  `,
+  psychic: `
+    <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer glowing aura -->
+      <circle cx="32" cy="32" r="28" fill="none" stroke="purple" stroke-width="3" opacity="0.5"/>
+      <circle cx="32" cy="32" r="20" fill="none" stroke="violet" stroke-width="2" stroke-dasharray="5 3"/>
+      
+      <!-- Central energy core -->
+      <circle cx="32" cy="32" r="14" fill="purple"/>
+      <circle cx="32" cy="32" r="10" fill="violet"/>
+      
+      <!-- Inner glowing node -->
+      <circle cx="32" cy="32" r="5" fill="white" opacity="0.8"/>
+    </svg>
+  `,
+  mech: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+      width="28" height="28" fill="none" stroke="currentColor"
+      stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+      aria-label="Mech Part (Plate)">
+      <!-- Plate -->
+      <path d="M16 14 H48 L54 24 V40 L48 50 H16 L10 40 V24 Z"/>
+
+      <!-- Inner panel -->
+      <path d="M22 22 H42 L46 28 V36 L42 42 H22 L18 36 V28 Z"/>
+
+      <!-- Mounting holes -->
+      <circle cx="18" cy="24" r="2"/>
+      <circle cx="46" cy="24" r="2"/>
+      <circle cx="18" cy="40" r="2"/>
+      <circle cx="46" cy="40" r="2"/>
+
+      <!-- Vent slots -->
+      <line x1="26" y1="30" x2="38" y2="30"/>
+      <line x1="26" y1="34" x2="38" y2="34"/>
+    </svg>
+  `,
+  npc: `
     <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
   `,
-  emerald: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
+  bombs: `
+    <svg xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Emerald jewel"
-    >
-      <!-- Outer gem (emerald cut) -->
-      <path
-        d="M18 6
-          H46
-          L58 18
-          V46
-          L46 58
-          H18
-          L6 46
-          V18
-          Z"
-        fill="#2e7d32"
-        stroke="#1b5e20"
+      width="28" height="28"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-label="Power Bomb Expansion">
+
+      <!-- Outer blast ring -->
+      <circle
+        cx="32" cy="32" r="20"
+        stroke="#D07CFF"
         stroke-width="3"
-        stroke-linejoin="round"
-      />
-
-      <!-- Facet lines -->
-      <path d="M32 6 V58" stroke="#1b5e20" stroke-width="2"/>
-      <path d="M6 18 L32 32 L58 18" stroke="#1b5e20" stroke-width="2" fill="none"/>
-      <path d="M18 58 L32 32 L46 58" stroke="#1b5e20" stroke-width="2" fill="none"/>
-
-      <!-- Inner facet -->
-      <rect
-        x="22"
-        y="22"
-        width="20"
-        height="20"
-        fill="#66bb6a"
         opacity="0.9"
       />
 
-      <!-- Highlight -->
+      <!-- Bomb body -->
+      <circle
+        cx="32" cy="34" r="10"
+        fill="#2A1538"
+        stroke="#FF9AEF"
+        stroke-width="2.5"
+      />
+
+      <!-- Fuse -->
       <path
-        d="M22 16
-          C20 20 20 26 22 30"
-        fill="none"
-        stroke="#c8e6c9"
-        stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.9"
+        d="M32 24 V18"
+        stroke="#FFFFFF"
+        stroke-width="2.5"
       />
+      <path
+        d="M28 18 H36"
+        stroke="#FFFFFF"
+        stroke-width="2.5"
+      />
+
+      <!-- Energy sparks -->
+      <g stroke="#FF6AD5" stroke-width="2.5">
+        <path d="M32 8  V14"/>
+        <path d="M32 50 V56"/>
+        <path d="M8  32 H14"/>
+        <path d="M50 32 H56"/>
+
+        <path d="M14 14 L18 18"/>
+        <path d="M46 46 L50 50"/>
+        <path d="M14 50 L18 46"/>
+        <path d="M46 18 L50 14"/>
+      </g>
     </svg>
   `,
-  sapphire: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Sapphire jewel"
-    >
-      <!-- Outer gem -->
-      <path
-        d="M32 4
-          L52 20
-          L44 56
-          H20
-          L12 20
-          Z"
-        fill="#1e88e5"
-        stroke="#0d47a1"
-        stroke-width="3"
-        stroke-linejoin="round"
-      />
+  research: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+      width="28" height="28" fill="none" stroke="currentColor"
+      stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+      aria-label="Research Sample">
 
-      <!-- Facet lines -->
-      <path d="M32 4 V56" stroke="#0d47a1" stroke-width="2"/>
-      <path d="M12 20 L32 32 L52 20" stroke="#0d47a1" stroke-width="2" fill="none"/>
-      <path d="M20 56 L32 32 L44 56" stroke="#0d47a1" stroke-width="2" fill="none"/>
+      <!-- Flask outline -->
+      <path d="M26 6 H38"/>
+      <path d="M30 6 V18 L18 40 A8 8 0 0 0 26 52 H38 A8 8 0 0 0 46 40 L34 18 V6"/>
 
-      <!-- Inner facet -->
-      <polygon
-        points="32,14 42,24 32,44 22,24"
-        fill="#42a5f5"
-        opacity="0.9"
-      />
+      <!-- Fluid level -->
+      <line x1="24" y1="36" x2="40" y2="36"/>
 
-      <!-- Highlight -->
-      <path
-        d="M22 18
-          C20 22 20 28 22 32"
-        fill="none"
-        stroke="#bbdefb"
-        stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
-    </svg>
-  `,
-  star: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      width="22"
-      height="22"
-      aria-label="Star jewel"
-    >
-      <!-- Outer star -->
-      <path
-        d="M32 4
-          L39.5 22.5
-          L60 24
-          L44.5 38
-          L49 58
-          L32 47
-          L15 58
-          L19.5 38
-          L4 24
-          L24.5 22.5
-          Z"
-        fill="#FFD700"
-        stroke="#B8860B"
-        stroke-width="3"
-        stroke-linejoin="round"
-      />
-
-      <!-- Facet lines -->
-      <path d="M32 4 L32 47" stroke="#B8860B" stroke-width="2"/>
-      <path d="M24.5 22.5 L32 32 L39.5 22.5" stroke="#B8860B" stroke-width="2" fill="none"/>
-      <path d="M19.5 38 L32 32 L44.5 38" stroke="#B8860B" stroke-width="2" fill="none"/>
-
-      <!-- Highlight -->
-      <path
-        d="M22 20
-          C20 24 20 30 22 34"
-        fill="none"
-        stroke="#FFF2A8"
-        stroke-width="2"
-        stroke-linecap="round"
-        opacity="0.9"
-      />
-    </svg>
-  `,
-  secrets: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <!-- Question mark curve -->
-      <path d="
-        M12 2
-        C8.7 2, 6.2 4.1, 6.2 7
-        H8.6
-        C8.6 5.4, 9.9 4.4, 12 4.4
-        C14 4.4, 15.4 5.5, 15.4 7.2
-        C15.4 8.7, 14.4 9.5, 12.9 10.4
-        C11.2 11.4, 10.6 12.3, 10.6 14
-        V15.2
-        H13
-        V14.4
-        C13 13.2, 13.6 12.7, 15.2 11.7
-        C17 10.6, 18 9.3, 18 7.1
-        C18 4.2, 15.3 2, 12 2
-        Z
-      "/>
-
-      <!-- Dot -->
-      <circle cx="12" cy="18.5" r="1.6"/>
+      <!-- Bubbles -->
+      <circle cx="30" cy="30" r="1.5"/>
+      <circle cx="34" cy="26" r="1.5"/>
     </svg>
   `
 };
 
 const SVG_SIZES = {
-  crystals: 36,
-  missiles: 36,
-  tapes: 25,
-  walls: 30,
-  NPC: 25,
-  secrets: 30,
-  keys: 35,
+  crystals: 100,
+  missiles: 100,
+  shots: 100,
+  boosts: 100,
+  bombs: 100,
+  energy: 100,
+  npc: 28,
+  maps: 100,
+  terminals: 100,
+  psychic: 100,
+  mech: 100,
+  research: 100
 };
 
 function createSvgMarker(category, isFound = false, iconKey = null, isLocked = false) {
@@ -2523,11 +2233,17 @@ map.on("click", (e) => {
   const GG_CATEGORY_OPTIONS = [
     { value: "crystals", label: "Crystals" },
     { value: "missiles",   label: "Missile Expansions" },
-    { value: "tapes",    label: "Cassettes" },
-    { value: "keys",     label: "Keys/Locks" },
-    { value: "walls",    label: "Smashable Walls" },
-    { value: "NPC",      label: "NPCs" },
-    { value: "secrets",  label: "Secrets" },
+    { value: "shots",    label: "Shot Expansions" },
+    { value: "bombs",    label: "Bomb Expansions" },
+    { value: "boosts",     label: "Viola Boost Tanks" },
+    { value: "energy",    label: "Energy Tanks" },
+    { value: "maps",      label: "Map Stations" },
+    { value: "terminals",  label: "Terminals" },
+    { value: "psychic",  label: "Psychic Upgrades" },
+    { value: "npc",  label: "Galactic Fed" },
+    { value: "maps",  label: "Map Stations" },
+    { value: "mech",  label: "Mech Parts" },
+    { value: "research",  label: "Research" }
   ];
 
   // Icon options = keys from your SVG_ICONS object

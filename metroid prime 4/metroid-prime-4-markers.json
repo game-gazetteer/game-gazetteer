@@ -1,5 +1,19 @@
 [
   {
+    "id": "bomb1",
+    "layer": "viewros",
+    "coords": [
+      48.66194284607008,
+      -122.87109375000001
+    ],
+    "category": "bombs",
+    "icon": "bombs",
+    "name": "Psychic Power Bomb Expansion",
+    "locked": true,
+    "image": "images/bomb1.jpg",
+    "description": "Reger Tobaki will give the bomb expansion to Samus after speaking with him."
+  },
+  {
     "id": "crystal1",
     "name": "Green Energy Crystal",
     "coords": [
@@ -2600,6 +2614,141 @@
     "locked": true
   },
   {
+    "id": "crystal202",
+    "layer": "viewros",
+    "coords": [
+      70.91664110709779,
+      -79.1015625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c202.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal203",
+    "layer": "viewros",
+    "coords": [
+      77.98904862437391,
+      -41.13281250000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c203.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal204",
+    "layer": "viewros",
+    "coords": [
+      79.15480994354373,
+      -39.11132812500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c204.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal205",
+    "layer": "viewros",
+    "coords": [
+      76.27912201826652,
+      -36.95800781250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c205.jpg",
+    "locked": true
+  },
+  {
+    "id": "e1",
+    "layer": "viewros",
+    "coords": [
+      -65.31182925383723,
+      -151.12792968750003
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "description": "Use thunder shot to electrify the lock and open the container.",
+    "image": "images/e1",
+    "locked": true
+  },
+  {
+    "id": "map1",
+    "layer": "viewros",
+    "coords": [
+      -62.32920841458002,
+      -167.87109375000003
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Viewros Area Map",
+    "description": "Activate the psychic platforms to reach here. Then use thunder shot on the scout bot to activate it and reveal the area map.",
+    "image": "images/map1.jpg",
+    "locked": true
+  },
+  {
+    "id": "mech1",
+    "layer": "viewros",
+    "coords": [
+      -3.6449998008920375,
+      -111.04980468750001
+    ],
+    "category": "mech",
+    "icon": "mech",
+    "name": "Mech Part",
+    "description": "Use psychic lasso to move the tank and collect the mech part.",
+    "image": "images/mech1.jpg",
+    "locked": true
+  },
+  {
+    "id": "mech2",
+    "layer": "viewros",
+    "coords": [
+      -59.5343180010956,
+      -22.9833984375
+    ],
+    "category": "mech",
+    "icon": "mech",
+    "name": "Mech Part",
+    "image": "images/mech2.jpg",
+    "locked": true
+  },
+  {
+    "id": "mech3",
+    "layer": "viewros",
+    "coords": [
+      78.98818668348777,
+      -147.52441406250003
+    ],
+    "category": "mech",
+    "icon": "mech",
+    "name": "Mech Part",
+    "description": "Use the grapple node inside to reach this ledge where the mech part is.",
+    "image": "images/mech3.jpg",
+    "locked": true
+  },
+  {
+    "id": "mech4",
+    "layer": "viewros",
+    "coords": [
+      78.22451306101968,
+      -25.356445312500004
+    ],
+    "category": "mech",
+    "icon": "mech",
+    "name": "Mech Part",
+    "description": "Use thunder shot to electrify and release the mech parts grip, causing it to fall.",
+    "image": "images/mech4.jpg",
+    "locked": true
+  },
+  {
     "id": "missile1",
     "layer": "viewros",
     "coords": [
@@ -2611,6 +2760,174 @@
     "name": "Missile Expansion",
     "description": "Use psychic lasso to pull the missile expansion out of the sand.",
     "image": "images/m1.jpg",
+    "locked": true
+  },
+  {
+    "id": "missile2",
+    "layer": "viewros",
+    "coords": [
+      61.689872200460016,
+      1.0107421875000002
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use psychic lasso to pull the missile expansion out of the sand.",
+    "image": "images/m2.jpg",
+    "locked": true
+  },
+  {
+    "id": "missile3",
+    "layer": "viewros",
+    "coords": [
+      -35.31736632923786,
+      -148.00781250000003
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "After speaking to Reger Tobaki, he will give you the missile expansion.",
+    "image": "images/m3.jpg",
+    "locked": true
+  },
+  {
+    "id": "missile4",
+    "layer": "viewros",
+    "coords": [
+      75.70478638174055,
+      -126.16699218750001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use psychic lasso to pull the missile expansion out of the sand.",
+    "image": "images/m4.jpg",
+    "locked": true
+  },
+  {
+    "id": "missile5",
+    "layer": "viewros",
+    "coords": [
+      -4.302591077119676,
+      -113.51074218750001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use psychic control beam on the crane to lower the grapple node. Swing across the gap to access the missile expansion.",
+    "image": "images/m5.jpg",
+    "locked": true
+  },
+  {
+    "id": "missile6",
+    "layer": "viewros",
+    "coords": [
+      -59.5343180010956,
+      -21.26953125
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use thunder shot to open the shutter. Then use the exposed morph tunnel to access the missile expansion.",
+    "image": "images/m6.jpg",
+    "locked": true
+  },
+  {
+    "id": "missile7",
+    "layer": "viewros",
+    "coords": [
+      78.19757802282507,
+      -27.333984375000004
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Destory the container inside the debri to reveal the missile expansion.",
+    "image": "images/m7.jpg",
+    "locked": true
+  },
+  {
+    "id": "npc1",
+    "layer": "viewros",
+    "coords": [
+      -46.468132992155546,
+      54.66796875000001
+    ],
+    "category": "npc",
+    "icon": "npc",
+    "name": "Reger Tobaki #1",
+    "description": "After completing all 5 dungeons. Reger Tobaki will appear here and offer Samus the Teleporter Chip to collect all 6 mech parts with.",
+    "image": "images/npc1.jpg",
+    "locked": true
+  },
+  {
+    "id": "npc2",
+    "layer": "viewros",
+    "coords": [
+      -36.703659597194545,
+      -148.05175781250003
+    ],
+    "category": "npc",
+    "icon": "npc",
+    "name": "Reger Tobaki #2",
+    "description": "After speaking to Reger Tobaki at his 1st location. He will move here.",
+    "image": "images/npc2.jpg",
+    "locked": true
+  },
+  {
+    "id": "npc3",
+    "layer": "viewros",
+    "coords": [
+      78.31385955743478,
+      -22.851562500000004
+    ],
+    "category": "npc",
+    "icon": "npc",
+    "name": "Reger Tobaki #3",
+    "description": "After speaking to Reger Tobaki at his 2nd location. He will move here.",
+    "image": "images/npc3.jpg",
+    "locked": true
+  },
+  {
+    "id": "npc4",
+    "layer": "viewros",
+    "coords": [
+      47.48751300895658,
+      -122.91503906250001
+    ],
+    "category": "npc",
+    "icon": "npc",
+    "name": "Reger Tobaki #4",
+    "description": "After speaking to Reger Tobaki at his 3rd location. He will move here.",
+    "image": "images/npc4.jpg",
+    "locked": true
+  },
+  {
+    "id": "r1",
+    "layer": "viewros",
+    "coords": [
+      -61.95961583829658,
+      -165.76171875000003
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Platform",
+    "description": "Use the psychic visor to activate the platforms",
+    "image": "images/r1.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot1",
+    "layer": "viewros",
+    "coords": [
+      78.65596693122328,
+      -22.8076171875
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Reger Tobaki will give the shot expansion to Samus after speaking with him.",
+    "image": "images/shot1.jpg",
     "locked": true
   }
 ]
