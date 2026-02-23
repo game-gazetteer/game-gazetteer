@@ -57,7 +57,9 @@
     .marker-terminals      { background: cyan; }
     .marker-psychic        { background: cyan; }
     .marker-mech           { background: seagreen; }
-    .marker-npc            { background: #ff7043; }
+    .marker-biology        { background: red }
+    .marker-machines       { background: red; }
+    .marker-gfed           { background: #ff7043; }
     .marker-research       { background: rgb(195, 0, 255); }
 
     .leaflet-container img.leaflet-tile {
@@ -725,37 +727,113 @@
         <label class="filter-item">
           <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
           <span>Galactic Federation</span>
-          <input type="checkbox" class="category" value="npc" checked>
+          <input type="checkbox" class="category" value="gfed" checked>
         </label>
 
         <label class="filter-item">
           <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
           <span>Bosses</span>
-          <input type="checkbox" class="category" value="biology" checked>
+          <input type="checkbox" class="category" value="bosses" checked>
         </label>
 
         <label class="filter-item">
-          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="12 16 40 44"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Biology Creature">
+
+            <!-- Fins -->
+            <path
+              d="M18 28 C20 30 23 33 24 36
+                C22 36 19 35 17 32 Z"
+            />
+            <path
+              d="M46 28 C44 30 41 33 40 36
+                C42 36 45 35 47 32 Z"
+            />
+
+            <!-- Face plate -->
+            <ellipse
+              cx="32"
+              cy="32"
+              rx="9"
+              ry="7"
+            />
+
+            <!-- Core -->
+            <circle
+              cx="32"
+              cy="42"
+              r="5"
+            />
+
+            <!-- Eyes -->
+            <circle cx="29" cy="32" r="1.5"/>
+            <circle cx="35" cy="32" r="1.5"/>
+
+          </svg>
           <span>Biology</span>
           <input type="checkbox" class="category" value="biology" checked>
         </label>
 
         <label class="filter-item">
-          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            width="28" height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Enemy (Drone)">
+            
+            <!-- Outer shell -->
+            <path d="M32 8
+                    C22 8 15 15 15 25
+                    C15 38 23 48 32 56
+                    C41 48 49 38 49 25
+                    C49 15 42 8 32 8 Z"/>
+
+            <!-- Side fins -->
+            <path d="M15 27 L8 31 L15 35 Z"/>
+            <path d="M49 27 L56 31 L49 35 Z"/>
+
+            <!-- Faceplate -->
+            <path d="M32 15
+                    C25 15 20 20 20 27
+                    C20 35 25 42 32 47
+                    C39 42 44 35 44 27
+                    C44 20 39 15 32 15 Z"/>
+
+            <!-- Eye -->
+            <circle cx="32" cy="27" r="4.5"/>
+
+            <!-- Threat chevron -->
+            <path d="M24 38 L32 43 L40 38"/>
+
+            <!-- Danger node -->
+            <circle cx="32" cy="54" r="2.8"/>
+          </svg>
           <span>Machines</span>
-          <input type="checkbox" class="category" value="biology" checked>
+          <input type="checkbox" class="category" value="machines" checked>
         </label>
 
         <label class="filter-item">
           <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
           <span>Lamorn Lore</span>
-          <input type="checkbox" class="category" value="biology" checked>
+          <input type="checkbox" class="category" value="lore" checked>
         </label>
 
         <label class="filter-item">
           <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
           <span>Data Logs</span>
-          <input type="checkbox" class="category" value="biology" checked>
+          <input type="checkbox" class="category" value="logs" checked>
         </label>
 
         <label class="filter-item">
@@ -905,6 +983,7 @@
   cursor: pointer;
 ">
   <option value="viewros">Viewros</option>
+  <option value="dungeons">Dungeons</option>
 </select>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -1281,6 +1360,135 @@ const SVG_ICONS = {
       <circle cx="46" cy="30" r="3"/>
     </svg>
   `,
+  machines: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Enemy icon">
+      <defs>
+        <style>
+          :root{
+            --stroke:#0b1220;
+            --body1:#1e2b45;
+            --body2:#0f1830;
+            --glow:#49f2ff;
+            --accent:#ff6b6b;
+          }
+          .s{stroke:var(--stroke);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+
+        <linearGradient id="gBody" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="var(--body1)"/>
+          <stop offset="1" stop-color="var(--body2)"/>
+        </linearGradient>
+
+        <radialGradient id="gEye" cx="50%" cy="50%" r="60%">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+          <stop offset="0.35" stop-color="var(--glow)" stop-opacity="0.95"/>
+          <stop offset="1" stop-color="var(--glow)" stop-opacity="0"/>
+        </radialGradient>
+
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.5" result="b"/>
+          <feMerge>
+            <feMergeNode in="b"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Outer shell -->
+      <path class="s" fill="url(#gBody)"
+            d="M64 16
+              C42 16 26 32 26 52
+              C26 78 44 98 64 112
+              C84 98 102 78 102 52
+              C102 32 86 16 64 16 Z"/>
+
+      <!-- Side fins -->
+      <path class="s" fill="var(--body2)"
+            d="M26 54 L12 62 L26 70 Z"/>
+      <path class="s" fill="var(--body2)"
+            d="M102 54 L116 62 L102 70 Z"/>
+
+      <!-- Inner faceplate -->
+      <path class="s" fill="#0a1023"
+            d="M64 30
+              C49 30 38 41 38 56
+              C38 73 50 87 64 96
+              C78 87 90 73 90 56
+              C90 41 79 30 64 30 Z"/>
+
+      <!-- Eye glow -->
+      <circle cx="64" cy="56" r="18" fill="url(#gEye)" filter="url(#softGlow)"/>
+
+      <!-- Eye core -->
+      <circle class="s" cx="64" cy="56" r="9" fill="var(--glow)"/>
+      <circle cx="61" cy="53" r="2.5" fill="#ffffff" opacity="0.9"/>
+
+      <!-- "Threat" chevrons -->
+      <path class="s" fill="none" d="M50 74 L64 82 L78 74" opacity="0.75"/>
+      <path class="s" fill="none" d="M54 88 L64 94 L74 88" opacity="0.5"/>
+
+      <!-- Small danger node -->
+      <circle class="s" cx="64" cy="106" r="6" fill="var(--accent)"/>
+    </svg>
+  `,
+  biology: `
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="12 16 40 44"
+      aria-label="Biology Creature">
+
+      <defs>
+        <radialGradient id="bioCoreGrad" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#eafff7"/>
+          <stop offset="50%" stop-color="#7bffd0"/>
+          <stop offset="100%" stop-color="#00b86b"/>
+        </radialGradient>
+
+        <filter id="bioGlow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="2.5" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Fins -->
+      <path
+        d="M18 26 C20 28 23 31 24 34
+          C22 34 19 33 17 30 Z"
+        fill="#0f5f3a"
+      />
+      <path
+        d="M46 26 C44 28 41 31 40 34
+          C42 34 45 33 47 30 Z"
+        fill="#0f5f3a"
+      />
+
+      <!-- Face plate -->
+      <ellipse
+        cx="32"
+        cy="30"
+        rx="9"
+        ry="7"
+        fill="#06311f"
+        opacity="0.9"
+      />
+
+      <!-- Core -->
+      <circle
+        cx="32"
+        cy="40"
+        r="5"
+        fill="url(#bioCoreGrad)"
+        filter="url(#bioGlow)"
+      />
+
+      <!-- Eye highlights -->
+      <circle cx="29" cy="30" r="1.5" fill="#d9fff1"/>
+      <circle cx="35" cy="30" r="1.5" fill="#d9fff1"/>
+
+    </svg>
+  `,
   save: `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
       width="28" height="28" fill="none" stroke="currentColor"
@@ -1395,7 +1603,7 @@ const SVG_ICONS = {
       <line x1="26" y1="34" x2="38" y2="34"/>
     </svg>
   `,
-  npc: `
+  gfed: `
     <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
   `,
   bombs: `
@@ -1476,11 +1684,13 @@ const SVG_SIZES = {
   boosts: 100,
   bombs: 100,
   energy: 100,
-  npc: 28,
+  gfed: 28,
   maps: 100,
   terminals: 100,
   psychic: 100,
   mech: 100,
+  biology: 100,
+  machines: 100,
   research: 100
 };
 
@@ -1526,22 +1736,22 @@ const tileLayers = {
       maxZoom: 5,
       minZoom: 2,
       noWrap: true,
-      bounds: [[-76,-180],[85.05,110.8]]
+      bounds: [[-76,-180],[85,110.8]]
     }),
     defaultZoom: 2,
-    defaultCenter: [60, -30]
+    defaultCenter: [25.8, -36.56]
   },
 
-  fury: {
-    layer: L.tileLayer('tiles/fury/{z}/{x}/{y}.png', {
-      maxZoom: 7,
-      maxNativeZoom: 6,  
+  dungeons: {
+    layer: L.tileLayer('tiles/dungeons/{z}/{x}/{y}.png', {
+      maxZoom: 9,
+      maxNativeZoom: 9,
       minZoom: 3,
       noWrap: true,
-      bounds: [[-69.78,-180],[85,110.4]]
+      bounds: [[41.77,-180],[85,23.91]]
     }),
     defaultZoom: 3,
-    defaultCenter: [77.39, -83.7]
+    defaultCenter: [73.78, -100.55]
   }
 };
 
@@ -2240,10 +2450,12 @@ map.on("click", (e) => {
     { value: "maps",      label: "Map Stations" },
     { value: "terminals",  label: "Terminals" },
     { value: "psychic",  label: "Psychic Upgrades" },
-    { value: "npc",  label: "Galactic Fed" },
+    { value: "gfed",  label: "Galactic Fed" },
     { value: "maps",  label: "Map Stations" },
     { value: "mech",  label: "Mech Parts" },
-    { value: "research",  label: "Research" }
+    { value: "research",  label: "Research" },
+    { value: "machines",  label: "Machines" },
+    { value: "biology",  label: "Biology" }
   ];
 
   // Icon options = keys from your SVG_ICONS object

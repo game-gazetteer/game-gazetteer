@@ -1,5 +1,45 @@
 [
   {
+    "id": "bio1",
+    "layer": "dungeons",
+    "coords": [
+      81.40736998372874,
+      -69.84008789062501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Roach",
+    "image": "images/bio1.jpg",
+    "locked": true
+  },
+  {
+    "id": "c208",
+    "layer": "dungeons",
+    "coords": [
+      74.6585631065021,
+      -85.46539306640626
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c208.jpg",
+    "locked": true
+  },
+  {
+    "id": "e2",
+    "layer": "dungeons",
+    "coords": [
+      81.50692142158408,
+      -74.60266113281251
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "description": "Use a bomb jump to reach the energy tank.",
+    "image": "images/e2.jpg",
+    "locked": true
+  },
+  {
     "id": "bomb1",
     "layer": "viewros",
     "coords": [
@@ -2663,6 +2703,32 @@
     "icon": "crystals",
     "name": "Green Energy Crystal",
     "image": "images/c205.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal206",
+    "layer": "viewros",
+    "coords": [
+      72.82905216821429,
+      10.283203125000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c206.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal207",
+    "layer": "viewros",
+    "coords": [
+      69.73333439033593,
+      9.052734375000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c207.jpg",
     "locked": true
   },
   {
