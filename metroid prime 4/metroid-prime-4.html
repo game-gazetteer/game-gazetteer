@@ -48,19 +48,22 @@
 
     /* Category colors */
     .marker-crystals       { background: blue; }
-    .marker-missiles       { background: purple; }
+    .marker-missiles       { background: rgb(0, 131, 131); }
     .marker-shots          { background: #0f1419; }
     .marker-bombs          { background: #5515eb; }
-    .marker-boosts         { background: #01687D;; }
-    .marker-energy         { background: orangered;; }
+    .marker-bosses         { background: lime; }
+    .marker-boosts         { background: #01687D; }
+    .marker-energy         { background: orangered; }
     .marker-maps           { background: green; }
     .marker-terminals      { background: cyan; }
-    .marker-psychic        { background: cyan; }
+    .marker-psychic        { background: yellow; }
     .marker-mech           { background: seagreen; }
-    .marker-biology        { background: red }
+    .marker-biology        { background: red; }
     .marker-machines       { background: red; }
     .marker-gfed           { background: #ff7043; }
     .marker-research       { background: rgb(195, 0, 255); }
+    .marker-logs           { background: #01687D; }
+    .marker-save           { background: rgb(136, 255, 0); }
 
     .leaflet-container img.leaflet-tile {
         mix-blend-mode: normal;
@@ -716,6 +719,36 @@
           <input type="checkbox" class="category" value="energy" checked>
         </label>
 
+        <label class="filter-item">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Psychic Abilities">
+
+            <!-- Outer ring -->
+            <circle cx="32" cy="32" r="22"/>
+
+            <!-- Inner ring -->
+            <circle cx="32" cy="32" r="12"/>
+
+            <!-- Psychic waves -->
+            <path d="M18 34 C22 26, 30 24, 32 18"/>
+            <path d="M46 34 C42 26, 34 24, 32 18"/>
+
+            <!-- Core -->
+            <circle cx="32" cy="36" r="6"/>
+
+          </svg>
+          <span>Psychic Abilities</span>
+          <input type="checkbox" class="category" value="psychic" checked>
+        </label>
+
       </div>
   </div>
 
@@ -731,7 +764,42 @@
         </label>
 
         <label class="filter-item">
-          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 128"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Boss">
+
+            <!-- Outer shell -->
+            <path d="M64 16
+                    C48 16 38 24 34 36
+                    C26 40 22 48 22 58
+                    C22 74 34 88 48 98
+                    C54 110 74 110 80 98
+                    C94 88 106 74 106 58
+                    C106 48 102 40 94 36
+                    C90 24 80 16 64 16 Z"/>
+
+            <!-- Horns -->
+            <path d="M34 44 L18 36 L22 54 Z"/>
+            <path d="M94 44 L110 36 L106 54 Z"/>
+
+            <!-- Crown -->
+            <path d="M48 40 L64 30 L80 40"/>
+
+            <!-- Core -->
+            <circle cx="64" cy="58" r="14"/>
+
+            <!-- Lower chevrons -->
+            <path d="M50 80 L64 88 L78 80"/>
+            <path d="M54 94 L64 100 L74 94"/>
+
+          </svg>
           <span>Bosses</span>
           <input type="checkbox" class="category" value="bosses" checked>
         </label>
@@ -831,7 +899,33 @@
         </label>
 
         <label class="filter-item">
-          <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            width="28"
+            height="28"
+            aria-label="Data Disc"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+
+            <!-- Outer disc (slightly smaller so it breathes) -->
+            <circle cx="32" cy="32" r="22"/>
+
+            <!-- Segmented ring -->
+            <path d="M32 16 A16 16 0 0 1 46 24"/>
+            <path d="M48 32 A16 16 0 0 1 40 46"/>
+            <path d="M32 48 A16 16 0 0 1 18 40"/>
+            <path d="M16 32 A16 16 0 0 1 24 18"/>
+
+            <!-- Inner ring -->
+            <circle cx="32" cy="32" r="9"/>
+
+            <!-- Center hub -->
+            <circle cx="32" cy="32" r="3"/>
+
+          </svg>
           <span>Data Logs</span>
           <input type="checkbox" class="category" value="logs" checked>
         </label>
@@ -910,6 +1004,35 @@
           </svg>
           <span>Mech Parts</span>
           <input type="checkbox" class="category" value="mech" checked>
+        </label>
+
+        <label class="filter-item">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-label="Save Station">
+
+            <!-- Top cap -->
+            <rect x="22" y="6" width="20" height="8" rx="4"/>
+
+            <!-- Main tube -->
+            <rect x="20" y="12" width="24" height="36" rx="12"/>
+
+            <!-- Inner core -->
+            <rect x="29" y="18" width="6" height="24" rx="3"/>
+
+            <!-- Bottom base -->
+            <rect x="18" y="48" width="28" height="8" rx="3"/>
+
+          </svg>
+          <span>Save Stations</span>
+          <input type="checkbox" class="category" value="save" checked>
         </label>
       </div>
   </div>
@@ -1004,6 +1127,75 @@ window.GG_MARKER_DATA = [];
 // A function we will define later (inside module script) to add markers on click.
 window.GG_ADD_MARKER_AT = null;
 window.GG_PENDING_ADD_LATLNGS = [];
+
+// ============================
+// EDIT MODE: Link Mode
+// ============================
+window.GG_LINKING_FROM = null; // marker object when "link mode" is active
+
+function toast(msg) {
+  // super-lightweight toast; swap with alert() if you want
+  const el = document.createElement("div");
+  el.textContent = msg;
+  el.style.position = "fixed";
+  el.style.left = "50%";
+  el.style.bottom = "28px";
+  el.style.transform = "translateX(-50%)";
+  el.style.padding = "10px 14px";
+  el.style.borderRadius = "12px";
+  el.style.background = "rgba(20,20,20,0.90)";
+  el.style.color = "white";
+  el.style.fontWeight = "700";
+  el.style.zIndex = "999999";
+  el.style.border = "1px solid rgba(255,255,255,0.15)";
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1800);
+}
+
+// ESC cancels link mode
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && window.GG_LINKING_FROM) {
+    window.GG_LINKING_FROM = null;
+    toast("Link mode cancelled");
+  }
+});
+
+function addLink(fromMarker, toMarker) {
+  if (!fromMarker || !toMarker) return;
+  if (fromMarker.__id === toMarker.__id) return;
+
+  // Ensure backing array exists
+  const p = fromMarker.__dataRef;
+  if (!p) return;
+  p.links = Array.isArray(p.links) ? p.links : [];
+
+  // Avoid duplicates
+  const exists = p.links.some(l => String(l.target) === String(toMarker.__id));
+  if (exists) return;
+
+  const label = toMarker.options?.title || toMarker.__id;
+
+  // Use current zoom as a sensible default
+  const zoom = map.getZoom();
+
+  p.links.push({ label, target: toMarker.__id, zoom });
+
+  // Keep the live Leaflet marker in sync too
+  fromMarker.links = p.links;
+
+  // Rebuild popup so the "Related" list updates immediately
+  createMarkerPopup(fromMarker, fromMarker.__id);
+}
+
+function removeLink(fromMarker, targetId) {
+  const p = fromMarker?.__dataRef;
+  if (!p || !Array.isArray(p.links)) return;
+
+  p.links = p.links.filter(l => String(l.target) !== String(targetId));
+  fromMarker.links = p.links;
+
+  createMarkerPopup(fromMarker, fromMarker.__id);
+}
 
 // Show export button in edit mode and wire export
 (function initEditorUI() {
@@ -1489,30 +1681,6 @@ const SVG_ICONS = {
 
     </svg>
   `,
-  save: `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
-      width="28" height="28" fill="none" stroke="currentColor"
-      stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-      aria-label="Metroid Station Node">
-
-      <!-- Blocky room -->
-      <path d="M16 20 H48 V44 H16 Z"/>
-
-      <!-- Door notch -->
-      <path d="M48 30 H54"/>
-
-      <!-- Station node badge -->
-      <rect x="24" y="26" width="16" height="12" rx="4"/>
-
-      <!-- Simple 'S' glyph -->
-      <path d="M36 28 H30 C28.5 28 28 29 28 30
-              C28 31 29 31.5 30.5 31.8
-              L33.5 32.4
-              C35 32.7 36 33.4 36 34.5
-              C36 36 34.8 36 33.5 36
-              H28"/>
-    </svg>
-  `,
   terminals: `
     <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -1568,17 +1736,67 @@ const SVG_ICONS = {
     </svg>
   `,
   psychic: `
-    <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <!-- Outer glowing aura -->
-      <circle cx="32" cy="32" r="28" fill="none" stroke="purple" stroke-width="3" opacity="0.5"/>
-      <circle cx="32" cy="32" r="20" fill="none" stroke="violet" stroke-width="2" stroke-dasharray="5 3"/>
-      
-      <!-- Central energy core -->
-      <circle cx="32" cy="32" r="14" fill="purple"/>
-      <circle cx="32" cy="32" r="10" fill="violet"/>
-      
-      <!-- Inner glowing node -->
-      <circle cx="32" cy="32" r="5" fill="white" opacity="0.8"/>
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      aria-label="Psychic Abilities">
+
+      <defs>
+        <!-- Aura gradient -->
+        <radialGradient id="psyAura" cx="50%" cy="45%" r="65%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+          <stop offset="35%" stop-color="#b86bff" stop-opacity="0.9"/>
+          <stop offset="70%" stop-color="#6d28ff" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#2a0b6d" stop-opacity="0"/>
+        </radialGradient>
+
+        <!-- Core gradient -->
+        <radialGradient id="psyCore" cx="50%" cy="40%" r="70%">
+          <stop offset="0%" stop-color="#f6f2ff"/>
+          <stop offset="45%" stop-color="#b86bff"/>
+          <stop offset="100%" stop-color="#5b21b6"/>
+        </radialGradient>
+
+        <!-- Soft glow -->
+        <filter id="psyGlow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/>
+          <feMerge>
+            <feMergeNode in="b"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+
+        <!-- Outer ring gradient -->
+        <linearGradient id="psyRing" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e9d5ff"/>
+          <stop offset="100%" stop-color="#7c3aed"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Aura -->
+      <circle cx="32" cy="32" r="28" fill="url(#psyAura)" filter="url(#psyGlow)"/>
+
+      <!-- Outer ring -->
+      <circle cx="32" cy="32" r="22"
+        fill="none" stroke="url(#psyRing)" stroke-width="3" opacity="0.95"/>
+
+      <!-- Inner ring -->
+      <circle cx="32" cy="32" r="13"
+        fill="none" stroke="#c084fc" stroke-width="2" opacity="0.9"/>
+
+      <!-- Psychic waves -->
+      <path d="M18 34 C22 26, 30 24, 32 18"
+        fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+      <path d="M46 34 C42 26, 34 24, 32 18"
+        fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+
+      <!-- Core -->
+      <circle cx="32" cy="36" r="7" fill="url(#psyCore)" filter="url(#psyGlow)"/>
+
+      <!-- Spark highlights -->
+      <circle cx="29" cy="34" r="1.2" fill="#ffffff" opacity="0.9"/>
+      <circle cx="36.5" cy="36.5" r="1" fill="#ffffff" opacity="0.75"/>
+      <circle cx="33" cy="32" r="0.9" fill="#ffffff" opacity="0.65"/>
+
     </svg>
   `,
   mech: `
@@ -1605,6 +1823,158 @@ const SVG_ICONS = {
   `,
   gfed: `
     <svg class="filter-icon" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6z"/></svg>
+  `,
+  logs: `
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      aria-label="Data Disc">
+
+      <defs>
+        <!-- Outer shell gradient -->
+        <linearGradient id="discOuterGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3c4b6e"/>
+          <stop offset="100%" stop-color="#121a2b"/>
+        </linearGradient>
+
+        <!-- Inner ring glow -->
+        <radialGradient id="discCoreGrad" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#ffffff"/>
+          <stop offset="40%" stop-color="#49f2ff"/>
+          <stop offset="100%" stop-color="#00a8c6"/>
+        </radialGradient>
+
+        <!-- Soft glow -->
+        <filter id="discGlow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="2.5" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Outer disc -->
+      <circle cx="32" cy="32" r="24"
+              fill="url(#discOuterGrad)"
+              stroke="#0b1220"
+              stroke-width="2"/>
+
+      <!-- Segmented ring -->
+      <path d="M32 14 A18 18 0 0 1 47 23"
+            stroke="#7ee8ff"
+            stroke-width="3"
+            stroke-linecap="round"/>
+      <path d="M50 32 A18 18 0 0 1 41 47"
+            stroke="#7ee8ff"
+            stroke-width="3"
+            stroke-linecap="round"/>
+      <path d="M32 50 A18 18 0 0 1 17 41"
+            stroke="#7ee8ff"
+            stroke-width="3"
+            stroke-linecap="round"/>
+      <path d="M14 32 A18 18 0 0 1 23 17"
+            stroke="#7ee8ff"
+            stroke-width="3"
+            stroke-linecap="round"/>
+
+      <!-- Inner ring -->
+      <circle cx="32" cy="32" r="11"
+              fill="#0a1023"
+              stroke="#1f2a40"
+              stroke-width="2"/>
+
+      <!-- Center core -->
+      <circle cx="32" cy="32" r="5"
+              fill="url(#discCoreGrad)"
+              filter="url(#discGlow)"/>
+
+      <!-- Data lines -->
+      <path d="M28 24 H36"
+            stroke="#49f2ff"
+            stroke-width="2"
+            stroke-linecap="round"/>
+      <path d="M28 40 H36"
+            stroke="#49f2ff"
+            stroke-width="2"
+            stroke-linecap="round"/>
+
+    </svg>
+  `,
+  bosses: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Boss icon">
+      <defs>
+        <style>
+          :root{
+            --stroke:#0b1220;
+            --armor1:#3a1a5a;
+            --armor2:#140a26;
+            --glow:#ff3df2;
+            --accent:#ffd166;
+          }
+          .s{stroke:var(--stroke);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+
+        <linearGradient id="bossBody" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="var(--armor1)"/>
+          <stop offset="1" stop-color="var(--armor2)"/>
+        </linearGradient>
+
+        <radialGradient id="bossCore" cx="50%" cy="45%" r="60%">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+          <stop offset="0.35" stop-color="var(--glow)" stop-opacity="0.95"/>
+          <stop offset="1" stop-color="var(--glow)" stop-opacity="0"/>
+        </radialGradient>
+
+        <filter id="bossGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.8" result="b"/>
+          <feMerge>
+            <feMergeNode in="b"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Outer “boss” shell -->
+      <path class="s" fill="url(#bossBody)"
+            d="M64 12
+              C46 12 34 22 30 36
+              C22 40 16 48 16 58
+              C16 76 30 92 44 102
+              C52 116 76 116 84 102
+              C98 92 112 76 112 58
+              C112 48 106 40 98 36
+              C94 22 82 12 64 12 Z"/>
+
+      <!-- Side horns / spikes -->
+      <path class="s" fill="var(--armor2)" d="M30 44 L14 36 L18 54 Z"/>
+      <path class="s" fill="var(--armor2)" d="M98 44 L114 36 L110 54 Z"/>
+
+      <!-- Inner faceplate -->
+      <path class="s" fill="#0a1023"
+            d="M64 30
+              C50 30 40 40 40 54
+              C40 72 52 86 64 94
+              C76 86 88 72 88 54
+              C88 40 78 30 64 30 Z"/>
+
+      <!-- Crown chevron -->
+      <path class="s" fill="none" opacity="0.8"
+            d="M46 38 L64 26 L82 38"/>
+
+      <!-- Core glow -->
+      <circle cx="64" cy="56" r="20" fill="url(#bossCore)" filter="url(#bossGlow)"/>
+
+      <!-- Core -->
+      <circle class="s" cx="64" cy="56" r="10" fill="var(--glow)"/>
+      <circle cx="60.5" cy="52.5" r="2.8" fill="#ffffff" opacity="0.9"/>
+
+      <!-- “Boss” marks -->
+      <path class="s" fill="none" opacity="0.7" d="M50 76 L64 84 L78 76"/>
+      <path class="s" fill="none" opacity="0.45" d="M54 90 L64 96 L74 90"/>
+
+      <!-- Gold threat node -->
+      <circle class="s" cx="64" cy="110" r="6.5" fill="var(--accent)"/>
+    </svg>
   `,
   bombs: `
     <svg xmlns="http://www.w3.org/2000/svg"
@@ -1674,6 +2044,66 @@ const SVG_ICONS = {
       <circle cx="30" cy="30" r="1.5"/>
       <circle cx="34" cy="26" r="1.5"/>
     </svg>
+  `,
+  save: `
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      aria-label="Save Station Tube">
+
+      <defs>
+        <!-- Yellow tube body -->
+        <linearGradient id="tubeYellow" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFE866"/>
+          <stop offset="50%" stop-color="#FFD600"/>
+          <stop offset="100%" stop-color="#E6B800"/>
+        </linearGradient>
+
+        <!-- Cyan core glow -->
+        <radialGradient id="tubeCore" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#E9FBFF"/>
+          <stop offset="40%" stop-color="#49F2FF"/>
+          <stop offset="100%" stop-color="#00A8C6"/>
+        </radialGradient>
+
+        <!-- Soft glow -->
+        <filter id="tubeGlow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="2.5" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Bottom base -->
+      <rect x="18" y="48" width="28" height="8" rx="3"
+            fill="#1B2235"
+            stroke="#0B1220"
+            stroke-width="2"/>
+
+      <!-- Tube body -->
+      <rect x="20" y="10" width="24" height="40" rx="12"
+            fill="url(#tubeYellow)"
+            stroke="#0B1220"
+            stroke-width="2"/>
+
+      <!-- Glass inner panel -->
+      <rect x="25" y="16" width="14" height="28" rx="7"
+            fill="#0A1023"
+            opacity="0.8"/>
+
+      <!-- Vertical energy core -->
+      <rect x="29" y="18" width="6" height="24" rx="3"
+            fill="url(#tubeCore)"
+            filter="url(#tubeGlow)"/>
+
+      <!-- Top cap -->
+      <rect x="22" y="6" width="20" height="8" rx="4"
+            fill="#1B2235"
+            stroke="#0B1220"
+            stroke-width="2"/>
+
+    </svg>
   `
 };
 
@@ -1690,7 +2120,10 @@ const SVG_SIZES = {
   psychic: 100,
   mech: 100,
   biology: 100,
+  bosses: 100,
   machines: 100,
+  logs: 100,
+  save: 100,
   research: 100
 };
 
@@ -1699,7 +2132,6 @@ function createSvgMarker(category, isFound = false, iconKey = null, isLocked = f
   const catClass = String(category).trim().toLowerCase();
   const svg = SVG_ICONS[iconKey] || SVG_ICONS[category];
 
-  // ✅ only show red outline in edit mode
   const lockClass = (window.GG_EDIT_MODE && isLocked) ? "marker-locked" : "";
 
   return L.divIcon({
@@ -1748,7 +2180,7 @@ const tileLayers = {
       maxNativeZoom: 9,
       minZoom: 3,
       noWrap: true,
-      bounds: [[41.77,-180],[85,23.91]]
+      bounds: [[37.02,-180],[85,23.91]]
     }),
     defaultZoom: 3,
     defaultCenter: [73.78, -100.55]
@@ -1912,8 +2344,17 @@ document.getElementById("hideAllBtn").onclick = () => {
 function updateMarkersByCategory() {
   const active = [...document.querySelectorAll('.category:checked')].map(x => x.value);
 
+  const isFoundMarker = (m) => !!foundMarkers[m.__id];
+  const isForced = (m) => forcedVisibleMarkers.has(m.__id);
+
   [...Object.values(markers), ...Object.values(foundMarkers)].forEach(m => {
-    if ((active.includes(m.category) || forcedVisibleMarkers.has(m.__id)) && m.mapLayer === currentLayer && !(hideFound && Object.values(foundMarkers).includes(m))) {
+    const allowedByCategory = active.includes(m.category) || isForced(m);
+    const allowedByLayer = m.mapLayer === currentLayer;
+
+    // ✅ if forced, show even when hideFound is true
+    const allowedByFoundToggle = !hideFound || !isFoundMarker(m) || isForced(m);
+
+    if (allowedByCategory && allowedByLayer && allowedByFoundToggle) {
       m.addTo(map);
     } else {
       map.removeLayer(m);
@@ -1929,20 +2370,26 @@ function updateMarkersBySearch() {
   const query = searchInput.value.toLowerCase();
   const activeCategories = [...document.querySelectorAll('.category:checked')].map(x => x.value);
 
+  const isFoundMarker = (m) => !!foundMarkers[m.__id];
+  const isForced = (m) => forcedVisibleMarkers.has(m.__id);
+
   if (!query) {
     updateMarkersByCategory();
     return;
   }
 
   [...Object.values(markers), ...Object.values(foundMarkers)].forEach(marker => {
-    const matchesCategory = activeCategories.includes(marker.category) || forcedVisibleMarkers.has(marker.__id);
-    
-    // Check if query is in title or description
-    const titleMatch = marker.options.title.toLowerCase().includes(query);
-    const descMatch = marker.description && marker.description.toLowerCase().includes(query);
+    const matchesCategory = activeCategories.includes(marker.category) || isForced(marker);
+
+    const titleMatch = (marker.options.title || "").toLowerCase().includes(query);
+    const descMatch = (marker.description || "").toLowerCase().includes(query);
     const matchesSearch = titleMatch || descMatch;
 
-    if (matchesCategory && matchesSearch && marker.mapLayer === currentLayer && !(hideFound && Object.values(foundMarkers).includes(marker))) {
+    const matchesLayer = marker.mapLayer === currentLayer;
+
+    const allowedByFoundToggle = !hideFound || !isFoundMarker(marker) || isForced(marker);
+
+    if (matchesCategory && matchesSearch && matchesLayer && allowedByFoundToggle) {
       marker.addTo(map);
     } else {
       map.removeLayer(marker);
@@ -2033,23 +2480,43 @@ map.on("click", (e) => {
     return null;
   }
 
+  function attachClick(marker) {
+    marker.off("click");
+
+    marker.on("click", (e) => {
+      // ✅ Stop the actual DOM event so it doesn't reach the map
+      if (e?.originalEvent) {
+        L.DomEvent.stop(e.originalEvent); // prevents + stops propagation
+      }
+
+      // Link mode behavior (unchanged)
+      if (window.GG_EDIT_MODE && window.GG_LINKING_FROM) {
+        if (window.GG_LINKING_FROM.__id === marker.__id) {
+          toast("Can't link a marker to itself");
+          return;
+        }
+        addLink(window.GG_LINKING_FROM, marker);
+        window.GG_LINKING_FROM = null;
+        toast("Link added");
+        return;
+      }
+
+      marker.openPopup();
+    });
+  }
+
   function attachRightClick(marker) {
-    // Remove any old handler if this gets called twice
     marker.off("contextmenu");
 
     marker.on("contextmenu", (e) => {
-      // Stop the browser context menu + stop Leaflet propagation
       if (e?.originalEvent) {
-        e.originalEvent.preventDefault();
-        e.originalEvent.stopPropagation();
+        L.DomEvent.stop(e.originalEvent);
       }
-      if (window.L?.DomEvent) L.DomEvent.stop(e);
 
       // EDIT MODE: toggle locked
       if (window.GG_EDIT_MODE) {
         const nowLocked = !marker.isLocked;
 
-        // keep JSON clean
         if (marker.__dataRef) {
           if (nowLocked) marker.__dataRef.locked = true;
           else delete marker.__dataRef.locked;
@@ -2057,19 +2524,16 @@ map.on("click", (e) => {
 
         applyLockState(marker, nowLocked);
 
-        // refresh icon (red outline only in edit mode)
         marker.setIcon(
           createSvgMarker(marker.category, marker.isFound, marker.iconKey, nowLocked)
         );
 
-        // rebuild popup so the lock checkbox reflects the new state
         createMarkerPopup(marker, marker.__id);
-
         return;
       }
 
       // NORMAL MODE: toggle found
-      toggleFound(marker.__id, { checked: !marker.isFound });
+      toggleFound(marker.__id, { checked: !marker.isFound, openPopup: false });
     });
   }
 
@@ -2127,6 +2591,7 @@ map.on("click", (e) => {
           if (marker.mapLayer === currentLayer) marker.addTo(map);
 
           createMarkerPopup(marker, id);
+          attachClick(marker);
           attachRightClick(marker);
 
         });
@@ -2201,32 +2666,40 @@ map.on("click", (e) => {
     side.style.display = side.style.display === "none" ? "block" : "none";
   };
 
-  async function toggleFound(id, checkbox) {
+  async function toggleFound(id, checkboxOrOpts) {
     const marker = markers[id] || foundMarkers[id];
     if (!marker) return;
 
-    const isNowFound = checkbox.checked;
+    // Support BOTH call styles:
+    // - toggleFound(id, e.target)  (from popup checkbox)
+    // - toggleFound(id, { checked: true/false, openPopup: false }) (from right-click)
+    const isOpts = checkboxOrOpts && typeof checkboxOrOpts === "object" && "checked" in checkboxOrOpts;
+    const isNowFound = isOpts ? !!checkboxOrOpts.checked : !!checkboxOrOpts?.checked;
+    const openPopup = (checkboxOrOpts && typeof checkboxOrOpts === "object" && "openPopup" in checkboxOrOpts)
+      ? !!checkboxOrOpts.openPopup
+      : true;
+
     marker.isFound = isNowFound;
 
+    // Move between buckets
+    marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey, !!marker.isLocked));
+
     if (isNowFound) {
-      marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey, !!marker.isLocked));
       delete markers[id];
       foundMarkers[id] = marker;
     } else {
-      marker.setIcon(createSvgMarker(marker.category, marker.isFound, marker.iconKey, !!marker.isLocked));
       delete foundMarkers[id];
       markers[id] = marker;
     }
 
+    // Persist progress
     if (isLoggedIn && auth.currentUser) {
-      // update foundIds array
       let foundIds = Object.keys(foundMarkers);
       if (isNowFound && !foundIds.includes(String(id))) foundIds.push(String(id));
       if (!isNowFound) foundIds = foundIds.filter(x => x !== String(id));
 
       await saveFoundMarkersToFirebase(auth.currentUser, foundIds);
     } else {
-      // fallback to localStorage
       if (isNowFound) localStorage.setItem(`found_${id}`, "true");
       else localStorage.removeItem(`found_${id}`);
     }
@@ -2235,7 +2708,13 @@ map.on("click", (e) => {
     updateProgressDisplay();
 
     createMarkerPopup(marker, id);
-    marker.openPopup();
+
+    attachClick(marker);
+    attachRightClick(marker);
+
+    // ✅ Only open popup when we want to
+    if (openPopup) marker.openPopup();
+    else marker.closePopup();
   }
 
   // ============================
@@ -2358,6 +2837,7 @@ map.on("click", (e) => {
     if (marker.mapLayer === currentLayer) marker.addTo(map);
 
     createMarkerPopup(marker, fullId);
+    attachClick(marker);
     attachRightClick(marker);
     updateMarkersByCategory();
     updateProgressDisplay();
@@ -2367,12 +2847,76 @@ map.on("click", (e) => {
     return marker;
   }
 
+  function getNextNumericId(prefix, layer, excludeId = null) {
+    const pfx = String(prefix || "").trim();
+    const lyr = String(layer || "").trim();
+    if (!pfx) return null;
+
+    let maxN = 0;
+
+    for (const pt of (window.GG_MARKER_DATA || [])) {
+      if (String(pt.layer || "") !== lyr) continue;
+
+      const idStr = String(pt.id || "");
+      if (excludeId && idStr === excludeId) continue;
+
+      if (!idStr.startsWith(pfx)) continue;
+
+      const suffix = idStr.slice(pfx.length);
+      if (!suffix) continue;
+      if (!/^\d+$/.test(suffix)) continue;
+
+      const n = parseInt(suffix, 10);
+      if (Number.isFinite(n) && n > maxN) maxN = n;
+    }
+
+    // Start at 1 if none exist
+    let candidate = `${pfx}${maxN + 1}`;
+
+    // Extra safety: avoid collisions with currently-loaded markers
+    const full = (id) => `${lyr}:${id}`;
+    while (markers[full(candidate)] || foundMarkers[full(candidate)]) {
+      // if somehow taken, keep incrementing
+      const m = candidate.match(/^(.+?)(\d+)$/);
+      const base = m ? m[1] : pfx;
+      const num = m ? parseInt(m[2], 10) + 1 : (maxN + 2);
+      candidate = `${base}${num}`;
+    }
+
+    return candidate;
+  }
+
+  function getPrefixForCategory(category) {
+    const c = String(category || "").toLowerCase();
+
+    const prefixMap = {
+      crystals: "crystal",
+      missiles: "m",
+      shots: "shot",
+      bombs: "bomb",
+      boosts: "boost",
+      energy: "e",
+      maps: "map",
+      terminals: "t",
+      psychic: "psy",
+      mech: "mech",
+      biology: "bio",
+      machines: "mac",
+      gfed: "npc",
+      research: "r",
+      bosses: "boss",
+      lore: "lore",
+      logs: "log",
+      save: "save"
+    };
+
+    return prefixMap[c] || c.slice(0, 3) || "m";
+  }
+
   window.GG_ADD_MARKER_AT = function(latlng) {
     if (!window.GG_EDIT_MODE) return;
 
-    // Don’t allow adding until the JSON has loaded,
-    // because loadMarkers() will overwrite GG_MARKER_DATA.
-    if (!didLoadMarkers || !Array.isArray(window.GG_MARKER_DATA) || window.GG_MARKER_DATA.length === 0) {
+    if (!didLoadMarkers || !Array.isArray(window.GG_MARKER_DATA)) {
       window.GG_PENDING_ADD_LATLNGS = window.GG_PENDING_ADD_LATLNGS || [];
       window.GG_PENDING_ADD_LATLNGS.push(latlng);
       console.warn("Markers not loaded yet — queued add.");
@@ -2381,8 +2925,19 @@ map.on("click", (e) => {
 
     const layer = currentLayer;
 
-    // Pick a unique id like new, new2, new3...
-    const newId = makeUniqueId("new", layer) || makeUniqueId("m", layer);
+    // Your current "default new marker" settings:
+    const defaultCategory = "crystals";
+    const defaultIcon = "crystals";
+
+    // Prefix based on category (biology => bio, missiles => mis, etc.)
+    const prefix = getPrefixForCategory(defaultCategory);
+    let newId = getNextNumericId(prefix, layer);
+
+    // fallback if something weird happens
+    if (!newId) {
+      newId = makeUniqueId(prefix, layer) || makeUniqueId("m", layer);
+    }
+
     if (!newId) {
       alert("Couldn't generate a unique ID.");
       return;
@@ -2392,8 +2947,8 @@ map.on("click", (e) => {
       id: newId,
       layer,
       coords: [latlng.lat, latlng.lng],
-      category: "crystals",
-      icon: "crystals",
+      category: defaultCategory,
+      icon: defaultIcon,
       name: `New Marker (${newId})`
     };
 
@@ -2401,6 +2956,9 @@ map.on("click", (e) => {
     totalCount = window.GG_MARKER_DATA.length;
 
     createMarkerFromPoint(point, { openPopup: false });
+
+    // Optional: quick feedback
+    toast(`Added: ${layer}:${newId}`);
   };
 
   window.pasteCopiedMarkerAt = function pasteCopiedMarkerAt(latlng) {
@@ -2455,7 +3013,10 @@ map.on("click", (e) => {
     { value: "mech",  label: "Mech Parts" },
     { value: "research",  label: "Research" },
     { value: "machines",  label: "Machines" },
-    { value: "biology",  label: "Biology" }
+    { value: "biology",  label: "Biology" },
+    { value: "bosses",  label: "Boss" },
+    { value: "logs",  label: "Data Logs" },
+    { value: "save",  label: "Save Station" }
   ];
 
   // Icon options = keys from your SVG_ICONS object
@@ -2580,11 +3141,16 @@ map.on("click", (e) => {
 
     // Rebuild popup (so image/video sections appear/disappear)
     createMarkerPopup(marker, newFullId);
-
+    attachClick(marker);
+    attachRightClick(marker);
     updateMarkersByCategory();
   }
 
   function createMarkerPopup(marker, id) {
+    function stopBtn(e){
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      if (window.L?.DomEvent) L.DomEvent.stop(e);
+    }
     const isFound = marker.isFound;
 
     // Create container div
@@ -2634,7 +3200,7 @@ map.on("click", (e) => {
       editTitle.style.color = "#fff";
       editWrap.appendChild(editTitle);
 
-      // --- ID input ---
+      // --- ID input + Update button row ---
       const idLabel = document.createElement("div");
       idLabel.innerText = "ID";
       idLabel.style.fontSize = "12px";
@@ -2642,20 +3208,39 @@ map.on("click", (e) => {
       idLabel.style.marginBottom = "4px";
       editWrap.appendChild(idLabel);
 
+      const idRow = document.createElement("div");
+      idRow.style.display = "flex";
+      idRow.style.gap = "8px";
+      idRow.style.marginBottom = "10px";
+
       const idInput = document.createElement("input");
       idInput.type = "text";
-      idInput.value = marker.__dataRef?.id || "";   // <-- current id
-      idInput.placeholder = "e.g. c1 (no spaces, no :)";
-      idInput.style.width = "100%";
+      idInput.value = marker.__dataRef?.id || "";
+      idInput.placeholder = "e.g. bio17 (no spaces, no :)";
+      idInput.style.flex = "1";
       idInput.style.boxSizing = "border-box";
       idInput.style.padding = "8px";
       idInput.style.borderRadius = "8px";
       idInput.style.border = "none";
       idInput.style.outline = "none";
-      idInput.style.marginBottom = "10px";
       idInput.style.background = "rgba(0,0,0,0.25)";
       idInput.style.color = "#fff";
-      editWrap.appendChild(idInput);
+
+      const updateIdBtn = document.createElement("button");
+      updateIdBtn.type = "button";
+      updateIdBtn.innerText = "Update ID";
+      updateIdBtn.style.whiteSpace = "nowrap";
+      updateIdBtn.style.padding = "8px 10px";
+      updateIdBtn.style.borderRadius = "10px";
+      updateIdBtn.style.border = "none";
+      updateIdBtn.style.cursor = "pointer";
+      updateIdBtn.style.fontWeight = "800";
+      updateIdBtn.style.background = "rgba(255,255,255,0.12)";
+      updateIdBtn.style.color = "white";
+
+      idRow.appendChild(idInput);
+      idRow.appendChild(updateIdBtn);
+      editWrap.appendChild(idRow);
 
       // --- Name input ---
       const nameLabel = document.createElement("div");
@@ -2708,6 +3293,30 @@ map.on("click", (e) => {
 
       catSelect.value = marker.category || "crystals";
       editWrap.appendChild(catSelect);
+
+      // --- Update ID button logic (based on selected category) ---
+      updateIdBtn.onclick = (e) => {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        if (window.L?.DomEvent) L.DomEvent.stop(e);
+
+        const layer = marker.__dataRef?.layer || marker.mapLayer || currentLayer;
+        const selectedCategory = catSelect.value;
+
+        const prefix = getPrefixForCategory(selectedCategory);
+
+        // exclude this marker’s current id so we don’t “block” ourselves
+        const currentIdOnly = String(marker.__dataRef?.id || "");
+
+        const nextId = getNextNumericId(prefix, layer, currentIdOnly);
+        if (!nextId) return;
+
+        idInput.value = nextId;
+
+        // optional: update the name input too, if you like
+        // nameInput.value = `New Marker (${nextId})`;
+
+        toast(`ID set to: ${layer}:${nextId}`);
+      };
 
       // --- Icon select ---
       const iconLabel = document.createElement("div");
@@ -2876,10 +3485,94 @@ map.on("click", (e) => {
         const ll = marker.getLatLng();
         window.pasteCopiedMarkerAt({ lat: ll.lat + 0.2, lng: ll.lng + 0.2 });
       };
-
       row.appendChild(copyBtn);
       row.appendChild(pasteBtn);
       editWrap.appendChild(row);
+
+      // --- Links editor ---
+      const linksTitle = document.createElement("div");
+      linksTitle.innerText = "Links";
+      linksTitle.style.fontWeight = "800";
+      linksTitle.style.margin = "12px 0 8px 0";
+      linksTitle.style.fontSize = "13px";
+      linksTitle.style.opacity = "0.95";
+      editWrap.appendChild(linksTitle);
+
+      const linksList = document.createElement("div");
+      linksList.style.display = "flex";
+      linksList.style.flexDirection = "column";
+      linksList.style.gap = "6px";
+      editWrap.appendChild(linksList);
+
+      const currentLinks = marker.__dataRef?.links || [];
+      if (currentLinks.length === 0) {
+        const empty = document.createElement("div");
+        empty.innerText = "No links yet.";
+        empty.style.fontSize = "12px";
+        empty.style.opacity = "0.8";
+        linksList.appendChild(empty);
+      } else {
+        currentLinks.forEach(l => {
+          const row = document.createElement("div");
+          row.style.display = "flex";
+          row.style.alignItems = "center";
+          row.style.justifyContent = "space-between";
+          row.style.gap = "8px";
+          row.style.background = "rgba(0,0,0,0.22)";
+          row.style.border = "1px solid rgba(255,255,255,0.10)";
+          row.style.borderRadius = "10px";
+          row.style.padding = "8px";
+
+          const left = document.createElement("div");
+          left.style.fontSize = "12px";
+          left.style.lineHeight = "1.2";
+          left.innerText = `${l.label || "Link"} → ${l.target || ""}`;
+          row.appendChild(left);
+
+          const del = document.createElement("button");
+          del.type = "button";
+          del.innerText = "Remove";
+          del.style.padding = "6px 10px";
+          del.style.borderRadius = "10px";
+          del.style.border = "none";
+          del.style.cursor = "pointer";
+          del.style.fontWeight = "800";
+          del.style.background = "rgba(229,57,53,0.85)";
+          del.style.color = "white";
+
+          del.onclick = (e) => {
+            if (e) { e.preventDefault(); e.stopPropagation(); }
+            if (window.L?.DomEvent) L.DomEvent.stop(e);
+            removeLink(marker, l.target);
+          };
+
+          row.appendChild(del);
+          linksList.appendChild(row);
+        });
+      }
+
+      const linkBtn = document.createElement("button");
+      linkBtn.type = "button";
+      linkBtn.innerText = "Link to another marker (click target)";
+      linkBtn.style.width = "100%";
+      linkBtn.style.padding = "10px";
+      linkBtn.style.borderRadius = "10px";
+      linkBtn.style.border = "none";
+      linkBtn.style.cursor = "pointer";
+      linkBtn.style.fontWeight = "800";
+      linkBtn.style.background = "rgba(255,255,255,0.12)";
+      linkBtn.style.color = "white";
+      linkBtn.style.marginTop = "8px";
+
+      linkBtn.onclick = (e) => {
+        if (e) { e.preventDefault(); e.stopPropagation(); }
+        if (window.L?.DomEvent) L.DomEvent.stop(e);
+
+        window.GG_LINKING_FROM = marker;
+        toast(`Link mode: click the target marker for "${marker.options.title}" (Esc to cancel)`);
+        map.closePopup(); // optional: gives you a clear view to click the target
+      };
+      editWrap.appendChild(linkBtn);
     
       // --- Delete button ---
       const deleteBtn = document.createElement("button");
@@ -2898,7 +3591,6 @@ map.on("click", (e) => {
         if (!confirm(`Delete this marker?\n\n${id}`)) return;
         deleteMarkerEverywhere(id);
       };
-
       editWrap.appendChild(deleteBtn);
 
       // --- Save button ---
@@ -2944,7 +3636,6 @@ map.on("click", (e) => {
       editWrap.appendChild(saveBtn);
       popupContainer.appendChild(editWrap);
     }
-
     if (marker.image) {
       const img = document.createElement("img");
       img.src = marker.image;
@@ -3067,7 +3758,7 @@ map.on("click", (e) => {
   for (const id in foundMarkers) {
     const marker = foundMarkers[id];
 
-    marker.isFound = false; // ✅ CRITICAL FIX
+    marker.isFound = false;
     marker.setIcon(createSvgMarker(marker.category, false, marker.iconKey, !!marker.isLocked));
 
     markers[id] = marker;

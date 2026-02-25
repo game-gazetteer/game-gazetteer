@@ -13,7 +13,87 @@
     "locked": true
   },
   {
-    "id": "c208",
+    "id": "bio2",
+    "layer": "dungeons",
+    "coords": [
+      67.71361226740302,
+      -101.77459716796875
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Neo Rootspur",
+    "image": "images/bio2.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio3",
+    "layer": "dungeons",
+    "coords": [
+      59.72594656451894,
+      -59.80957031250001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Heatstrap",
+    "image": "images/bio3.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio4",
+    "layer": "dungeons",
+    "coords": [
+      58.182288761718965,
+      -49.85595703125001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Leaping Spitter",
+    "image": "images/dbio4.jpg",
+    "locked": true
+  },
+  {
+    "id": "bomb1",
+    "layer": "dungeons",
+    "coords": [
+      59.734253447591364,
+      -61.77886962890626
+    ],
+    "category": "bombs",
+    "icon": "bombs",
+    "name": "Power Bomb Expansion",
+    "image": "images/dbomb1.jpg",
+    "locked": true
+  },
+  {
+    "id": "boss1",
+    "layer": "dungeons",
+    "coords": [
+      60.29429873400919,
+      -64.85229492187501
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Behemoth",
+    "description": "Shoot and destory each of the four eyes to defeat Behemoth.",
+    "image": "images/boss1.jpg",
+    "locked": true
+  },
+  {
+    "id": "boss2",
+    "layer": "dungeons",
+    "coords": [
+      46.88647742351024,
+      -126.63940429687501
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Sylux (Fake)",
+    "image": "images/dboss2.jpg",
+    "description": "Vulnerable to all attacks. Use the grapple nodes to stay off the electrified floor.",
+    "locked": true
+  },
+  {
+    "id": "crystal208",
     "layer": "dungeons",
     "coords": [
       74.6585631065021,
@@ -23,6 +103,123 @@
     "icon": "crystals",
     "name": "Green Energy Crystal",
     "image": "images/c208.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal209",
+    "layer": "dungeons",
+    "coords": [
+      67.90861918215302,
+      -102.89245605468751
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c209.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal210",
+    "layer": "dungeons",
+    "coords": [
+      67.88691715539623,
+      -103.25500488281251
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c210.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal211",
+    "layer": "dungeons",
+    "coords": [
+      68.00037003928001,
+      -103.10943603515625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c211.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal212",
+    "layer": "dungeons",
+    "coords": [
+      77.17912216580106,
+      -101.53015136718751
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c212.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal213",
+    "layer": "dungeons",
+    "coords": [
+      77.21320824717637,
+      -100.80230712890626
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c213.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal214",
+    "layer": "dungeons",
+    "coords": [
+      77.00425935803139,
+      -100.59356689453126
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c214.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal215",
+    "layer": "dungeons",
+    "coords": [
+      76.9999351181161,
+      -99.78057861328125
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/c215.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal216",
+    "layer": "dungeons",
+    "coords": [
+      53.253712042468464,
+      -20.90972900390625
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "New Marker (crystal216)",
+    "locked": true
+  },
+  {
+    "id": "crystal218",
+    "layer": "dungeons",
+    "coords": [
+      74.47363792257309,
+      -166.24511718750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal Finder",
+    "description": "Awarded after filling the Altar of Legacy 75%.",
+    "image": "images/dc218.jpg",
     "locked": true
   },
   {
@@ -40,6 +237,428 @@
     "locked": true
   },
   {
+    "id": "e3",
+    "layer": "dungeons",
+    "coords": [
+      47.06076747983352,
+      -126.30981445312501
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "description": "Awarded after defeating Sylux (Fake).",
+    "image": "images/de3.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Sylux (Fake)",
+        "target": "dungeons:boss2",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "e4",
+    "layer": "dungeons",
+    "coords": [
+      73.83858696871835,
+      -162.34497070312503
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "description": "Awarded after completing the Sacred Flame Ceremony, Fountain of Tranquility, and Rods of Transference room puzzles",
+    "image": "images/de4.jpg",
+    "locked": true
+  },
+  {
+    "id": "log1",
+    "layer": "dungeons",
+    "coords": [
+      57.00485033534416,
+      -37.81219482421876
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Delivery Status",
+    "image": "images/log1.jpg",
+    "locked": true
+  },
+  {
+    "id": "m1",
+    "layer": "dungeons",
+    "coords": [
+      56.35612110895762,
+      -34.13452148437501
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm1.jpg",
+    "locked": true
+  },
+  {
+    "id": "m2",
+    "layer": "dungeons",
+    "coords": [
+      56.53525774684848,
+      -33.39294433593751
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "links": [
+      {
+        "label": "Magnetic Track",
+        "target": "dungeons:r3",
+        "zoom": 9
+      }
+    ],
+    "description": "Navigate the magnetic tracks below to reach the missile expansion.",
+    "image": "images/dm2.jpg",
+    "locked": true
+  },
+  {
+    "id": "m3",
+    "layer": "dungeons",
+    "coords": [
+      54.13347814286042,
+      -24.760437011718754
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "New Marker (crystal216)",
+    "description": "Enter the morph space in the wall and use a bomb jump at the top to acquire the missile expansion.",
+    "image": "images/dm3.jpg",
+    "locked": true
+  },
+  {
+    "id": "m4",
+    "layer": "dungeons",
+    "coords": [
+      54.35335505466622,
+      -39.3695068359375
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm4.jpg",
+    "locked": true
+  },
+  {
+    "id": "m5",
+    "layer": "dungeons",
+    "coords": [
+      74.14308601072788,
+      -155.41259765625003
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use the psychic platforms to access the missile expansion on the wall.",
+    "image": "images/dm5.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac1",
+    "layer": "dungeons",
+    "coords": [
+      56.36068589615771,
+      -34.40917968750001
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Heavy Turret",
+    "image": "images/dmac1.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac2",
+    "layer": "dungeons",
+    "coords": [
+      53.522349648656935,
+      -28.558959960937504
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Heavy Turret",
+    "image": "images/dmac2.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac3",
+    "layer": "dungeons",
+    "coords": [
+      53.456984556204986,
+      -28.800659179687504
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Soldier",
+    "image": "images/dmac3.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac4",
+    "layer": "dungeons",
+    "coords": [
+      54.316523240258284,
+      -25.691528320312504
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Shocker",
+    "image": "images/dmac4.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac5",
+    "layer": "dungeons",
+    "coords": [
+      53.075877572693564,
+      -27.850341796875
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Heavy Turret",
+    "image": "images/dmac5.jpg",
+    "locked": true
+  },
+  {
+    "id": "mech5",
+    "layer": "dungeons",
+    "coords": [
+      60.37586010056013,
+      -66.17340087890626
+    ],
+    "category": "mech",
+    "icon": "mech",
+    "name": "Mech Part",
+    "description": "Defeat Behemoth to collect this mech part.",
+    "image": "images/mech5.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Behemoth",
+        "target": "dungeons:boss1",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "psy1",
+    "layer": "dungeons",
+    "coords": [
+      74.47363792257309,
+      -166.35772705078128
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Beam Upgrade",
+    "description": "Awarded after filling the Altar of Legacy 25%.",
+    "image": "images/dpsy1.jpg",
+    "locked": true
+  },
+  {
+    "id": "r2",
+    "layer": "dungeons",
+    "coords": [
+      59.51620962404415,
+      -59.47998046875001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "description": "Use the spinner to deactivate the lava flowing in the morph tunnels on the walls of this room.",
+    "image": "images/r2.jpg",
+    "locked": true
+  },
+  {
+    "id": "r3",
+    "layer": "dungeons",
+    "coords": [
+      55.71009271344361,
+      -33.31604003906251
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Magnetic Track",
+    "image": "images/dr3.jpg",
+    "locked": true
+  },
+  {
+    "id": "r4",
+    "layer": "dungeons",
+    "coords": [
+      48.144097934938884,
+      -127.97698974609376
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Grapple Node",
+    "image": "images/dr4.jpg",
+    "locked": true
+  },
+  {
+    "id": "r5",
+    "layer": "dungeons",
+    "coords": [
+      74.15958786570519,
+      -154.96215820312503
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Platform",
+    "image": "images/dr5.jpg",
+    "locked": true
+  },
+  {
+    "id": "save1",
+    "layer": "dungeons",
+    "coords": [
+      62.96770872233941,
+      -64.98138427734376
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "New Marker (crystal216)",
+    "locked": true
+  },
+  {
+    "id": "save2",
+    "layer": "dungeons",
+    "coords": [
+      57.717352096870876,
+      -33.85711669921876
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "New Marker (crystal216)",
+    "locked": true
+  },
+  {
+    "id": "shot2",
+    "layer": "dungeons",
+    "coords": [
+      69.15180817075904,
+      -86.56951904296876
+    ],
+    "category": "shots",
+    "icon": "shotsthunder",
+    "name": "Super Thunder Shot",
+    "image": "images/shot2.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot3",
+    "layer": "dungeons",
+    "coords": [
+      67.84863097259371,
+      -102.43927001953126
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/shot3.jpg",
+    "locked": true,
+    "description": "Use one of the motes on the mote socket above to open the morph door."
+  },
+  {
+    "id": "shot4",
+    "layer": "dungeons",
+    "coords": [
+      68.20829104467289,
+      -104.19708251953126
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Super Ice Shot",
+    "image": "images/shot4.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot5",
+    "layer": "dungeons",
+    "coords": [
+      77.17241619466677,
+      -98.32489013671876
+    ],
+    "category": "shots",
+    "icon": "shotsfire",
+    "name": "Super Fire Shot",
+    "image": "images/shot5.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot6",
+    "layer": "dungeons",
+    "coords": [
+      77.25023632863972,
+      -97.31689453125
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/shot6.jpg",
+    "locked": true,
+    "description": "Use control beam to hit the sensor in the celing aclove to open this room."
+  },
+  {
+    "id": "shot7",
+    "layer": "dungeons",
+    "coords": [
+      54.535426104507124,
+      -39.03991699218751
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/dm4.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot8",
+    "layer": "dungeons",
+    "coords": [
+      47.11499982620772,
+      -127.20520019531251
+    ],
+    "category": "shots",
+    "icon": "shotsthunder",
+    "name": "Thunder Chip",
+    "image": "images/dshot8.jpg",
+    "locked": true,
+    "description": "Inside the broken Lamorn Power Cell. Take this chip to Myles MacKenzie to acquire the Thunder Shot."
+  },
+  {
+    "id": "shot9",
+    "layer": "dungeons",
+    "coords": [
+      74.53381109379046,
+      -159.71649169921878
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Electrify both ends of the container with thunder shot to open it.",
+    "image": "images/dshot9.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot10",
+    "layer": "dungeons",
+    "coords": [
+      74.30289547588602,
+      -161.94946289062503
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Align the metal rods near the peak of the center container and electrify them using thunder shot to open it.",
+    "image": "images/dshot10.jpg",
+    "locked": true
+  },
+  {
     "id": "bomb1",
     "layer": "viewros",
     "coords": [
@@ -52,6 +671,20 @@
     "locked": true,
     "image": "images/bomb1.jpg",
     "description": "Reger Tobaki will give the bomb expansion to Samus after speaking with him."
+  },
+  {
+    "id": "boss1",
+    "layer": "viewros",
+    "coords": [
+      4.390228926463396,
+      19.863281250000004
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Varmis",
+    "image": "images/vboss1.jpg",
+    "description": "To activate the boss fight, approach the mech part near the GF Debri to the east. Navigate behind it and shoot the tail to stun it. Then boost into the tail to deal damage. Once defeated, enter its body and use one final super bomb to destroy Varmis.",
+    "locked": true
   },
   {
     "id": "crystal1",
@@ -2732,6 +3365,123 @@
     "locked": true
   },
   {
+    "id": "crystal209",
+    "layer": "viewros",
+    "coords": [
+      -49.58222604462169,
+      29.355468750000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc209.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal210",
+    "layer": "viewros",
+    "coords": [
+      -42.03297433244139,
+      29.926757812500004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc210.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal211",
+    "layer": "viewros",
+    "coords": [
+      -49.92293545449573,
+      21.928710937500004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc211.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal212",
+    "layer": "viewros",
+    "coords": [
+      -50.68079714532165,
+      3.5156250000000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc212.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal213",
+    "layer": "viewros",
+    "coords": [
+      -48.01932418480118,
+      -8.876953125000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc213.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal214",
+    "layer": "viewros",
+    "coords": [
+      -55.80128097118045,
+      1.0546875000000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc214.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal215",
+    "layer": "viewros",
+    "coords": [
+      -58.49369382056807,
+      4.306640625000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc215.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal216",
+    "layer": "viewros",
+    "coords": [
+      -65.78475783804784,
+      -3.1640625000000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc216.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal217",
+    "layer": "viewros",
+    "coords": [
+      -66.21373941545203,
+      -140.75683593750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc217.jpg",
+    "locked": true
+  },
+  {
     "id": "e1",
     "layer": "viewros",
     "coords": [
@@ -2743,6 +3493,33 @@
     "name": "Energy Tank",
     "description": "Use thunder shot to electrify the lock and open the container.",
     "image": "images/e1",
+    "locked": true
+  },
+  {
+    "id": "m1",
+    "layer": "viewros",
+    "coords": [
+      -68.0897089643431,
+      -60.68847656250001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "New Marker (crystal217)",
+    "image": "images/vm1.jpg",
+    "locked": true
+  },
+  {
+    "id": "m2",
+    "layer": "viewros",
+    "coords": [
+      78.75065903068668,
+      -144.31640625000003
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use the psychic boost rail to reach this location.",
+    "image": "images/vm2.jpg",
     "locked": true
   },
   {
@@ -2812,6 +3589,27 @@
     "name": "Mech Part",
     "description": "Use thunder shot to electrify and release the mech parts grip, causing it to fall.",
     "image": "images/mech4.jpg",
+    "locked": true
+  },
+  {
+    "id": "mech5",
+    "layer": "viewros",
+    "coords": [
+      4.390228926463396,
+      22.1923828125
+    ],
+    "category": "mech",
+    "icon": "mech",
+    "name": "Mech Part",
+    "image": "images/vmech5.jpg",
+    "links": [
+      {
+        "label": "Varmis",
+        "target": "viewros:boss1",
+        "zoom": 4
+      }
+    ],
+    "description": "Obtained after defeating Varmis.",
     "locked": true
   },
   {
@@ -2980,6 +3778,32 @@
     "name": "Psychic Platform",
     "description": "Use the psychic visor to activate the platforms",
     "image": "images/r1.jpg",
+    "locked": true
+  },
+  {
+    "id": "r2",
+    "layer": "viewros",
+    "coords": [
+      78.72491156127533,
+      -146.82128906250003
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Boost Rail",
+    "image": "images/vr2.jpg",
+    "locked": true
+  },
+  {
+    "id": "save1",
+    "layer": "viewros",
+    "coords": [
+      28.188243641850313,
+      -63.67675781250001
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "image": "images/vsave1.jpg",
     "locked": true
   },
   {
