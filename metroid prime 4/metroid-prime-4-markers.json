@@ -52,6 +52,636 @@
     "locked": true
   },
   {
+    "id": "bio5",
+    "layer": "dungeons",
+    "coords": [
+      84.12131727581513,
+      -120.28656005859376
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Ice Crawler",
+    "image": "images/dbio5.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio6",
+    "layer": "dungeons",
+    "coords": [
+      84.20899108827103,
+      -116.41387939453126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Ice Crawler",
+    "image": "images/dbio6.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio7",
+    "layer": "dungeons",
+    "coords": [
+      84.24876117211417,
+      -113.19213867187501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "image": "images/dbio7.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio8",
+    "layer": "dungeons",
+    "coords": [
+      84.23774131088716,
+      -111.23931884765626
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "image": "images/dbio8.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio9",
+    "layer": "dungeons",
+    "coords": [
+      84.02832173907123,
+      -109.08599853515626
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "image": "images/dbio9.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio10",
+    "layer": "dungeons",
+    "coords": [
+      75.06734898853098,
+      -84.97100830078125
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Sand Crawler",
+    "image": "images/dbio10.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio11",
+    "layer": "dungeons",
+    "coords": [
+      84.70883576468934,
+      -67.45880126953126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Winged Lizard",
+    "image": "images/dbio11.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio12",
+    "layer": "dungeons",
+    "coords": [
+      84.19733993764314,
+      -74.88555908203126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Spin Dartwing",
+    "image": "images/dbio12.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio13",
+    "layer": "dungeons",
+    "coords": [
+      84.00914616413525,
+      -77.26135253906251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Spin Dartwing",
+    "image": "images/dbio13.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio14",
+    "layer": "dungeons",
+    "coords": [
+      83.88256181214624,
+      -80.1177978515625
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Maul Griever",
+    "image": "images/dbio14.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio15",
+    "layer": "dungeons",
+    "coords": [
+      83.87113612312238,
+      -79.97222900390626
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Griever Bomber",
+    "image": "images/dbio15.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio16",
+    "layer": "dungeons",
+    "coords": [
+      83.54923364253351,
+      -81.67510986328126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio16.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio17",
+    "layer": "dungeons",
+    "coords": [
+      83.1008508560563,
+      -82.74353027343751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Pop Crawler",
+    "image": "images/dbio17.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio18",
+    "layer": "dungeons",
+    "coords": [
+      82.75498868140106,
+      -79.07135009765626
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snare Weed",
+    "image": "images/dbio18.jpg",
+    "locked": true,
+    "description": "Destroy with fire shot."
+  },
+  {
+    "id": "bio19",
+    "layer": "dungeons",
+    "coords": [
+      82.77228703725048,
+      -76.79443359375001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snare Weed",
+    "image": "images/dbio19.jpg",
+    "locked": true,
+    "description": "Destroy with fire shot."
+  },
+  {
+    "id": "bio20",
+    "layer": "dungeons",
+    "coords": [
+      82.68852902103283,
+      -74.97894287109376
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Shren",
+    "image": "images/dbio20.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio21",
+    "layer": "dungeons",
+    "coords": [
+      82.0362324481155,
+      -73.47106933593751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Roach",
+    "image": "images/dbio21.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio22",
+    "layer": "dungeons",
+    "coords": [
+      82.0715437537193,
+      -72.51251220703126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Maul Griever",
+    "image": "images/dbio12.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio23",
+    "layer": "dungeons",
+    "coords": [
+      82.08517084229395,
+      -73.01788330078126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Winged Lizard",
+    "image": "images/dbio23.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio24",
+    "layer": "dungeons",
+    "coords": [
+      82.10217198029846,
+      -65.79711914062501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Roach",
+    "image": "images/dbio24.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio25",
+    "layer": "dungeons",
+    "coords": [
+      82.86191969113509,
+      -67.00561523437501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Winged Lizard",
+    "image": "images/dbio25.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio26",
+    "layer": "dungeons",
+    "coords": [
+      82.88202774781253,
+      -66.22283935546876
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Shren",
+    "image": "images/dbio26.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio27",
+    "layer": "dungeons",
+    "coords": [
+      83.29440273586283,
+      -60.62805175781251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Roach",
+    "image": "images/dbio27.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio28",
+    "layer": "dungeons",
+    "coords": [
+      83.22315116855215,
+      -56.88171386718751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Maul Griever Brute",
+    "image": "images/dbio28.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio29",
+    "layer": "dungeons",
+    "coords": [
+      83.14819766064318,
+      -56.35162353515626
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio29.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio30",
+    "layer": "dungeons",
+    "coords": [
+      82.88100666544061,
+      -55.61553955078126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio30.jpg",
+    "locked": true,
+    "description": "Use bombs to clear the creature off the magnetic track."
+  },
+  {
+    "id": "bio31",
+    "layer": "dungeons",
+    "coords": [
+      83.50371366674491,
+      -56.26647949218751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Pop Crawler",
+    "image": "images/dbio31.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio32",
+    "layer": "dungeons",
+    "coords": [
+      83.59596793148299,
+      -52.8057861328125
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Crystal Crawler",
+    "image": "images/dbio32.jpg",
+    "description": "Use the crystal crawlers to swing across the chasm.",
+    "locked": true
+  },
+  {
+    "id": "bio33",
+    "layer": "dungeons",
+    "coords": [
+      83.63658376070562,
+      -51.94335937500001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Crystal Crawler",
+    "locked": true,
+    "description": "Use the crystal crawlers to swing across the chasm."
+  },
+  {
+    "id": "bio34",
+    "layer": "dungeons",
+    "coords": [
+      83.59474241214163,
+      -50.811767578125
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Roach",
+    "image": "images/dbio34.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio35",
+    "layer": "dungeons",
+    "coords": [
+      83.55201023907685,
+      -51.81701660156251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio35.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio36",
+    "layer": "dungeons",
+    "coords": [
+      83.65482262341393,
+      -54.13787841796876
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Crystal Crawler",
+    "image": "images/dbio36.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio37",
+    "layer": "dungeons",
+    "coords": [
+      83.71223624922133,
+      -50.54260253906251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snare Weed",
+    "description": "Destroy with fire shot.",
+    "image": "images/dbio37.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio38",
+    "layer": "dungeons",
+    "coords": [
+      81.80110755470236,
+      -58.91693115234376
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Goura Ghaspore",
+    "image": "images/dbio38.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio39",
+    "layer": "dungeons",
+    "coords": [
+      81.91005525775145,
+      -60.1666259765625
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Roach",
+    "image": "images/dbio39.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio40",
+    "layer": "dungeons",
+    "coords": [
+      81.8736412548283,
+      -61.93267822265626
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Goura Ghaspore",
+    "image": "images/dbio40.jpg",
+    "locked": true,
+    "description": "Destory all the spores in this room to destory the central spore."
+  },
+  {
+    "id": "bio41",
+    "layer": "dungeons",
+    "coords": [
+      81.72437369245873,
+      -64.48425292968751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio41.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio42",
+    "layer": "dungeons",
+    "coords": [
+      81.40736998372874,
+      -64.83306884765626
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Maul Griever Brute",
+    "image": "images/dbio42.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio43",
+    "layer": "dungeons",
+    "coords": [
+      81.4405455582586,
+      -64.35791015625001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Maul Griever",
+    "image": "images/dbio43.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio44",
+    "layer": "dungeons",
+    "coords": [
+      79.71174015885131,
+      -70.16418457031251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio44.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio45",
+    "layer": "dungeons",
+    "coords": [
+      79.56850599323725,
+      -69.28527832031251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio45.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio46",
+    "layer": "dungeons",
+    "coords": [
+      79.18164994073766,
+      -71.13647460937501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Cave Roach",
+    "image": "images/dbio46.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio47",
+    "layer": "dungeons",
+    "coords": [
+      78.82010065787368,
+      -73.62487792968751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Metareetta",
+    "image": "images/dbio47.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio48",
+    "layer": "dungeons",
+    "coords": [
+      78.75012321750289,
+      -75.05310058593751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Spin Dartwing",
+    "image": "images/dbio48.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio49",
+    "layer": "dungeons",
+    "coords": [
+      58.90038990959524,
+      -58.99108886718751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Vaernan",
+    "image": "images/dbio49.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio50",
+    "layer": "dungeons",
+    "coords": [
+      74.8900996682821,
+      -161.57867431640628
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Empress Aleu",
+    "image": "images/dbio50.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio51",
+    "layer": "dungeons",
+    "coords": [
+      74.8664550967452,
+      -161.46331787109378
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Mireworm",
+    "image": "images/dbio51.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio52",
+    "layer": "dungeons",
+    "coords": [
+      74.83918324990893,
+      -161.34521484375003
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Aurengh Crane",
+    "image": "images/dbio52.jpg",
+    "locked": true
+  },
+  {
     "id": "bomb1",
     "layer": "dungeons",
     "coords": [
@@ -91,6 +721,20 @@
     "image": "images/dboss2.jpg",
     "description": "Vulnerable to all attacks. Use the grapple nodes to stay off the electrified floor.",
     "locked": true
+  },
+  {
+    "id": "boss3",
+    "layer": "dungeons",
+    "coords": [
+      78.44882739291555,
+      -77.77770996093751
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Omega Griever",
+    "image": "images/dboss3.jpg",
+    "locked": true,
+    "description": "Shoot the arms while its on the walls to reveal is abdomen weak spot and knock it off the wall. On the ground, damage its arms to stun it, then use morph ball to roll under it and place bombs."
   },
   {
     "id": "crystal208",
@@ -212,14 +856,195 @@
     "id": "crystal218",
     "layer": "dungeons",
     "coords": [
-      74.47363792257309,
-      -166.24511718750003
+      74.475108274259,
+      -166.12976074218753
     ],
     "category": "crystals",
     "icon": "crystals",
     "name": "Green Energy Crystal Finder",
     "description": "Awarded after filling the Altar of Legacy 75%.",
     "image": "images/dc218.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal219",
+    "layer": "dungeons",
+    "coords": [
+      74.85641315279074,
+      -84.05639648437501
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc219.jpg",
+    "description": "Use the morph openings to enter this room.",
+    "locked": true
+  },
+  {
+    "id": "crystal220",
+    "layer": "dungeons",
+    "coords": [
+      74.84492867694821,
+      -82.80670166015626
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc220.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal221",
+    "layer": "dungeons",
+    "coords": [
+      74.77728542281855,
+      -83.75701904296876
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc221.jpg",
+    "locked": true,
+    "description": "Destroy this crystal to reveal the morph opening."
+  },
+  {
+    "id": "crystal222",
+    "layer": "dungeons",
+    "coords": [
+      74.78233282926209,
+      -84.5068359375
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc222.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal223",
+    "layer": "dungeons",
+    "coords": [
+      74.86286943496678,
+      -84.43267822265626
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "description": "Destroy this crystal to reveal the morph opening.",
+    "image": "images/dc223.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal225",
+    "layer": "dungeons",
+    "coords": [
+      68.30088905242916,
+      -72.79541015625001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc225.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal226",
+    "layer": "dungeons",
+    "coords": [
+      68.09893121169753,
+      -72.15270996093751
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc225.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal227",
+    "layer": "dungeons",
+    "coords": [
+      68.05791517726011,
+      -72.18841552734376
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc225.jpg",
+    "locked": true,
+    "description": "This crystal is blocking the morph tunnel."
+  },
+  {
+    "id": "crystal228",
+    "layer": "dungeons",
+    "coords": [
+      67.91894636807176,
+      -72.84484863281251
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc225.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal229",
+    "layer": "dungeons",
+    "coords": [
+      68.28666761625654,
+      -72.22961425781251
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc229.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Green Energy Crystal",
+        "target": "dungeons:crystal227",
+        "zoom": 9
+      }
+    ],
+    "description": "Access this area after destroying the green energy crystal revealing the morph tunnel."
+  },
+  {
+    "id": "crystal231",
+    "layer": "dungeons",
+    "coords": [
+      69.42282952635381,
+      -90.087890625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc231.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal232",
+    "layer": "dungeons",
+    "coords": [
+      69.46911584774982,
+      -89.90112304687501
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc231.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal233",
+    "layer": "dungeons",
+    "coords": [
+      69.51914693717981,
+      -89.066162109375
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc231.jpg",
     "locked": true
   },
   {
@@ -270,6 +1095,27 @@
     "description": "Awarded after completing the Sacred Flame Ceremony, Fountain of Tranquility, and Rods of Transference room puzzles",
     "image": "images/de4.jpg",
     "locked": true
+  },
+  {
+    "id": "e5",
+    "layer": "dungeons",
+    "coords": [
+      83.17925621697067,
+      -62.39410400390626
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "description": "Use the psychic platforms to reach here.",
+    "image": "images/de5.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Psychic Platform",
+        "target": "dungeons:r17",
+        "zoom": 8
+      }
+    ]
   },
   {
     "id": "log1",
@@ -357,7 +1203,111 @@
     "name": "Missile Expansion",
     "description": "Use the psychic platforms to access the missile expansion on the wall.",
     "image": "images/dm5.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Psychic Platform",
+        "target": "dungeons:r5",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "m6",
+    "layer": "dungeons",
+    "coords": [
+      84.6961565582941,
+      -66.44531250000001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dr9.jpg",
+    "locked": true,
+    "description": "Use the lamorn magnetic track and bomb jumps to reach the missile expansion.",
+    "links": [
+      {
+        "label": "Lamorn Magnetic Track",
+        "target": "dungeons:r9",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "m7",
+    "layer": "dungeons",
+    "coords": [
+      82.87283275879136,
+      -55.33813476562501
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Super Missile",
+    "description": "Unscrew both clamps using the boost slots above to drop the container.",
+    "image": "images/dm7.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Boost Slot",
+        "target": "dungeons:r19",
+        "zoom": 9
+      },
+      {
+        "label": "Boost Slot",
+        "target": "dungeons:r20",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "m8",
+    "layer": "dungeons",
+    "coords": [
+      82.81054268734316,
+      -56.39831542968751
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Destroy the koornicite ore blocking this area to access the missile expansion.",
+    "image": "images/dm8.jpg",
+    "locked": true,
+    "links": []
+  },
+  {
+    "id": "m9",
+    "layer": "dungeons",
+    "coords": [
+      78.87746865669968,
+      -74.51751708984376
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use psychic lasso to break open the side pannel. Then traverse the morph tunnel to find the missile expansion at the end.",
+    "image": "images/dm9.jpg",
     "locked": true
+  },
+  {
+    "id": "m10",
+    "layer": "dungeons",
+    "coords": [
+      68.18891001018181,
+      -71.98242187500001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm10.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Green Energy Crystal",
+        "target": "dungeons:crystal227",
+        "zoom": 9
+      }
+    ],
+    "description": "Access this area after destroying the green energy crystal revealing the morph tunnel."
   },
   {
     "id": "mac1",
@@ -425,6 +1375,19 @@
     "locked": true
   },
   {
+    "id": "map1",
+    "layer": "dungeons",
+    "coords": [
+      84.14854149391776,
+      -73.62213134765626
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Great Mines Area Map",
+    "image": "images/dmap1.jpg",
+    "locked": true
+  },
+  {
     "id": "mech5",
     "layer": "dungeons",
     "coords": [
@@ -446,6 +1409,20 @@
     ]
   },
   {
+    "id": "npc1",
+    "layer": "dungeons",
+    "coords": [
+      84.01201208049929,
+      -123.42864990234376
+    ],
+    "category": "gfed",
+    "icon": "gfed",
+    "name": "VUE-995",
+    "image": "images/dnpc1.jpg",
+    "locked": true,
+    "description": "Use VUE-995 to open the heavy-duty barricade clamp and other strong barriers."
+  },
+  {
     "id": "psy1",
     "layer": "dungeons",
     "coords": [
@@ -457,6 +1434,48 @@
     "name": "Psychic Beam Upgrade",
     "description": "Awarded after filling the Altar of Legacy 25%.",
     "image": "images/dpsy1.jpg",
+    "locked": true
+  },
+  {
+    "id": "psy2",
+    "layer": "dungeons",
+    "coords": [
+      84.03774393454192,
+      -108.30871582031251
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Spider Ball",
+    "image": "images/dpsy2.jpg",
+    "locked": true,
+    "description": "Activate the mote sockets on both sides of the sculpture to reveal the spider ball."
+  },
+  {
+    "id": "psy3",
+    "layer": "dungeons",
+    "coords": [
+      78.42901122247589,
+      -77.96173095703126
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Power Bomb",
+    "image": "images/dpsy3.jpg",
+    "description": "Defeat the omega griever to obtain this.",
+    "locked": true
+  },
+  {
+    "id": "psy4",
+    "layer": "dungeons",
+    "coords": [
+      74.4743731153941,
+      -166.24511718750003
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Control Beam Boost",
+    "description": "Awarded after filling the Altar of Legacy 50%.",
+    "image": "images/dpsy4.jpg",
     "locked": true
   },
   {
@@ -513,6 +1532,247 @@
     "locked": true
   },
   {
+    "id": "r6",
+    "layer": "dungeons",
+    "coords": [
+      84.13845235273705,
+      -119.66583251953126
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Grapple Point",
+    "image": "images/dr6.jpg",
+    "locked": true
+  },
+  {
+    "id": "r7",
+    "layer": "dungeons",
+    "coords": [
+      84.01430383003249,
+      -107.57263183593751
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Ball Track",
+    "image": "images/dr7.jpg",
+    "locked": true
+  },
+  {
+    "id": "r8",
+    "layer": "dungeons",
+    "coords": [
+      83.98185170564561,
+      -123.58245849609376
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Lamorn Magnetic Track",
+    "image": "images/dr8.jpg",
+    "locked": true
+  },
+  {
+    "id": "r9",
+    "layer": "dungeons",
+    "coords": [
+      84.63050580523138,
+      -66.64581298828126
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Lamorn Magnetic Track",
+    "image": "images/dr9.jpg",
+    "locked": true
+  },
+  {
+    "id": "r10",
+    "layer": "dungeons",
+    "coords": [
+      84.55935937018045,
+      -69.64782714843751
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Lamorn Magnetic Track",
+    "image": "images/dr10.jpg",
+    "locked": true
+  },
+  {
+    "id": "r11",
+    "layer": "dungeons",
+    "coords": [
+      84.43265087536717,
+      -71.34246826171876
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr11.jpg",
+    "locked": true,
+    "description": "Use the spinner to raise the bridge."
+  },
+  {
+    "id": "r12",
+    "layer": "dungeons",
+    "coords": [
+      82.12741757373921,
+      -65.62408447265626
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "image": "images/dr12.jpg",
+    "locked": true,
+    "description": "Burn away the webbing with fire shot, then use a psychic bomb mote on the bomb slot to open the gate."
+  },
+  {
+    "id": "r13",
+    "layer": "dungeons",
+    "coords": [
+      83.24289284813716,
+      -67.64007568359376
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Boost Rail",
+    "image": "images/dr13.jpg",
+    "locked": true
+  },
+  {
+    "id": "r14",
+    "layer": "dungeons",
+    "coords": [
+      83.22282705664117,
+      -67.03857421875001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Tether Node",
+    "image": "images/dr14.jpg",
+    "locked": true
+  },
+  {
+    "id": "r15",
+    "layer": "dungeons",
+    "coords": [
+      83.19619730940111,
+      -63.08349609375001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr15.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Tether Node",
+        "target": "dungeons:r14",
+        "zoom": 8
+      },
+      {
+        "label": "Psychic Grapple Node",
+        "target": "dungeons:r16",
+        "zoom": 8
+      }
+    ],
+    "description": "Use the tether nodes on the other side of the bridge to reach the other platform, then use the psychic grapple nodes to swing here. Use this spinner to raise the bridge."
+  },
+  {
+    "id": "r16",
+    "layer": "dungeons",
+    "coords": [
+      83.39309340983067,
+      -63.74816894531251
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Grapple Node",
+    "image": "images/dr16.jpg",
+    "locked": true
+  },
+  {
+    "id": "r17",
+    "layer": "dungeons",
+    "coords": [
+      83.14786998099164,
+      -64.35791015625001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Platform",
+    "description": "Once the bridge is reconnected, you can access the psychic platforms.",
+    "image": "images/dr17.jpg",
+    "locked": true
+  },
+  {
+    "id": "r18",
+    "layer": "dungeons",
+    "coords": [
+      82.97769755554401,
+      -56.07696533203126
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Lamorn Magnetic Track",
+    "image": "images/dr18.jpg",
+    "locked": true,
+    "description": "Use the boost half pipe below to reach here."
+  },
+  {
+    "id": "r19",
+    "layer": "dungeons",
+    "coords": [
+      82.95347956073496,
+      -55.66223144531251
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Boost Slot",
+    "image": "images/dr19.jpg",
+    "locked": true,
+    "description": "Use the boost slot to unscrew half of the clamp holding the container. (No logbook entry)"
+  },
+  {
+    "id": "r20",
+    "layer": "dungeons",
+    "coords": [
+      82.9632440096606,
+      -55.17333984375001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Boost Slot",
+    "description": "Use the boost slot to unscrew half of the clamp holding the container. (No logbook entry)",
+    "image": "images/dr20.jpg",
+    "locked": true
+  },
+  {
+    "id": "r21",
+    "layer": "dungeons",
+    "coords": [
+      79.45099186882102,
+      -66.83532714843751
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Lamorn Magnetic Track",
+    "image": "images/dr21.jpg",
+    "locked": true,
+    "description": "Use this to get back up to the elevator controls."
+  },
+  {
+    "id": "r22",
+    "layer": "dungeons",
+    "coords": [
+      79.24487589555704,
+      -66.79412841796876
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Power Bomb Slot",
+    "image": "images/dr22.jpg",
+    "locked": true
+  },
+  {
     "id": "save1",
     "layer": "dungeons",
     "coords": [
@@ -534,6 +1794,150 @@
     "category": "save",
     "icon": "save",
     "name": "New Marker (crystal216)",
+    "locked": true
+  },
+  {
+    "id": "save3",
+    "layer": "dungeons",
+    "coords": [
+      84.14966144082375,
+      -71.11999511718751
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save4",
+    "layer": "dungeons",
+    "coords": [
+      83.52635866340974,
+      -142.87994384765628
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save5",
+    "layer": "dungeons",
+    "coords": [
+      82.82565128374648,
+      -125.50781250000001
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save6",
+    "layer": "dungeons",
+    "coords": [
+      81.12589817464159,
+      -125.01342773437501
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save7",
+    "layer": "dungeons",
+    "coords": [
+      80.38777179330573,
+      -121.90155029296876
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save8",
+    "layer": "dungeons",
+    "coords": [
+      76.56284986632164,
+      -131.97052001953128
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save9",
+    "layer": "dungeons",
+    "coords": [
+      75.08856670583678,
+      -162.49328613281253
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save10",
+    "layer": "dungeons",
+    "coords": [
+      57.81550367239279,
+      -124.91729736328126
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save11",
+    "layer": "dungeons",
+    "coords": [
+      65.184182845801,
+      -129.25689697265628
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save12",
+    "layer": "dungeons",
+    "coords": [
+      51.316880504045876,
+      -160.89752197265628
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save13",
+    "layer": "dungeons",
+    "coords": [
+      82.5488004740892,
+      -63.12469482421876
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
+    "locked": true
+  },
+  {
+    "id": "save14",
+    "layer": "dungeons",
+    "coords": [
+      78.622964280678,
+      -73.03436279296876
+    ],
+    "category": "save",
+    "icon": "save",
+    "name": "Save Station",
     "locked": true
   },
   {
@@ -659,6 +2063,184 @@
     "locked": true
   },
   {
+    "id": "shot11",
+    "layer": "dungeons",
+    "coords": [
+      84.09029169795966,
+      -123.93402099609376
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/dshot11.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Lamorn Magnetic Track",
+        "target": "dungeons:r8",
+        "zoom": 9
+      }
+    ],
+    "description": "Use the lamorn magnetic track to reach this spot on the ceiling."
+  },
+  {
+    "id": "shot12",
+    "layer": "dungeons",
+    "coords": [
+      74.82409138193968,
+      -84.08660888671876
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Use the morph openings to enter this room.",
+    "image": "images/dshot12.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot13",
+    "layer": "dungeons",
+    "coords": [
+      74.9536886200003,
+      -82.08435058593751
+    ],
+    "category": "shots",
+    "icon": "shotsthunder",
+    "name": "Charged Thunder Shot",
+    "image": "images/dshot13.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot14",
+    "layer": "dungeons",
+    "coords": [
+      83.07672443384496,
+      -68.28552246093751
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/dshot14.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Psychic Boost Rail",
+        "target": "dungeons:r13",
+        "zoom": 8
+      }
+    ],
+    "description": "Take the psychic boost rail to reach this location."
+  },
+  {
+    "id": "shot15",
+    "layer": "dungeons",
+    "coords": [
+      83.31233870035545,
+      -57.12066650390626
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Solve the flipping tunnel puzzle to access the shot expansion.",
+    "image": "images/dshot15.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Boost Slot",
+        "target": "dungeons:r19",
+        "zoom": 9
+      },
+      {
+        "label": "Boost Slot",
+        "target": "dungeons:r20",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "shot16",
+    "layer": "dungeons",
+    "coords": [
+      83.62378550048383,
+      -52.86895751953125
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Use the crystal crawlers at the beginning to get on top of this spike.",
+    "image": "images/dshot16.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot17",
+    "layer": "dungeons",
+    "coords": [
+      73.7034892450368,
+      -159.06829833984378
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Solve the freezing water puzzle to reach the top of the center structure.",
+    "image": "images/dshot17.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot18",
+    "layer": "dungeons",
+    "coords": [
+      67.59980263528335,
+      -71.63635253906251
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Charged Ice Shot",
+    "image": "images/dshot18.jpg",
+    "locked": true
+  },
+  {
+    "id": "t1",
+    "layer": "dungeons",
+    "coords": [
+      83.8910440795144,
+      -78.37921142578125
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Excavation Drill Control",
+    "image": "images/dt1.jpg",
+    "description": "Use this terminal to activate the drill to reach the lower levels of the mine. This will spawn waves of grievers.",
+    "locked": true
+  },
+  {
+    "id": "t2",
+    "layer": "dungeons",
+    "coords": [
+      82.11574676002891,
+      -68.51623535156251
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "LS51 Rock Eater DJIII",
+    "description": "Scan the console to activate the drill and defend Armstrong from waves of grievers.",
+    "locked": true,
+    "image": "images/dt2.jpg"
+  },
+  {
+    "id": "bio1",
+    "layer": "viewros",
+    "coords": [
+      8.102738577783168,
+      -130.86914062500003
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Gullbat",
+    "image": "images/vbio1.jpg",
+    "locked": true,
+    "description": "Randomly seen throughout Sol Valley. If approached, they will attack."
+  },
+  {
     "id": "bomb1",
     "layer": "viewros",
     "coords": [
@@ -671,6 +2253,47 @@
     "locked": true,
     "image": "images/bomb1.jpg",
     "description": "Reger Tobaki will give the bomb expansion to Samus after speaking with him."
+  },
+  {
+    "id": "boost1",
+    "layer": "viewros",
+    "coords": [
+      -31.165809587861947,
+      -153.2373046875
+    ],
+    "category": "boosts",
+    "icon": "boosts",
+    "name": "Vi-O-La Boost Tank",
+    "image": "images/vboost1.jpg",
+    "locked": true,
+    "description": "Destroy the heat lock unit with fire shot to obtain."
+  },
+  {
+    "id": "boost2",
+    "layer": "viewros",
+    "coords": [
+      14.519780046326085,
+      -49.21875000000001
+    ],
+    "category": "boosts",
+    "icon": "boosts",
+    "name": "Vi-O-La Boost Tank",
+    "image": "images/vboost2.jpg",
+    "locked": true
+  },
+  {
+    "id": "boost3",
+    "layer": "viewros",
+    "coords": [
+      -2.3723687086440504,
+      82.88085937500001
+    ],
+    "category": "boosts",
+    "icon": "boosts",
+    "name": "Vi-O-La Boost Tank",
+    "image": "images/vboost3.jpg",
+    "locked": true,
+    "description": "Destroy the cold lock unit with ice shot to obtain."
   },
   {
     "id": "boss1",
@@ -3482,6 +5105,1254 @@
     "locked": true
   },
   {
+    "id": "crystal218",
+    "layer": "viewros",
+    "coords": [
+      72.08743247624157,
+      -128.71582031250003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc218.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal219",
+    "layer": "viewros",
+    "coords": [
+      36.527294814546245,
+      -117.15820312500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc219.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal220",
+    "layer": "viewros",
+    "coords": [
+      42.779275360241904,
+      -111.09375000000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc220.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal221",
+    "layer": "viewros",
+    "coords": [
+      45.89000815866184,
+      -105.38085937500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc221.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal222",
+    "layer": "viewros",
+    "coords": [
+      29.6880527498568,
+      -108.85253906250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc222.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal223",
+    "layer": "viewros",
+    "coords": [
+      30.37287518811804,
+      -100.15136718750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc223.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal224",
+    "layer": "viewros",
+    "coords": [
+      54.265224078605684,
+      -114.56542968750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc224.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal225",
+    "layer": "viewros",
+    "coords": [
+      59.153403092050375,
+      -105.3369140625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc225.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal226",
+    "layer": "viewros",
+    "coords": [
+      67.39059859150743,
+      -113.42285156250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc226.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal227",
+    "layer": "viewros",
+    "coords": [
+      68.84766505841037,
+      -99.05273437500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc227.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal228",
+    "layer": "viewros",
+    "coords": [
+      63.31268278043484,
+      -92.63671875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc228.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal229",
+    "layer": "viewros",
+    "coords": [
+      64.58618480339979,
+      -82.22167968750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc229.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal230",
+    "layer": "viewros",
+    "coords": [
+      69.65708627301174,
+      -88.06640625000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc230.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal231",
+    "layer": "viewros",
+    "coords": [
+      73.20131708476698,
+      -82.30957031250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc231.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal232",
+    "layer": "viewros",
+    "coords": [
+      72.73800301833366,
+      -103.35937500000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc232.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal233",
+    "layer": "viewros",
+    "coords": [
+      75.397779424116,
+      -103.00781250000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc233.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal234",
+    "layer": "viewros",
+    "coords": [
+      78.07107600956168,
+      -117.59765625000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc234.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal235",
+    "layer": "viewros",
+    "coords": [
+      77.65534600967779,
+      -107.62207031250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc235.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal236",
+    "layer": "viewros",
+    "coords": [
+      76.55774293896556,
+      -98.12988281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc236.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal237",
+    "layer": "viewros",
+    "coords": [
+      76.4654918099891,
+      -88.06640625000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc237.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal238",
+    "layer": "viewros",
+    "coords": [
+      77.26417034397093,
+      -76.68457031250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc238.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal239",
+    "layer": "viewros",
+    "coords": [
+      78.46421682297357,
+      -70.09277343750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc239.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal240",
+    "layer": "viewros",
+    "coords": [
+      79.01334043073517,
+      -61.52343750000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc240.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal241",
+    "layer": "viewros",
+    "coords": [
+      76.39331166244496,
+      -62.00683593750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc241.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal242",
+    "layer": "viewros",
+    "coords": [
+      78.9039293885709,
+      -56.38183593750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc242.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal243",
+    "layer": "viewros",
+    "coords": [
+      80.16371016565114,
+      -46.31835937500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc243.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal244",
+    "layer": "viewros",
+    "coords": [
+      80.22358765833236,
+      -40.78125000000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc244.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal245",
+    "layer": "viewros",
+    "coords": [
+      80.58972691308571,
+      -35.77148437500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc245.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal246",
+    "layer": "viewros",
+    "coords": [
+      80.29051846422898,
+      -19.204101562500004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc246.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal247",
+    "layer": "viewros",
+    "coords": [
+      80.71818333779606,
+      -10.327148437500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc247.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal248",
+    "layer": "viewros",
+    "coords": [
+      81.20813892964775,
+      6.50390625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc248.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal249",
+    "layer": "viewros",
+    "coords": [
+      80.7252686227758,
+      12.48046875
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc249.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal250",
+    "layer": "viewros",
+    "coords": [
+      80.87979546011317,
+      28.564453125000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc250.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal251",
+    "layer": "viewros",
+    "coords": [
+      81.61494580972223,
+      32.16796875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc251.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal252",
+    "layer": "viewros",
+    "coords": [
+      80.71109268759263,
+      39.06738281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc252.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal253",
+    "layer": "viewros",
+    "coords": [
+      82.13042660886293,
+      46.45019531250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc253.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal254",
+    "layer": "viewros",
+    "coords": [
+      81.92935832414982,
+      59.76562500000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc254.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal255",
+    "layer": "viewros",
+    "coords": [
+      81.22156243486594,
+      67.19238281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc255.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal256",
+    "layer": "viewros",
+    "coords": [
+      80.52483958061848,
+      79.54101562500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc256.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal257",
+    "layer": "viewros",
+    "coords": [
+      78.67324199721936,
+      88.7255859375
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc257.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal258",
+    "layer": "viewros",
+    "coords": [
+      77.2544787022853,
+      78.17871093750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc258.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal259",
+    "layer": "viewros",
+    "coords": [
+      75.70478638174055,
+      81.29882812500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc259.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal260",
+    "layer": "viewros",
+    "coords": [
+      74.4021625984244,
+      89.60449218750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc260.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal261",
+    "layer": "viewros",
+    "coords": [
+      72.03328927451815,
+      89.69238281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc261.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal262",
+    "layer": "viewros",
+    "coords": [
+      73.20131708476698,
+      78.92578125000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc262.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal263",
+    "layer": "viewros",
+    "coords": [
+      68.89518688943544,
+      80.46386718750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc263.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal264",
+    "layer": "viewros",
+    "coords": [
+      61.75233128411639,
+      78.92578125000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc264.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal265",
+    "layer": "viewros",
+    "coords": [
+      64.14895190024562,
+      86.17675781250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc265.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal266",
+    "layer": "viewros",
+    "coords": [
+      65.96437717203098,
+      88.41796875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc266.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal267",
+    "layer": "viewros",
+    "coords": [
+      62.16550190583813,
+      65.83007812500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc267.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal268",
+    "layer": "viewros",
+    "coords": [
+      60.108670463036,
+      69.47753906250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc268.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal269",
+    "layer": "viewros",
+    "coords": [
+      53.9560855309879,
+      77.78320312500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc269.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal270",
+    "layer": "viewros",
+    "coords": [
+      47.84265762816538,
+      75.62988281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc270.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal271",
+    "layer": "viewros",
+    "coords": [
+      42.61779143282346,
+      68.99414062500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc271.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal272",
+    "layer": "viewros",
+    "coords": [
+      33.100745405144245,
+      66.35742187500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc272.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal273",
+    "layer": "viewros",
+    "coords": [
+      28.729130483430154,
+      76.72851562500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc273.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal274",
+    "layer": "viewros",
+    "coords": [
+      -0.3515602939922709,
+      79.49707031250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc274.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal275",
+    "layer": "viewros",
+    "coords": [
+      -9.40571004160001,
+      77.38769531250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc275.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal276",
+    "layer": "viewros",
+    "coords": [
+      -22.67484735118852,
+      68.46679687500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc276.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal277",
+    "layer": "viewros",
+    "coords": [
+      -4.696879026871413,
+      68.59863281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc277.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal278",
+    "layer": "viewros",
+    "coords": [
+      -24.8864364907877,
+      76.99218750000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc278.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal279",
+    "layer": "viewros",
+    "coords": [
+      -36.49197347059368,
+      79.01367187500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc279.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal280",
+    "layer": "viewros",
+    "coords": [
+      -46.43785689502421,
+      72.81738281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc280.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal281",
+    "layer": "viewros",
+    "coords": [
+      -38.47939467327644,
+      70.79589843750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc281.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal282",
+    "layer": "viewros",
+    "coords": [
+      -40.91351257612758,
+      58.44726562500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc282.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal283",
+    "layer": "viewros",
+    "coords": [
+      -49.61070993807422,
+      63.58886718750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc283.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal284",
+    "layer": "viewros",
+    "coords": [
+      -49.66762782262193,
+      68.51074218750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc284.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal285",
+    "layer": "viewros",
+    "coords": [
+      -49.89463439573421,
+      51.50390625000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc285.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal286",
+    "layer": "viewros",
+    "coords": [
+      -51.944264879028765,
+      13.139648437500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc286.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal287",
+    "layer": "viewros",
+    "coords": [
+      -45.27488643704893,
+      4.965820312500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc287.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal288",
+    "layer": "viewros",
+    "coords": [
+      -51.69979984974194,
+      -2.6367187500000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc288.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal289",
+    "layer": "viewros",
+    "coords": [
+      -45.583289756006316,
+      -6.152343750000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc289.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal290",
+    "layer": "viewros",
+    "coords": [
+      -57.01681401739112,
+      -9.755859375000002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc290.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal291",
+    "layer": "viewros",
+    "coords": [
+      -53.041213040756475,
+      -14.370117187500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc291.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal292",
+    "layer": "viewros",
+    "coords": [
+      -35.532226227703376,
+      -10.634765625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc292.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal293",
+    "layer": "viewros",
+    "coords": [
+      -25.958044673317843,
+      3.7792968750000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc293.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal294",
+    "layer": "viewros",
+    "coords": [
+      6.053161295714067,
+      52.0751953125
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc294.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal295",
+    "layer": "viewros",
+    "coords": [
+      15.199386048560008,
+      51.19628906250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc295.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal296",
+    "layer": "viewros",
+    "coords": [
+      31.690781806136822,
+      52.20703125000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc296.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal297",
+    "layer": "viewros",
+    "coords": [
+      32.47269502206151,
+      58.35937500000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc297.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal298",
+    "layer": "viewros",
+    "coords": [
+      36.73888412439431,
+      56.16210937500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc298.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal299",
+    "layer": "viewros",
+    "coords": [
+      26.941659545381516,
+      68.37890625000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc299.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal300",
+    "layer": "viewros",
+    "coords": [
+      22.63429269379353,
+      63.06152343750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc300.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal301",
+    "layer": "viewros",
+    "coords": [
+      -23.40276490540795,
+      53.34960937500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc301.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal302",
+    "layer": "viewros",
+    "coords": [
+      -31.353636941500987,
+      57.61230468750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc302.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal303",
+    "layer": "viewros",
+    "coords": [
+      -38.27268853598096,
+      41.44042968750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc303.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal304",
+    "layer": "viewros",
+    "coords": [
+      -23.32208001137844,
+      40.166015625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc304.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal305",
+    "layer": "viewros",
+    "coords": [
+      -40.64730356252251,
+      25.312500000000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc305.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal306",
+    "layer": "viewros",
+    "coords": [
+      -31.690781806136822,
+      22.280273437500004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc306.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal307",
+    "layer": "viewros",
+    "coords": [
+      -36.35052700542764,
+      9.799804687500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc307.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal308",
+    "layer": "viewros",
+    "coords": [
+      -44.59046718130884,
+      17.226562500000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc308.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal309",
+    "layer": "viewros",
+    "coords": [
+      -63.39152174400882,
+      -5.493164062500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc309.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal310",
+    "layer": "viewros",
+    "coords": [
+      -67.87554134672945,
+      -11.821289062500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc310.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal311",
+    "layer": "viewros",
+    "coords": [
+      -65.09064558256853,
+      -118.82812500000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc311.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal312",
+    "layer": "viewros",
+    "coords": [
+      -63.23362741232569,
+      -124.98046875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc312.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal313",
+    "layer": "viewros",
+    "coords": [
+      -60.45721779774396,
+      -139.26269531250003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc313.jpg",
+    "locked": true
+  },
+  {
     "id": "e1",
     "layer": "viewros",
     "coords": [
@@ -3520,6 +6391,20 @@
     "name": "Missile Expansion",
     "description": "Use the psychic boost rail to reach this location.",
     "image": "images/vm2.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac1",
+    "layer": "viewros",
+    "coords": [
+      11.523087506868514,
+      -130.69335937500003
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Aeronaut",
+    "description": "Will attack Samus randomly throughout Sol Valley.",
+    "image": "images/vmac1.jpg",
     "locked": true
   },
   {
@@ -3791,6 +6676,19 @@
     "icon": "research",
     "name": "Psychic Boost Rail",
     "image": "images/vr2.jpg",
+    "locked": true
+  },
+  {
+    "id": "r3",
+    "layer": "viewros",
+    "coords": [
+      75.55208098028335,
+      50.80078125
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Lamorn Magnetic Track",
+    "image": "images/vr3.jpg",
     "locked": true
   },
   {
