@@ -682,6 +682,71 @@
     "locked": true
   },
   {
+    "id": "bio53",
+    "layer": "dungeons",
+    "coords": [
+      56.8429636484013,
+      -41.33331298828126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Vaernan",
+    "image": "images/dbio53.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio54",
+    "layer": "dungeons",
+    "coords": [
+      56.78583637507541,
+      -39.27337646484376
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Vaernan",
+    "image": "images/dbio54.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio55",
+    "layer": "dungeons",
+    "coords": [
+      54.82917227452139,
+      -39.72106933593751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Vaernan",
+    "image": "images/dbio55.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio56",
+    "layer": "dungeons",
+    "coords": [
+      49.59112904845232,
+      18.297729492187504
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Vaernan",
+    "image": "images/dbio56.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio57",
+    "layer": "dungeons",
+    "coords": [
+      43.6599240747891,
+      -3.3618164062500004
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blow Hopper",
+    "image": "images/dbio57.jpg",
+    "locked": true
+  },
+  {
     "id": "bomb1",
     "layer": "dungeons",
     "coords": [
@@ -735,6 +800,20 @@
     "image": "images/dboss3.jpg",
     "locked": true,
     "description": "Shoot the arms while its on the walls to reveal is abdomen weak spot and knock it off the wall. On the ground, damage its arms to stun it, then use morph ball to roll under it and place bombs."
+  },
+  {
+    "id": "boss4",
+    "layer": "dungeons",
+    "coords": [
+      46.240651955001695,
+      -0.5053710937500001
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Phenoros",
+    "image": "images/dboss4.jpg",
+    "locked": true,
+    "description": "Use the Vi-O-La blaster to destory the weak points on the underbelly while traversing the lava to activate phase 2 of the fight. When in phase 2 on foot, destory the blue weak points on the face of Phenoros to expose and damage the tongue. When enough damage is done, Phenoros will become stunned, use the control beam to destroy the core from the inside."
   },
   {
     "id": "crystal208",
@@ -1118,6 +1197,40 @@
     ]
   },
   {
+    "id": "e6",
+    "layer": "dungeons",
+    "coords": [
+      54.36935859782679,
+      -26.367187500000004
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "image": "images/de6.jpg",
+    "description": "Held within the psychic container",
+    "locked": true,
+    "links": [
+      {
+        "label": "Psychic Container",
+        "target": "dungeons:r32",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "key1",
+    "layer": "dungeons",
+    "coords": [
+      45.65244828675087,
+      0.8679199218750001
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "Master Teleporter Key - Flare Pool",
+    "image": "images/key1.jpg",
+    "locked": true
+  },
+  {
     "id": "log1",
     "layer": "dungeons",
     "coords": [
@@ -1128,6 +1241,45 @@
     "icon": "logs",
     "name": "Data Log - Delivery Status",
     "image": "images/log1.jpg",
+    "locked": true
+  },
+  {
+    "id": "log2",
+    "layer": "dungeons",
+    "coords": [
+      55.163181143473714,
+      -32.78320312500001
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Extraction Process",
+    "image": "images/log2.jpg",
+    "locked": true
+  },
+  {
+    "id": "log3",
+    "layer": "dungeons",
+    "coords": [
+      54.52905134493475,
+      -28.034362792968754
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Injection Process",
+    "image": "images/log3.jpg",
+    "locked": true
+  },
+  {
+    "id": "log4",
+    "layer": "dungeons",
+    "coords": [
+      54.45087972039684,
+      -26.207885742187504
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Facility Shutdown",
+    "image": "images/log4.jpg",
     "locked": true
   },
   {
@@ -1310,6 +1462,63 @@
     "description": "Access this area after destroying the green energy crystal revealing the morph tunnel."
   },
   {
+    "id": "m11",
+    "layer": "dungeons",
+    "coords": [
+      56.108810038002154,
+      -123.29406738281251
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use the spinner to ram the hanging container into the other until it falls and breaks open to reveal the missile expansion.",
+    "image": "images/dm11.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Spinner",
+        "target": "dungeons:r23",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "m12",
+    "layer": "dungeons",
+    "coords": [
+      63.67428787360124,
+      -132.12158203125003
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use the spinner to raise the container containing the missile expansion.",
+    "image": "images/dm12.jpg",
+    "links": [
+      {
+        "label": "Spinner",
+        "target": "dungeons:r24",
+        "zoom": 9
+      }
+    ],
+    "locked": true
+  },
+  {
+    "id": "m13",
+    "layer": "dungeons",
+    "coords": [
+      61.13395496811726,
+      -64.00634765625001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "description": "Use ice shot to freeze the lava flow and access this area.",
+    "image": "images/dm13.jpg",
+    "locked": true,
+    "links": []
+  },
+  {
     "id": "mac1",
     "layer": "dungeons",
     "coords": [
@@ -1375,6 +1584,215 @@
     "locked": true
   },
   {
+    "id": "mac6",
+    "layer": "dungeons",
+    "coords": [
+      63.77034956885743,
+      -131.83868408203128
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Teleporter",
+    "image": "images/dmac6.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac7",
+    "layer": "dungeons",
+    "coords": [
+      55.42589636057864,
+      -119.32800292968751
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Flight Drone MCU",
+    "description": "Use the psychic control beam when the mini drones aren't guarding it.",
+    "image": "images/dmac7.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac8",
+    "layer": "dungeons",
+    "coords": [
+      56.486761752490885,
+      -37.24365234375001
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Heavy Maintenance Tank",
+    "image": "images/dmac8.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac9",
+    "layer": "dungeons",
+    "coords": [
+      56.94047958804111,
+      -36.91406250000001
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac9.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac10",
+    "layer": "dungeons",
+    "coords": [
+      57.320589769167135,
+      -36.09558105468751
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac10.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac11",
+    "layer": "dungeons",
+    "coords": [
+      54.783266005102874,
+      -30.473327636718754
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Beam Turret",
+    "image": "images/dmac11.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac12",
+    "layer": "dungeons",
+    "coords": [
+      55.36662484928637,
+      -27.33123779296875
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Soldier",
+    "image": "images/dmac12.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac13",
+    "layer": "dungeons",
+    "coords": [
+      54.890826092918864,
+      -25.771179199218754
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac13.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac14",
+    "layer": "dungeons",
+    "coords": [
+      54.470037612805754,
+      -23.071289062500004
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Soldier",
+    "image": "images/dmac14.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac15",
+    "layer": "dungeons",
+    "coords": [
+      54.02067955159995,
+      -20.629577636718754
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Gunner",
+    "image": "images/dmac15.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac16",
+    "layer": "dungeons",
+    "coords": [
+      53.941538066746006,
+      -20.764160156250004
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Shield",
+    "image": "images/dmac16.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac17",
+    "layer": "dungeons",
+    "coords": [
+      53.5027506979993,
+      -18.503723144531254
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Heavy Turret",
+    "image": "images/dmac17.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac18",
+    "layer": "dungeons",
+    "coords": [
+      53.66417110963306,
+      -19.132690429687504
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Soldier",
+    "image": "images/dmac18.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac19",
+    "layer": "dungeons",
+    "coords": [
+      54.13991452083357,
+      -17.589111328125004
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac19.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac20",
+    "layer": "dungeons",
+    "coords": [
+      56.64112657446674,
+      -37.99072265625
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Shocker",
+    "image": "images/dmac20.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac21",
+    "layer": "dungeons",
+    "coords": [
+      57.27310364731209,
+      -35.07110595703126
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Beam Turret",
+    "image": "images/dmac21.jpg",
+    "locked": true
+  },
+  {
     "id": "map1",
     "layer": "dungeons",
     "coords": [
@@ -1385,6 +1803,32 @@
     "icon": "maps",
     "name": "Great Mines Area Map",
     "image": "images/dmap1.jpg",
+    "locked": true
+  },
+  {
+    "id": "map2",
+    "layer": "dungeons",
+    "coords": [
+      54.194583360162646,
+      -31.755981445312504
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Flare Pool Area Map",
+    "image": "images/dmap2.jpg",
+    "locked": true
+  },
+  {
+    "id": "map3",
+    "layer": "dungeons",
+    "coords": [
+      53.4291738804146,
+      -17.943420410156254
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Flare Pool Area Map",
+    "image": "images/dmap3.jpg",
     "locked": true
   },
   {
@@ -1421,6 +1865,32 @@
     "image": "images/dnpc1.jpg",
     "locked": true,
     "description": "Use VUE-995 to open the heavy-duty barricade clamp and other strong barriers."
+  },
+  {
+    "id": "npc2",
+    "layer": "dungeons",
+    "coords": [
+      54.22510213749348,
+      -41.16577148437501
+    ],
+    "category": "gfed",
+    "icon": "gfed",
+    "name": "Ezra Duke",
+    "image": "images/dnpc2.jpg",
+    "locked": true
+  },
+  {
+    "id": "npc3",
+    "layer": "dungeons",
+    "coords": [
+      50.01656412776064,
+      19.190368652343754
+    ],
+    "category": "gfed",
+    "icon": "gfed",
+    "name": "Nora Armstrong",
+    "image": "images/dnpc3.jpg",
+    "locked": true
   },
   {
     "id": "psy1",
@@ -1477,6 +1947,48 @@
     "description": "Awarded after filling the Altar of Legacy 50%.",
     "image": "images/dpsy4.jpg",
     "locked": true
+  },
+  {
+    "id": "psy5",
+    "layer": "dungeons",
+    "coords": [
+      54.78009813290534,
+      -158.43383789062503
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Vi-O-La Suit Upgrade",
+    "description": "Use the spinner to access the suit upgrade terminal. Upgrades the Vi-O-La suit to so the bike can hover over lava.",
+    "image": "images/dpsy5.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Spinner",
+        "target": "dungeons:r27",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "psy6",
+    "layer": "dungeons",
+    "coords": [
+      45.97406038956239,
+      -0.8624267578125001
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Grapple",
+    "description": "Awarded after defeating Phenoros.",
+    "image": "images/dpsy6.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Phenoros",
+        "target": "dungeons:boss4",
+        "zoom": 7
+      }
+    ]
   },
   {
     "id": "r2",
@@ -1771,6 +2283,153 @@
     "name": "Power Bomb Slot",
     "image": "images/dr22.jpg",
     "locked": true
+  },
+  {
+    "id": "r23",
+    "layer": "dungeons",
+    "coords": [
+      56.53374318603544,
+      -123.73626708984376
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr23.jpg",
+    "locked": true
+  },
+  {
+    "id": "r24",
+    "layer": "dungeons",
+    "coords": [
+      63.675505883656584,
+      -132.23693847656253
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr24.jpg",
+    "locked": true
+  },
+  {
+    "id": "r25",
+    "layer": "dungeons",
+    "coords": [
+      58.0923963085905,
+      -129.92980957031253
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Boost Rail",
+    "image": "images/dr25.jpg",
+    "locked": true,
+    "description": "Boost rail takes you to tower 1 generator."
+  },
+  {
+    "id": "r26",
+    "layer": "dungeons",
+    "coords": [
+      50.49421062933561,
+      -127.97973632812501
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Boost Rail",
+    "description": "Boost rail takes you to tower 2 generator.",
+    "image": "images/dr26.jpg",
+    "locked": true
+  },
+  {
+    "id": "r27",
+    "layer": "dungeons",
+    "coords": [
+      54.69605907758271,
+      -158.54919433593753
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr27.jpg",
+    "locked": true
+  },
+  {
+    "id": "r28",
+    "layer": "dungeons",
+    "coords": [
+      58.008097793068906,
+      -46.62322998046875
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Boost Rail",
+    "image": "images/dr28.jpg",
+    "locked": true,
+    "links": []
+  },
+  {
+    "id": "r29",
+    "layer": "dungeons",
+    "coords": [
+      57.22852971878346,
+      -43.24768066406251
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr29.jpg",
+    "locked": true
+  },
+  {
+    "id": "r30",
+    "layer": "dungeons",
+    "coords": [
+      54.57524580078331,
+      -39.83367919921876
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr30.jpg",
+    "locked": true
+  },
+  {
+    "id": "r31",
+    "layer": "dungeons",
+    "coords": [
+      55.30413773740139,
+      -27.193908691406254
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Grapple Node",
+    "image": "images/dr31.jpg",
+    "locked": true
+  },
+  {
+    "id": "r32",
+    "layer": "dungeons",
+    "coords": [
+      54.401346982784176,
+      -26.501770019531254
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Container",
+    "image": "images/dr32.jpg",
+    "locked": true
+  },
+  {
+    "id": "r33",
+    "layer": "dungeons",
+    "coords": [
+      49.719152198289635,
+      18.750915527343754
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "image": "images/dr33.jpg",
+    "locked": true,
+    "description": "Activate the bomb slots to provide power to the charge amplifier above."
   },
   {
     "id": "save1",
@@ -2199,6 +2858,67 @@
     "locked": true
   },
   {
+    "id": "shot19",
+    "layer": "dungeons",
+    "coords": [
+      48.189894561126884,
+      -130.91308593750003
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/dshot19.jpg",
+    "locked": true,
+    "description": "Pull the lock at the top of the elevator with psychic lasso. Then use the tube to be transported to this secluded area. The shot expansion is hidden in a crate."
+  },
+  {
+    "id": "shot20",
+    "layer": "dungeons",
+    "coords": [
+      59.0377286454312,
+      -50.2294921875
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Use the psychic boost rail below to reach here.",
+    "image": "images/dshot20.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Psychic Boost Rail",
+        "target": "dungeons:r28",
+        "zoom": 8
+      }
+    ]
+  },
+  {
+    "id": "shot21",
+    "layer": "dungeons",
+    "coords": [
+      56.811404079015695,
+      -42.46490478515625
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/dshot21.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot22",
+    "layer": "dungeons",
+    "coords": [
+      56.95246396506335,
+      -39.59747314453126
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/dshot22.jpg",
+    "locked": true
+  },
+  {
     "id": "t1",
     "layer": "dungeons",
     "coords": [
@@ -2225,6 +2945,46 @@
     "description": "Scan the console to activate the drill and defend Armstrong from waves of grievers.",
     "locked": true,
     "image": "images/dt2.jpg"
+  },
+  {
+    "id": "t3",
+    "layer": "dungeons",
+    "coords": [
+      62.17832350589512,
+      -69.59838867187501
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Lava Pressure Control Terminal",
+    "image": "images/dt3.jpg",
+    "locked": true
+  },
+  {
+    "id": "t4",
+    "layer": "dungeons",
+    "coords": [
+      55.79973718325882,
+      -31.124267578125004
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Maintenance Tank Terminal",
+    "image": "images/dt4.jpg",
+    "locked": true
+  },
+  {
+    "id": "t5",
+    "layer": "dungeons",
+    "coords": [
+      54.56569261911194,
+      -16.990356445312504
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Tram Control Terminal",
+    "image": "images/dt5.jpg",
+    "locked": true,
+    "description": "Scan the terminal to transport the tram."
   },
   {
     "id": "bio1",
@@ -6353,6 +7113,19 @@
     "locked": true
   },
   {
+    "id": "crystal314",
+    "layer": "viewros",
+    "coords": [
+      -64.43489204304059,
+      -61.17187500000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc314.jpg",
+    "locked": true
+  },
+  {
     "id": "e1",
     "layer": "viewros",
     "coords": [
@@ -6717,5 +7490,60 @@
     "description": "Reger Tobaki will give the shot expansion to Samus after speaking with him.",
     "image": "images/shot1.jpg",
     "locked": true
+  },
+  {
+    "id": "shot2",
+    "layer": "viewros",
+    "coords": [
+      -64.9607663214987,
+      82.7490234375
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Large Shot Expansion",
+    "description": "After launching to the cargo target, find the large shot expansion on the ledge.",
+    "image": "images/vshot2.jpg",
+    "locked": true
+  },
+  {
+    "id": "t1",
+    "layer": "viewros",
+    "coords": [
+      -66.10716955858042,
+      75.23437500000001
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Small-Sized Cargo Launcher",
+    "image": "images/vt1.jpg",
+    "locked": true,
+    "description": "Launches Samus in morph ball form to the linked cargo target.",
+    "links": [
+      {
+        "label": "Cargo Target",
+        "target": "viewros:t2",
+        "zoom": 5
+      }
+    ]
+  },
+  {
+    "id": "t2",
+    "layer": "viewros",
+    "coords": [
+      -64.45384948864441,
+      82.04589843750001
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Cargo Target",
+    "image": "images/vt2.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Small-Sized Cargo Launcher",
+        "target": "viewros:t1",
+        "zoom": 5
+      }
+    ]
   }
 ]
