@@ -747,6 +747,580 @@
     "locked": true
   },
   {
+    "id": "bio58",
+    "layer": "dungeons",
+    "coords": [
+      83.53347709183595,
+      -140.90789794921878
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "image": "images/dbio58.jpg",
+    "links": [],
+    "locked": true
+  },
+  {
+    "id": "bio59",
+    "layer": "dungeons",
+    "coords": [
+      82.25688954721987,
+      -124.21417236328125
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Frostburn Griever",
+    "image": "images/dbio59.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio60",
+    "layer": "dungeons",
+    "coords": [
+      82.52668465415564,
+      -127.30957031250001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Frostburn Griever",
+    "image": "images/dbio60.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio61",
+    "layer": "dungeons",
+    "coords": [
+      82.67173199904896,
+      -125.13427734375001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Frostburn Griever",
+    "image": "images/dbio61.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio62",
+    "layer": "dungeons",
+    "coords": [
+      82.72618244801887,
+      -124.54101562500001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Frostburn Griever",
+    "image": "images/dbio62.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio63",
+    "layer": "dungeons",
+    "coords": [
+      80.47906399342918,
+      -122.96722412109376
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio63.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio64",
+    "layer": "dungeons",
+    "coords": [
+      81.06851567130734,
+      -127.36450195312501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio64.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio65",
+    "layer": "dungeons",
+    "coords": [
+      82.019471615817,
+      -123.37921142578126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Frostburn Griever",
+    "image": "images/dbio65.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio66",
+    "layer": "dungeons",
+    "coords": [
+      80.98971236488003,
+      -127.55126953125001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio66.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio67",
+    "layer": "dungeons",
+    "coords": [
+      77.22414555099601,
+      -133.86840820312503
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Jungle Griever",
+    "image": "images/dbio67.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio68",
+    "layer": "dungeons",
+    "coords": [
+      76.92123505772136,
+      -133.06365966796878
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Rootspur",
+    "image": "images/dbio68.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio69",
+    "layer": "dungeons",
+    "coords": [
+      76.38555570978366,
+      -139.89166259765628
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Glottagropper",
+    "image": "images/dbio69.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio70",
+    "layer": "dungeons",
+    "coords": [
+      74.30586757235652,
+      -172.1173095703125
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Shren",
+    "description": "Destory the hives to keep them from spawning more.",
+    "image": "images/dbio70.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio71",
+    "layer": "dungeons",
+    "coords": [
+      74.49127318132314,
+      -170.5792236328125
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Red Relic Ant",
+    "image": "images/dbio71.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio72",
+    "layer": "dungeons",
+    "coords": [
+      74.61490270320951,
+      -159.80987548828128
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Ghaspore",
+    "image": "images/dbio72.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio73",
+    "layer": "dungeons",
+    "coords": [
+      74.15358912811868,
+      -158.24432373046875
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Ghaspore",
+    "image": "images/dbio73.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio74",
+    "layer": "dungeons",
+    "coords": [
+      56.28453473265067,
+      -123.68682861328126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Denzard",
+    "image": "images/dbio74.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio75",
+    "layer": "dungeons",
+    "coords": [
+      54.86870479742191,
+      -126.32629394531251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Denzard",
+    "image": "images/dbio75.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio76",
+    "layer": "dungeons",
+    "coords": [
+      48.87194147722911,
+      -127.84790039062501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Denzard",
+    "image": "images/dbio76.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio77",
+    "layer": "dungeons",
+    "coords": [
+      66.00796906083234,
+      -130.52032470703128
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Denzard",
+    "image": "images/dbio77.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio78",
+    "layer": "dungeons",
+    "coords": [
+      62.49583319597203,
+      -129.95178222656253
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Denzard",
+    "image": "images/dbio78.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio79",
+    "layer": "dungeons",
+    "coords": [
+      58.2040028592663,
+      -127.95776367187501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Denzard",
+    "image": "images/dbio79.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio80",
+    "layer": "dungeons",
+    "coords": [
+      72.88006245631676,
+      -119.02038574218751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Sicklefly",
+    "image": "images/dbio80.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio81",
+    "layer": "dungeons",
+    "coords": [
+      72.9470421197786,
+      -118.57543945312501
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Red Relic Ant",
+    "image": "images/dbio81.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio82",
+    "layer": "dungeons",
+    "coords": [
+      73.40961261539778,
+      -124.72229003906251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Jungle Griever",
+    "image": "images/dbio82.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio83",
+    "layer": "dungeons",
+    "coords": [
+      74.10852798998154,
+      -127.31506347656251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Jungle Griever",
+    "image": "images/dbio83.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio84",
+    "layer": "dungeons",
+    "coords": [
+      74.74118495548187,
+      -129.10583496093753
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Rootspur",
+    "image": "images/dbio84.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio85",
+    "layer": "dungeons",
+    "coords": [
+      75.29494692212414,
+      -130.24291992187503
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Jungle Griever",
+    "image": "images/dbio85.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio86",
+    "layer": "dungeons",
+    "coords": [
+      73.75043685528821,
+      -127.50732421875001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Shimmerstrap",
+    "image": "images/dbio86.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio87",
+    "layer": "dungeons",
+    "coords": [
+      63.509375401175134,
+      -75.18493652343751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Swarm Flyer",
+    "image": "images/dbio87.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio88",
+    "layer": "dungeons",
+    "coords": [
+      63.99523519297698,
+      -75.52551269531251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Heatstrap",
+    "image": "images/dbio88.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio89",
+    "layer": "dungeons",
+    "coords": [
+      63.45296439593958,
+      -76.70104980468751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Heatstrap",
+    "image": "images/dbio89.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio90",
+    "layer": "dungeons",
+    "coords": [
+      63.025074210117246,
+      -73.65783691406251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Heatstrap",
+    "image": "images/dbio90.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio91",
+    "layer": "dungeons",
+    "coords": [
+      62.93273538869887,
+      -72.86682128906251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Heatstrap",
+    "image": "images/dbio91.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio92",
+    "layer": "dungeons",
+    "coords": [
+      62.55538881565855,
+      -69.53796386718751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Heatstrap",
+    "image": "images/dbio92.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio93",
+    "layer": "dungeons",
+    "coords": [
+      62.24746627771428,
+      -64.93469238281251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Heatstrap",
+    "image": "images/dbio93.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio94",
+    "layer": "dungeons",
+    "coords": [
+      62.48314642297105,
+      -63.69598388671876
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Vaernan",
+    "image": "images/dbio94.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio95",
+    "layer": "dungeons",
+    "coords": [
+      63.09972952967008,
+      -61.61407470703126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Vaernan",
+    "image": "images/dbio95.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio96",
+    "layer": "dungeons",
+    "coords": [
+      63.467691042267994,
+      -60.93017578125
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Pyremite",
+    "image": "images/dbio96.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio97",
+    "layer": "dungeons",
+    "coords": [
+      63.86366580845093,
+      -61.26525878906251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Swarm Flyer",
+    "image": "images/dbio97.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio98",
+    "layer": "dungeons",
+    "coords": [
+      75.48821294614392,
+      -113.82385253906251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Web Crawler",
+    "image": "images/dbio98.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio99",
+    "layer": "dungeons",
+    "coords": [
+      83.62012414870622,
+      -141.35009765625003
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Ice Crawler",
+    "image": "images/dbio99.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio100",
+    "layer": "dungeons",
+    "coords": [
+      84.1204732805161,
+      -132.70935058593753
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Wolf",
+    "image": "images/dbio100.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio101",
+    "layer": "dungeons",
+    "coords": [
+      83.66180037550016,
+      -125.77148437500001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio101.jpg",
+    "locked": true
+  },
+  {
     "id": "bomb1",
     "layer": "dungeons",
     "coords": [
@@ -814,6 +1388,60 @@
     "image": "images/dboss4.jpg",
     "locked": true,
     "description": "Use the Vi-O-La blaster to destory the weak points on the underbelly while traversing the lava to activate phase 2 of the fight. When in phase 2 on foot, destory the blue weak points on the face of Phenoros to expose and damage the tongue. When enough damage is done, Phenoros will become stunned, use the control beam to destroy the core from the inside."
+  },
+  {
+    "id": "boss5",
+    "layer": "dungeons",
+    "coords": [
+      79.92919653140936,
+      -129.20471191406253
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Keratos",
+    "description": "Shoot the eye to make it reveal its abdominal weak spot. During  its ice spin attack, shoot the ice surrounding Keratos with fire shots to break it.",
+    "image": "images/dboss5.jpg",
+    "locked": true
+  },
+  {
+    "id": "boss6",
+    "layer": "dungeons",
+    "coords": [
+      73.55718933846995,
+      -175.74005126953128
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Carvex",
+    "image": "images/dboss6.jpg",
+    "description": "Use the control beam to destroy the root nodes simultaneously.",
+    "locked": true
+  },
+  {
+    "id": "boss7",
+    "layer": "dungeons",
+    "coords": [
+      59.71763761778773,
+      -132.20397949218753
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Sylux (Fake)",
+    "image": "images/dboss7.jpg",
+    "locked": true
+  },
+  {
+    "id": "boss8",
+    "layer": "dungeons",
+    "coords": [
+      49.89109559573688,
+      -161.66656494140628
+    ],
+    "category": "bosses",
+    "icon": "bosses",
+    "name": "Xelios",
+    "image": "images/dboss8.jpg",
+    "locked": true
   },
   {
     "id": "crystal208",
@@ -1127,6 +1755,45 @@
     "locked": true
   },
   {
+    "id": "crystal234",
+    "layer": "dungeons",
+    "coords": [
+      75.58083435810957,
+      -113.86505126953126
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc234.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal235",
+    "layer": "dungeons",
+    "coords": [
+      75.4261421618192,
+      -114.77966308593751
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc235.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal236",
+    "layer": "dungeons",
+    "coords": [
+      75.60953172351894,
+      -115.21362304687501
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/dc236.jpg",
+    "locked": true
+  },
+  {
     "id": "e2",
     "layer": "dungeons",
     "coords": [
@@ -1218,6 +1885,70 @@
     ]
   },
   {
+    "id": "e7",
+    "layer": "dungeons",
+    "coords": [
+      80.60498315996338,
+      -131.83319091796878
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "description": "Lower the ramp and find the energy tank at the end of the tunnel.",
+    "image": "images/de7.jpg",
+    "locked": true
+  },
+  {
+    "id": "e8",
+    "layer": "dungeons",
+    "coords": [
+      75.72173105835004,
+      -132.03643798828128
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "image": "images/de8.jpg",
+    "description": "Held within the psychic container.",
+    "locked": true,
+    "links": [
+      {
+        "label": "Psychic Container",
+        "target": "dungeons:r38",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "e9",
+    "layer": "dungeons",
+    "coords": [
+      59.66912761441038,
+      -131.99798583984378
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "description": "Awarded after defeating Sylux (Fake).",
+    "image": "images/de9.jpg",
+    "links": [],
+    "locked": true
+  },
+  {
+    "id": "e10",
+    "layer": "dungeons",
+    "coords": [
+      75.66947836020186,
+      -113.1646728515625
+    ],
+    "category": "energy",
+    "icon": "energy",
+    "name": "Energy Tank",
+    "image": "images/de10.jpg",
+    "locked": true,
+    "description": "Take the morph tunnel to reach here."
+  },
+  {
     "id": "key1",
     "layer": "dungeons",
     "coords": [
@@ -1228,6 +1959,49 @@
     "icon": "keys",
     "name": "Master Teleporter Key - Flare Pool",
     "image": "images/key1.jpg",
+    "locked": true,
+    "description": "Enter the shrine to collect the master teleporter key."
+  },
+  {
+    "id": "key2",
+    "layer": "dungeons",
+    "coords": [
+      79.86366822424414,
+      -129.88861083984378
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "Master Teleporter Key - Ice Belt",
+    "image": "images/key2.jpg",
+    "locked": true,
+    "description": "Enter the shrine to collect the master teleporter key."
+  },
+  {
+    "id": "key3",
+    "layer": "dungeons",
+    "coords": [
+      73.47926612122662,
+      -176.7755126953125
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "Master Teleporter Key - Fury Green",
+    "description": "Enter the shrine to collect the master teleporter key.",
+    "image": "images/key3.jpg",
+    "locked": true
+  },
+  {
+    "id": "key4",
+    "layer": "dungeons",
+    "coords": [
+      49.75997752330658,
+      -162.75695800781253
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "Master Teleporter Key - Volt Forge",
+    "description": "Enter the shrine to collect the master teleporter key.",
+    "image": "images/key4.jpg",
     "locked": true
   },
   {
@@ -1280,6 +2054,58 @@
     "icon": "logs",
     "name": "Data Log - Facility Shutdown",
     "image": "images/log4.jpg",
+    "locked": true
+  },
+  {
+    "id": "log5",
+    "layer": "dungeons",
+    "coords": [
+      81.13733071423627,
+      -127.12554931640626
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Query",
+    "image": "images/dlog5.jpg",
+    "locked": true
+  },
+  {
+    "id": "log6",
+    "layer": "dungeons",
+    "coords": [
+      81.69903413025092,
+      -126.62017822265626
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Records",
+    "image": "images/dlog6.jpg",
+    "locked": true
+  },
+  {
+    "id": "log7",
+    "layer": "dungeons",
+    "coords": [
+      83.5600248347434,
+      -125.42541503906251
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Endeavor",
+    "image": "images/dlog7.jpg",
+    "locked": true
+  },
+  {
+    "id": "log8",
+    "layer": "dungeons",
+    "coords": [
+      83.46225340078134,
+      -127.44689941406251
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Security",
+    "image": "images/dlog8.jpg",
     "locked": true
   },
   {
@@ -1517,6 +2343,135 @@
     "image": "images/dm13.jpg",
     "locked": true,
     "links": []
+  },
+  {
+    "id": "m14",
+    "layer": "dungeons",
+    "coords": [
+      82.56836486819392,
+      -126.10382080078126
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm14.jpg",
+    "locked": true
+  },
+  {
+    "id": "m15",
+    "layer": "dungeons",
+    "coords": [
+      77.157162522661,
+      -133.82446289062503
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Launcher",
+    "description": "Inside the big cargo container.",
+    "image": "images/dm15.jpg",
+    "locked": true
+  },
+  {
+    "id": "m16",
+    "layer": "dungeons",
+    "coords": [
+      76.29930294622136,
+      -136.47491455078128
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm16.jpg",
+    "locked": true
+  },
+  {
+    "id": "m17",
+    "layer": "dungeons",
+    "coords": [
+      74.58426829888151,
+      -163.47656250000003
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm17.jpg",
+    "locked": true
+  },
+  {
+    "id": "m18",
+    "layer": "dungeons",
+    "coords": [
+      65.36454720329691,
+      -132.16552734375003
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm18.jpg",
+    "locked": true
+  },
+  {
+    "id": "m19",
+    "layer": "dungeons",
+    "coords": [
+      75.45927883636958,
+      -129.48760986328128
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm19.jpg",
+    "locked": true,
+    "description": "Use the psychic platform to reach here.",
+    "links": [
+      {
+        "label": "Psychic Platform",
+        "target": "dungeons:r46",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "m20",
+    "layer": "dungeons",
+    "coords": [
+      64.24698161075293,
+      -75.72326660156251
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm20.jpg",
+    "locked": true,
+    "description": "Use the Psychic Platform to reach here.",
+    "links": [
+      {
+        "label": "Psychic Platform",
+        "target": "dungeons:r47",
+        "zoom": 8
+      }
+    ]
+  },
+  {
+    "id": "m21",
+    "layer": "dungeons",
+    "coords": [
+      83.5322396644071,
+      -139.85321044921878
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm21.jpg",
+    "locked": true,
+    "description": "Use the bomb slot to open the door blocking the missile expansion.",
+    "links": [
+      {
+        "label": "Bomb Slot",
+        "target": "dungeons:r49",
+        "zoom": 9
+      }
+    ]
   },
   {
     "id": "mac1",
@@ -1793,6 +2748,267 @@
     "locked": true
   },
   {
+    "id": "mac22",
+    "layer": "dungeons",
+    "coords": [
+      54.749990970226925,
+      -127.28485107421876
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Mecha Rat",
+    "image": "images/dmac22.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac23",
+    "layer": "dungeons",
+    "coords": [
+      55.466399363938194,
+      -124.71405029296876
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Mecha Rat",
+    "image": "images/dmac23.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac24",
+    "layer": "dungeons",
+    "coords": [
+      52.353796172573944,
+      -126.29608154296876
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Mecha Rat",
+    "image": "images/dmac24.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac25",
+    "layer": "dungeons",
+    "coords": [
+      49.54303352434694,
+      -130.62469482421878
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Flight Drone",
+    "image": "images/dmac25.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac26",
+    "layer": "dungeons",
+    "coords": [
+      52.03897658307622,
+      -126.89758300781251
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Maintenance Tank",
+    "image": "images/dmac26.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac27",
+    "layer": "dungeons",
+    "coords": [
+      55.407188641599014,
+      -125.73852539062501
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Maintenance Tank",
+    "image": "images/dmac27.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac28",
+    "layer": "dungeons",
+    "coords": [
+      56.36372878401013,
+      -128.10882568359378
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac28.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac29",
+    "layer": "dungeons",
+    "coords": [
+      64.17767943926998,
+      -123.80493164062501
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Flight Drone",
+    "image": "images/dmac29.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac30",
+    "layer": "dungeons",
+    "coords": [
+      63.52652188424609,
+      -132.53356933593753
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Soldier",
+    "image": "images/dmac30.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac31",
+    "layer": "dungeons",
+    "coords": [
+      58.48220919993359,
+      -128.32031250000003
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Flight Drone MCU",
+    "description": "Use the psychic control beam when the mini drones aren't guarding it.",
+    "image": "images/dmac31.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac32",
+    "layer": "dungeons",
+    "coords": [
+      61.60247790999632,
+      -131.85791015625003
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac32.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac33",
+    "layer": "dungeons",
+    "coords": [
+      63.67794174677443,
+      -132.80548095703128
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac33.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac34",
+    "layer": "dungeons",
+    "coords": [
+      63.84793280019531,
+      -131.92657470703128
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Beam Turret",
+    "image": "images/dmac34.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac35",
+    "layer": "dungeons",
+    "coords": [
+      63.79097844984936,
+      -131.57226562500003
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Beam Turret",
+    "image": "images/dmac34.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac36",
+    "layer": "dungeons",
+    "coords": [
+      65.90613875658492,
+      -130.83343505859378
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Maintenance Tank",
+    "image": "images/dmac36.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac37",
+    "layer": "dungeons",
+    "coords": [
+      65.59480042624014,
+      -132.53631591796878
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Maintenance Tank",
+    "image": "images/dmac37.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac38",
+    "layer": "dungeons",
+    "coords": [
+      50.75035931136963,
+      -160.18341064453128
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Mecha Rat",
+    "image": "images/dmac38.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac39",
+    "layer": "dungeons",
+    "coords": [
+      50.90822881118012,
+      -158.47229003906253
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Maintenance Tank",
+    "image": "images/dmac39.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac40",
+    "layer": "dungeons",
+    "coords": [
+      62.629981748883736,
+      -63.13293457031251
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scanner Drone",
+    "image": "images/dmac40.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac41",
+    "layer": "dungeons",
+    "coords": [
+      83.94632843344745,
+      -139.05395507812503
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Scout Bot",
+    "image": "images/dmac41.jpg",
+    "locked": true
+  },
+  {
     "id": "map1",
     "layer": "dungeons",
     "coords": [
@@ -1829,6 +3045,45 @@
     "icon": "maps",
     "name": "Flare Pool Area Map",
     "image": "images/dmap3.jpg",
+    "locked": true
+  },
+  {
+    "id": "map4",
+    "layer": "dungeons",
+    "coords": [
+      57.271618718194446,
+      -127.87536621093751
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Volt Forge Area Map",
+    "image": "images/dmap4.jpg",
+    "locked": true
+  },
+  {
+    "id": "map5",
+    "layer": "dungeons",
+    "coords": [
+      53.63323922888165,
+      -160.66955566406253
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Volt Forge Area Map",
+    "image": "images/dmap5.jpg",
+    "locked": true
+  },
+  {
+    "id": "map6",
+    "layer": "dungeons",
+    "coords": [
+      84.21978913663628,
+      -125.13427734375001
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Ice Belt Area Map",
+    "image": "images/dmap6.jpg",
     "locked": true
   },
   {
@@ -1890,6 +3145,46 @@
     "icon": "gfed",
     "name": "Nora Armstrong",
     "image": "images/dnpc3.jpg",
+    "locked": true
+  },
+  {
+    "id": "npc4",
+    "layer": "dungeons",
+    "coords": [
+      77.17790315476361,
+      -133.95080566406253
+    ],
+    "category": "gfed",
+    "icon": "gfed",
+    "name": "Myles MacKenzie",
+    "image": "images/dnpc4.jpg",
+    "locked": true
+  },
+  {
+    "id": "npc5",
+    "layer": "dungeons",
+    "coords": [
+      74.81833824086799,
+      -160.54870605468753
+    ],
+    "category": "gfed",
+    "icon": "gfed",
+    "name": "Myles MacKenzie",
+    "description": "When brought certain parts, he will upgrade Samus's suit and weapons.",
+    "locked": true,
+    "image": "images/dt9.jpg"
+  },
+  {
+    "id": "npc6",
+    "layer": "dungeons",
+    "coords": [
+      84.21342348665273,
+      -125.51879882812501
+    ],
+    "category": "gfed",
+    "icon": "gfed",
+    "name": "Reger Tokabi",
+    "image": "images/dnpc6.jpg",
     "locked": true
   },
   {
@@ -1987,6 +3282,110 @@
         "label": "Phenoros",
         "target": "dungeons:boss4",
         "zoom": 7
+      }
+    ]
+  },
+  {
+    "id": "psy7",
+    "layer": "dungeons",
+    "coords": [
+      79.91189171335418,
+      -129.09210205078128
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Boost Ball",
+    "description": "Awarded after defeating Keratos.",
+    "image": "images/dpsy7.jpg",
+    "links": [
+      {
+        "label": "Keratos",
+        "target": "dungeons:boss5",
+        "zoom": 9
+      }
+    ],
+    "locked": true
+  },
+  {
+    "id": "psy8",
+    "layer": "dungeons",
+    "coords": [
+      76.01011902600874,
+      -124.23614501953125
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Glove",
+    "image": "images/dpsy8.jpg",
+    "locked": true
+  },
+  {
+    "id": "psy9",
+    "layer": "dungeons",
+    "coords": [
+      75.35895281581585,
+      -154.171142578125
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Control Beam",
+    "image": "images/dpsy9.jpg",
+    "locked": true,
+    "description": "Insert the 2 motes into the ancient lamorn object to open it and obtain the control beam inside."
+  },
+  {
+    "id": "psy10",
+    "layer": "dungeons",
+    "coords": [
+      73.54007695142666,
+      -175.90759277343753
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Bomb",
+    "image": "images/dpsy10.jpg",
+    "description": "Awarded after defeating Carvex.",
+    "locked": true,
+    "links": [
+      {
+        "label": "Carvex",
+        "target": "dungeons:boss6",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "psy11",
+    "layer": "dungeons",
+    "coords": [
+      57.076574722762096,
+      -126.92230224609376
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Vi-O-La Suit",
+    "image": "images/dpsy11.jpg",
+    "locked": true,
+    "description": "Obtained after activating the tower 1 generator."
+  },
+  {
+    "id": "psy12",
+    "layer": "dungeons",
+    "coords": [
+      49.81140398092215,
+      -161.54571533203128
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Boots",
+    "image": "images/dpsy12.jpg",
+    "locked": true,
+    "description": "Awarded after defeating Xelios.",
+    "links": [
+      {
+        "label": "Xelios",
+        "target": "dungeons:boss8",
+        "zoom": 9
       }
     ]
   },
@@ -2432,6 +3831,227 @@
     "description": "Activate the bomb slots to provide power to the charge amplifier above."
   },
   {
+    "id": "r34",
+    "layer": "dungeons",
+    "coords": [
+      83.56279680602582,
+      -139.85595703125003
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr34.jpg",
+    "locked": true
+  },
+  {
+    "id": "r35",
+    "layer": "dungeons",
+    "coords": [
+      80.503112101851,
+      -122.61291503906251
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Spinner",
+    "image": "images/dr35.jpg",
+    "locked": true
+  },
+  {
+    "id": "r36",
+    "layer": "dungeons",
+    "coords": [
+      81.35716082386317,
+      -125.17272949218751
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "image": "images/dr36.jpg",
+    "locked": true
+  },
+  {
+    "id": "r37",
+    "layer": "dungeons",
+    "coords": [
+      80.69733927021896,
+      -131.05041503906253
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Ball Track",
+    "image": "images/dr37.jpg",
+    "locked": true
+  },
+  {
+    "id": "r38",
+    "layer": "dungeons",
+    "coords": [
+      75.73527263753384,
+      -131.88537597656253
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Container",
+    "image": "images/dr38.jpg",
+    "locked": true
+  },
+  {
+    "id": "r39",
+    "layer": "dungeons",
+    "coords": [
+      74.73829331009176,
+      -160.576171875
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "image": "images/dr39.jpg",
+    "locked": true
+  },
+  {
+    "id": "r40",
+    "layer": "dungeons",
+    "coords": [
+      57.17199198214385,
+      -127.35351562500001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Vi-O-La Spinner",
+    "image": "images/dr40.jpg",
+    "locked": true
+  },
+  {
+    "id": "r41",
+    "layer": "dungeons",
+    "coords": [
+      50.466246274560476,
+      -130.26763916015628
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "description": "Activate both bomb slots to release the lightning antenna.",
+    "locked": true
+  },
+  {
+    "id": "r42",
+    "layer": "dungeons",
+    "coords": [
+      50.15578588538455,
+      -130.82519531250003
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "description": "Activate both bomb slots to release the lightning antenna.",
+    "locked": true
+  },
+  {
+    "id": "r43",
+    "layer": "dungeons",
+    "coords": [
+      55.229023057406344,
+      -118.45458984375001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Vi-O-La Spinner",
+    "image": "images/dr43.jpg",
+    "locked": true
+  },
+  {
+    "id": "r44",
+    "layer": "dungeons",
+    "coords": [
+      58.14896803443219,
+      -127.67486572265626
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "locked": true,
+    "image": "images/dr44.jpg"
+  },
+  {
+    "id": "r45",
+    "layer": "dungeons",
+    "coords": [
+      49.947685259857685,
+      -160.46081542968753
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Platform",
+    "image": "images/dr45.jpg",
+    "locked": true
+  },
+  {
+    "id": "r46",
+    "layer": "dungeons",
+    "coords": [
+      75.3853104399459,
+      -129.99572753906253
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Platform",
+    "image": "images/dr46.jpg",
+    "locked": true
+  },
+  {
+    "id": "r47",
+    "layer": "dungeons",
+    "coords": [
+      63.719319406048676,
+      -74.09179687500001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Platform",
+    "image": "images/dr47.jpg",
+    "locked": true
+  },
+  {
+    "id": "r48",
+    "layer": "dungeons",
+    "coords": [
+      59.93575245264131,
+      -55.76660156250001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Vi-O-La Spinner",
+    "image": "images/dr48.jpg",
+    "locked": true
+  },
+  {
+    "id": "r49",
+    "layer": "dungeons",
+    "coords": [
+      83.55046783239735,
+      -140.05645751953128
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "image": "images/dr49.jpg",
+    "locked": true
+  },
+  {
+    "id": "r50",
+    "layer": "dungeons",
+    "coords": [
+      83.5430591646737,
+      -125.22491455078126
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "image": "images/dr50.jpg",
+    "locked": true
+  },
+  {
     "id": "save1",
     "layer": "dungeons",
     "coords": [
@@ -2691,7 +4311,14 @@
     "name": "Thunder Chip",
     "image": "images/dshot8.jpg",
     "locked": true,
-    "description": "Inside the broken Lamorn Power Cell. Take this chip to Myles MacKenzie to acquire the Thunder Shot."
+    "description": "Inside the broken Lamorn Power Cell. Take this chip to Myles MacKenzie to acquire the Thunder Shot.",
+    "links": [
+      {
+        "label": "Myles MacKenzie",
+        "target": "dungeons:npc5",
+        "zoom": 9
+      }
+    ]
   },
   {
     "id": "shot9",
@@ -2919,6 +4546,85 @@
     "locked": true
   },
   {
+    "id": "shot23",
+    "layer": "dungeons",
+    "coords": [
+      83.53038308115114,
+      -140.50689697265628
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Ice Chip",
+    "image": "images/dshot23.jpg",
+    "description": "Break the glass up the stairs and use the control beam to open the door from the other side. Then power up the grapple crane control terminal using the spinner to drop the ice chip. Take this chip to Myles MacKenzie to acquire the Ice Shot.",
+    "links": [
+      {
+        "label": "Spinner",
+        "target": "dungeons:r34",
+        "zoom": 9
+      },
+      {
+        "label": "Grapple Crane Control Terminal",
+        "target": "dungeons:t6",
+        "zoom": 9
+      },
+      {
+        "label": "Myles MacKenzie",
+        "target": "dungeons:npc5",
+        "zoom": 9
+      }
+    ],
+    "locked": true
+  },
+  {
+    "id": "shot24",
+    "layer": "dungeons",
+    "coords": [
+      63.38413977217118,
+      -60.23254394531251
+    ],
+    "category": "shots",
+    "icon": "shotsfire",
+    "name": "Fire Chip",
+    "image": "images/dshot24.jpg",
+    "locked": true,
+    "description": "Take this chip to Myles MacKenzie to acquire the Fire Shot.",
+    "links": [
+      {
+        "label": "Myles MacKenzie",
+        "target": "dungeons:npc5",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "shot25",
+    "layer": "dungeons",
+    "coords": [
+      73.87829317963788,
+      -162.03735351562503
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "description": "Complete the flame ceremony to reach here.",
+    "image": "images/dshot25.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot26",
+    "layer": "dungeons",
+    "coords": [
+      75.86731624904571,
+      -116.30950927734376
+    ],
+    "category": "shots",
+    "icon": "shotsfire",
+    "name": "Charged Fire Shot",
+    "image": "images/dshot26.jpg",
+    "locked": true
+  },
+  {
     "id": "t1",
     "layer": "dungeons",
     "coords": [
@@ -2987,6 +4693,102 @@
     "description": "Scan the terminal to transport the tram."
   },
   {
+    "id": "t6",
+    "layer": "dungeons",
+    "coords": [
+      83.5787893920361,
+      -139.75433349609378
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Grapple Crane Control Terminal",
+    "locked": true,
+    "image": "images/dt6.jpg"
+  },
+  {
+    "id": "t7",
+    "layer": "dungeons",
+    "coords": [
+      84.19317315334956,
+      -127.56225585937501
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Small-Sized Cargo Launcher",
+    "description": "Launches Samus in morph ball form to the linked cargo target.",
+    "image": "images/dt7.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Cargo Target",
+        "target": "dungeons:t8",
+        "zoom": 7
+      }
+    ]
+  },
+  {
+    "id": "t8",
+    "layer": "dungeons",
+    "coords": [
+      83.84910386039061,
+      -142.79479980468753
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Cargo Target",
+    "image": "images/dt8.jpg",
+    "locked": true,
+    "links": [
+      {
+        "label": "Small-Sized Cargo Launcher",
+        "target": "dungeons:t7",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "t9",
+    "layer": "dungeons",
+    "coords": [
+      74.82768601394717,
+      -160.44708251953125
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Lamorn Control System",
+    "image": "images/dt9.jpg",
+    "description": "Myles MacKenzie will use this terminal to upgrade Samus's suit and weapons.",
+    "locked": true
+  },
+  {
+    "id": "t10",
+    "layer": "dungeons",
+    "coords": [
+      74.41766380246501,
+      -155.41259765625003
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Cargo Launcher",
+    "image": "images/dt10.jpg",
+    "locked": true,
+    "description": "After using this for the first time, the launcher will malfunction and send Samus into Sol Valley near Volt Forge. Any other time, it will transport Samus to the other cargo launcher at the enterance of Fury Green."
+  },
+  {
+    "id": "t11",
+    "layer": "dungeons",
+    "coords": [
+      83.56895248916925,
+      -125.89508056640626
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Floor Security Terminal",
+    "image": "images/dt11.jpg",
+    "locked": true,
+    "description": "Interact with this terminal to release all locked security doors on this floor."
+  },
+  {
     "id": "bio1",
     "layer": "viewros",
     "coords": [
@@ -2999,6 +4801,73 @@
     "image": "images/vbio1.jpg",
     "locked": true,
     "description": "Randomly seen throughout Sol Valley. If approached, they will attack."
+  },
+  {
+    "id": "bio2",
+    "layer": "viewros",
+    "coords": [
+      27.566721430409736,
+      -148.71093750000003
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Sand Shren",
+    "image": "images/vbio2.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio3",
+    "layer": "viewros",
+    "coords": [
+      -65.36683689226321,
+      81.07910156250001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Sand Shren",
+    "image": "images/vbio3.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio4",
+    "layer": "viewros",
+    "coords": [
+      8.102738577783168,
+      -132.97851562500003
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Kyuveria",
+    "description": "Randomly found throughout Sol Valley. Provides boost to Samus while on the Vi-O-La.",
+    "image": "images/vbio4.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio5",
+    "layer": "viewros",
+    "coords": [
+      -58.74540696858028,
+      -22.9833984375
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Sand Shren",
+    "image": "images/vbio5.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio6",
+    "layer": "viewros",
+    "coords": [
+      8.102738577783168,
+      -135.08789062500003
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Sand Griever",
+    "description": "Will attack Samus randomly throughout Sol Valley.",
+    "image": "images/vbio6.jpg",
+    "locked": true
   },
   {
     "id": "bomb1",
@@ -7126,6 +8995,578 @@
     "locked": true
   },
   {
+    "id": "crystal315",
+    "layer": "viewros",
+    "coords": [
+      -61.93895042666062,
+      -153.54492187500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc315.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal316",
+    "layer": "viewros",
+    "coords": [
+      -64.43489204304059,
+      -147.56835937500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc316.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal317",
+    "layer": "viewros",
+    "coords": [
+      -41.80407814427235,
+      -152.35839843750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc317.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal318",
+    "layer": "viewros",
+    "coords": [
+      -36.49197347059368,
+      -150.732421875
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc318.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal319",
+    "layer": "viewros",
+    "coords": [
+      -25.839449402063185,
+      -147.74414062500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc319.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal320",
+    "layer": "viewros",
+    "coords": [
+      -18.562947442888312,
+      -139.43847656250003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc320.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal321",
+    "layer": "viewros",
+    "coords": [
+      -15.072123545811683,
+      -132.67089843750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc321.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal322",
+    "layer": "viewros",
+    "coords": [
+      -2.152813583128846,
+      -128.27636718750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc322.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal323",
+    "layer": "viewros",
+    "coords": [
+      4.039617826768437,
+      -124.98046875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc323.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal324",
+    "layer": "viewros",
+    "coords": [
+      16.594081412718474,
+      -119.97070312500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc324.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal325",
+    "layer": "viewros",
+    "coords": [
+      32.10118973232094,
+      -123.79394531250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc325.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal326",
+    "layer": "viewros",
+    "coords": [
+      27.916766641249065,
+      -117.42187500000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc326.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal327",
+    "layer": "viewros",
+    "coords": [
+      -67.06743335108298,
+      -132.14355468750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc327.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal328",
+    "layer": "viewros",
+    "coords": [
+      -63.31268278043484,
+      -100.28320312500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc328.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal329",
+    "layer": "viewros",
+    "coords": [
+      -64.18724867664994,
+      -83.10058593750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc329.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal330",
+    "layer": "viewros",
+    "coords": [
+      -66.44310650816469,
+      -70.53222656250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc330.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal331",
+    "layer": "viewros",
+    "coords": [
+      -66.60067571342496,
+      -59.45800781250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc331.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal332",
+    "layer": "viewros",
+    "coords": [
+      -69.1312712296365,
+      -53.21777343750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc332.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal333",
+    "layer": "viewros",
+    "coords": [
+      -70.46620742226558,
+      -37.35351562500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc333.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal334",
+    "layer": "viewros",
+    "coords": [
+      -71.45515260247822,
+      -24.609375000000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc334.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal335",
+    "layer": "viewros",
+    "coords": [
+      -71.39916455383504,
+      -15.512695312500002
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc335.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal336",
+    "layer": "viewros",
+    "coords": [
+      -72.08743247624157,
+      -4.482421875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc336.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal337",
+    "layer": "viewros",
+    "coords": [
+      -68.942606818121,
+      -2.6806640625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc337.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal338",
+    "layer": "viewros",
+    "coords": [
+      -67.18699968023047,
+      2.4609375000000004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc338.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal339",
+    "layer": "viewros",
+    "coords": [
+      -63.6267446447533,
+      4.350585937500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc339.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal340",
+    "layer": "viewros",
+    "coords": [
+      -56.60788546500924,
+      12.1728515625
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc340.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal341",
+    "layer": "viewros",
+    "coords": [
+      -56.02294807962745,
+      20.698242187500004
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc341.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal342",
+    "layer": "viewros",
+    "coords": [
+      -57.06463027327856,
+      34.40917968750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc342.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal343",
+    "layer": "viewros",
+    "coords": [
+      -55.35413531021058,
+      44.51660156250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc343.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal344",
+    "layer": "viewros",
+    "coords": [
+      -56.243349924105246,
+      64.37988281250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc344.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal345",
+    "layer": "viewros",
+    "coords": [
+      -47.66538735632655,
+      54.66796875000001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc345.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal346",
+    "layer": "viewros",
+    "coords": [
+      44.84029065139799,
+      -126.65039062500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc346.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal347",
+    "layer": "viewros",
+    "coords": [
+      51.06901665960392,
+      -127.13378906250001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc347.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal348",
+    "layer": "viewros",
+    "coords": [
+      55.3791104480105,
+      -134.91210937500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc348.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal349",
+    "layer": "viewros",
+    "coords": [
+      59.84481485969108,
+      -135.70312500000003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc349.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal350",
+    "layer": "viewros",
+    "coords": [
+      64.26368374017731,
+      -136.40625000000003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc350.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal351",
+    "layer": "viewros",
+    "coords": [
+      67.30597574414469,
+      -137.50488281250003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc351.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal352",
+    "layer": "viewros",
+    "coords": [
+      72.48850416712037,
+      -136.66992187500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc352.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal353",
+    "layer": "viewros",
+    "coords": [
+      74.6017809536723,
+      -137.54882812500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc353.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal354",
+    "layer": "viewros",
+    "coords": [
+      78.08922921093165,
+      -138.29589843750003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Rock",
+    "image": "images/vc354.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal355",
+    "layer": "viewros",
+    "coords": [
+      77.89725517594935,
+      -131.57226562500003
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc355.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal356",
+    "layer": "viewros",
+    "coords": [
+      77.85109964137916,
+      -125.46386718750001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc356.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal357",
+    "layer": "viewros",
+    "coords": [
+      75.41992081555084,
+      -121.02539062500001
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc357.jpg",
+    "locked": true
+  },
+  {
+    "id": "crystal358",
+    "layer": "viewros",
+    "coords": [
+      74.39034206491468,
+      -113.2470703125
+    ],
+    "category": "crystals",
+    "icon": "crystals",
+    "name": "Green Energy Crystal",
+    "image": "images/vc358.jpg",
+    "locked": true
+  },
+  {
     "id": "e1",
     "layer": "viewros",
     "coords": [
@@ -7148,7 +9589,7 @@
     ],
     "category": "missiles",
     "icon": "missiles",
-    "name": "New Marker (crystal217)",
+    "name": "Missile Expansion",
     "image": "images/vm1.jpg",
     "locked": true
   },
@@ -7170,14 +9611,41 @@
     "id": "mac1",
     "layer": "viewros",
     "coords": [
-      11.523087506868514,
-      -130.69335937500003
+      11.221510260010541,
+      -133.19824218750003
     ],
     "category": "machines",
     "icon": "machines",
     "name": "Aeronaut",
     "description": "Will attack Samus randomly throughout Sol Valley.",
     "image": "images/vmac1.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac2",
+    "layer": "viewros",
+    "coords": [
+      -67.37369797436554,
+      -159.08203125000003
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Psy-bot Soldier",
+    "image": "images/vmac2.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac3",
+    "layer": "viewros",
+    "coords": [
+      11.221510260010541,
+      -131.17675781250003
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Marauder",
+    "description": "Will attack Samus randomly throughout Sol Valley.",
+    "image": "images/vmac3.jpg",
     "locked": true
   },
   {
@@ -7302,8 +9770,8 @@
     "id": "missile3",
     "layer": "viewros",
     "coords": [
-      -35.31736632923786,
-      -148.00781250000003
+      -36.527294814546245,
+      -147.83203125000003
     ],
     "category": "missiles",
     "icon": "missiles",
@@ -7462,6 +9930,32 @@
     "icon": "research",
     "name": "Lamorn Magnetic Track",
     "image": "images/vr3.jpg",
+    "locked": true
+  },
+  {
+    "id": "r4",
+    "layer": "viewros",
+    "coords": [
+      -66.35513620288559,
+      80.02441406250001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Vi-O-La Spinner",
+    "image": "images/vr4.jpg",
+    "locked": true
+  },
+  {
+    "id": "r5",
+    "layer": "viewros",
+    "coords": [
+      79.28631294293976,
+      -142.64648437500003
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Platform",
+    "image": "images/vr5.jpg",
     "locked": true
   },
   {
