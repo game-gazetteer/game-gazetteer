@@ -1321,6 +1321,132 @@
     "locked": true
   },
   {
+    "id": "bio102",
+    "layer": "dungeons",
+    "coords": [
+      82.58468858289409,
+      -126.85363769531251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio102.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio103",
+    "layer": "dungeons",
+    "coords": [
+      82.68678111932283,
+      -126.32629394531251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio103.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio104",
+    "layer": "dungeons",
+    "coords": [
+      82.93492373453886,
+      -130.88836669921878
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio104.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio105",
+    "layer": "dungeons",
+    "coords": [
+      82.68573217882164,
+      -120.34973144531251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Ice Crawler",
+    "image": "images/dbio105.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio106",
+    "layer": "dungeons",
+    "coords": [
+      82.83901658713786,
+      -120.84960937500001
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "locked": true
+  },
+  {
+    "id": "bio107",
+    "layer": "dungeons",
+    "coords": [
+      83.16096500987297,
+      -119.89929199218751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Ice Crawler",
+    "image": "images/dbio107.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio108",
+    "layer": "dungeons",
+    "coords": [
+      83.02821942764845,
+      -124.94201660156251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Snow Roach",
+    "image": "images/dbio108.jpg",
+    "locked": true
+  },
+  {
+    "id": "bio109",
+    "layer": "dungeons",
+    "coords": [
+      81.77207158785004,
+      -126.52130126953126
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "locked": true
+  },
+  {
+    "id": "bio110",
+    "layer": "dungeons",
+    "coords": [
+      80.95480355187101,
+      -127.62268066406251
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "locked": true
+  },
+  {
+    "id": "bio111",
+    "layer": "dungeons",
+    "coords": [
+      82.96122488400279,
+      -122.03063964843751
+    ],
+    "category": "biology",
+    "icon": "biology",
+    "name": "Blue Krauk",
+    "locked": true
+  },
+  {
     "id": "bomb1",
     "layer": "dungeons",
     "coords": [
@@ -2005,6 +2131,90 @@
     "locked": true
   },
   {
+    "id": "key5",
+    "layer": "dungeons",
+    "coords": [
+      83.4625661130035,
+      -125.31829833984376
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "TK Code",
+    "description": "Collect all TK Codes to proceed.",
+    "image": "images/dkey5.jpg",
+    "locked": true
+  },
+  {
+    "id": "key6",
+    "layer": "dungeons",
+    "coords": [
+      83.38455556618109,
+      -124.53277587890625
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "TK Code",
+    "description": "Scan the sample vial. Collect all TK Codes to proceed.",
+    "image": "images/dkey6.jpg",
+    "locked": true
+  },
+  {
+    "id": "key7",
+    "layer": "dungeons",
+    "coords": [
+      82.65945998125234,
+      -126.36474609375001
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "TK Code",
+    "description": "Scan the experimental capsule. Collect all TK Codes to proceed.",
+    "image": "images/dkey7.jpg",
+    "locked": true
+  },
+  {
+    "id": "key8",
+    "layer": "dungeons",
+    "coords": [
+      82.88985120701432,
+      -130.73730468750003
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "TK Code",
+    "description": "Scan the surveillance monitor. Collect all TK Codes to proceed.",
+    "image": "images/dkey8.jpg",
+    "locked": true
+  },
+  {
+    "id": "key9",
+    "layer": "dungeons",
+    "coords": [
+      82.23279900442527,
+      -131.66564941406253
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "TK Code",
+    "description": "After opneing the balsallae system, scan it. Collect all TK Codes to proceed.",
+    "image": "images/dkey9.jpg",
+    "locked": true
+  },
+  {
+    "id": "key10",
+    "layer": "dungeons",
+    "coords": [
+      82.11461641446347,
+      -123.73901367187501
+    ],
+    "category": "keys",
+    "icon": "keys",
+    "name": "TK Code",
+    "description": "Scan the griever specimen. Collect all TK Codes to proceed.",
+    "image": "images/dkey10.jpg",
+    "locked": true
+  },
+  {
     "id": "log1",
     "layer": "dungeons",
     "coords": [
@@ -2106,6 +2316,123 @@
     "icon": "logs",
     "name": "Data Log - Security",
     "image": "images/dlog8.jpg",
+    "locked": true
+  },
+  {
+    "id": "log9",
+    "layer": "dungeons",
+    "coords": [
+      83.24935306101382,
+      -126.65039062500001
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Gifts",
+    "image": "images/dlog9.jpg",
+    "locked": true
+  },
+  {
+    "id": "log10",
+    "layer": "dungeons",
+    "coords": [
+      82.73487099264526,
+      -125.12054443359376
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Anxiety",
+    "image": "images/dlog10.jpg",
+    "locked": true
+  },
+  {
+    "id": "log11",
+    "layer": "dungeons",
+    "coords": [
+      82.62534204496824,
+      -128.66638183593753
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Awakening",
+    "image": "images/dlog11.jpg",
+    "locked": true
+  },
+  {
+    "id": "log12",
+    "layer": "dungeons",
+    "coords": [
+      82.86021302332666,
+      -131.63543701171878
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Analysis",
+    "image": "images/dlog12.jpg",
+    "locked": true
+  },
+  {
+    "id": "log13",
+    "layer": "dungeons",
+    "coords": [
+      82.36237374266103,
+      -129.15252685546878
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Breakthrough",
+    "image": "images/dlog13.jpg",
+    "locked": true
+  },
+  {
+    "id": "log14",
+    "layer": "dungeons",
+    "coords": [
+      82.38096828528464,
+      -125.35125732421876
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Attempt",
+    "image": "images/dlog14.jpg",
+    "locked": true
+  },
+  {
+    "id": "log15",
+    "layer": "dungeons",
+    "coords": [
+      82.16532288603119,
+      -122.83813476562501
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Limit",
+    "image": "images/dlog15.jpg",
+    "locked": true
+  },
+  {
+    "id": "log16",
+    "layer": "dungeons",
+    "coords": [
+      82.50701115710902,
+      -122.58270263671876
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Resignation",
+    "image": "images/dlog16.jpg",
+    "locked": true
+  },
+  {
+    "id": "log17",
+    "layer": "dungeons",
+    "coords": [
+      80.50583073411785,
+      -131.22070312500003
+    ],
+    "category": "logs",
+    "icon": "logs",
+    "name": "Data Log - Prayer",
+    "image": "images/dlog17.jpg",
     "locked": true
   },
   {
@@ -2472,6 +2799,32 @@
         "zoom": 9
       }
     ]
+  },
+  {
+    "id": "m22",
+    "layer": "dungeons",
+    "coords": [
+      83.38645381351238,
+      -122.03613281250001
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm22.jpg",
+    "locked": true
+  },
+  {
+    "id": "m23",
+    "layer": "dungeons",
+    "coords": [
+      82.48153829875959,
+      -130.32531738281253
+    ],
+    "category": "missiles",
+    "icon": "missiles",
+    "name": "Missile Expansion",
+    "image": "images/dm23.jpg",
+    "locked": true
   },
   {
     "id": "mac1",
@@ -3009,6 +3362,32 @@
     "locked": true
   },
   {
+    "id": "mac42",
+    "layer": "dungeons",
+    "coords": [
+      83.53935165353202,
+      -123.91754150390625
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Light Maintenance Tank",
+    "image": "images/dmac42.jpg",
+    "locked": true
+  },
+  {
+    "id": "mac43",
+    "layer": "dungeons",
+    "coords": [
+      82.7487511976143,
+      -124.25537109375001
+    ],
+    "category": "machines",
+    "icon": "machines",
+    "name": "Light Maintenance Tank",
+    "image": "images/dmac43.jpg",
+    "locked": true
+  },
+  {
     "id": "map1",
     "layer": "dungeons",
     "coords": [
@@ -3084,6 +3463,19 @@
     "icon": "maps",
     "name": "Ice Belt Area Map",
     "image": "images/dmap6.jpg",
+    "locked": true
+  },
+  {
+    "id": "map7",
+    "layer": "dungeons",
+    "coords": [
+      83.25999897439891,
+      -124.29931640625
+    ],
+    "category": "maps",
+    "icon": "maps",
+    "name": "Ice Belt Area Map",
+    "image": "images/dmap7.jpg",
     "locked": true
   },
   {
@@ -3385,6 +3777,27 @@
       {
         "label": "Xelios",
         "target": "dungeons:boss8",
+        "zoom": 9
+      }
+    ]
+  },
+  {
+    "id": "psy13",
+    "layer": "dungeons",
+    "coords": [
+      83.29504412978949,
+      -126.06811523437501
+    ],
+    "category": "psychic",
+    "icon": "psychic",
+    "name": "Psychic Lasso",
+    "image": "images/dpsy13.jpg",
+    "description": "Inside the psychic container.",
+    "locked": true,
+    "links": [
+      {
+        "label": "Psychic Container",
+        "target": "dungeons:r51",
         "zoom": 9
       }
     ]
@@ -4052,6 +4465,32 @@
     "locked": true
   },
   {
+    "id": "r51",
+    "layer": "dungeons",
+    "coords": [
+      83.29472344046019,
+      -126.18896484375001
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Psychic Container",
+    "image": "images/dr51.jpg",
+    "locked": true
+  },
+  {
+    "id": "r52",
+    "layer": "dungeons",
+    "coords": [
+      83.25419418587208,
+      -125.34851074218751
+    ],
+    "category": "research",
+    "icon": "research",
+    "name": "Bomb Slot",
+    "image": "images/dr52.jpg",
+    "locked": true
+  },
+  {
     "id": "save1",
     "layer": "dungeons",
     "coords": [
@@ -4625,6 +5064,32 @@
     "locked": true
   },
   {
+    "id": "shot27",
+    "layer": "dungeons",
+    "coords": [
+      83.3196914147877,
+      -126.49658203125001
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Shot Expansion",
+    "image": "images/dshot27.jpg",
+    "locked": true
+  },
+  {
+    "id": "shot28",
+    "layer": "dungeons",
+    "coords": [
+      80.76502356856545,
+      -132.10510253906253
+    ],
+    "category": "shots",
+    "icon": "shotsice",
+    "name": "Large Shot Expansion",
+    "image": "images/dshot28.jpg",
+    "locked": true
+  },
+  {
     "id": "t1",
     "layer": "dungeons",
     "coords": [
@@ -4787,6 +5252,19 @@
     "image": "images/dt11.jpg",
     "locked": true,
     "description": "Interact with this terminal to release all locked security doors on this floor."
+  },
+  {
+    "id": "t12",
+    "layer": "dungeons",
+    "coords": [
+      82.84962261869683,
+      -130.95977783203128
+    ],
+    "category": "terminals",
+    "icon": "terminals",
+    "name": "Recovery Pod Management Terminal",
+    "image": "images/dt12.jpg",
+    "locked": true
   },
   {
     "id": "bio1",
